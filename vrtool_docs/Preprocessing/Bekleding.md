@@ -1,4 +1,4 @@
-# Bekleding
+# Bekledingen
 
 ## Stap 1: Excel invoerbestand invullen
 
@@ -68,3 +68,4 @@ Om meer informatie over de code te krijgen, gebruik je:
 ```
 python -m preprocessing bekleding --input_csv "c:\VRM\test_revetments_cli\Bekleding_default.csv" --database_path "c:\VRM\test_revetments_cli\database" --steentoets_path "c:\VRM\test_revetments_cli\steentoets" --profielen_path "c:\VRM\test_revetments_cli\profielen" --figures_gebu "c:\VRM\test_revetments_cli\figures_GEBU_CLI" --figures_zst "c:\VRM\test_revetments_cli\figures_ZST_CLI" --hring_path  "c:/Program Files (x86)/BOI/Riskeer 21.1.1.2/Application/Standalone/Deltares/HydraRing-20.1.3.10236" --bin_dikernel "c:/VRM/test_revetments_cli/bin_DiKErnel" --output_path "c:\VRM\test_revetments_cli\output_CLI"
 ```
+

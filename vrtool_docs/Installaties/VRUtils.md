@@ -23,12 +23,12 @@ cd C:/link_naar_ZIP_file_map
 
 ### Stap 3: Creëer het environment: 
 ```
-conda env create -f .config\environment.yml -p .env
+conda env create -f .config\environment.yml -p .env\
 ```
 
 ### Stap 4: Activeer het environment: 
 ```
-conda activate .env/
+conda activate .env\
 ```
 
 ### Stap 5: Installeer benodigde packages: 
@@ -37,5 +37,6 @@ poetry install
 ```
 
 #### Let op
-- Bij Stap 5 lukt de installatie soms niet ineens, probeer het dan nogmaals: ```poetry install```
+- Bij Stap 5 lukt de installatie soms niet ineens, probeer het dan nogmaals (het kan zijn dat je het 3 keer moet proberen): ```poetry install```
 - Als er zich een probleem voordoet bij Stap 5 met de package ```peewee```, installeer deze dan handmatig door de volgende commandline in te typen: ```pip install peewee==3.16.2```. Doe daarna nog eens: ```poetry install```
+

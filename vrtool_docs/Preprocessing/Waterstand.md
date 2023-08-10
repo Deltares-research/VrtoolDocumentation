@@ -49,9 +49,9 @@ De inputs van overslag zijn:
 **Let op:** deze regel is vanuit elke directory te runnen, je hoeft dus niet eerst naar een bepaalde folder te gaan.
 
 Om meer informatie over de code te krijgen, gebruik je: 
-``` python -m preprocessing waterlevel --help. ```
+``` python -m preprocessing waterlevel --help ```
 
 #### Voorbeeld invoer: 
 ```
-python -m preprocessing waterlevel --work_dir c:\VRM\test_hydraring_workflow_wdod\waterlevel --database_paths "c:\VRM\test_hydraring_workflow_wdod\HR\2023" --database_paths "c:\VRM\test_hydraring_workflow_wdod\HR\2100" --hydraring_path "c:\Program Files (x86)\BOI\Riskeer 21.1.1.2\Application\Standalone\Deltares\HydraRing-20.1.3.10236" --file_name “c:\VRM\test_hydraring_workflow_wdod\HR_default.csv”
+python -m preprocessing waterlevel --work_dir "c:\VRM\test_hydraring_workflow_wdod\waterlevel" --database_paths "c:\VRM\test_hydraring_workflow_wdod\HR\2023" --database_paths "c:\VRM\test_hydraring_workflow_wdod\HR\2100" --hydraring_path "c:\Program Files (x86)\BOI\Riskeer 21.1.1.2\Application\Standalone\Deltares\HydraRing-20.1.3.10236" --file_name “c:\VRM\test_hydraring_workflow_wdod\HR_default.csv”
 ```

@@ -26,9 +26,9 @@ De inputs van overslag zijn:
 
 
 Om meer informatie over de code te krijgen, gebruik je: 
-``` python -m preprocessing overflow --help. ```
+``` python -m preprocessing overflow --help ```
 
 ### Voorbeeld invoer: 
 ```
-python -m preprocessing overflow --work_dir c:\VRM\test_hydraring_workflow_wdod\overslag --database_paths "c:\VRM\test_hydraring_workflow_wdod\HR\2023" --database_paths "c:\VRM\test_hydraring_workflow_wdod\HR\2100" --hydraring_path "c:\Program Files (x86)\BOI\Riskeer 21.1.1.2\Application\Standalone\Deltares\HydraRing-20.1.3.10236" --file_name “c:\VRM\test_hydraring_workflow_wdod\HR_default.csv”
+python -m preprocessing overflow --work_dir "c:\VRM\test_hydraring_workflow_wdod\overslag" --database_paths "c:\VRM\test_hydraring_workflow_wdod\HR\2023" --database_paths "c:\VRM\test_hydraring_workflow_wdod\HR\2100" --hydraring_path "c:\Program Files (x86)\BOI\Riskeer 21.1.1.2\Application\Standalone\Deltares\HydraRing-20.1.3.10236" --file_name “c:\VRM\test_hydraring_workflow_wdod\HR_default.csv”
 ```

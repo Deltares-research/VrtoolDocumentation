@@ -43,7 +43,7 @@ cd C:/link_naar_ZIP_file_map
 
 3. Activeer het environment van de preprocessor: 
 ```
-conda activate .env
+conda activate .env/
 ```
 **Let op:** als je het environment een andere naam hebt gegeven, vervang ".env" dan door de naam die je aan het environment gegeven hebt.
 
@@ -76,7 +76,7 @@ De inputs van een vakindeling zijn:
 **Let op:** deze regel is vanuit elke directory te runnen, je hoeft dus niet eerst naar een bepaalde folder te gaan.
 
 Om meer informatie over de code te krijgen, gebruik je: 
-``` python -m preprocessing vakindeling --help. ```
+``` python -m preprocessing vakindeling --help ```
 
 ### Voorbeeld van code om de vakindeling te runnen 
 
@@ -84,4 +84,8 @@ Om meer informatie over de code te krijgen, gebruik je:
 python -m preprocessing vakindeling --traject_id “38-1” --vakindeling_csv “c:\VRM\test_vakindeling_workflow\Vakindeling 38-1.csv” --output_folder “c:\VRM\test_vakindeling_workflow\result\”
 ```
 
+### Mogelijke error
 
+Vaak gaat de script fout met de totale lengte van het traject. De code verwacht een lengte en de totale lengte in het excel moet overeen komen. 
+
+*Let op*: de totale lengte moet niet te veel korte zijn dan de verwachte lengte maar mag zeker niet langer zijn. Dus altijd de verwachte lengte afronden naar beneden. 

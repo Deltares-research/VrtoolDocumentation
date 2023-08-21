@@ -1,26 +1,20 @@
 # Afleiden dijkprofielen en karakteristieke punten
 
-Voor het gegeven traject worden elke x meter dijkprofielen getrokken op basis van het AHN4. Voor elk van deze profielen worden de karakteristieke punten afgeleid: 2 punten op de kruin, en op zowel het buiten- als het binnentalud beide maximaal 3 punten. 
+Met de workflow ```genereer_dijkprofielen``` worden voor een gegeven traject elke x meter dijkprofielen gegenereerd op basis van het AHN4. Voor elk van deze profielen worden de karakteristieke punten afgeleid: 2 punten op de kruin, en op zowel het buiten- als het binnentalud beide maximaal 3 punten. 
 
-De workflow bevat 3 stappen, die achter elkaar worden doorlopen als de workflow wordt aangeroepen: derive_profiles en derive_characteristic_points. Deze stappen werken als volgt:
+De workflow bevat 2 stappen, die achter elkaar worden doorlopen als de workflow wordt aangeroepen: eerst worden de AHN profielen afgeleid, daarna worden de karakteristieke punten bepaald.
 
-1. Command-Line activeren
+In de map AHN_profiles worden profielen uit AHN4 weggeschreven naar csv-bestanden. Deze map wordt (automatisch) gemaakt in de uitvoermap (output_dir). In de uitvoermap output_dir wordt ook een overzicht opgeslagen met informatie over elk profiel (m-waarde, naam CSV-bestand, x- en y-coördinaten van het uiterste punt op het voorland en het achterland): traject_profiles_info.csv.
 
-2. Runnen van de script ```derive_profiles.py```. 
-
-3. Runnen van de script ```derive_characteristic_points.py```. 
-
-De script ```derive_profiles.py``` schrijft profielen, afgeleid uit de AHN4 weg naar csv’s in een nieuw aan te maken map: AHN_profiles. Deze map wordt (automatisch) gemaakt in de uitvoermap (output_dir). In de uitvoermap output_dir  wordt ook een overzicht opgeslagen met informatie over elk profiel (m-waarde, naam CSV-bestand, x- en y-coördinaten van het uiterste punt op het voorland en het achterland): traject_profiles_info.csv.
-
-De script ```derive_characteristic_points.py``` leidt voor elk profiel in de map ahn_profiles het karakteristieke profiel af. Deze worden weggeschreven naar een nieuwe map die wordt aangemaakt in de uitvoermap (output_dir). De naam van deze nieuwe map is characteristic_profiles. Hierin wordt per profiel een figuur (profielnaam.png) weggeschreven met daarin het profiel en het karakteristieke profiel. Er wordt ook een CSV-bestand (profielnaam.csv) weggeschreven met daarin de gevonden karakteristieke punten voor het desbetreffende profiel.
+In de map characteristic_profiles wordt voor elk AHN-profiel karakteristieke (knik)punten weggeschreven Hierin wordt per profiel een figuur (profielnaam.png) weggeschreven met daarin het profiel en het karakteristieke profiel. Er wordt ook een CSV-bestand (profielnaam.csv) weggeschreven met daarin de gevonden karakteristieke punten voor het desbetreffende profiel.
 
 *Let op*: Er is geen input excel bij deze workflow.
 
 ## Stap 1: Command-Line Interface voorbereiden
 
-Stap 1 is identiek als de preprocessing van de [vakindeling](Vakindeling.md).
+Stap 1 is identiek aan de preprocessing van de [vakindeling](Vakindeling.md).
 
-## Stap 2: Script voor het afleiden van profilen runnen  
+## Stap 2: Script voor het afleiden van profielen uit AHN  
 De gebruiker kan de workflow als volgt aanroepen vanuit de Anaconda Prompt (activeer eerst environment):
 
 ```
@@ -51,6 +45,6 @@ Om meer informatie over de code te krijgen, gebruik je:
 python -m preprocessing genereer_dijkprofielen --traject_id=”38-1” --output_folder=”c:\VRM\Gegevens 38-1\dijkinfo2"
 ```
 
-## Stap 3: Script voor het afleiden van karakteristieke punten runnen  
+## Stap 3: Script voor het afleiden van een karakteristiek profiel per dijkvak
 
 *Hier wordt nog aan gewerkt*

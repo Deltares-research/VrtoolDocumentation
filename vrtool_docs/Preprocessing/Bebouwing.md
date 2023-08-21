@@ -1,12 +1,12 @@
 # Afleiden bebouwing
 
 
-De script ```derive_bebouwing.py``` gebruikt de binnenteen-GeoJSON en de vakindeling-GeoJSON als invoerbestand. Daarnaast is een Geopackage bestand nodig van de BAG (Basis Administratie Gebouwen). Op dit moment is het nog niet mogelijk meer dan 1000 gebouwen rechtstreeks uit de BAG te halen via internet, daar zit een limiet op van max. 1000 objecten. Daarom moet de Geopackage van de BAG direct naar een lokale schijf worden gedownload. Dat kan hier: https://service.pdok.nl/lv/bag/atom/bag.xml (Let er op dat je de Geopackage download). 
+De workflow ```tel_gebouwen``` gebruikt de binnenteen-GeoJSON en de vakindeling-GeoJSON als invoerbestand. Daarnaast is een Geopackage bestand nodig van de BAG (Basis Administratie Gebouwen). Op dit moment is het nog niet mogelijk meer dan 1000 gebouwen rechtstreeks uit de BAG te halen via internet, daar zit een limiet op van max. 1000 objecten. Daarom moet de Geopackage van de BAG direct naar een lokale schijf worden gedownload. Dat kan hier: https://service.pdok.nl/lv/bag/atom/bag.xml (Let er op dat je de Geopackage download). 
 
 *Let op*: Er is geen input excel bij deze workflow.
 
 ## Stap 1: Command-Line Interface voorbereiden
-Stap 1 is identiek als de preprocessing van de [vakindeling](Vakindeling.md).
+Stap 1 is identiek aan de preprocessing van de [vakindeling](Vakindeling.md).
 
 
 ## Stap 2: Script voor het afleiden van de bebouwing runnen  
@@ -16,8 +16,9 @@ De gebruiker kan de workflow als volgt aanroepen vanuit de Anaconda Prompt (acti
 ```
 python -m preprocessing tel_gebouwen 
 ```
+Dit levert een csv bestand met voor 1 tot 50 meter uit de teenlijn het aantal objecten.
 
-De invoer die nodig is voor het afleiden van de binnenteenlijn, is weergegeven de tabel hieronder.
+De invoerparameters voor de workflow zijn weergegeven in de tabel hieronder.
 
 | Input naam       	    | 	           | Beschrijving                                                                                                                                                                                 	 |
 |-----------------------|-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

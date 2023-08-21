@@ -16,7 +16,7 @@ Daarvoor moet als eerste een aantal invoerbestanden worden gevuld met de gegeven
    Macro
    Piping
    Bekleding
-   genereer_dijkprofielen
+   Dijkprofielen
    Teenlijn
    Bebouwing
 

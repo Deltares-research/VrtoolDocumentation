@@ -2,7 +2,7 @@
 
 ## Stap 1: Excel invoerbestand invullen
 
-De basis voor het genereren van de bekleding berekeningen is het invoerbestand `Bekleding_default.csv`. Dit bestand is terug te vinden in: ```.\VRSuiteUtils-main\preprocessing\default_files``` in de ZIP bestand die bij de installatie voor [preprocessing](..\Installaties\VRUtils.md) is gedownload.
+De basis voor het genereren van de bekleding berekeningen is het invoerbestand `Bekleding_default.csv`. Dit bestand is terug te vinden in: ```.\VRSuiteUtils-main\preprocessing\default_files``` in het ZIP bestand wat bij de installatie voor [preprocessing](..\Installaties\VRUtils.md) is gedownload.
 
 Dit bestand heeft de volgende kolommen die ingevuld moeten worden:
 
@@ -28,13 +28,13 @@ Stap 2 is identiek als de preprocessing van de [vakindeling](Vakindeling.md).
 
 ## Stap 3: Script voor bekleding runnen  
 
-Via de **Command Line Interface (CLI)** kan de VR Preprocessing tool worden aangeroepen, zonder dat de gebruiker in de Python code hoeft te werken. Dit werkt als volgt:
+Via de **Command Line Interface (CLI)** kan de workflow voor bekledingen worden aangeroepen, zonder dat de gebruiker in de Python code hoeft te werken. Dit werkt als volgt:
 
 ```
 python -m preprocessing bekleding {input arguments}”
 ```
 
-Vervang nog "{input arguments}" met behorend inputs van bekleding: ```--input_naam1 "input_1" --input_naam2 "input_2" etc.```
+Vervang nog "{input arguments}" met onderstaande input arguments van bekledingen: ```--input_naam1 "input_1" --input_naam2 "input_2" etc.```
 
 De inputs van bekleding zijn: 
 
@@ -55,6 +55,6 @@ Om meer informatie over de code te krijgen, gebruik je:
 
 ### Voorbeeld invoer: 
 ```
-python -m preprocessing bekleding --input_csv "c:\VRM\test_revetments_cli\Bekleding_default.csv" --database_path "c:\VRM\test_revetments_cli\database" --steentoets_path "c:\VRM\test_revetments_cli\steentoets" --profielen_path "c:\VRM\test_revetments_cli\profielen" --figures_gebu "c:\VRM\test_revetments_cli\figures_GEBU_CLI" --figures_zst "c:\VRM\test_revetments_cli\figures_ZST_CLI" --hring_path  "c:/Program Files (x86)/BOI/Riskeer 21.1.1.2/Application/Standalone/Deltares/HydraRing-20.1.3.10236" --bin_dikernel "c:/VRM/test_revetments_cli/bin_DiKErnel" --output_path "c:\VRM\test_revetments_cli\output_CLI"
+python -m preprocessing bekleding --input_csv "c:\VRM\test_revetments_cli\Bekleding_default.csv" --database_path "c:\VRM\test_revetments_cli\database" --waterlevel_path "c:\VRM\traject_x\waterstandssommen" --steentoets_path "c:\VRM\test_revetments_cli\steentoets" --profielen_path "c:\VRM\test_revetments_cli\profielen" --figures_gebu "c:\VRM\test_revetments_cli\figures_GEBU_CLI" --output_path "c:\VRM\test_revetments_cli\output_CLI"
 ```
 

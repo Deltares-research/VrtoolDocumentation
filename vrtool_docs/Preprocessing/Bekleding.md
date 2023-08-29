@@ -39,7 +39,7 @@ De inputs voor bekledingen zijn:
 
 | Input naam       	      | 	           | Beschrijving                                                                                                                                                                                 	                                        |
 |-------------------------|-------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| --input_csv 	       | Verplicht 	 | 	Link naar het excel invoerbestand, bijvoorbeeld: "c:\VRM\test_revetments_cli\Bekleding_default.csv"                                                                                                                                  |
+| --input_csv_path 	       | Verplicht 	 | 	Link naar het excel invoerbestand, bijvoorbeeld: "c:\VRM\test_revetments_cli\Bekleding_default.csv"                                                                                                                                  |
 | --database_path     	 | Verplicht 	 | Link naar de map met de database, bijvoorbeeld: "c:\VRM\test_revetments_cli\database\WBI2017_Oosterschelde_26-3_v02". Deze map moet in ieder geval een HRD, bijbehorende config, hlcd en hlcd_W_2100.sqlite bevatten                                                                                                                                                 |
 | --waterlevel_path    | Verplicht 	 | Link naar een map met frequentielijnen voor de waterstand, zolas bepaald in de workflow [Waterstand](Waterstand.md)      |
 | --steentoets_path    	   | Verplicht 	 | Link naar de map met de steentoets files, bijvoorbeeld: "c:\VRM\test_revetments_cli\steentoets"	                                                                                                                                      |
@@ -55,6 +55,6 @@ Om meer informatie over de code te krijgen, gebruik je:
 
 ### Voorbeeld invoer: 
 ```
-python -m preprocessing bekleding --input_csv "c:\VRM\Bekleding_traject_26-3\Bekleding_default.csv" --waterlevel_path "c:\VRM\Waterstand_traject_26-3" --database_path "c:\VRM\Bekleding_traject_26-3\database\WBI2017_Oosterschelde_26-3_v02" --steentoets_path "c:\VRM\Bekleding_traject_26-3\steentoets" --profielen_path "c:\VRM\Bekleding_traject_26-3\profielen" --output_path "c:\VRM\test_revetments_cli\output_CLI"
+python -m preprocessing bekleding --input_csv_path "c:\VRM\Bekleding_traject_26-3\Bekleding_default.csv" --waterlevel_path "c:\VRM\Waterstand_traject_26-3" --database_path "c:\VRM\Bekleding_traject_26-3\database\WBI2017_Oosterschelde_26-3_v02" --steentoets_path "c:\VRM\Bekleding_traject_26-3\steentoets" --profielen_path "c:\VRM\Bekleding_traject_26-3\profielen" --output_path "c:\VRM\test_revetments_cli\output_CLI"
 ```
 

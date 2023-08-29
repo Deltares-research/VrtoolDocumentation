@@ -16,9 +16,9 @@ De inputs voor overslag zijn:
 
 | Input naam       	     | 	           | Beschrijving                                                                                                                                                                                 	                                                                                                                                                                              |
 |------------------------|-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| --file_path            | Verplicht 	 | Link naar de HR_default.csv.                                                                                                                                                     	                                                                                                                                                                                          |
+| --input_csv_path            | Verplicht 	 | Link naar de HR_default.csv.                                                                                                                                                     	                                                                                                                                                                                          |
 | --database_paths     	 | Verplicht 	 | Link naar de map met de Hydraulische database. Omdat er zowel een map voor de situatie huidig, als voor 2100 is, moet deze optie twee keer worden opgegeven. Dus: "--database_paths <pad naar de database voor huidige situatie> --database_paths <pad naar database voor de 2100 situatie>.                                                                                |
-| --profielen_dir     	  | Verplicht 	 | Link naar de map met alle profielen.                                                                      |
+| --profielen_path     	  | Verplicht 	 | Link naar de map met alle profielen.                                                                      |
 | --output_path  	       | Verplicht 	 | 	Dit is de werkmap, waarin je de resultaten van de overslagsommen wilt uitvoeren. Belangrijk is dat deze map voorafgaand aan het runnen van het script al een map met de profielen bevat. Deze map met profielen moet de naam 'prfl' hebben. Naast de profielenmap, moet de map leeg zijn.                                                                                                                                                                                                                                                                                                     |
 
 
@@ -30,6 +30,6 @@ Om meer informatie over de code te krijgen, gebruik je:
 
 ### Voorbeeld invoer: 
 ```
-python -m preprocessing overflow --file_path “c:\VRM\test_hydraring_workflow_wdod\HR_default.csv” --database_paths "c:\VRM\test_hydraring_workflow_wdod\HR\2023" --database_paths "c:\VRM\test_hydraring_workflow_wdod\HR\2100" --profielen_dir "c:\VRM\test_hydraring_workflow_wdod\Profielen" --output_path "c:\VRM\test_hydraring_workflow_wdod\overslag"
+python -m preprocessing overflow --input_csv_path “c:\VRM\test_hydraring_workflow_wdod\HR_default.csv” --database_paths "c:\VRM\test_hydraring_workflow_wdod\HR\2023" --database_paths "c:\VRM\test_hydraring_workflow_wdod\HR\2100" --profielen_path "c:\VRM\test_hydraring_workflow_wdod\Profielen" --output_path "c:\VRM\test_hydraring_workflow_wdod\overslag"
 ```
 

@@ -37,6 +37,9 @@ poetry install
 ```
 
 #### Let op
-- Bij Stap 5 lukt de installatie soms niet ineens, probeer het dan nogmaals (het kan zijn dat je het 3 keer moet proberen): ```poetry install```
 - Als er zich een probleem voordoet bij Stap 5 met de package ```peewee```, installeer deze dan handmatig door de volgende commandline in te typen: ```pip install peewee==3.16.2```. Doe daarna nog eens: ```poetry install```
+
+- Bij Stap 5 lukt de installatie soms niet ineens, probeer het dan nogmaals (het kan zijn dat je het 3 keer moet proberen): ```poetry install```
+Je kan zien dat de installatie niet gelukt is als er in de command line 'PoetryException' in rood geschreven staat: 
+![Poetry_error_circled.PNG](Poetry_error_circled.PNG)
 

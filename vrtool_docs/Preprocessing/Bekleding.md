@@ -4,11 +4,12 @@
 
 De basis voor het genereren van de bekleding berekeningen is het invoerbestand `Bekleding_default.csv`. Dit bestand is terug te vinden in: ```.\VRSuiteUtils-main\preprocessing\default_files``` in de ZIP bestand die bij de installatie voor [preprocessing](..\Installaties\VRUtils.md) is gedownload.
 
-Dit bestand heeft de volgende kolommen die ingevul dmoeten worden:
+Dit bestand heeft de volgende kolommen die ingevuld moeten worden:
 
 | Kolom       	          | 	           | Beschrijving                                                                                                                                                                                 	 |
 |------------------------|-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | doorsnede 	              | Verplicht 	 | De doorsnede zoals beschreven in de Vakindeling.csv                                                                                                                                              |
+| HR_locatie    	 | Verplicht 	 | Naam van folder met HLCD, HRD en config database                                                                                                                                               |
 | locationid     	       | Verplicht 	 | ID uit HLCD van HydraRing                                                                                                                                                                      |
 | region    	            | Verplicht 	 | Region van het traject. Te kiezen uit: kust en meren (m.u.v. Oosterschelde)                                                                                                                    |
 | gws   	                | Verplicht 	 | Gemiddelde buitenwaterstand in m+NAP                                                                                                                                                           |
@@ -40,9 +41,9 @@ De inputs voor bekledingen zijn:
 |-------------------------|-------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | --input_csv 	       | Verplicht 	 | 	Link naar het excel invoerbestand, bijvoorbeeld: "c:\VRM\test_revetments_cli\Bekleding_default.csv"                                                                                                                                  |
 | --database_path     	 | Verplicht 	 | Link naar de map met de database, bijvoorbeeld: "c:\VRM\test_revetments_cli\database\WBI2017_Oosterschelde_26-3_v02". Deze map moet in ieder geval een HRD, bijbehorende config, hlcd en hlcd_W_2100.sqlite bevatten                                                                                                                                                 |
+| --waterlevel_path    | Verplicht 	 | Link naar een map met frequentielijnen voor de waterstand, zolas bepaald in de workflow [Waterstand](Waterstand.md)      |
 | --steentoets_path    	   | Verplicht 	 | Link naar de map met de steentoets files, bijvoorbeeld: "c:\VRM\test_revetments_cli\steentoets"	                                                                                                                                      |
 | --profielen_path    | Verplicht 	 | Link naar de map met alle profielen, bijvoobeeld: "c:\VRM\test_revetments_cli\profielen"                                                                                                                                            	 |
-| --waterlevel_path    | Verplicht 	 | Link naar een map met frequentielijnen voor de waterstand, zolas bepaald in de workflow [Waterstand](Waterstand.md)      |
 | --output_path    | Verplicht 	 | Link naar map waar resultaten moeten worden opgeslagen, bijvoobeeld: "c:\VRM\test_revetments_cli\output_CLI"                                                                                                                          |
 
 **Let op:** deze regel is vanuit elke directory te runnen, je hoeft dus niet eerst naar een bepaalde folder te gaan.
@@ -54,6 +55,6 @@ Om meer informatie over de code te krijgen, gebruik je:
 
 ### Voorbeeld invoer: 
 ```
-python -m preprocessing bekleding --input_csv "c:\VRM\Bekleding_traject_26-3\Bekleding_default.csv" --database_path "c:\VRM\Bekleding_traject_26-3\database\WBI2017_Oosterschelde_26-3_v02" --steentoets_path "c:\VRM\Bekleding_traject_26-3\steentoets" --profielen_path "c:\VRM\Bekleding_traject_26-3\profielen" --waterlevel_path "c:\VRM\Waterstand_traject_26-3" --output_path "c:\VRM\test_revetments_cli\output_CLI"
+python -m preprocessing bekleding --input_csv "c:\VRM\Bekleding_traject_26-3\Bekleding_default.csv" --waterlevel_path "c:\VRM\Waterstand_traject_26-3" --database_path "c:\VRM\Bekleding_traject_26-3\database\WBI2017_Oosterschelde_26-3_v02" --steentoets_path "c:\VRM\Bekleding_traject_26-3\steentoets" --profielen_path "c:\VRM\Bekleding_traject_26-3\profielen" --output_path "c:\VRM\test_revetments_cli\output_CLI"
 ```
 

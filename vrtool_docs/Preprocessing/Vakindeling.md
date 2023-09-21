@@ -8,6 +8,7 @@ De basis voor het genereren van de vakindeling is het invoerbestand `Vakindeling
 
 Dit bestand heeft de volgende kolommen die ingevul dmoeten worden:
 
+
 | Kolom       	     |           	| Beschrijving                                                                                                                                                                                 	                                                                                                                                                                                |
 |-------------------|-----------	|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | objectid    	     | Verplicht 	| Unieke identifier (moeten verschillende getallen zijn)                                                                                                                                       	                                                                                                                                                                                |

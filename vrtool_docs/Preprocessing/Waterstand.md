@@ -35,11 +35,12 @@ Vervang daarbij "{input arguments}" met de juiste invoerparameters voor watersta
 
 De inputs van waterstand zijn: 
 
-| Input naam       	      | 	           | Beschrijving                                                                                                                                                                                 	                                                                                                                                                                               |
-|-------------------------|-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| --file_name    | Verplicht 	 | Link naar de HR_default.csv.                                                                                                                                                     	                                                                                                                                                                                           |
+| Input naam       	     | 	           | Beschrijving                                                                                                                                                                                 	                                                                                                                                                                               |
+|------------------------|-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| --file_path            | Verplicht 	 | Link naar de HR_default.csv.                                                                                                                                                     	                                                                                                                                                                                           |
 | --database_paths     	 | Verplicht 	 | Link naar de map met de Hydraulische database. Omdat er zowel een map voor de situatie huidig, als voor 2100 is, moet deze optie twee keer worden opgegeven. Dus: "--database_paths <pad naar de database voor huidige situatie> --database_paths <pad naar database voor de 2100 situatie>.                                                                                 |
 | --output_path  	       | Verplicht 	 | 	Dit is de werkmap, waarin je de resultaten van de waterstandsommen wilt uitvoeren. Belangrijk is dat deze map leeg is.                                    |
+
 
 
 **Let op:** deze regel is vanuit elke directory te runnen, je hoeft dus niet eerst naar een bepaalde folder te gaan.
@@ -51,5 +52,5 @@ Bij deze workflow wordt via Python Hydra-Ring aangeroepen. Daarbij wordt een gro
 
 #### Voorbeeld invoer: 
 ```
-python -m preprocessing waterlevel --file_name “c:\VRM\test_hydraring_workflow_wdod\HR_default.csv” --database_paths "c:\VRM\test_hydraring_workflow_wdod\HR\2023" --database_paths "c:\VRM\test_hydraring_workflow_wdod\HR\2100" --hydraring_path "c:\Program Files (x86)\BOI\Riskeer 21.1.1.2\Application\Standalone\Deltares\HydraRing-20.1.3.10236" --output_path "c:\VRM\test_hydraring_workflow_wdod\waterlevel"
+python -m preprocessing waterlevel --file_name “c:\VRM\test_hydraring_workflow_wdod\HR_default.csv” --database_paths "c:\VRM\test_hydraring_workflow_wdod\HR\2023" --database_paths "c:\VRM\test_hydraring_workflow_wdod\HR\2100" --output_path "c:\VRM\test_hydraring_workflow_wdod\waterlevel"
 ```

@@ -1,6 +1,6 @@
 # Vakindeling
 
-Bij de veiligheidsrendement methode moet één vakindeling gemaakt worden die voor alle faalmechanismen gebruikt wordt. Hiervoor zijn drie stappen nodig. 
+De basis van een veiligheidsrendementberekening is één vakindeling die voor alle faalmechanismen gebruikt wordt. Hiervoor zijn drie stappen nodig. 
 
 ## Stap 1: Excel invoerbestand invullen
 

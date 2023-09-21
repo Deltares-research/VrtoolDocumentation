@@ -19,7 +19,14 @@ Voor onderdelen 1 en 2 zijn gegevens van de beoordeling nodig. Onderdeel 3 wordt
 
 De basis voor berekeningen met de veiligheidsrendementmethode is een uniforme vakindeling voor alle faalmechanismen. De gewenste vakindeling kan worden gegenereerd door op basis van een invoerbestand (``vakindeling.csv``) de bijbehorende workflow te draaien.
 
-:ref:`Workflow vakindeling <Vakindeling>`
+.. raw:: html
+
+   <div class="toc-caption">Workflow vakindeling</div>
+
+.. toctree::
+   :maxdepth: 1
+
+   Vakindeling
 
 2. Gegevens faalmechanismen
 --------------------------------
@@ -65,4 +72,11 @@ Voordat de veiligheidsrendement methode toegepast kan worden is, naast de boveng
 
 Het laatste onderdeel van de preprocessing is om alle informatie van de vorige onderdelen te verzamelen in een sql invoerbestand. Dit wordt aan de hand van een python script gedaan. Deze grootte invoerbestand wordt vervolgens gebruikt bij het toepassen van de veiligheidsrendement methode.
 
-:ref:`Workflow genereren database <Genereren database>`
+.. raw:: html
+
+   <div class="toc-caption">Workflow genereren database</div>
+
+.. toctree::
+   :maxdepth: 1
+
+   Genereren_database

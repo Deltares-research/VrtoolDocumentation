@@ -4,7 +4,7 @@ De input database kan worden gemaakt door de volgende stappen te volgen:
 
 **Stap 1**: Open de Anaconda Prompt
 
-**Stap 2**:	Ga naar de juiste directory waar je preprocessing script staat met behulp van de volgende commandline. Vervang “C:/link_naar_ZIP_file_map” met de locatie van de map waar de ZIP file is uitgepakt:
+**Stap 2**:	Ga naar de directory van de preprocessor met behulp van de volgende commandline. Vervang “C:/link_naar_ZIP_file_map” met de locatie van de map waar de ZIP file is uitgepakt:
 ```
 cd C:/link_naar_ZIP_file_map
 ```

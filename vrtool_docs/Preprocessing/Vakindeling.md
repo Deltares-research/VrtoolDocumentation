@@ -1,12 +1,12 @@
 # Vakindeling
 
-De basis van een veiligheidsrendementberekening is één vakindeling die voor alle faalmechanismen gebruikt wordt. Hiervoor zijn drie stappen nodig. 
+De basis van een veiligheidsrendementberekening is één vakindeling die voor alle faalmechanismen gebruikt wordt. Als eerste wordt een invoerbestand gevuld, waarna de workflow voor het maken van de vakindeling kan worden gedraaid.
 
-## Stap 1: Excel invoerbestand invullen
+## Vullen van het invoerbestand van de vakindeling
 
-De basis voor het genereren van de vakindeling is het invoerbestand `Vakindeling.csv`. Dit bestand is terug te vinden in: ```.\VRSuiteUtils-main\preprocessing\default_files``` in de folder met de uitgepakte installatie voor de [preprocessing](..\Installaties\VRUtils.md).
+De basis voor het genereren van de vakindeling is het invoerbestand `Vakindeling.csv`. Dit bestand is terug te vinden in: ```.\VRSuiteUtils-main\preprocessing\default_files``` in de folder met de uitgepakte installatie voor de [preprocessing](..\Installaties\VRUtils.md). Doel van deze workflow is een `geojson` bestand te creeren waarin alle vakken geografisch zijn gerepresenteerd. Dit bestand is ook invoer voor andere workflows.
 
-Dit bestand heeft de volgende kolommen die ingevul dmoeten worden:
+Het invoerbestand `Vakindeling.csv` heeft de volgende kolommen die ingevuld moeten worden:
 
 
 | Kolom       	     |           	| Beschrijving                                                                                                                                                                                 	                                                                                                                                                                                |
@@ -18,56 +18,34 @@ Dit bestand heeft de volgende kolommen die ingevul dmoeten worden:
 | in_analyse  	     | Verplicht 	| Vak meenemen in analyse of niet (TRUE/FALSE)                                                                                                                                                 	                                                                                                                                                                                |
 | van_dp      	     | Optioneel 	| Begrenzing dijkpaalnummers                                                                                                                                                                   	                                                                                                                                                                                |
 | tot_dp      	     | Optioneel 	| Begrenzing dijkpaalnummers                                                                                                                                                                   	                                                                                                                                                                                |
-| piping          	 | Optioneel 	| Moet overeen komen met kolom 'doorsnede' bij [Piping_default.csv](Piping.md). Hiermee wordt een link gemaakt tussen vak en doorsnede die gebruikt moet worden voor de piping invoer. Wanneer dit niet wordt ingevuld moet dit later worden afgeleid uit bijv een shapefile met uittredepunten. Daarvoor zijn specifieke workflows beschikbaar. 	                              |
-| overslag      	   | Optioneel 	| Moet overeen komen met kolom 'doorsnede' bij [HR_default.csv](Overtopping.md), zie afbeelding hieronder. Hiermee wordt een link gemaakt tussen vak en doorsnede die gebruikt moet worden voor de overslag invoer. Wanneer dit niet wordt ingevuld moet dit later worden afgeleid uit bijv een shapefile met uittredepunten. Daarvoor zijn specifieke workflows beschikbaar. 	 |
-| bekledingen    	  | Optioneel 	| Moet overeen komen met kolom 'doorsnede' bij [Stabiliteit_default.csv](Macro.md). Hiermee wordt een link gemaakt tussen vak en doorsnede die gebruikt moet worden voor de stabiliteit invoer. Wanneer dit niet wordt ingevuld moet dit later worden afgeleid uit bijv een shapefile met uittredepunten. Daarvoor zijn specifieke workflows beschikbaar. 	                     |
+| piping          	 | Optioneel 	| Moet overeen komen met een waarde in de kolom `doorsnede` bij [Piping_default.csv](Piping.md). Hiermee wordt aangegeven welke doorsnede bij welk vak hoort. Let op: bij het maken van de vakindeling is deze invoer optioneel, maar bij het maken van een [database](Genereren_database.md) moeten alle doorsneden in het `geojson` bestand zijn ingevuld.                              |
+| overslag      	   | Optioneel 	| Moet overeen komen met een waarde in de kolom `doorsnede` bij [HR_default.csv](Overtopping.md). Hiermee wordt aangegeven welke doorsnede bij welk vak hoort. Let op: bij het maken van de vakindeling is deze invoer optioneel, maar bij het maken van een [database](Genereren_database.md) moeten alle doorsneden in het `geojson` bestand zijn ingevuld.    	 |
+| stabiliteit    	  | Optioneel 	| Moet overeen komen  met een waarde in de kolom `doorsnede` bij [Stabiliteit_default.csv](Macro.md). Hiermee wordt aangegeven welke doorsnede bij welk vak hoort. Let op: bij het maken van de vakindeling is deze invoer optioneel, maar bij het maken van een [database](Genereren_database.md) moeten alle doorsneden in het `geojson` bestand zijn ingevuld.   
+| stabiliteit    	  | Optioneel 	| Moet overeen komen  met een waarde in de kolom `doorsnede` bij [Stabiliteit_default.csv](Macro.md). Hiermee wordt aangegeven welke doorsnede bij welk vak hoort. Let op: bij het maken van de vakindeling is deze invoer optioneel, maar bij het maken van een [database](Genereren_database.md) moeten alle doorsneden in het `geojson` bestand zijn ingevuld.     	                     |
 | kunstwerken 	     | Optioneel 	| *Optie om Kunstwerken te berekenen nog niet beschrikbaar*                                                                                                                                                                                                                                                                                                                     |
-| opmerkingen 	     | Optioneel 	| extra opmerkingen, moet altijd de laatste kolom zijn                                                                                                                                         	                                                                                                                                                                                |
+| opmerkingen 	     | Optioneel 	| extra opmerkingen, moet altijd de laatste kolom zijn.                                                                                                                                                         |
 
-Voorbeeld van hoe kolom 'overslag' ingevuld moet worden:
-![](Filling_Vakindeling_overslag.PNG)
+In onderstaande figuur is met een voorbeeld voor stabiliteit geillustreerd hoe de koppeling tussen doorsnedes en de vakindeling moet worden ingevoerd. Merk op dat het mogelijk is voor meerdere vakken dezelfde doorsnede te hanteren (een voorbeeld in de figuur is de dikgedrukte doorsnede `ET_VOLDOET`). Deze hoeft dan slechts 1x genoemd te worden in het STBI invoerbestand, maar kan bij meerdere vakken worden gebruikt.
+![](Filling_Vakindeling_stbi.PNG)
 
-Belangrijk bij het genereren van de vakindeling zijn met name de `m_start` en `m_eind` parameters. 
+Belangrijk bij het genereren van de vakindeling zijn met name de `m_start` en `m_eind` parameters. Wanneer de lengte van het traject teveel afwijkt van de lengte van de shape uit het Nationaal Basisbestand Primaire Waterkeringen wordt een foutmelding gegeven.
 
 **Let op:** 
 - De separator in de csv files moet een komma zijn, en het teken voor decimalen een punt.
 - De m_eind en m_start van alle vakken moeten op elkaar aansluiten
 
-## Stap 2: Command-Line Interface voorbereiden 
-
-Deze stap kan je overslaan als Anaconda Prompt al open staat en de juiste enviroment al geactiveerd is. Dit is het geval als bijvoorbeeld zojuist de [installatie van de preprocssing is gemaakt](..\Installaties\VRUtiles.md).
-
-
-1. Open Anaconda Prompt
-
-![Opening_Anaconda_promt.PNG](Opening_Anaconda_promt.PNG)
-
-2. Ga naar de juiste directory waar je [preprocessing script staat](..\Installaties\VRUtils.md) met behulp van de volgende commandline. Vervang "C:/link_naar_ZIP_file_map" met de locatie van de map waar de ZIP file is uitgepakt.
-```
-cd C:/link_naar_ZIP_file_map
-```
-
-
-3. Activeer het environment van de preprocessor: 
-```
-conda activate .env/
-```
-**Let op:** als je het environment een andere naam hebt gegeven, vervang ".env" dan door de naam die je aan het environment gegeven hebt.
-
-## Stap 3: Script voor vakindeling runnen
-
-Via de **Command Line Interface (CLI)** kan de Preprocessing tool worden aangeroepen, zonder dat de gebruiker in de Python code hoeft te werken. Dit werkt als volgt:
-
+### Draaien van de workflow voor het genereren van een vakindeling
+De gebruiker kan de workflow als volgt aanroepen vanuit de Anaconda Prompt (activeer eerst environment):
 
 ```
 python -m preprocessing vakindeling {input arguments}
 ```
 
 
-Vervang nog "{input arguments}" met behorend inputs van een vakindeling: ```--input_naam1 "input_1" --input_naam2 "input_2" etc.```
+Vervang daarbij "{input arguments}" met de bijbehorend inputs van een vakindeling: ```--input_naam1 "input_1" --input_naam2 "input_2" etc.```
 
 
-De inputs van een vakindeling zijn: 
+De input parameters van de workflow vakindeling zijn: 
 
 | Input naam       	      | 	           | Beschrijving                                                                                                                                                                                 	                                                                                                                                                                                                                                                                                                                                               |
 |-------------------------|-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -91,8 +69,11 @@ Om meer informatie over de code te krijgen, gebruik je:
 python -m preprocessing vakindeling --traject_id “38-1” --vakindeling_csv “c:\VRM\test_vakindeling_workflow\Vakindeling 38-1.csv” --output_folder “c:\VRM\test_vakindeling_workflow\result\”
 ```
 
-### Mogelijke error
+### Mogelijke foutmeldingen
 
-Vaak gaat de script fout met de totale lengte van het traject. De code verwacht een lengte en de totale lengte in het excel moet overeen komen. 
+#### Foute trajectlengte
+Een foutmelding die vaak voorkomt is wanneer de totale lengte van het traject niet overeenkomt met het NWBP. Daarvoor wordt gekeken naar de hoogste M-waarde, en de lengte van de shape uit het Nationaal Basisbestand Primaire Waterkeringen. Deze moeten ongeveer (op de meter nauwkeurig) overeenkomen.
 
-*Let op*: de totale lengte moet niet te veel korte zijn dan de verwachte lengte maar mag zeker niet langer zijn. Dus altijd de verwachte lengte afronden naar beneden. 
+*Let op*: de totale lengte is bij voorkeur niet korter dan de verwachte trajectlengte, maar mag zeker niet langer zijn. Dus rond altijd de  verwachte lengte af naar beneden. 
+
+

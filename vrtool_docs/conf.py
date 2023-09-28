@@ -18,6 +18,8 @@ extensions = [
     'sphinx_rtd_theme',
     'sphinx.ext.autosectionlabel'
 ]
+source_suffix = ['.rst', '.md']
+
 
 templates_path = ['_templates']
 exclude_patterns = []

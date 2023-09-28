@@ -3,9 +3,15 @@
 Met de workflow ```maak_database``` kan een invoerdatabase voor de VRTOOL worden gegenereerd. Daarbij moeten de met de overige workflows gegenereerde bestanden als invoer worden opgegeven.
 
 ## Draaien van de workflow voor het genereren van een database
-Via de **Command Line Interface (CLI)** van Anaconda kan de Preprocessing tool worden aangeroepen, zie [werken met de preprocessor](werken_met_preprocessor.md). 
+Via de **Command Line Interface (CLI)** van Anaconda kan de Preprocessing tool worden aangeroepen, zie [werken met de preprocessor](werken_met_preprocessor.md). Voer daarna het volgende commando in:
 
-**Stap 4**:	Als je deze regel code typt, krijg je een beschrijving van de benodigde invoerparameters:
+
+```
+python -m preprocessing maak_database {invoerparameters}
+```
+
+Als je deze regel code typt, krijg je een beschrijving van de benodigde invoerparameters:
+
 ```
 python -m preprocessing maak_database --help
 ```
@@ -14,20 +20,20 @@ python -m preprocessing maak_database --help
 Onderstaande tabel beschrijft de verschillende invoerparameters.
 
 
-| Parameter     	 | 	Toelichting           |
-|---------|-------------|
-| --traject_id|Hier geef je aan om welk traject het gaat. Dit is een string, bijvoorbeeld ‘38-1’. Dit is verplichte invoer.|
-|--vakindeling_geojson |Link naar de GeoJSON met de vakindeling. Dit is verplichte invoer.|
-|--characteristic_profile_csv |Link naar de map met de CSV’s van de gegenereerde karakteristieke profielen. Dit is verplichte invoer.|
-|--building_csv_path |Link naar het CSV-bestand van de gegenereerde gebouwen. Dit is verplichte invoer.|
-|--output_dir |Link naar de map waar de resultaten (database-bestand en config.json) terecht moeten komen. Dit is verplichte invoer.|
-|--output_db_name |Hier vul je een naam in voor de te creëren database. Belangrijk om “.db” aan het einde toe te voegen. Voorbeeld: --output_db_name “resultaten_trajectX.db”. Dit is verplichte invoer.|
-|--hr_input_csv |Link naar de ingevulde CSV (HR_default.csv) die gebruikt is voor de HR sommen. Dit is verplichte invoer.|
-|--waterlevel_results_path |Link naar de map met de resultaten van de waterstandssommen. Dit is verplichte invoer.|
-|--overflow_results_path	|Link naar de map met de resultaten van de overslagsommen. Dit is verplichte invoer.|
-|--piping_path	|Link naar de ingevulde CSV voor piping (Piping_default.csv). Dit is verplichte invoer, indien piping een relevant faalmechanisme is voor dit traject en de CSV is ingevuld.|
-|--stability_path	|Link naar de ingevulde CSV voor stabiliteit (Stabiliteit_default.csv). Dit is verplichte invoer, indien stabiliteit een relevant faalmechanisme is voor dit traject en de CSV is ingevuld.|
-|--revetment_path	|Link naar de uitvoermap van de bekledingssommen. Dit is alleen verplichte invoer, indien bekleding een relevant faalmechanisme is voor dit traject en er invoer voor bekleding is gegenereerd.|
+| Input naam  	       |           |	Toelichting           |
+|----------------------|-----------|-------------|
+| --traject_id        | Verplicht |Hier geef je aan om welk traject het gaat. Dit is een string, bijvoorbeeld ‘38-1’.|
+| --vakindeling_geojson    | Verplicht | Link naar de GeoJSON met de vakindeling.                                                                                                                             |
+| --characteristic_profile_csv | Verplicht | Link naar de map met de CSV’s van de gegenereerde karakteristieke profielen.                                                                                        |
+| --building_csv_path    | Verplicht | Link naar het CSV-bestand van de gegenereerde gebouwen.                                                                                                            |
+| --output_dir        | Verplicht | Link naar de map waar de resultaten (database-bestand en config.json) terecht moeten komen.                                                                           |
+| --output_db_name      | Verplicht | Hier vul je een naam in voor de te creëren database. Belangrijk om “.db” aan het einde toe te voegen. Voorbeeld: --output_db_name “resultaten_trajectX.db”.         |
+| --hr_input_csv          | Verplicht | Link naar de ingevulde CSV (HR_default.csv) die gebruikt is voor de HR sommen.                                                                                       |
+| --waterlevel_results_path | Verplicht | Link naar de map met de resultaten van de waterstandssommen.                                                                                                         |
+| --overflow_results_path	  | Verplicht | Link naar de map met de resultaten van de overslagsommen.                                                                                                         |
+| --piping_path	        | Optioneel | Link naar de ingevulde CSV voor piping (Piping_default.csv). Dit is verplichte invoer, indien piping een relevant faalmechanisme is voor dit traject en de CSV is ingevuld.                    |
+| --stability_path	    | Optioneel | Link naar de ingevulde CSV voor stabiliteit (Stabiliteit_default.csv). Dit is verplichte invoer, indien stabiliteit een relevant faalmechanisme is voor dit traject en de CSV is ingevuld.     |
+| --revetment_path	     | Optioneel          | Link naar de uitvoermap van de bekledingssommen. Dit is alleen verplichte invoer, indien bekleding een relevant faalmechanisme is voor dit traject en er invoer voor bekleding is gegenereerd. |
 
 **Let op:** deze regel is vanuit elke directory te runnen, je hoeft dus niet eerst naar een bepaalde folder te gaan.
 

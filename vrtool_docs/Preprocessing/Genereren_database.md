@@ -1,25 +1,17 @@
 # Genereren database
 
-De input database kan worden gemaakt door de volgende stappen te volgen: 
+Met de workflow ```maak_database``` kan een invoerdatabase voor de VRTOOL worden gegenereerd. Daarbij moeten de met de overige workflows gegenereerde bestanden als invoer worden opgegeven.
 
-**Stap 1**: Open de Anaconda Prompt
+## Draaien van de workflow voor het genereren van een database
+Via de **Command Line Interface (CLI)** van Anaconda kan de Preprocessing tool worden aangeroepen, zie [werken met de preprocessor](werken_met_preprocessor.md). 
 
-**Stap 2**:	Ga naar de directory van de preprocessor met behulp van de volgende commandline. Vervang “C:/link_naar_ZIP_file_map” met de locatie van de map waar de ZIP file is uitgepakt:
-```
-cd C:/link_naar_ZIP_file_map
-```
-
-**Stap 3**:	Activeer het environment van de preprocessor (ervan uitgaande dat de environment reeds is geïnstalleerd):
-```
-conda activate .env
-```
 **Stap 4**:	Als je deze regel code typt, krijg je een beschrijving van de benodigde invoerparameters:
 ```
 python -m preprocessing maak_database --help
 ```
 
 
-De tabel beschrijft een voorbeeld van hoe de paden eruit kunnen zien.
+Onderstaande tabel beschrijft de verschillende invoerparameters.
 
 
 | Parameter     	 | 	Toelichting           |
@@ -37,9 +29,16 @@ De tabel beschrijft een voorbeeld van hoe de paden eruit kunnen zien.
 |--stability_path	|Link naar de ingevulde CSV voor stabiliteit (Stabiliteit_default.csv). Dit is verplichte invoer, indien stabiliteit een relevant faalmechanisme is voor dit traject en de CSV is ingevuld.|
 |--revetment_path	|Link naar de uitvoermap van de bekledingssommen. Dit is alleen verplichte invoer, indien bekleding een relevant faalmechanisme is voor dit traject en er invoer voor bekleding is gegenereerd.|
 
+**Let op:** deze regel is vanuit elke directory te runnen, je hoeft dus niet eerst naar een bepaalde folder te gaan.
 
 
-**Stap 5**:	Run de preprocessing voor maak_database, vul de juiste paden op de juiste plek in. Zie hier een voorbeeld waarbij de paden uit de tabel zijn gebruikt:
+### Voorbeeld invoer
+Onderstaand is een voorbeeld opgenomen met de paden uit de tabel:
 ```
 python -m preprocessing maak_database --traject_id "53-1" --vakindeling_geojson "c:\VRM\test_database\resultaten\preprocessing_vakindeling\Optie_1\Vakindeling_53-1.geojson" --characteristic_profile_csv "C:\VRM\test_database\resultaten\vakindeling1\selectie_profielen_1\selected_profiles.csv" --building_csv_path "C:\VRM\test_database\resultaten\vakindeling1\building_count_traject53-1.csv" --output_dir "C:\VRM\test_database\Output" --output_db_name "53-1_database.db" --hr_input_csv "C:\VRM\test_database\resultaten\HR_53-1.csv" --waterlevel_results_path "C:\VRM\test_database\resultaten\preprocessing_waterlevel" --overflow_results_path "c:\VRM\test_database\resultaten\preprocessing_overflow" --piping_path "c:\VRM\test_database\resultaten\Piping_53-1.csv" --stability_path "c:\VRM\test_database\resultaten\Stabiliteit_53-1.csv"
 ```
+
+### Mogelijke foutmeldingen
+
+#### Doorsnedenamen niet ingevuld in geojson
+In sommige gevallen wordt gedurende het werkproces eerst een ```geojson``` van de vakindeling gemaakt waarin de doorsnedenamen nog niet zijn opgegeven. Voor het koppelen van de informatie van mechanismen aan de dijkvakken moet deze kolommen gevuld zijn, en moet de ```geojson``` dus opnieuw worden gemaakt, met deze informatie.

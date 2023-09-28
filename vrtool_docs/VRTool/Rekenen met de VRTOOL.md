@@ -6,9 +6,9 @@
 * Welke workflows er zijn: assessment/measures en optimalisatie (deels overnemen uit bestaande )
 
 * Omgang met invoer/uitvoer:
-    * invoer is database uit preprocessor + bijbehorend config bestand. Daarin kunnen meer opties worden opgegeven, zie daarvoor hieronder.
+    * invoer is database uit preprocessor + bijbehorend config bestand (wordt automatisch gegenereerd via de ```maak_database``` workflow). Daarin kunnen meer opties worden opgegeven, zie daarvoor hieronder.
 
-* Belangrijke instellingen
+* Belangrijke instellingen: dit aanvullen na afronding van issue VRTOOL-261.
 
 * Advies werkwijze:
     * Draai eerst assessment workflow en controleer de invoer voor de beoordeling + projectie.

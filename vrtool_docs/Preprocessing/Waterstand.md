@@ -1,5 +1,5 @@
 # Waterstand
-Invoer voor de veiligheidsrendementberekening zijn met Hydra-Ring afgeleide waterstandsfrequentielijnen voor het jaar 2023 en 2100. Deze worden afgeleid middels een gestandaardiseerde workflow. 
+Invoer voor de veiligheidsrendementberekening zijn met Hydra-Ring afgeleide waterstandsfrequentielijnen voor het jaar 2023 en 2100. Deze worden afgeleid middels een gestandaardiseerde workflow. Vóór het draaien van deze workflow moet eerst een invoerbestand ingevult worden. 
 
 ## Stap 1: Vullen van het invoerbestand
 
@@ -23,9 +23,9 @@ Dit bestand heeft de volgende kolommen die ingevuld moeten worden:
 | hrlocation/hr_koppel	          | Verplicht   | Verwijzing naar de bijbehorende locatie in de hydraulische database. Hrlocation kan worden afgeleid o.b.v. hr_koppel.                                                                                                                                       	             |
 Belangrijk: bij het invullen van de gegevens moeten elke regel voor alle verplichte waarden een waarde bevatten anders kunnen de gegevens niet goed worden gelezen. De waarden in de kolom `doorsnede` moeten overeenkomen met die in de kolom `waterstand` in de [vakindeling](Vakindeling.md).
  
-## Stap 2: draaien van de workflow
+## Stap 2: Draaien van de waterstand workflow  
 
-Via de **Command Line Interface (CLI)** kan de workflow voor het uitvoeren van waterstandsberekeningen worden aangeroepen. Start daarvoor Anaconda Prompt, activeer het environment en voer het volgende commando in:
+Via de **Command Line Interface (CLI)** van Anaconda kan de Preprocessing tool worden aangeroepen, zie [werken met de preprocessor](werken_met_preprocessor.md). Voer daarna het volgende commando in:
 
 ```
 python -m preprocessing waterlevel {input arguments}”

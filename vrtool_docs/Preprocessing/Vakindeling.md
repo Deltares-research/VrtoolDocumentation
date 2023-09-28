@@ -1,6 +1,6 @@
 # Vakindeling
 
-De basis van een veiligheidsrendementberekening is één vakindeling die voor alle faalmechanismen gebruikt wordt. Hiervoor zijn drie stappen nodig. 
+De basis van een veiligheidsrendementberekening is één vakindeling die voor alle faalmechanismen gebruikt wordt. Vóór het draaien van deze workflow moet eerst een invoerbestand ingevult worden. 
 
 ## Stap 1: Excel invoerbestand invullen
 
@@ -33,30 +33,10 @@ Belangrijk bij het genereren van de vakindeling zijn met name de `m_start` en `m
 - De separator in de csv files moet een komma zijn, en het teken voor decimalen een punt.
 - De m_eind en m_start van alle vakken moeten op elkaar aansluiten
 
-## Stap 2: Command-Line Interface voorbereiden 
 
-Deze stap kan je overslaan als Anaconda Prompt al open staat en de juiste enviroment al geactiveerd is. Dit is het geval als bijvoorbeeld zojuist de [installatie van de preprocssing is gemaakt](..\Installaties\VRUtiles.md).
+## Stap 2: Draaien van vakindeling workflow
 
-
-1. Open Anaconda Prompt
-
-![Opening_Anaconda_promt.PNG](Opening_Anaconda_promt.PNG)
-
-2. Ga naar de juiste directory waar je [preprocessing script staat](..\Installaties\VRUtils.md) met behulp van de volgende commandline. Vervang "C:/link_naar_ZIP_file_map" met de locatie van de map waar de ZIP file is uitgepakt.
-```
-cd C:/link_naar_ZIP_file_map
-```
-
-
-3. Activeer het environment van de preprocessor: 
-```
-conda activate .env/
-```
-**Let op:** als je het environment een andere naam hebt gegeven, vervang ".env" dan door de naam die je aan het environment gegeven hebt.
-
-## Stap 3: Script voor vakindeling runnen
-
-Via de **Command Line Interface (CLI)** kan de Preprocessing tool worden aangeroepen, zonder dat de gebruiker in de Python code hoeft te werken. Dit werkt als volgt:
+Via de **Command Line Interface (CLI)** van Anaconda kan de Preprocessing tool worden aangeroepen, zie [werken met de preprocessor](werken_met_preprocessor.md). Voer daarna het volgende commando in:
 
 
 ```

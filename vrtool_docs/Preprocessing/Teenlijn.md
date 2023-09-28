@@ -6,15 +6,13 @@ De teenlijn wordt als GeoJSON-bestand weggeschreven naar een EPSG:28992, als tee
 
 *Let op*: Er is geen input Excel bij deze workflow.
 
-## Stap 1: Command-Line Interface voorbereiden
+## Stap 1: Script voor het afleiden van de teenlijn runnen  
+Via de **Command Line Interface (CLI)** van Anaconda kan de Preprocessing tool worden aangeroepen, zie [werken met de preprocessor](werken_met_preprocessor.md). Voer daarna het volgende commando in:
 
-Stap 1 is identiek aan de preprocessing van de [vakindeling](Vakindeling.md).
+```
+python -m preprocessing genereer_teenlijn {input arguments}
+```
 
-## Stap 2: Script voor het afleiden van de teenlijn runnen  
-De gebruiker kan de workflow als volgt aanroepen vanuit Anaconda Prompt (activeer eerst environment):
-```
-python -m preprocessing genereer_teenlijn
-```
 De invoer die nodig is voor het afleiden van de binnenteenlijn, is weergegeven de tabel hieronder.
 
 | Input naam       	    | 	           | Beschrijving                                                                                                                                                                                 	                                                                          |
@@ -34,6 +32,6 @@ python -m preprocessing genereer_teenlijn --help
 python -m preprocessing genereer_teenlijn --karakteristieke_profielen_map="c:\VRM\Gegevens 38-1\dijkinfo\characteristic_profiles" --profiel_info_csv="c:\VRM\Gegevens 38-1\dijkinfo\traject_profiles.csv" --teenlijn_map="c:\VRM\Gegevens 38-1\dijkinfo\teenlijn"
 ```
 
-## Stap 3: Controleren van de teenlijn
+## Stap 2: Controleren van de teenlijn
 
 De workflow eindigt hier. Reden hiervoor is dat de gebruiker nu de gelegenheid heeft om plots (figuren) van profielen te checken en bijbehorende teenlijn. Mochten teenpunten niet goed liggen, kan de teenlijn handmatig in GIS worden aangepast (er is nog niet getest of het toevoegen/verwijderen van punten aan het begin/eind/midden van de teenlijn tot problemen leidt in vervolgstappen). Een andere optie is om ‘slechte’ PNG figuren te verwijderen (waar de karakteristieke punten onjuist zijn afgeleid), alvorens deze workflow te draaien. De profielen waarvan de PNG is verwijderd, worden genegeerd. Let daarbij wel op dat grote stukken zonder punten tot een foute teenlijn kunnen leiden omdat aangenomen wordt dat de dijk recht loopt tussen opeenvolgende profielen.

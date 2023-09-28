@@ -16,9 +16,7 @@ Als je deze regel code typt, krijg je een beschrijving van de benodigde invoerpa
 python -m preprocessing maak_database --help
 ```
 
-
-Onderstaande tabel beschrijft de verschillende invoerparameters.
-
+Onderstaande tabel beschrijft de verschillende invoerparameters:
 
 | Input naam  	       |           |	Toelichting           |
 |----------------------|-----------|-------------|

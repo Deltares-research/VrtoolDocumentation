@@ -1,10 +1,13 @@
-VRTool
-=======================================
+***************************************************************************
+Uitvoeren van veiligheidsrendementberekeningen met de VRTOOL
+***************************************************************************
 
-*Tekst komt nog*
 
-.. toctree::
-   :maxdepth: 1
+.. include:: Opzet van een berekening.md
+    :parser: myst_parser.sphinx_
 
-   Running the VRTool
+.. include:: Rekenen met de VRTOOL.md
+    :parser: myst_parser.sphinx_
+
+
 

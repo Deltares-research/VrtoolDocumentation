@@ -1,6 +1,8 @@
 # VRTool
 
-Wanneer de repository van [VRUtils](..\Installaties\VRUtils.md) is geinstalleerd wordt daarmee automatisch de VRTool meegeinstalleerd. Wanneer de VRTool direct wordt geinstalleerd kan dit worden gedaan door deze direct te installeren met behulp van pip. Start daarvoor Anaconda Prompt en voer het volgende commando uit:
+Wanneer de repository van [VRUtils](..\Installaties\VRUtils.md) is geinstalleerd wordt daarmee automatisch de VRTool meegeinstalleerd. 
+
+Wanneer de wens is om alleen de VRTool te installeren kan dit worden gedaan met behulp van pip. Start daarvoor Anaconda Prompt en voer het volgende commando uit:
 
     pip install ..\..\vrtool-v0.0.4.whl
 

@@ -24,8 +24,8 @@ Dit bestand heeft de volgende kolommen die ingevul dmoeten worden:
 | kunstwerken 	     | Optioneel 	| *Optie om Kunstwerken te berekenen nog niet beschrikbaar*                                                                                                                                                                                                                                                                                                                     |
 | opmerkingen 	     | Optioneel 	| extra opmerkingen, moet altijd de laatste kolom zijn                                                                                                                                         	                                                                                                                                                                                |
 
-Voorbeeld van hoe kolom 'stabiliteit' ingevuld moet worden:
-![](Filling_Vakindeling_stbi.PNG)
+Voorbeeld van hoe kolom 'overslag' ingevuld moet worden:
+![](Filling_Vakindeling_overslag.PNG)
 
 Belangrijk bij het genereren van de vakindeling zijn met name de `m_start` en `m_eind` parameters. 
 

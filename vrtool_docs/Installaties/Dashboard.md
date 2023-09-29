@@ -1,4 +1,4 @@
-# Installatie van het Dashboard
+# Dashboard
 
 Het dashboard draait vooralsnog lokaal. Vaak zal dit zijn via een uitgeleverde zip-file met daarin alle benodigde bestanden.
  Volg de onderstaande stappen om het dashboard te installeren en te gebruiken:

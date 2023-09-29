@@ -29,7 +29,7 @@ Het invoerbestand `Vakindeling.csv` heeft de volgende kolommen die ingevuld moet
 In onderstaande figuur is met een voorbeeld voor stabiliteit geillustreerd hoe de koppeling tussen doorsnedes en de vakindeling moet worden ingevoerd. Merk op dat het mogelijk is voor meerdere vakken dezelfde doorsnede te hanteren (een voorbeeld in de figuur is de dikgedrukte doorsnede `ET_VOLDOET`). Deze hoeft dan slechts 1x genoemd te worden in het STBI invoerbestand, maar kan bij meerdere vakken worden gebruikt.
 ![](Filling_Vakindeling_stbi.PNG)
 
-Belangrijk bij het genereren van de vakindeling zijn met name de `m_start` en `m_eind` parameters. Wanneer de lengte van het traject teveel afwijkt van de lengte van de shape uit het Nationaal Basisbestand Primaire Waterkeringen wordt een foutmelding gegeven.
+Belangrijk bij het genereren van de vakindeling zijn met name de `m_start` en `m_eind` parameters. Wanneer de lengte van het traject (dus de maximale `m_eind`) teveel afwijkt (grofweg >1 meter) van de lengte van de shape uit het Nationaal Basisbestand Primaire Waterkeringen wordt een foutmelding gegeven.
 
 **Let op:** 
 - De separator in de csv files moet een komma zijn, en het teken voor decimalen een punt.

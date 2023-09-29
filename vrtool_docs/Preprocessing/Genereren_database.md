@@ -45,7 +45,7 @@ python -m preprocessing maak_database --traject_id "53-1" --vakindeling_geojson 
 ### Mogelijke foutmeldingen
 
 - Wanneer je ".db" vergeet te schrijven achter de output_db_name, krijg je een foutmelding. Het moet ```53-1_database.db``` en niet ```--output_db_name "53-1_database"```
-- Wanneer je opnieuw de workflow uitvoert moet de ```--output_dir``` leeg zijn. Verwijder daaroom eerst de vorige resultaten voordat je de som opnieuw draait.
+- Wanneer je opnieuw de workflow uitvoert moet de ```--output_dir``` leeg zijn. Verwijder daaroom eerst de vorige resultaten voordat je de workflow opnieuw draait.
 
 #### Doorsnedenamen niet ingevuld in geojson
 In sommige gevallen wordt gedurende het werkproces eerst een ```geojson``` van de vakindeling gemaakt waarin de doorsnedenamen nog niet zijn opgegeven. Voor het koppelen van de informatie van mechanismen aan de dijkvakken moet deze kolommen gevuld zijn, en moet de ```geojson``` dus opnieuw worden gemaakt, met deze informatie.

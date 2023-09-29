@@ -36,13 +36,16 @@ Onderstaande tabel beschrijft de verschillende invoerparameters:
 **Let op:** deze regel is vanuit elke directory te runnen, je hoeft dus niet eerst naar een bepaalde folder te gaan.
 
 
-### Voorbeeld invoer
+### Voorbeeld invoer (zonder bekleding)
 Onderstaand is een voorbeeld opgenomen met de paden uit de tabel:
 ```
 python -m preprocessing maak_database --traject_id "53-1" --vakindeling_geojson "c:\VRM\test_database\resultaten\preprocessing_vakindeling\Optie_1\Vakindeling_53-1.geojson" --characteristic_profile_csv "C:\VRM\test_database\resultaten\vakindeling1\selectie_profielen_1\selected_profiles.csv" --building_csv_path "C:\VRM\test_database\resultaten\vakindeling1\building_count_traject53-1.csv" --output_dir "C:\VRM\test_database\Output" --output_db_name "53-1_database.db" --hr_input_csv "C:\VRM\test_database\resultaten\HR_53-1.csv" --waterlevel_results_path "C:\VRM\test_database\resultaten\preprocessing_waterlevel" --overflow_results_path "c:\VRM\test_database\resultaten\preprocessing_overflow" --piping_path "c:\VRM\test_database\resultaten\Piping_53-1.csv" --stability_path "c:\VRM\test_database\resultaten\Stabiliteit_53-1.csv"
 ```
 
 ### Mogelijke foutmeldingen
+
+- Wanneer je ".db" vergeet te schrijven achter de output_db_name, krijg je een foutmelding. Het moet ```53-1_database.db``` en niet ```--output_db_name "53-1_database"```
+- Wanneer je opnieuw de workflow uitvoert moet de ```--output_dir``` leeg zijn. Verwijder daaroom eerst de vorige resultaten voordat je de som opnieuw draait.
 
 #### Doorsnedenamen niet ingevuld in geojson
 In sommige gevallen wordt gedurende het werkproces eerst een ```geojson``` van de vakindeling gemaakt waarin de doorsnedenamen nog niet zijn opgegeven. Voor het koppelen van de informatie van mechanismen aan de dijkvakken moet deze kolommen gevuld zijn, en moet de ```geojson``` dus opnieuw worden gemaakt, met deze informatie.

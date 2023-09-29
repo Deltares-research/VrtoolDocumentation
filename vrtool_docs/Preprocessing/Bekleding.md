@@ -1,5 +1,7 @@
 # Bekledingen
 
+Vóór het draaien van deze workflow moet eerst een invoerbestand ingevult worden. 
+
 ## Stap 1: Excel invoerbestand invullen
 
 De basis voor het genereren van de bekleding berekeningen is het invoerbestand `Bekleding_default.csv`. Dit bestand is terug te vinden in: ```.\VRSuiteUtils-main\preprocessing\default_files``` in de ZIP bestand die bij de installatie voor [preprocessing](..\Installaties\VRUtils.md) is gedownload.
@@ -21,13 +23,9 @@ Dit bestand heeft de volgende kolommen die ingevuld moeten worden:
 | waterstand_stap  	           | Verplicht 	 | Stapgrootte voor de waterstand in Q-variant berekeningen in meters. Dient voor definiëren van waterstandniveaus onder de waterstand bij de norm                                                                 |
 
 
-## Stap 2: Command-Line Interface voorbereiden
+## Stap 2: Draaien van de bekleding workflow 
 
-Stap 2 is identiek als de preprocessing van de [vakindeling](Vakindeling.md).
-
-## Stap 3: Script voor bekleding runnen  
-
-Via de **Command Line Interface (CLI)** kan de VR Preprocessing tool worden aangeroepen, zonder dat de gebruiker in de Python code hoeft te werken. Dit werkt als volgt:
+Via de **Command Line Interface (CLI)** van Anaconda kan de Preprocessing tool worden aangeroepen, zie [werken met de preprocessor](werken_met_preprocessor.md). Voer daarna het volgende commando in:
 
 ```
 python -m preprocessing bekleding {input arguments}”

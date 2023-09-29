@@ -5,16 +5,12 @@ De workflow ```tel_gebouwen``` gebruikt de binnenteen-GeoJSON en de vakindeling-
 
 *Let op*: Er is geen input excel bij deze workflow.
 
-## Stap 1: Command-Line Interface voorbereiden
-Stap 1 is identiek aan de preprocessing van de [vakindeling](Vakindeling.md).
+## Draai van bebouwing workflow
 
+Via de **Command Line Interface (CLI)** van Anaconda kan de Preprocessing tool worden aangeroepen, zie [werken met de preprocessor](werken_met_preprocessor.md). Voer daarna het volgende commando in:
 
-## Stap 2: Script voor het afleiden van de bebouwing runnen  
-
-
-De gebruiker kan de workflow als volgt aanroepen vanuit de Anaconda Prompt (activeer eerst environment):
 ```
-python -m preprocessing tel_gebouwen 
+python -m preprocessing tel_gebouwen {input arguments}
 ```
 Dit levert een csv bestand met voor 1 tot 50 meter uit de teenlijn het aantal objecten.
 

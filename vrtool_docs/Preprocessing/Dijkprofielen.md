@@ -11,8 +11,8 @@ In de map characteristic_profiles wordt voor elk AHN-profiel karakteristieke (kn
 
 *Let op*: Er is geen invoerbestand bij deze workflow.
 
-### Draaien van de workflow voor het bepalen van profielen en karakteristieke punten
-De gebruiker kan de workflow als volgt aanroepen vanuit de Anaconda Prompt (activeer eerst environment):
+### Draaien van de profielen en karakteristieke punten workflow
+Via de **Command Line Interface (CLI)** van Anaconda kan de Preprocessing tool worden aangeroepen, zie [werken met de preprocessor](werken_met_preprocessor.md). Voer daarna het volgende commando in:
 
 ```
 python -m preprocessing genereer_dijkprofielen {input_arguments}

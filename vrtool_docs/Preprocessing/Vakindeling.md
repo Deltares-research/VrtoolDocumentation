@@ -75,6 +75,8 @@ python -m preprocessing vakindeling --traject_id “38-1” --vakindeling_csv �
 #### Foute trajectlengte
 Een foutmelding die vaak voorkomt is wanneer de totale lengte van het traject niet overeenkomt met het NWBP. Daarvoor wordt gekeken naar de hoogste M-waarde, en de lengte van de shape uit het Nationaal Basisbestand Primaire Waterkeringen. Deze moeten ongeveer (op de meter nauwkeurig) overeenkomen.
 
-*Let op*: de totale lengte is bij voorkeur niet korter dan de verwachte trajectlengte, maar mag zeker niet langer zijn. Dus rond altijd de  verwachte lengte af naar beneden. 
+*Let op*: de totale trajectlengte moet afgerond op 5 cijfers (dus bij een lengte van >10000 meter afgerond op 1 meter) niet korter zijn dan de verwachte trajectlengte, maar mag zeker niet langer zijn. Dus rond altijd de verwachte lengte af naar beneden. Onderstaand is een voorbeeld van een foutmelding weergegeven wanneer de lengte in vakindeling.csv te kort is. Wanneer er een klein verschil is in trajectlengte is het advies om de waarde op basis van de foutmelding in het csv-bestand aan te passen: een meter meer of minder heeft geen invloed op de resultaten. Bij grote verschillen is wel raadzaam om de ligging van de vakken op basis van het NBPW en de shape die als bron voor de M-waarden is gebruikt te vergelijken.
+
+![](te_kort_traject.PNG)
 
 

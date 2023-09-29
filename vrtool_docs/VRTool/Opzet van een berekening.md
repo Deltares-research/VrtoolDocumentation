@@ -1,6 +1,6 @@
 # Opzet van een berekening
 
-Bij een veiligheidsrendementmethode kijken we voor een periode van 100 jaar vooruit naar de kosten en baten van dijkversterkingsmaatregelen.
+Bij een berekening met de veiligheidsrendementmethode kijken we voor een periode van 100 jaar vooruit naar de kosten en baten van dijkversterkingsmaatregelen.
 
 Een veiligheidsrendementberekening bestaat uit 3 stappen, die individueel of gezamenlijk kunnen worden aangeroepen. 
 

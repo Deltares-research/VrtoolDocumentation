@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Genereren database &mdash; vrtool_docs  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Uitvoeren van veiligheidsrendementberekeningen met de VRTOOL" href="../VRTool/index.html" />
+    <link rel="prev" title="Afleiden bebouwing" href="Bebouwing.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            vrtool_docs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Installaties/index.html">Installaties</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Preprocessing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="werken_met_preprocessor.html">Werken met de preprocessor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#vakindeling">1. Vakindeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#gegevens-faalmechanismen">2. Gegevens faalmechanismen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#algemene-gegevens">3. Algemene gegevens</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#genereren-database">4. Genereren database</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Genereren database</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#draaien-van-de-workflow-voor-het-genereren-van-een-database">Draaien van de workflow voor het genereren van een database</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../VRTool/index.html">Uitvoeren van veiligheidsrendementberekeningen met de VRTOOL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Postprocessing/index.html">Werken met het dashboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Achtergronden/index.html">Achtergronden</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">vrtool_docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Preprocessing</a></li>
+      <li class="breadcrumb-item active">Genereren database</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/Preprocessing/Genereren_database.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="genereren-database">
+<h1>Genereren database<a class="headerlink" href="#genereren-database" title="Link to this heading"></a></h1>
+<p>Met de workflow <code class="docutils literal notranslate"><span class="pre">maak_database</span></code> kan een invoerdatabase voor de VRTOOL worden gegenereerd. Daarbij moeten de met de overige workflows gegenereerde bestanden als invoer worden opgegeven.</p>
+<section id="draaien-van-de-workflow-voor-het-genereren-van-een-database">
+<h2>Draaien van de workflow voor het genereren van een database<a class="headerlink" href="#draaien-van-de-workflow-voor-het-genereren-van-een-database" title="Link to this heading"></a></h2>
+<p>Via de <strong>Command Line Interface (CLI)</strong> van Anaconda kan de Preprocessing tool worden aangeroepen, zie <a class="reference internal" href="werken_met_preprocessor.html"><span class="std std-doc">werken met de preprocessor</span></a>. Voer daarna het volgende commando in:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">preprocessing</span> <span class="n">maak_database</span> <span class="p">{</span><span class="n">invoerparameters</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Als je deze regel code typt, krijg je een beschrijving van de benodigde invoerparameters:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">preprocessing</span> <span class="n">maak_database</span> <span class="o">--</span><span class="n">help</span>
+</pre></div>
+</div>
+<p>Onderstaande tabel beschrijft de verschillende invoerparameters:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Input naam</p></th>
+<th class="head"><p></p></th>
+<th class="head"><p>Toelichting</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>–traject_id</p></td>
+<td><p>Verplicht</p></td>
+<td><p>Hier geef je aan om welk traject het gaat. Dit is een string, bijvoorbeeld ‘38-1’.</p></td>
+</tr>
+<tr class="row-odd"><td><p>–vakindeling_geojson</p></td>
+<td><p>Verplicht</p></td>
+<td><p>Link naar de GeoJSON met de vakindeling.</p></td>
+</tr>
+<tr class="row-even"><td><p>–characteristic_profile_csv</p></td>
+<td><p>Verplicht</p></td>
+<td><p>Link naar de map met de CSV’s van de gegenereerde karakteristieke profielen.</p></td>
+</tr>
+<tr class="row-odd"><td><p>–building_csv_path</p></td>
+<td><p>Verplicht</p></td>
+<td><p>Link naar het CSV-bestand van de gegenereerde gebouwen.</p></td>
+</tr>
+<tr class="row-even"><td><p>–output_dir</p></td>
+<td><p>Verplicht</p></td>
+<td><p>Link naar de map waar de resultaten (database-bestand en config.json) terecht moeten komen.</p></td>
+</tr>
+<tr class="row-odd"><td><p>–output_db_name</p></td>
+<td><p>Verplicht</p></td>
+<td><p>Hier vul je een naam in voor de te creëren database. Belangrijk om “.db” aan het einde toe te voegen. Voorbeeld: –output_db_name “resultaten_trajectX.db”.</p></td>
+</tr>
+<tr class="row-even"><td><p>–hr_input_csv</p></td>
+<td><p>Verplicht</p></td>
+<td><p>Link naar de ingevulde CSV (HR_default.csv) die gebruikt is voor de HR sommen.</p></td>
+</tr>
+<tr class="row-odd"><td><p>–waterlevel_results_path</p></td>
+<td><p>Verplicht</p></td>
+<td><p>Link naar de map met de resultaten van de waterstandssommen.</p></td>
+</tr>
+<tr class="row-even"><td><p>–overflow_results_path</p></td>
+<td><p>Verplicht</p></td>
+<td><p>Link naar de map met de resultaten van de overslagsommen.</p></td>
+</tr>
+<tr class="row-odd"><td><p>–piping_path</p></td>
+<td><p>Optioneel</p></td>
+<td><p>Link naar de ingevulde CSV voor piping (Piping_default.csv). Dit is verplichte invoer, indien piping een relevant faalmechanisme is voor dit traject en de CSV is ingevuld.</p></td>
+</tr>
+<tr class="row-even"><td><p>–stability_path</p></td>
+<td><p>Optioneel</p></td>
+<td><p>Link naar de ingevulde CSV voor stabiliteit (Stabiliteit_default.csv). Dit is verplichte invoer, indien stabiliteit een relevant faalmechanisme is voor dit traject en de CSV is ingevuld.</p></td>
+</tr>
+<tr class="row-odd"><td><p>–revetment_path</p></td>
+<td><p>Optioneel</p></td>
+<td><p>Link naar de uitvoermap van de bekledingssommen. Dit is alleen verplichte invoer, indien bekleding een relevant faalmechanisme is voor dit traject en er invoer voor bekleding is gegenereerd.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Let op:</strong> deze regel is vanuit elke directory te runnen, je hoeft dus niet eerst naar een bepaalde folder te gaan.</p>
+<section id="voorbeeld-invoer-zonder-bekleding">
+<h3>Voorbeeld invoer (zonder bekleding)<a class="headerlink" href="#voorbeeld-invoer-zonder-bekleding" title="Link to this heading"></a></h3>
+<p>Onderstaand is een voorbeeld opgenomen met de paden uit de tabel:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">preprocessing</span> <span class="n">maak_database</span> <span class="o">--</span><span class="n">traject_id</span> <span class="s2">&quot;53-1&quot;</span> <span class="o">--</span><span class="n">vakindeling_geojson</span> <span class="s2">&quot;c:\VRM</span><span class="se">\t</span><span class="s2">est_database</span><span class="se">\r</span><span class="s2">esultaten\preprocessing_vakindeling\Optie_1\Vakindeling_53-1.geojson&quot;</span> <span class="o">--</span><span class="n">characteristic_profile_csv</span> <span class="s2">&quot;C:\VRM</span><span class="se">\t</span><span class="s2">est_database</span><span class="se">\r</span><span class="s2">esultaten</span><span class="se">\v</span><span class="s2">akindeling1\selectie_profielen_1\selected_profiles.csv&quot;</span> <span class="o">--</span><span class="n">building_csv_path</span> <span class="s2">&quot;C:\VRM</span><span class="se">\t</span><span class="s2">est_database</span><span class="se">\r</span><span class="s2">esultaten</span><span class="se">\v</span><span class="s2">akindeling1</span><span class="se">\b</span><span class="s2">uilding_count_traject53-1.csv&quot;</span> <span class="o">--</span><span class="n">output_dir</span> <span class="s2">&quot;C:\VRM</span><span class="se">\t</span><span class="s2">est_database\Output&quot;</span> <span class="o">--</span><span class="n">output_db_name</span> <span class="s2">&quot;53-1_database.db&quot;</span> <span class="o">--</span><span class="n">hr_input_csv</span> <span class="s2">&quot;C:\VRM</span><span class="se">\t</span><span class="s2">est_database</span><span class="se">\r</span><span class="s2">esultaten\HR_53-1.csv&quot;</span> <span class="o">--</span><span class="n">waterlevel_results_path</span> <span class="s2">&quot;C:\VRM</span><span class="se">\t</span><span class="s2">est_database</span><span class="se">\r</span><span class="s2">esultaten\preprocessing_waterlevel&quot;</span> <span class="o">--</span><span class="n">overflow_results_path</span> <span class="s2">&quot;c:\VRM</span><span class="se">\t</span><span class="s2">est_database</span><span class="se">\r</span><span class="s2">esultaten\preprocessing_overflow&quot;</span> <span class="o">--</span><span class="n">piping_path</span> <span class="s2">&quot;c:\VRM</span><span class="se">\t</span><span class="s2">est_database</span><span class="se">\r</span><span class="s2">esultaten\Piping_53-1.csv&quot;</span> <span class="o">--</span><span class="n">stability_path</span> <span class="s2">&quot;c:\VRM</span><span class="se">\t</span><span class="s2">est_database</span><span class="se">\r</span><span class="s2">esultaten\Stabiliteit_53-1.csv&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="mogelijke-foutmeldingen">
+<h3>Mogelijke foutmeldingen<a class="headerlink" href="#mogelijke-foutmeldingen" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Wanneer je “.db” vergeet te schrijven achter de output_db_name, krijg je een foutmelding. Het moet <code class="docutils literal notranslate"><span class="pre">53-1_database.db</span></code> en niet <code class="docutils literal notranslate"><span class="pre">--output_db_name</span> <span class="pre">&quot;53-1_database&quot;</span></code></p></li>
+<li><p>Wanneer je opnieuw de workflow uitvoert moet de <code class="docutils literal notranslate"><span class="pre">--output_dir</span></code> leeg zijn. Verwijder daaroom eerst de vorige resultaten voordat je de workflow opnieuw draait.</p></li>
+</ul>
+<section id="doorsnedenamen-niet-ingevuld-in-geojson">
+<h4>Doorsnedenamen niet ingevuld in geojson<a class="headerlink" href="#doorsnedenamen-niet-ingevuld-in-geojson" title="Link to this heading"></a></h4>
+<p>In sommige gevallen wordt gedurende het werkproces eerst een <code class="docutils literal notranslate"><span class="pre">geojson</span></code> van de vakindeling gemaakt waarin de doorsnedenamen nog niet zijn opgegeven. Voor het koppelen van de informatie van mechanismen aan de dijkvakken moet deze kolommen gevuld zijn, en moet de <code class="docutils literal notranslate"><span class="pre">geojson</span></code> dus opnieuw worden gemaakt, met deze informatie.</p>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Bebouwing.html" class="btn btn-neutral float-left" title="Afleiden bebouwing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../VRTool/index.html" class="btn btn-neutral float-right" title="Uitvoeren van veiligheidsrendementberekeningen met de VRTOOL" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Deltares.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

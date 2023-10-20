@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Afleiden bebouwing &mdash; vrtool_docs  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Genereren database" href="Genereren_database.html" />
+    <link rel="prev" title="Afleiden teenlijn" href="Teenlijn.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            vrtool_docs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Installaties/index.html">Installaties</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Preprocessing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="werken_met_preprocessor.html">Werken met de preprocessor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#vakindeling">1. Vakindeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#gegevens-faalmechanismen">2. Gegevens faalmechanismen</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#algemene-gegevens">3. Algemene gegevens</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Dijkprofielen.html"> Afleiden dijkprofielen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Teenlijn.html"> Afleiden teenlijn</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#"> Afleiden bebouwing per dijkvak</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#draai-van-bebouwing-workflow">Draai van bebouwing workflow</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#genereren-database">4. Genereren database</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../VRTool/index.html">Uitvoeren van veiligheidsrendementberekeningen met de VRTOOL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Postprocessing/index.html">Werken met het dashboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Achtergronden/index.html">Achtergronden</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">vrtool_docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Preprocessing</a></li>
+      <li class="breadcrumb-item active">Afleiden bebouwing</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/Preprocessing/Bebouwing.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="afleiden-bebouwing">
+<h1>Afleiden bebouwing<a class="headerlink" href="#afleiden-bebouwing" title="Link to this heading"></a></h1>
+<p>De workflow <code class="docutils literal notranslate"><span class="pre">tel_gebouwen</span></code> gebruikt de binnenteen-GeoJSON en de vakindeling-GeoJSON als invoerbestand. Daarnaast is een Geopackage bestand nodig van de BAG (Basis Administratie Gebouwen). Op dit moment is het nog niet mogelijk meer dan 1000 gebouwen rechtstreeks uit de BAG te halen via internet, daar zit een limiet op van max. 1000 objecten. Daarom moet de Geopackage van de BAG direct naar een lokale schijf worden gedownload. Dat kan hier: https://service.pdok.nl/lv/bag/atom/bag.xml (Let er op dat je de Geopackage download).</p>
+<p><em>Let op</em>: Er is geen input excel bij deze workflow.</p>
+<section id="draai-van-bebouwing-workflow">
+<h2>Draai van bebouwing workflow<a class="headerlink" href="#draai-van-bebouwing-workflow" title="Link to this heading"></a></h2>
+<p>Via de <strong>Command Line Interface (CLI)</strong> van Anaconda kan de Preprocessing tool worden aangeroepen, zie <a class="reference internal" href="werken_met_preprocessor.html"><span class="std std-doc">werken met de preprocessor</span></a>. Voer daarna het volgende commando in:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">preprocessing</span> <span class="n">tel_gebouwen</span> <span class="p">{</span><span class="nb">input</span> <span class="n">arguments</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Dit levert een csv bestand met voor 1 tot 50 meter uit de teenlijn het aantal objecten.</p>
+<p>De invoerparameters voor de workflow zijn weergegeven in de tabel hieronder.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Input naam</p></th>
+<th class="head"><p></p></th>
+<th class="head"><p>Beschrijving</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>–traject_id</p></td>
+<td><p>Verplicht</p></td>
+<td><p>Hier geef je aan om welk traject het gaat. Dit is een string, bijvoorbeeld ‘38-1’.</p></td>
+</tr>
+<tr class="row-odd"><td><p>–teenlijn_geojson</p></td>
+<td><p>Verplicht</p></td>
+<td><p>Hier geef je het pad naar de GeoJSON van de gegenereerde teenlijn. Deze GeoJSON zou teenlijn.geojson moeten heten, tenzij de gebruiker de naam heeft aangepast.</p></td>
+</tr>
+<tr class="row-even"><td><p>–vakindeling_geojson</p></td>
+<td><p>Verplicht</p></td>
+<td><p>Hier geef je het pad naar de GeoJSON van de gegenereerde vakindeling.</p></td>
+</tr>
+<tr class="row-odd"><td><p>–uitvoer_map</p></td>
+<td><p>Verplicht</p></td>
+<td><p>Hier geef je de het pad naar de map waar de uitvoer naartoe moet worden geschreven.</p></td>
+</tr>
+<tr class="row-even"><td><p>–gebouwen_geopackage</p></td>
+<td><p>Verplicht</p></td>
+<td><p>Hier geef je de het pad naar de geopackage van de BAG. Dit bestand is te downloaden via https://service.pdok.nl/lv/bag/atom/bag.xml. Dit is nodig, omdat de BAG het niet toelaat alle objecten vanuit het script te downloaden. Het aantal objecten is gelimiteerd tot 1000.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Om meer informatie over de code te krijgen, gebruik je:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">preprocessing</span> <span class="n">tel_gebouwen</span> <span class="o">--</span><span class="n">help</span>
+</pre></div>
+</div>
+<section id="voorbeeld-invoer">
+<h3>Voorbeeld invoer:<a class="headerlink" href="#voorbeeld-invoer" title="Link to this heading"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">preprocessing</span> <span class="n">tel_gebouwen</span> <span class="o">--</span><span class="n">traject_id</span><span class="o">=</span><span class="s2">&quot;38-1&quot;</span> <span class="o">--</span><span class="n">teenlijn_geojson</span><span class="o">=</span><span class="s2">&quot;c:\VRM\Gegevens 38-1\profiles</span><span class="se">\t</span><span class="s2">eenlijn</span><span class="se">\t</span><span class="s2">eenlijn.geojson&quot;</span> <span class="o">--</span><span class="n">vakindeling_geojson</span><span class="o">=</span><span class="s2">&quot;c:\VRM</span><span class="se">\t</span><span class="s2">est_vakindeling_workflow</span><span class="se">\r</span><span class="s2">esult\Vakindeling_38-1.geojson&quot;</span> <span class="o">--</span><span class="n">uitvoer_map</span><span class="o">=</span><span class="s2">&quot;c:\VRM\Gegevens 38-1\profiles</span><span class="se">\t</span><span class="s2">eenlijn&quot;</span> <span class="o">--</span><span class="n">gebouwen_geopackage</span><span class="o">=</span><span class="s2">&quot;c://GIS//Achtergrond//bag-light.gpkg&quot;</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Teenlijn.html" class="btn btn-neutral float-left" title="Afleiden teenlijn" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Genereren_database.html" class="btn btn-neutral float-right" title="Genereren database" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Deltares.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

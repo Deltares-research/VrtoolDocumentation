@@ -7,13 +7,13 @@ Bij de directe invoer voor binnenwaartse macrostabiliteit moet de betrouwbaarhei
 
 In sommige gevallen zijn verschillende scenario’s mogelijk. In dat geval is het mogelijk zowel de geaggregeerde β over alle scenario’s, als de β per scenario (incl. scenariokans) in te voeren.
 
-## D-stability
+## D-Stability
 Wanneer een *.stix file beschikbaar is kan deze worden gebruikt om de stabiliteitsberekening opnieuw te maken/aan te passen. 
-Dit moet dan voor elk scenario (indien van toepassing) worden gedaan. 
-Eventuele aanpassingen kunnen zijn:
-- De geometrie:
-    - N.a.v. versterking (bermverbreding/kruinverhoging)
-    - N.a.v. tijdsafhankelijke verandering van de geometrie (daling kruin en/of teen)
-- Toevoegen van constructies in de vorm van forbidden lines (aannames is dat constructie dan stijf is en voldoende sterk).
 
-Mogelijk wordt in de toekomst de mogelijkheid toegevoegd om de buitenwaterstand en bijbehorend freatisch vlak aan te passen.
+Binnen de VRTOOL wordt gebruik gemaakt van D-Stability versie 2022.01.2. De stix files moeten daarmee compatibel zijn. Wanneer deze in een oudere versie van D-Stability zijn gemaakt dan moeten ze in de regel eerst worden geopend in D-Stability, en zonder wijzigingen worden opgeslagen. Dit moet voor elk scenario (indien van toepassing) wat wordt meegenomen in de berekening worden gedaan. 
+
+In de VRTOOL worden parametrisch aanpassingen gedaan om versterkingen door te rekenen:
+- Voor grondversterkingen wordt de geometrie aangepast o.b.v. de gewenste kruinverhoging en bermverbreding.
+- Voor stabiliteitsschermen wordt een forbidden line toegevoegd bij de teen. Aanname is dat constructie stijf en voldoende sterk is.
+
+Momenteel zijn aanpassingen van de buitenwaterstand en bijbehorend freatisch nog niet mogelijk. De betrouwbaarheid blijft dus, net als bij directe invoer constant in de tijd. 

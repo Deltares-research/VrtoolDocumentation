@@ -12,8 +12,6 @@ Om de installatie goed te doorlopen is het nodig om Anaconda of Miniconda te ins
 
 Download de bestanden via deze [link](sharepoint.nl). Dit is een zip-file met daarin verschillende bestanden die nodig zijn voor de installatie en het gebruik van de VRTOOL .
 
-
-
  2. Pak het zip-bestand uit en zet de ```tar.gz``` bestanden in een lege folder (we gebruiken even C:\DashboardFiles als voorbeeld)
 
 **VRTOOL & Dashboard**

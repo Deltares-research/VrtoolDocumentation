@@ -50,7 +50,7 @@ html_theme_options = {
     "icon_links": [
         {
             "name": "GitHub",
-            "url": "https://github.com/Deltares/hydromt",  # required
+            "url": "https://github.com/Deltares/Veiligheidsrendement",  # required
             "icon": "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg",
             "type": "url",
         },
@@ -63,10 +63,5 @@ html_theme_options = {
     ],
     "logo": {
         "text": "Veiligheidsrendement",
-    },
-    "navbar_end": ["navbar-icon-links", "version-switcher"],  # remove dark mode switch
-    "switcher": {
-        "json_url": "https://raw.githubusercontent.com/Deltares/hydromt/gh-pages/switcher.json",
-        "version_match": "0.0",
     },
 }

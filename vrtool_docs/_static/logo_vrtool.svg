@@ -22,7 +22,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title>il_icon hydromt_ I1000642-002_rs_v3</dc:title>
+        <dc:title>icon veiligheidsrendement</dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -563,7 +563,7 @@
     </marker>
   </defs>
   <title
-     id="title6">il_icon hydromt_ I1000642-002_rs_v3</title>
+     id="title6">icon veiligheidsrendement</title>
   <circle
      style="fill:#080c80;fill-opacity:1"
      id="circle8"

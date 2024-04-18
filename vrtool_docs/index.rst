@@ -4,7 +4,7 @@ Versterkingsaanpak vanuit Veiligheidsrendement
 
 Wat doen we in het project?
 ----------------------------
-Versterkingsaanpak vanuit Veiligheidsrendement is een project in het kader van de HWBP kennis & innovatieagenda. Binnen het project werken waterschappen en Deltares aan de toepassing van de veiligheidsrendemetnmethode voor het vertalen van beoordelingsresultaten naar een versterkingsopgave. Daarmee het een bouwsteen voor het programmeren van dijkversterkingsprojecten, en geeft het in een vroeg stadium inzicht in de te verwachten opgave.
+Versterkingsaanpak vanuit Veiligheidsrendement is een project in het kader van de HWBP kennis & innovatieagenda. Binnen het project werken waterschappen en Deltares aan de toepassing van de veiligheidsrendementmethode voor het vertalen van beoordelingsresultaten naar een versterkingsopgave. Daarmee het een bouwsteen voor het programmeren van dijkversterkingsprojecten, en geeft het in een vroeg stadium inzicht in de te verwachten opgave.
 
 .. image:: logos_deelnemers.png
 

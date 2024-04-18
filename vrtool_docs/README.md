@@ -1,11 +1,11 @@
 Versterkingsaanpak vanuit Veiligheidsrendement
-============================================
+====================================================
 
 Wat doen we in het project?
 -------------------------------------------
 Versterkingsaanpak vanuit Veiligheidsrendement is een project in het kader van de HWBP kennis & innovatieagenda. Binnen het project werken waterschappen en Deltares aan de toepassing van de veiligheidsrendemetnmethode voor het vertalen van beoordelingsresultaten naar een versterkingsopgave. Daarmee het een bouwsteen voor het programmeren van dijkversterkingsprojecten, en geeft het in een vroeg stadium inzicht in de te verwachten opgave.
 
-![Deelnemers project](logos_deelnemers.PNG) 
+![logos_deelnemers](logos_deelnemers.png) 
 
 Waarom veiligheidsrendement?
 -------------------------------------------
@@ -24,3 +24,8 @@ De tooling voor veiligheidsrendement is ontwikkeld in Python en bestaat uit 3 on
 * Het analyseren van resultaten wordt gedaan middels een dashboard. 
 
 Geadviseerd wordt om de [installatieinstructies](Installaties/index.rst) zorgvuldig te doorlopen en daarna de [tutorial](Tutorial/index.rst) te volgen. Dit geeft aan de hand van een voorbeeldcase snel inzicht in de werkwijze en welke resultaten te verwachten zijn. Om daarna met een eigen casus aan de slag te gaan kunnen de instructies en tutorial voor de preprocessing worden gebruikt. 
+
+Voor vragen kan contact worden opgenomen met Deltares:
+* Wouter Jan Klerk (wouterjan.klerk@deltares.nl)
+* Stephan Rikkert (stephan.rikkert@deltares.nl)
+* Eduard Jas (eduard.jas@deltares.nl)

@@ -29,6 +29,7 @@ exclude_patterns = []
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'pydata_sphinx_theme'
+html_logo = '_static/logo_vrtool.svg'
 html_static_path = ['_static']
 # html_css_files = ['css/custom.css']
 
@@ -49,7 +50,7 @@ html_theme_options = {
     "use_edit_page_button": True,
     "icon_links": [
         {
-            "name": "GitHub",
+            "name": "VRTOOL",
             "url": "https://github.com/Deltares/Veiligheidsrendement",  # required
             "icon": "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg",
             "type": "url",
@@ -62,6 +63,6 @@ html_theme_options = {
         },
     ],
     "logo": {
-        "text": "Veiligheidsrendement",
-    },
+        "text": "Veiligheidsrendement",    
+        },
 }

@@ -4,10 +4,15 @@ channels:
   - defaults
 dependencies:
   - conda-forge::python=3.10
-  - conda-forge::sphinx
+  # Declared explicitly through pip due to 7.3.7 not being yet present in conda-forge
+  # - conda-forge::sphinx
+  - conda-forge::pip
+  - pip:
+    - sphinx>=7.3.7
   - conda-forge::jupytext
   - conda-forge::nbsphinx
   - conda-forge::myst-parser
   - conda-forge::sphinx-book-theme
   - conda-forge::sphinx-copybutton
   - conda-forge::sphinx_rtd_theme
+  

@@ -15,7 +15,6 @@ author = 'Carles S. Soriano Perez'
 
 extensions = [
     'myst_parser',
-    'sphinx_rtd_theme',
     'sphinx.ext.autosectionlabel'
 ]
 source_suffix = ['.rst', '.md']
@@ -29,9 +28,10 @@ exclude_patterns = []
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'pydata_sphinx_theme'
+html_logo = '_static/logo_vrtool.svg'
 html_static_path = ['_static']
-html_css_files = ['css/custom.css']
+# html_css_files = ['css/custom.css']
 
 
 html_context = {
@@ -41,4 +41,28 @@ html_context = {
     "github_version": "main",  # FIXME
     "doc_path": "docs",
     "default_mode": "light",
+}
+
+html_css_files = ["css/theme-deltares.css"]
+html_theme_options = {
+    "show_nav_level": 2,
+    "navbar_align": "content",
+    "use_edit_page_button": True,
+    "icon_links": [
+        {
+            "name": "VRTOOL",
+            "url": "https://github.com/Deltares/Veiligheidsrendement",  # required
+            "icon": "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg",
+            "type": "url",
+        },
+        {
+            "name": "Deltares",
+            "url": "https://www.deltares.nl/en/",
+            "icon": "_static/deltares-blue.svg",
+            "type": "local",
+        },
+    ],
+    "logo": {
+        "text": "Veiligheidsrendement",    
+        },
 }

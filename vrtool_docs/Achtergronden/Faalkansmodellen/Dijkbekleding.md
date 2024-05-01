@@ -1,4 +1,6 @@
-# Preprocessing dijkbekleding
+# Betrouwbaarheid dijkbekleding
+
+**NB: dit gedeelte is niet up-to-date en beschrijft alleen de preprocessing.**
 
 Als onderdeel van de preprocessing worden de volgende stappen uitgevoerd:
 - Uitvoeren van Q-variant berekeningen

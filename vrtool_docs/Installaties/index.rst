@@ -49,5 +49,3 @@ Voor het starten van het dashboard volg je de volgende stappen:
 1. Run ``python -m src.index`` om het dashboard te starten. 
 
 2.  In je commandline verschijnt nu een url en wordt het dashboard automatisch geopend in je browser. Mocht dit niet gebeuren, kopieer dan de url (http://127.0.0.1:8050/) en open deze in je browser. Het Dashboard wordt gestart.
-
-

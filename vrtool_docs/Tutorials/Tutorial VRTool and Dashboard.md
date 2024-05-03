@@ -53,12 +53,16 @@ afhankelijk van de folder waarin je uitpakt moet je de padnamen in het ``config.
 Uiteindelijk zit je Dashboard er als volgt uit:
 ![](voorbeeldDashboard.png)
 
-**Oefenvraag:**
-```
-Welk dijkvak heeft in 2050 voor de beoordeling een Beta van 3.5 voor stabiliteit?
+**Oefenvraag dashboard**
 
-Antwoord: Dijkvak 24
-```
+>Welk dijkvak heeft in 2050 voor de beoordeling een Beta van 3.5 voor stabiliteit?
+    <details>
+    <summary>klik hier om het antwoord te zien</summary>
+     <p style="background-color: blackgrey; color: black;">dijkvak 24.</p>
+    </details>
+
+
+
 In [Werken met het dashboard](../Gebruikershandleiding/Postprocessing/index.rst) volgt een gedetaileerde uitleg van de verschillende tabbladen in het dashboard en hoe er verder mee gewerkt kan worden.
 
 

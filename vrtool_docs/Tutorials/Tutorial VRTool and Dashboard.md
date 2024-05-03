@@ -7,7 +7,7 @@ Voor deze tutorial wordt gebruikt gemaakt van een casus (Dijktraject 24-3).
 
 **Rekenen met VRTool** 
 
-1. Download de bestanden via deze `link <https://www.sharepoint.nl>`_ en sla ze op in de folder ``"C:\Veiligheidsrendement\Tutorial"`` (gebruik hiervoor dezelfde folder die tijdens de [Installaties](vrtool_docs\Installaties\index.rst) is gemaakt).
+1. Download de bestanden via deze `link <https://www.sharepoint.nl>`_ en sla ze op in de folder ``"C:\Veiligheidsrendement\Tutorial"`` (gebruik hiervoor dezelfde folder die tijdens de [Installaties](../Installaties/index.rst) is gemaakt).
 
 In de map staan nu de volgende bestanden:
 - ``config.json``: Met instellingen van de berekening
@@ -38,15 +38,25 @@ vervang ``{MODEL_DIRECTORY}`` met het path naar de database (.db) en config best
 
 Nu de VRTool verschillende berekeningen heeft gedaan kunnen we de rekenresultaten laten zien met het Dashboard.
 
-3.  In Anaconda, run ``python -m src.index`` om het dashboard te starten. Het dashboard verschijnt nu automatisch in de browser. Mocht dit niet gebeuren, kopieer dan de url (http://127.0.0.1:8050/) en open deze in je browser. (Mocht dit niet werken omdat je nog niet alle packages hebt geinstalleerd, volg dan eerst de [Installaties](vrtool_docs\Installaties\index.md) instructies.)
+3.  In Anaconda, run ``python -m src.index`` om het dashboard te starten. Het dashboard verschijnt nu automatisch in de browser. Mocht dit niet gebeuren, kopieer dan de url (http://127.0.0.1:8050/) en open deze in je browser. (Mocht dit niet werken omdat je nog niet alle packages hebt geinstalleerd, volg dan eerst de [Installaties](../Installaties/index.rst) instructies.)
 
 afhankelijk van de folder waarin je uitpakt moet je de padnamen in het ``config.json`` aanpassen.
 
 4. Open het config.json bestand in Notepad. Je ziet nu een tekst bestand met bij ``input_directory`` de padnaam (''C:/..../...''). Deze padnaam moet gelijk zijn aan waar het config bestand staat. Kopieer de padnaam (waarschijnlijk ''C:\Veiligheidsrendement\Tutorial'') en pas dit bij input_directory aan. Let op dat je ``/`` gebruikt in plaats van ``\``.
 ![](config.png)
 
-5. Ga nu naar de browser waar het Dashboard geopend is. Sleep het ``config.json`` bestand naar het vak ''traject selectie''. De resultaten worden nu ingeladen 
+5. Ga nu naar de browser waar het Dashboard geopend is. Sleep het ``config.json`` bestand naar het vak ''traject selectie''. De resultaten worden nu ingeladen. 
 ![](Traject_selectie.png)
 
-meer gedetailleerd overzicht van het Dashboard 
-- opdrachtjes Dashboard
+Uiteindelijk zit je Dashboard er als volgt uit:
+![](voorbeeldDashboard.png)
+
+**Oefenvraag:**
+```
+Welk dijkvak heeft in 2050 voor de beoordeling een 'Beta' van 3.5 voor stabiliteit?
+
+Antwoord: Dijkvak 24
+```
+In [Werken met het dashboard](../Gebruikershandleiding/Postprocessing/index.rst) volgt een gedetaileerde uitleg van de verschillende tabbladen in het dashboard en hoe er verder mee gewerkt kan worden.
+
+

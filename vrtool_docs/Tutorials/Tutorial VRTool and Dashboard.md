@@ -1,13 +1,13 @@
 
 # Tutorial VRTool and Dashboard
-=======================================
+
 
 Deze tutorial bevat een introductie om tot de eerste berekeningen met de VRTool te komen. Vervolgens kunnen de resultaten worden bekeken met behulp van het Dashboard.
 Voor deze tutorial wordt gebruikt gemaakt van een casus (Dijktraject 24-3). 
 
 **Rekenen met VRTool** 
 
-1. Download de bestanden via deze `link <https://www.sharepoint.nl>`_ en sla ze op in de folder ``"C:\Veiligheidsrendement\Tutorial"`` (gebruik hiervoor dezelfde folder die tijdens de [Installaties](vrtool_docs\Installaties\index.md) is gemaakt).
+1. Download de bestanden via deze `link <https://www.sharepoint.nl>`_ en sla ze op in de folder ``"C:\Veiligheidsrendement\Tutorial"`` (gebruik hiervoor dezelfde folder die tijdens de [Installaties](vrtool_docs\Installaties\index.rst) is gemaakt).
 
 In de map staan nu de volgende bestanden:
 - ``config.json``: Met instellingen van de berekening
@@ -30,7 +30,9 @@ Vervang ``{desired_run}`` met de gewenste berekening. Hierbij kan worden gekozen
 
 vervang ``{MODEL_DIRECTORY}`` met het path naar de database (.db) en config bestand (.json). (waarschijnlijk  ``"C:\Veiligheidsrendement\Tutorial"``). 
 
-Voorbeeld commando: ``python -m vrtool run_full C:\Veiligheidsrendement\Tutorial``
+(Voorbeeld commando: ``python -m vrtool run_full C:\Veiligheidsrendement\Tutorial``)
+
+*NB: De berekening kan enkele minuten duren afhankelijk van welke desired_run er gekozen. Het spreekt voor zich dat de run_full het langst duurt.*
 
 **Dashboard gebruiken**
 
@@ -45,8 +47,6 @@ afhankelijk van de folder waarin je uitpakt moet je de padnamen in het ``config.
 
 5. Ga nu naar de browser waar het Dashboard geopend is. Sleep het ``config.json`` bestand naar het vak ''traject selectie''. De resultaten worden nu ingeladen 
 ![](Traject_selectie.png)
-
-![](config.png)
 
 meer gedetailleerd overzicht van het Dashboard 
 - opdrachtjes Dashboard

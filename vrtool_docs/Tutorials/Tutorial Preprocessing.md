@@ -1,3 +1,3 @@
-# Tutorial VRTool and Dashboard
+# Tutorial Preprocessing
 
  *tekst komt hier* 

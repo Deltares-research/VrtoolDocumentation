@@ -3,11 +3,11 @@
 
 
 Deze tutorial bevat een introductie om tot de eerste berekeningen met de VRTool te komen. Vervolgens kunnen de resultaten worden bekeken met behulp van het Dashboard.
-Voor deze tutorial wordt gebruikt gemaakt van een casus (Dijktraject 24-3). 
+Voor deze tutorial wordt gebruikt gemaakt van een casus (dijktraject 24-3). 
 
 **Rekenen met VRTool** 
 
-1. Download de bestanden via deze `link <https://www.sharepoint.nl>`_ en sla ze op in de folder ``"C:\Veiligheidsrendement\Tutorial"`` (gebruik hiervoor dezelfde folder die tijdens de [Installaties](../Installaties/index.rst) is gemaakt).
+1. Download de bestanden via deze [link](https://www.sharepoint.nl) en sla ze op in de folder ``"C:\Veiligheidsrendement\Tutorial"`` (gebruik hiervoor dezelfde folder die tijdens de [Installaties](../Installaties/index.rst) is gemaakt).
 
 In de map staan nu de volgende bestanden:
 - ``config.json``: Met instellingen van de berekening
@@ -16,7 +16,7 @@ In de map staan nu de volgende bestanden:
 
  *NB: de preprocessing, het genereren van de juiste bestanden van een traject, gaat vooraf aan het rekenen met de VRTool. In deze tutorial zijn de hierboven gedownloade bestanden een eindresultaat van de preprocessing.*
 
-het bestand `24-3_database.db` is de database welke we gaan vullen (....actie verder uitschrijven....) door met de VRTool te rekenen. 
+het bestand `24-3_database.db` is de database welke we gaan vullen door met de VRTool te rekenen. 
 
 2. Open `Anaconda <https://www.anaconda.com/download>`_ en roep de VRTool aan met de volgende commando: 
 ``python -m vrtool {desired_run} {MODEL_DIRECTORY}``. 
@@ -30,9 +30,11 @@ Vervang ``{desired_run}`` met de gewenste berekening. Hierbij kan worden gekozen
 
 vervang ``{MODEL_DIRECTORY}`` met het path naar de database (.db) en config bestand (.json). (waarschijnlijk  ``"C:\Veiligheidsrendement\Tutorial"``). 
 
-(Voorbeeld commando: ``python -m vrtool run_full C:\Veiligheidsrendement\Tutorial``)
+```
+Voorbeeld commando: python -m vrtool run_full C:\Veiligheidsrendement\Tutorial
+```
 
-*NB: De berekening kan enkele minuten duren afhankelijk van welke desired_run er gekozen. Het spreekt voor zich dat de run_full het langst duurt.*
+*NB: De berekening kan enkele minuten duren afhankelijk van welke desired_run er gekozen is. Het spreekt voor zich dat de run_full het langst duurt.*
 
 **Dashboard gebruiken**
 
@@ -42,7 +44,7 @@ Nu de VRTool verschillende berekeningen heeft gedaan kunnen we de rekenresultate
 
 afhankelijk van de folder waarin je uitpakt moet je de padnamen in het ``config.json`` aanpassen.
 
-4. Open het config.json bestand in Notepad. Je ziet nu een tekst bestand met bij ``input_directory`` de padnaam (''C:/..../...''). Deze padnaam moet gelijk zijn aan waar het config bestand staat. Kopieer de padnaam (waarschijnlijk ''C:\Veiligheidsrendement\Tutorial'') en pas dit bij input_directory aan. Let op dat je ``/`` gebruikt in plaats van ``\``.
+4. Open het ``config.json`` bestand in ``Notepad``. Je ziet nu een tekst bestand met bij ``input_directory`` de padnaam (''C:/..../...''). Deze padnaam moet gelijk zijn aan waar het config bestand staat. Kopieer de padnaam (waarschijnlijk ''C:\Veiligheidsrendement\Tutorial'') en pas dit bij input_directory aan. Let op dat je ``/`` gebruikt in plaats van ``\``.
 ![](config.png)
 
 5. Ga nu naar de browser waar het Dashboard geopend is. Sleep het ``config.json`` bestand naar het vak ''traject selectie''. De resultaten worden nu ingeladen. 
@@ -53,7 +55,7 @@ Uiteindelijk zit je Dashboard er als volgt uit:
 
 **Oefenvraag:**
 ```
-Welk dijkvak heeft in 2050 voor de beoordeling een 'Beta' van 3.5 voor stabiliteit?
+Welk dijkvak heeft in 2050 voor de beoordeling een Beta van 3.5 voor stabiliteit?
 
 Antwoord: Dijkvak 24
 ```

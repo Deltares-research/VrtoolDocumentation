@@ -1,7 +1,7 @@
 =============================================
-Optimaliseren van versterkingsmaatregelen
+Bepalen van versterkingsmaatregelen
 =============================================
-Op basis van de resultaten van de eerdere stappen worden vervolgens 2 versterkingsvarianten bepaald: 
+Op basis van de resultaten van de eerdere stappen worden 2 versterkingsvarianten bepaald: 
 
 * Een referentievariant op basis van het OI2014, waarbij 50 jaar vooruit en integraal wordt versterkt.
 * Een optimalisatie van maatregelen op basis van veiligheidsrendement.
@@ -11,25 +11,10 @@ Referentievariant op basis van OI2014
 De referentievariant heeft als doel de resultaten te vergelijken met een gangbare werkwijze. Daarvoor gaan we uit van de standaardfaalkansbegroting uit het OI2014. 
 Daarvoor hanteren we de volgende factoren voor de faalkansruimte, en de lengte-effectfactoren N, a en b:
 
-.. list-table:: faalkansbegroting
-   :widths: 30 20
+.. csv-table:: Gebruikte faalkansbegroting voor referentievariant
+   :file: faalkansbegroting.csv
+   :widths: 20, 15, 20
    :header-rows: 1
-
-   * - Mechanisme
-     - Faalkansruimte
-     - Lengte-effectfactoren
-   * - Piping
-       - 24%
-       - a = 0.5 of 0.9 en b = 300 m
-   * - Macrostabiliteit
-         - 4%
-         - a = 0.033 en b = 50 m
-   * - Overloop/overslag
-         - 24%
-         - N = 1
-   * - Bekleding
-         - 10%
-         - N = 3
 
 Bij bekleding wordt een gecombineerde eis gehanteerd voor falen van de gras- en steenbekleding. De N-waarde voor overloop/overslag wordt in een komende release toegevoegd.
 
@@ -65,23 +50,30 @@ waarbij :math:`P_{m}` de faalkans van het traject is voor mechanisme :math:`m`, 
 .. math::
    P_{m} = \max_{i=1}^{n} P_{m,i}.,
 
-Vervolgens worden de kansen van de mechanismen als onafhankelijke kansen gecombineerd. Door deze voor elk jaar te vermenigvuldigen met de trajectfaalkans wordt het totale overstromingsrisico bepaald. 
+Vervolgens worden de kansen van de mechanismen als onafhankelijke kansen gecombineerd. Door deze voor elk jaar te vermenigvuldigen met de verdisconteerde overstromingsschade wordt het totale overstromingsrisico bepaald. 
 
 Opzet van het algoritme
 --------------------------------
-- Er wordt stapsgewijs bepaald welke maatregel het beste is. Daarvoor worden achtereenvolgens:
-  - De kosten van de maatregelen bepaald
-  - Het risico door falen door overslag/geotechnische mechanismen ná uitvoering van een individuele maatregel
-  - Vervolgens wordt de BC-ratio op 2 manieren bepaald:
-    1.	De BC-ratio (kosten/baten) van elke individuele maatregel
-    2.	Vervolgens wordt apart voor overslag gekeken naar de optimale combinatie van maatregelen voor overslag en voor bekleding. Omdat voor overslag en bekleding geldt dat het zwakste vak de faalkans bepaalt kan het voorkomen dat bijvoorbeeld het verhogen van de kruin van 1 vak een zeer lage BC-ratio heeft, maar van 2 vakken juist een hoge (bijv. als 2 vakken nagenoeg dezelfde β hebben).
-  - Tot slot wordt vergeleken of een individuele maatregel (1) of een combinatie (2) de hoogste BC-ratio heeft. Deze maatregel wordt dan uitgevoerd, en de beginsituatie voor de volgende optimalisatiestap wordt aangepast met deze maatregel.
-- Wanneer het max aantal iteraties (600) is bereikt, of de BC-ratio van de beste maatregel < 0.1 stopt de optimalisatie.
+Het gebruikte algoritme is een lokale optimalisatie. Dat betekent dat telkens, gegeven een bepaalde situatie (veiligheid van de dijkvakken en het traject als geheel), de beste maatregel wordt bepaald. Dit wordt gedaan door de kosten en baten van de maatregelen te bepalen, en de maatregel te kiezen met de hoogste baten/kosten-verhouding (BC-ratio).
 
+Daarbij zijn 2 methoden om dit te bepalen:
+1. De BC-ratio van elke individuele maatregel. Dit werkt uitstekend voor maatregelen die de faalmechanismen beinvloeden waarvoor vakken als onafhankelijk beschouwd worden. 
+2. De BC-ratio van een combinatie van maatregelen. Dit werkt uitstekend voor maatregelen die de faalmechanismen beinvloeden waarvoor vakken als afhankelijk beschouwd worden, dus voor overloop/overslag en bekleding. 
 
-.. toctree::
-   :maxdepth: 1
+  **Combinaties van maatregelen**
+  Voor overloop/overslag en bekleding is het voor een betrouwbaar resultaat noodzakelijk om maatregelen te combineren. Dit valt eenvoudig te illustreren aan de hand van het volgende voorbeeld: een dijktraject met 2 dijkvakken heeft een faalkans van 1/100 voor overslag voor beide dijkvakken, de trajectfaalkans is daarmee ook 1/100. Wanneer op dijkvak A de kruin wordt versterkt (bijv. tot een faalkans van 1/1000), is de faalkans nog steeds 1/100, dijkvak B is immers niet versterkt, en het zwakste vak bepaalt de trajectfaalkans. Binnen de optimalisatie wordt daarom in 100 stappen gezocht naar de beste combinaties van maatregelen, daarbij wordt telkens het zwakste vak versterkt. In dit geval zou alleen kijken naar individuele maatregelen dus zorgen voor een lokaal optimum voor overloop/overslag, omdat er nooit een individuele maatregel wordt gekozen. In onderstaande tabel is een voorbeeld weergegeven waarbij is aangenomen dat om beurten de dijkvakken een factor 10 veiliger worden gemaakt, dit kost 1 miljoen euro per dijkvak. Te zien is dat het risico slechts 1 keer per 2 stappen wordt verlaagd. In dit geval heeft de combinatie van maatregelen waarbij beide vakken een factor 10 veiliger worden de gunstigste kosten-batenverhouding (450).
+  
+   .. csv-table:: Rekenvoorbeeld voor het combineren van maatregelen
+      :file: rekenvoorbeeld_combinatie.csv
+      :widths: 10,10,10,10,10,10
+      :header-rows: 2
 
-   .. Bepaling van optimale maatregelen
-   .. Optimalisatiealgoritme
+Vervolgens wordt gekeken welke maatregel het gunstigste is. Daarbij wordt eerst gekeken of de kosten-batenverhouding van een combinatie hoger is dan die van een individuele maatregel. Als dat het geval is, wordt de combinatie gekozen. Als dat niet het geval is, wordt de individuele maatregel gekozen. Daarbij wordt de maatregel gekozen op eht dijkvak met de gunstigste maatregel waarvan de kosten-batenverhouding een factor 1.5 gunstiger is dan de beste maatregel op de andere vakken. 
 
+  **Keuze van de individuele maatregel**
+
+  Op vak A heeft een pipingmaatregel een BC-ratio van 10000. Eventueel uitbreiden met een kleine of grotere berm verlaagt de BC-ratio naar 3000 of 1200. Op vak B heeft de gunstigste maatregel een BC-ratio van 1000. In dit geval wordt de op vak A gekozen voor een pipingmaatregel met kleine berm (BC=3000), omdat deze meer dan een factor 1.5 gunstiger is dan de beste maatregel op vak B.
+
+  *NB: de factor 1.5 is configureerbaar door in config.json de waarde van 'f_cautious' aan te passen.*
+
+Als de BC-ratio van de beste maatregel < 0.1 is, of het maximaal aantal iteraties (600) is bereikt, wordt de optimalisatie gestopt. Wanneer dit niet het geval is wordt de beginsituatie voor de volgende optimalisatiestap aangepast met de gekozen maatregel.

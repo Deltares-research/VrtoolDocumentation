@@ -1,0 +1,13 @@
+﻿Kolom,,Beschrijving
+objectid,Verplicht,Unieke identifier (moeten verschillende getallen zijn)
+vaknaam,Verplicht,"Nummer/naam van het dijkvak (moet uniek zijn, kan identiek zijn aan OBJECTID)"
+m_start,Verplicht,startpunt op lijn van traject
+m_eind,Verplicht,eindpunt op lijn van traject
+in_analyse,Verplicht,Vak meenemen in analyse of niet (TRUE/FALSE)
+van_dp,Optioneel,Begrenzing dijkpaalnummers
+tot_dp,Optioneel,Begrenzing dijkpaalnummers
+stabiliteit,Optioneel,Moet overeen komen met een waarde in de kolom doorsnede bij Stabiliteit_default.csv. Hiermee wordt aangegeven welke doorsnede bij welk vak hoort.
+piping,Optioneel,Moet overeen komen met een waarde in de kolom doorsnede bij Piping_default.csv. Hiermee wordt aangegeven welke doorsnede bij welk vak hoort.
+overslag,Optioneel,Moet overeen komen met een waarde in de kolom doorsnede bij HR_default.csv. Hiermee wordt aangegeven welke doorsnede bij welk vak hoort. 
+bekledingen,Optioneel,Moet overeen komen met een waarde in de kolom doorsnede bij Bekleding_default.csv. Hiermee wordt aangegeven welke doorsnede bij welk vak hoort.
+opmerkingen,Optioneel,"Hier kunnen eventuele opmerkingen worden geplaatst. Deze kolom is voor de gebruiker, en wordt niet gebruikt in de VRTOOL."

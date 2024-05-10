@@ -57,13 +57,26 @@ In de map ``intermediate_results`` worden de resultaten van de workflows opgesla
 
 In de map ``vrtool_database`` wordt de database weggeschreven die nodig is voor de VRTool. 
 
+Het ``preprocessing.config``-bestand bevat de configuratie van de preprocessor. Hierin kunnen de locaties van de verschillende bestanden worden aangepast. In de basis is het advies dit niet te doen, tenzij dit uitdrukkelijk staat vermeld in de documentatie van de betreffende workflow. 
+
+.. topic:: Tips 
+
+    * Wanneer paden worden aangepast in het ``preprocessing.config``-bestand, zijn er 2 mogelijkheden: 
+        
+        1. Invoeren van een *relatief* pad ten opzichte van de map waarin de preprocessor wordt uitgevoerd. Deze wordt dan automatisch gecombineerd met de ``project_dir``.
+
+        2. Invoeren van een *absoluut* pad, bijvoorbeeld ``C:\Veiligheidsrendement\basisadministratiegebouwen\bag-light.gpkg``.
+
+    * Wanneer aan meerdere dijktrajecten wordt gewerkt kan het handig zijn om voor het ``bag_gebouwen``-bestand een aparte locatie te gebruiken om onnodig gebruik van schijfruimte te voorkomen.
+    
+
 In totaal zijn er 8 workflows, meer informatie over de invoerparameters per workflow is te vinden via onderstaande links: 
 
-- `Vakindeling <Vakindeling.rst>`_
-- `Overslag <Overtopping.rst>`_
-- `Waterstand <Waterstand.rst>`_
-- `Bekleding <Bekleding.rst>`_
-- `Bebouwing <Bebouwing.rst>`_
-- `Dijkprofielen <Dijkprofielen.rst>`_
-- `Teenlijn <Teenlijn.rst>`_
-- `Genereren database <Genereren_database.rst>`_
+- `Vakindeling <Vakindeling.html>`_
+- `Overslag <Overtopping.html>`_
+- `Waterstand <Waterstand.html>`_
+- `Bekleding <Bekleding.html>`_
+- `Bebouwing <Bebouwing.html>`_
+- `Dijkprofielen <Dijkprofielen.html>`_
+- `Teenlijn <Teenlijn.html>`_
+- `Genereren database <Genereren_database.html>`_

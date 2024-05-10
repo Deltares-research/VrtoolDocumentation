@@ -14,40 +14,35 @@ Om de installatie goed te doorlopen is het nodig om eerst Anaconda of Miniconda 
 
 **Download bestanden** 
 
-Download de bestanden via deze `link <https://www.sharepoint.nl>`_. Dit is een zip-file met daarin verschillende bestanden die nodig zijn voor de installatie en het gebruik van de VRTOOL.
+2. Download de bestanden via deze `link <https://github.com/Deltares-research/VrtoolDocumentation/raw/VRTOOL---341---Tutorial-VRTool-&-Dashboard/vrtool_docs/Bestanden/Installatie/Release.zip>`_. In deze zipfile staan de verschillende bestanden die nodig zijn voor de installatie en het gebruik van de VRTOOL, preprocessor en het dashboard.
 
-2. Pak het zip-bestand uit en zet de ``tar.gz`` bestanden in een lege folder (we gebruiken even ``"C:\Veiligheidsrendement"`` als voorbeeld)
+3. Pak de zip-file uit en zet de ``tar.gz`` bestanden in een lege folder (we gebruiken even ``"C:\Veiligheidsrendement"`` als voorbeeld)
 
 **Installeren van de software**
 
-Het dashboard draait vooralsnog lokaal. Volg de onderstaande stappen om het dashboard te installeren en te gebruiken:
+Volg de onderstaande stappen om de software te installeren en te gebruiken:
 
-1. Navigeer in Anaconda Prompt (zorg ervoor dat Anaconda geïnstalleerd is) naar de gecreerde folder met ``cd "C:\Veiligheidsrendement"``
+4. Open Anaconda Prompt en navigeer naar de gecreerde folder met ``cd "C:\Veiligheidsrendement"``
 
-2. Maak een lokaal environment aan met het volgende command: ``conda create -p "C:\Veiligheidsrendement"\.env python=3.10``.
+   *NB: afhankelijk van de gebruikersrechten kan het noodzakelijk zijn om Anaconda Prompt als administrator te starten. Klik daarvoor met de rechtermuisknop en selecteer `Als administrator uitvoeren`.*
+
+5. Maak een lokaal environment aan met het volgende command: ``conda create -p "C:\Veiligheidsrendement"\.env python=3.10``.
 
    *NB: als hier al een environment staat dan wordt deze automatisch overschreven.*
 
-3. Activeer de environment met ``conda activate "C:\Veiligheidsrendement"\.env\``
+6. Activeer de environment met ``conda activate "C:\Veiligheidsrendement\.env\"``
 
-4. Run ``pip install vrtool-0.1.3.tar.gz`` om de VRTool te installeren
+7. Run ``pip install vrtool-0.2.0.tar.gz`` om de VRTool te installeren
 
-   *NB: het versienummer (0.1.3.) van het bestand kan veranderen*
+8. Run ``pip install vr_dash-0.4.0.tar.gz`` om het Dashboard te installeren
 
-5. Run ``pip install vr_dash-0.3.2.tar.gz`` om het Dashboard te installeren
-
-   *NB: het versienummer (0.3.2.) van het bestand kan veranderen*
-
-6. Run ``pip install vr_utils-....tar.gz`` om VRUtils te te installeren waarmee we de preprocessing kunnen doen, Deze stap is niet nodig voor de tutorial. 
-
-   *NB: het versienummer (...) van het bestand kan veranderen*
+9. Run ``pip install vr_utils-....tar.gz`` om VRUtils te te installeren waarmee we de preprocessing kunnen doen, Deze stap is niet nodig voor de tutorial. 
 
 Alles is nu geïnstalleerd en zowel de VRTool als het Dashboard zijn klaar voor gebruik. Als je VRUtils (stap 8.) hebt geïnstalleerd kun je ook de preprocessing doen.
 
 Voor het starten van het dashboard volg je de volgende stappen:
 
-1. Run ``python -m src.index`` om het dashboard te starten. 
+10. Run ``python -m src.index`` om het dashboard te starten. 
 
-2.  In je commandline verschijnt nu een url en wordt het dashboard automatisch geopend in je browser. Mocht dit niet gebeuren, kopieer dan de url (http://127.0.0.1:8050/) en open deze in je browser. Het Dashboard wordt gestart.
-
+11.  In je commandline verschijnt nu een url en wordt het dashboard automatisch geopend in je browser. Mocht dit niet gebeuren, kopieer dan de url (http://127.0.0.1:8050/) en open deze in je browser. Het Dashboard wordt gestart.
 

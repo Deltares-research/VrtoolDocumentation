@@ -1,3 +1,5 @@
+**NB: Dit gedeelte is niet up-to-date en wordt in de komende weken aangepast**
+
 # Afleiden dijkprofielen en karakteristieke punten
 
 Met de workflow ```genereer_dijkprofielen``` worden voor een gegeven traject elke x meter dijkprofielen gegenereerd op basis van het AHN4. Voor elk van deze profielen worden de karakteristieke punten afgeleid: 2 punten op de kruin, en op zowel het buiten- als het binnentalud beide maximaal 3 punten. Vervolgens kan met de workflow ```selecteer_profiel``` voor verschillende dijkvakken het meest representatieve profiel worden geselecteerd.

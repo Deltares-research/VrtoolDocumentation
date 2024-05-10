@@ -1,3 +1,5 @@
+**NB: Dit gedeelte is niet up-to-date en wordt in de komende weken aangepast**
+
 # Stabiliteit
 
 Voor macrostabiliteit bevat de preprocessing maar 1 stap: het invullen van het invoerbestand `Stabiliteit_default.csv`. Dit bestand is terug te vinden in ```\preprocessing\default_files``` in het uitgepakte ZIP bestand wat bij de installatie voor de [preprocessing](..\Installaties\VRUtils.md) is gedownload.

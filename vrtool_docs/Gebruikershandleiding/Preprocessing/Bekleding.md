@@ -1,5 +1,5 @@
 # Bekledingen
-
+**NB: Dit gedeelte is niet up-to-date en wordt in de komende weken aangepast**
 Vóór het draaien van deze workflow moet eerst een invoerbestand ingevult worden. 
 
 ## Stap 1: Excel invoerbestand invullen

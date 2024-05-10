@@ -41,7 +41,7 @@ Voor overslag moet een aantal specifieke parameters worden opgegeven in het invo
 
 * ``orientatie`` verwijst naar de orientatie van de doorsnede. Deze wordt gelezen uit het `*.prfl` bestand en dit is daarom een optionele kolom.
 
-* ``dijkhoogte`` verwijst naar de hoogte van de dijk. Deze wordt gelezen uit het `*.prfl` bestand en dit is daarom een optionele kolom.
+* ``dijkhoogte`` verwijst naar de hoogte van de dijk. Deze wordt gelezen uit het `*.prfl` bestand en dit is daarom een optionele kolom voor deze workflow. Echter, voor het maken van de database is deze wel nodig. Dit wordt in een toekomstige versie aangepast.
 
 * ``zodeklasse`` en ``bovengrens_golfhoogteklasse`` verwijzen naar de zodeklasse van de dijk en de gegeven de hydraulische condities geldende kansverdeling voor het kritisch overslagdebiet. De mogelijke zodeklassen zijn te vinden bij de achtergronden van het `faalkansmodel <../../Achtergronden/Faalkansmodellen/Overslag.html>`_.
 

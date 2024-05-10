@@ -1,11 +1,13 @@
 Tutorials
 ======================================= 
  
-Hieronder kunnen twee tutorials worden gevolgd. Zowel een Tutorial om te rekenen met de VRTool and Dashboard als de Tutorial over preprocessing. Hoewel in werkelijkheid men eerst de prepocessing dient te doen, voordat er gerekend kan worden met VRTool en het dashboard, wordt er aangeraden om de Tutorials in de aangeboden volgorde te volgen. Hierdoor wordt je eerst comfortabel met de te gebruiken software om vervolgens grondiger met de inhoud bezig te gaan. 
-Wanneer er met 
+Om snel gevoel te krijgen voor de VRTool en het dashboard wordt aanbevolen om eerst de `tutorial <Tutorials/tutorial_vrtool_dashboard.html>`_ te volgen. Deze geeft snel gevoel en inzicht in de werking van de software en de te verwachten resultaten.
 
- .. toctree::
-   :maxdepth: 1
+Wanneer vervolgens aan de slag wordt gegaan met de preprocessing van gegeven zijn er verschillende tutorials beschikbaar voor de workflows uit de `preprocessor <tutorial_preprocessing.html>`_.
 
-    Tutorial VRTool and Dashboard <Tutorial VRTool and Dashboard>
-    Tutorial Preprocessing <Tutorial Preprocessing>
+.. toctree::
+  :hidden:
+  :maxdepth: 1
+
+  Tutorial VRTool and Dashboard <tutorial_vrtool_dashboard>
+  Tutorial Preprocessing <tutorial_preprocessing>

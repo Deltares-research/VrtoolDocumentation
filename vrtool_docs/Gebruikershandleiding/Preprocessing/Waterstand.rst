@@ -85,7 +85,7 @@ Voor deze workflow zijn de volgende waarden in dat bestand van belang:
 
 Er wordt enige controle op de uitvoer gedaan door de preprocessor, maar het is raadzaam (al dan niet steekproefsgewijs) de resultaten te controleren. De meeste envoudige manier daarvoor is om naar de ``output_map_waterstand`` te gaan en voor enkele locaties de resultaten te bekijken in het bestand ``DESIGNTABLE_{locatie}.txt``. Een voorbeeld is hieronder weergegeven.
 
-.. image:: images/DesignTableWaterstand.png
+.. image:: img/DesignTableWaterstand.png
    :width: 60%
    :align: center
 

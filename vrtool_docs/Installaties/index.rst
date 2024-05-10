@@ -14,15 +14,17 @@ Om de installatie goed te doorlopen is het nodig om eerst Anaconda of Miniconda 
 
 **Download bestanden** 
 
-2. Download de bestanden via deze `link <https://www.sharepoint.nl>`_. Hier staan de verschillende bestanden die nodig zijn voor de installatie en het gebruik van de VRTOOL, preprocessor en het dashboard.
+2. Download de bestanden via deze `link <https://github.com/Deltares-research/VrtoolDocumentation/raw/VRTOOL---341---Tutorial-VRTool-&-Dashboard/vrtool_docs/Bestanden/Installatie/Release.zip>`_. In deze zipfile staan de verschillende bestanden die nodig zijn voor de installatie en het gebruik van de VRTOOL, preprocessor en het dashboard.
 
-3. Zet de ``tar.gz`` bestanden in een lege folder (we gebruiken even ``"C:\Veiligheidsrendement"`` als voorbeeld)
+3. Pak de zip-file uit en zet de ``tar.gz`` bestanden in een lege folder (we gebruiken even ``"C:\Veiligheidsrendement"`` als voorbeeld)
 
 **Installeren van de software**
 
 Volg de onderstaande stappen om de software te installeren en te gebruiken:
 
 4. Open Anaconda Prompt en navigeer naar de gecreerde folder met ``cd "C:\Veiligheidsrendement"``
+
+   *NB: afhankelijk van de gebruikersrechten kan het noodzakelijk zijn om Anaconda Prompt als administrator te starten. Klik daarvoor met de rechtermuisknop en selecteer `Als administrator uitvoeren`.*
 
 5. Maak een lokaal environment aan met het volgende command: ``conda create -p "C:\Veiligheidsrendement"\.env python=3.10``.
 
@@ -44,4 +46,3 @@ Voor het starten van het dashboard volg je de volgende stappen:
 
 11.  In je commandline verschijnt nu een url en wordt het dashboard automatisch geopend in je browser. Mocht dit niet gebeuren, kopieer dan de url (http://127.0.0.1:8050/) en open deze in je browser. Het Dashboard wordt gestart.
 
-*NB: afhankelijk van de gebruikersrechten kan het noodzakelijk zijn om Anaconda Prompt als administrator te starten. Klik daarvoor met de rechtermuisknop en selecteer `Als administrator uitvoeren`.*

@@ -6,8 +6,9 @@ Om snel gevoel te krijgen voor de VRTool en het dashboard wordt aanbevolen om ee
 Wanneer vervolgens aan de slag wordt gegaan met de preprocessing van gegeven zijn er verschillende tutorials beschikbaar voor de workflows uit de `preprocessor <tutorial_preprocessing.html>`_.
 
 .. toctree::
+  :caption: Tutorials
   :hidden:
   :maxdepth: 1
 
-  Tutorial VRTool and Dashboard <tutorial_vrtool_dashboard>
-  Tutorial Preprocessing <tutorial_preprocessing>
+  VRTool & Dashboard <tutorial_vrtool_dashboard>
+  Preprocessing <tutorial_preprocessing>

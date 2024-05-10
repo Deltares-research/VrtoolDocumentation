@@ -52,6 +52,8 @@ Waterkeringen wordt een foutmelding gegeven.
 
   * De m_eind en m_start van alle vakken moeten op elkaar aansluiten
 
+  * In principe is het beter om vakken niet té klein te maken. Vaak zorgt dit voor onnodig veel rekentijd, en niet voor een beter resultaat. In de regel is het advies geen vakken kleiner dan pakweg 300 meter te maken, tenzij er sprake is van lokale zwakke plekken.
+
 
 Draaien van de workflow voor het genereren van een vakindeling
 -------------------------------

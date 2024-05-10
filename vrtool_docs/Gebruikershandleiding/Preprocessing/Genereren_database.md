@@ -1,3 +1,5 @@
+**NB: Dit gedeelte is niet up-to-date en wordt in de komende weken aangepast**
+
 # Genereren database
 
 Met de workflow ```maak_database``` kan een invoerdatabase voor de VRTOOL worden gegenereerd. Daarbij moeten de met de overige workflows gegenereerde bestanden als invoer worden opgegeven.

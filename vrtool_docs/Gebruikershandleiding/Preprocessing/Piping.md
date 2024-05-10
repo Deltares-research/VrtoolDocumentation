@@ -1,3 +1,5 @@
+**NB: Dit gedeelte is niet up-to-date en wordt in de komende weken aangepast**
+
 # Piping
 
 Voor piping bevat de preprocessing maar 1 stap: het invullen van het invoerbestand `Piping_default.csv`. Dit bestand is terug te vinden in: ```.\VRSuiteUtils-main\preprocessing\default_files``` in de folder met de uitgepakte installatie voor de [preprocessing](..\Installaties\VRUtils.md).

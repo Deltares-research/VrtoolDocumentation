@@ -1,3 +1,5 @@
+**NB: Dit gedeelte is niet up-to-date en wordt in de komende weken aangepast**
+
 # Afleiden teenlijn
 
 De workflow ```genereer_teenlijn``` pakt alle gevonden teenpunten uit de CSV-bestanden in output_dir/characteristic_profiles (zie [Dijkprofielen](Dijkprofielen.md)). Vervolgens worden per profiel de x- en y-coördinaten van de teen bepaald. Dit script gebruikt dus zowel de CSV-bestanden van de afgeleide karakteristieke punten, als de informatie uit traject_profiles_info.csv. Daarom moeten eerst de [dijkprofielen](Dijkprofielen.md) worden bepaald. Daarbij is van belang dat de tussenafstand tussen de profielen klein is (maximaal 25 meter).

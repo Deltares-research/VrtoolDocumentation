@@ -2,12 +2,12 @@
 # Tutorial VRTool and Dashboard
 
 
-Deze tutorial bevat een introductie om tot de eerste berekeningen met de VRTool te komen. Vervolgens kunnen de resultaten worden bekeken met behulp van het Dashboard.
+Deze tutorial bevat een introductie om kennis te maken met het rekenen met de VRTool en resultaten weer te geven in het dashboard.
 Voor deze tutorial wordt gebruikt gemaakt van een casus (dijktraject 24-3). 
 
 **Rekenen met VRTool** 
 
-1. Download de bestanden via deze [link](https://www.sharepoint.nl) en sla ze op in de folder ``"C:\Veiligheidsrendement\Tutorial"`` (gebruik hiervoor dezelfde folder die tijdens de [Installaties](../Installaties/index.rst) is gemaakt).
+1. Download de bestanden via deze [link](https://github.com/Deltares-research/VrtoolDocumentation/blob/VRTOOL---341---Tutorial-VRTool-%26-Dashboard/vrtool_docs/Bestanden/Tutorial/24-3.zip) en sla ze op in de folder ``"C:\Veiligheidsrendement\Tutorial"`` (gebruik hiervoor dezelfde folder die tijdens de [Installaties](../Installaties/index.rst) is gemaakt).
 
 In de map staan nu de volgende bestanden:
 - ``config.json``: Met instellingen van de berekening

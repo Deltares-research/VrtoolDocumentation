@@ -8,6 +8,7 @@ Bij de directe invoer voor binnenwaartse macrostabiliteit moet de betrouwbaarhei
 In sommige gevallen zijn verschillende scenario’s mogelijk. In dat geval is het mogelijk zowel de geaggregeerde β over alle scenario’s, als de β per scenario (incl. scenariokans) in te voeren.
 
 ## D-Stability
+## D-Stability
 Wanneer een *.stix file beschikbaar is kan deze worden gebruikt om de stabiliteitsberekening opnieuw te maken/aan te passen. 
 
 Binnen de VRTOOL wordt gebruik gemaakt van D-Stability versie 2022.01.2. De stix files moeten daarmee compatibel zijn. Wanneer deze in een oudere versie van D-Stability zijn gemaakt dan moeten ze in de regel eerst worden geopend in D-Stability, en zonder wijzigingen worden opgeslagen. Dit moet voor elk scenario (indien van toepassing) wat wordt meegenomen in de berekening worden gedaan. 

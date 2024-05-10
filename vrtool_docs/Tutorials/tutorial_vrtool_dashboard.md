@@ -7,14 +7,14 @@ Voor deze tutorial wordt gebruikt gemaakt van een casus (dijktraject 24-3). Dit 
 
 ## Rekenen met VRTool
 
-1. Download de bestanden via deze [link](https://github.com/Deltares-research/VrtoolDocumentation/raw/VRTOOL-341/Tutorial-VRToolDashboard/vrtool_docs/Bestanden/Tutorial/24-3.zip) en pak ze uit in de folder ``"C:\Veiligheidsrendement\Tutorial"`` (gebruik hiervoor dezelfde folder die tijdens de [Installaties](../Installaties/index.rst) is gemaakt).
+1. Download de bestanden via deze [link](https://github.com/Deltares-research/VrtoolDocumentation/raw/VRTOOL-341/Tutorial-VRToolDashboard/vrtool_docs/Bestanden/Tutorial/24-3.zip) en pak ze uit in de folder ``"C:\Veiligheidsrendement\Tutorial"`` (gebruik hiervoor dezelfde folder die tijdens de [installatie](../Installaties/index.rst) is gemaakt).
 
 In de map staan nu de volgende bestanden:
 - ``config.json``: Dit bestand bevat instellingen voor de berekening met de VRTOOL
 - ``24-3_database.db``: De invoer en uitvoer van de betreffende berekening
 - ``24-3.geojson``: Hiermee kunnen de resultaten op kaart weergegeven worden
 
-2. Open [Anaconda Prompt](https://www.anaconda.com/download) en roep de VRTool aan met de volgende commando: 
+2. Open Anaconda Prompt, activeer het environment, en roep de VRTool aan met het volgende commando: 
 ``python -m vrtool {desired_run} {MODEL_DIRECTORY}``. 
 
 Vervang ``{desired_run}`` met de gewenste berekening. Hierbij kan worden gekozen voor één van de drie stappen van de veiligheidsrendementberekening of alle drie tegelijk:
@@ -37,7 +37,7 @@ python -m vrtool run_full C:\Veiligheidsrendement\Tutorial
 
 Nu de VRTool de verschillende berekeningen heeft uitgevoerd kunnen we de rekenresultaten laten zien met het Dashboard.
 
-3.  Run in Anaconda Prompt ``python -m src.index`` om het dashboard te starten. Het dashboard verschijnt nu automatisch in de browser. Mocht dit niet gebeuren, kopieer dan de url (http://127.0.0.1:8050/) en open deze in je browser. (Mocht dit niet werken omdat je nog niet alle packages hebt geinstalleerd, volg dan eerst de [installatieinstructis](../Installaties/index.rst).)
+3.  Run in Anaconda Prompt ``python -m src.index`` om het dashboard te starten. Het dashboard verschijnt nu automatisch in de browser. Mocht dit niet gebeuren, kopieer dan de url (http://127.0.0.1:8050/) en open deze in je browser. (Mocht dit niet werken omdat je nog niet alle packages hebt geinstalleerd, volg dan eerst de [installatieinstructies](../Installaties/index.rst)).
 
 4. Afhankelijk van de folder waarin de bestanden zijn uitgepakt moet de padnaam in het ``config.json`` aanpassen. Open het ``config.json`` bestand in ``Notepad`` of ``Textpad``. Je ziet nu een tekstbestand met bij ``input_directory`` de padnaam (''C:/..../...''). Deze padnaam moet gelijk zijn aan de map waar ``config.json`` staat. Kopieer de padnaam waar de database staat (waarschijnlijk ''C:\Veiligheidsrendement\Tutorial'') en pas dit bij input_directory aan. Let op dat je ``/`` gebruikt in plaats van ``\``. Er moet geen ``/`` op het eind van de padnaam staan.
 ![](img/config.png)
@@ -47,6 +47,7 @@ Nu de VRTool de verschillende berekeningen heeft uitgevoerd kunnen we de rekenre
 ![](img/Traject_selectie.png)
 
 Uiteindelijk ziet het dashboard er als volgt uit:
+
 ![](img/voorbeeldDashboard.png)
 
 **Oefenvraag dashboard**
@@ -57,4 +58,4 @@ Uiteindelijk ziet het dashboard er als volgt uit:
      <p style="background-color: blackgrey; color: black;">dijkvak 24.</p>
     </details>
 
-In de [gebruikershandleiding](../Gebruikershandleiding/Postprocessing/index.html) wordt meer uitleg gegeven over de verschillende tabbladen in het dashboard en hoe er verder mee gewerkt kan worden. Daar valt ook meer te vinden over het [rekenen met de VRTOOL](../Gebruikershandleiding/VRTool/index.html).
+In de [gebruikershandleiding](../Gebruikershandleiding/Postprocessing/index.rst) wordt meer uitleg gegeven over de verschillende tabbladen in het dashboard en hoe er verder mee gewerkt kan worden. Daar valt ook meer te vinden over het [rekenen met de VRTOOL](../Gebruikershandleiding/VRTool/index.rst).

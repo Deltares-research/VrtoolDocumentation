@@ -1,5 +1,7 @@
 # Rekenen met de VRTOOL
 
+**NB: Dit hoofdstuk wordt in de loop van mei geupdate**
+
 De VRTool kan op twee manieren worden gedraaid:
 * Via het environment van de [preprocessor](../Installaties/VRUtils.md). Deze bevat altijd de laatste VRTOOL release, zie hiervoor de pagina over [werken met de preprocessor](../Preprocessing/werken_met_preprocessor.md).
 * Door de [VRTOOL](../Installaties/VRTool.md) als aparte package te installeren.

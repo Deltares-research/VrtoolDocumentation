@@ -7,7 +7,7 @@ Voor deze tutorial wordt gebruikt gemaakt van een casus (dijktraject 24-3). Dit 
 
 ## Rekenen met VRTool
 
-1. Download de bestanden via deze [link](https://github.com/Deltares-research/VrtoolDocumentation/raw/VRTOOL-341/Tutorial-VRToolDashboard/vrtool_docs/Bestanden/Tutorial/24-3.zip) en pak ze uit in de folder ``"C:\Veiligheidsrendement\Tutorial"`` (gebruik hiervoor dezelfde folder die tijdens de [installatie](../Installaties/index.rst) is gemaakt).
+1. Download de bestanden via deze [link](https://github.com/Deltares-research/VrtoolDocumentation/raw/main/vrtool_docs/Bestanden/Tutorial/24-3.zip) en pak ze uit in de folder ``"C:\Veiligheidsrendement\Tutorial"`` (gebruik hiervoor dezelfde folder die tijdens de [installatie](../Installaties/index.rst) is gemaakt).
 
 In de map staan nu de volgende bestanden:
 - ``config.json``: Dit bestand bevat instellingen voor de berekening met de VRTOOL

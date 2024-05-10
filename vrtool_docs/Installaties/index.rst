@@ -14,7 +14,7 @@ Om de installatie goed te doorlopen is het nodig om eerst Anaconda of Miniconda 
 
 **Download bestanden** 
 
-2. Download de bestanden via deze `link <https://github.com/Deltares-research/VrtoolDocumentation/raw/VRTOOL---341---Tutorial-VRTool-&-Dashboard/vrtool_docs/Bestanden/Installatie/Release.zip>`_. In deze zipfile staan de verschillende bestanden die nodig zijn voor de installatie en het gebruik van de VRTOOL, preprocessor en het dashboard.
+2. Download de bestanden via deze `link <https://github.com/Deltares-research/VrtoolDocumentation/raw/main/vrtool_docs/Bestanden/Installatie/Release.zip>`_. In deze zipfile staan de verschillende bestanden die nodig zijn voor de installatie en het gebruik van de VRTOOL, preprocessor en het dashboard.
 
 3. Pak de zip-file uit en zet de ``tar.gz`` bestanden in een lege folder (we gebruiken even ``"C:\Veiligheidsrendement"`` als voorbeeld)
 

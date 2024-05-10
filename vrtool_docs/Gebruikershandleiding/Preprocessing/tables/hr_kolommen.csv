@@ -4,7 +4,7 @@ bovengrens,Verplicht,Bovengrens voor waterstandsberekeningen (bijv. waterstand b
 ondergrens,Verplicht,Ondergrens voor waterstandsberekeningen (bijv. waterstand bij kans 1/10).
 prfl_bestand,Verplicht,Naam van het prfl-bestand te gebruiken voor overslag.
 orientatie,Optioneel,Orientatie van het profiel voor overslagberekeningen.
-dijkhoogte,Verplicht,Hoogte van de dijk.
+dijkhoogte,Optioneel,Hoogte van de dijk.
 zodeklasse,Verplicht,Beschrijving van de graszodekwaliteit. Waarden moeten overeenkomen met de waarden in de standaardtabel.
 bovengrens_golfhoogteklasse,Verplicht,"Bovengrens van de golfhoogteklasse. Bij 0-1 meter dus “1 meter”, 1-2 meter wordt “2 meter” etc."
 faalkans,Optioneel,"Faalkans uit beoordeling, ter controle."

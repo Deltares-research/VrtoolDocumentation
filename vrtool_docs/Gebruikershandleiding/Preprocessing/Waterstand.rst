@@ -32,7 +32,7 @@ Het invoerbestand ``HR_default.csv`` heeft de volgende kolommen die ingevuld moe
 
 Het vullen van het invoerbestand
 -------------------------------
-Voor het doorrekenen van de waterstandsfrequentielijnen moet per dijkvak 1 locatie worden opgegeven. Deze locatie moet tevens hetzelfde zijn als voor overslag. In de beoordeling zijn door beheerders vaak waterstands- en overslagberekeningen gemaakt op doorsneden op 100 meter afstand tot elkaar. Dit is voor veiligheidsrendement niet nodig. Het advies is om voor elk vak de maatgevende locatie voor overslag te kiezen, en deze locatie ook te gebruiken voor waterstandsberekeningen.
+Voor het doorrekenen van de waterstandsfrequentielijnen moet per dijkvak 1 locatie worden opgegeven. Het is handig (en meestal logisch) als deze locatie hetzelfde is als voor overslag. In de beoordeling zijn door beheerders vaak waterstands- en overslagberekeningen gemaakt op doorsneden op 100 meter afstand tot elkaar. Dit is voor veiligheidsrendement niet nodig. Het advies is om voor elk vak de maatgevende locatie voor overslag te kiezen, en deze locatie ook te gebruiken voor waterstandsberekeningen.
 
 De kolommen ``bovengrens`` en ``ondergrens`` moeten worden ingevuld met een voldoende hoge en lage waterstand. Vervolgens wordt hier door de preprocessor een grid van gemaakt. Deze waarden zijn doorgaans beschikbaar vanuit de beoordeling. 
 
@@ -89,4 +89,4 @@ Er wordt enige controle op de uitvoer gedaan door de preprocessor, maar het is r
    :width: 60%
    :align: center
 
-Belangrijke waarden om te controleren zijn in het algemeen de terugkeertijden bij de verschillende waterstanden, maar ook de kansen bij de laagste en hoogste waterstand. In de regel zou het bereik van kansen grofwel tussen 1/10 en 1 of 2 orde groottes kleiner dan de signaleringswaarde moeten liggen.
+Belangrijke waarden om te controleren zijn in het algemeen de terugkeertijden bij de verschillende waterstanden, maar ook de kansen bij de laagste en hoogste waterstand. In de regel zou het bereik van kansen grofweg tussen 1/10 en 1 of 2 orde groottes kleiner dan de signaleringswaarde moeten liggen.

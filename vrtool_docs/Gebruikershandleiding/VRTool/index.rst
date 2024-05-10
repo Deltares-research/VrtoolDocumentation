@@ -27,7 +27,8 @@ Een veiligheidsrendementberekening bestaat uit 3 stappen, die individueel of gez
     :width: 75%
     :align: center
 
-Voor meer achtergronden wordt verwezen naar de sectie `Achtergronden<>`
+Voor meer achtergronden over het rekenmodel en de optimalisatie wordt verwezen naar `Achtergronden <../../Achtergronden/index.html>`_. 
+
 .. include:: Rekenen met de VRTOOL.md
     :parser: myst_parser.sphinx_
 

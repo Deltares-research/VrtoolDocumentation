@@ -14,9 +14,6 @@ Voor onderdelen 1 en 2 zijn gegevens van de beoordeling nodig. Onderdeel 3 wordt
 .. image:: img/Overzicht_preprocessing.png
    :width: 600
 
-.. image:: img/DesignTableWaterstand.png
-   :width: 600
-   
 Alle workflows (de blauwe rechthoeken in de figuur hierboven) worden op dezelfde manier uitgevoerd, dit is verder uitgelegd op de pagina `werken met de preprocessor <werken_met_preprocessor.html>`_.
 
 .. toctree::

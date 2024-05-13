@@ -1,10 +1,8 @@
-================================
 Werken met de preprocessor
 ================================
 
 Opstarten van de preprocessor
-=============================
-
+-----------------------------
 Alle workflows (de blauwe rechthoeken in de overzichtsfiguur) gebruiken dezelfde stappen. Om workflows uit te voeren moet eerst Anaconda Prompt worden opgestart en het environment worden geactiveerd.
 Het activeren van een environment kan door het volgende command in Anaconda in te voeren. 
 
@@ -20,7 +18,7 @@ Het activeren van een environment kan door het volgende command in Anaconda in t
 
 
 Aanmaken van een mappenstructuur
-================================
+---------------------------------
 
 De tweede stap is om een werkmap te maken voor de preprocessor. Dat gebeurt met een aparte workflow ``maak_project``. Hierin wordt automatisch een complete mappenstructuur aangemaakt waarmee de preprocessor uit de voeten kan. Dit is te doen via het volgende commando:
 

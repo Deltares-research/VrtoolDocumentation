@@ -2,6 +2,8 @@
 Preprocessing
 ***************
 
+
+
 Met de preprocessing worden gegevens over het dijktraject vertaald naar een invoerdatabase voor de VRTOOL, zodat een veiligheidsrendementberekening kan worden gemaakt. De preprocessing bestaat uit vier onderdelen, zie de figuur hieronder. Meer informatie over elk onderdeel wordt hieronder gegeven.
 
 1. Gegevens faalmechanismen (in blauwe kader)
@@ -20,7 +22,10 @@ Alle workflows (de blauwe rechthoeken in de figuur hierboven) worden op dezelfde
    :hidden:
    :maxdepth: 1
 
-   werken_met_de_preprocessor
+   Werken met de preprocessor <werken_met_preprocessor>
+
+
+1. Vakindeling
 --------------------------
 
 De basis voor berekeningen met de veiligheidsrendementmethode is een uniforme vakindeling voor alle faalmechanismen. De gewenste vakindeling kan worden gegenereerd door op basis van een invoerbestand (``vakindeling.csv``) de bijbehorende workflow te draaien.

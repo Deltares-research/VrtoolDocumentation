@@ -20,7 +20,7 @@ Alle workflows (de blauwe rechthoeken in de figuur hierboven) worden op dezelfde
    :hidden:
    :maxdepth: 1
 
-   Werken met de preprocessor
+   werken_met_de_preprocessor
 --------------------------
 
 De basis voor berekeningen met de veiligheidsrendementmethode is een uniforme vakindeling voor alle faalmechanismen. De gewenste vakindeling kan worden gegenereerd door op basis van een invoerbestand (``vakindeling.csv``) de bijbehorende workflow te draaien.

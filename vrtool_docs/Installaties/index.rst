@@ -26,7 +26,7 @@ Volg de onderstaande stappen om de software te installeren en te gebruiken:
 
    *NB: afhankelijk van de gebruikersrechten kan het noodzakelijk zijn om Anaconda Prompt als administrator te starten. Klik daarvoor met de rechtermuisknop en selecteer `Als administrator uitvoeren`.*
 
-5. Maak een lokaal environment aan met het volgende command: ``conda create -p "C:\Veiligheidsrendement"\.env python=3.10``.
+5. Maak een lokaal environment aan met het volgende command: ``conda create -p "C:\Veiligheidsrendement\.env" python=3.10``.
 
    *NB: als hier al een environment staat dan wordt deze automatisch overschreven.*
 
@@ -36,7 +36,7 @@ Volg de onderstaande stappen om de software te installeren en te gebruiken:
 
 8. Run ``pip install vr_dash-0.4.0.tar.gz`` om het Dashboard te installeren
 
-9. Run ``pip install vr_utils-....tar.gz`` om VRUtils te te installeren waarmee we de preprocessing kunnen doen, Deze stap is niet nodig voor de tutorial. 
+9. Run ``pip install VRSuiteUtils-0.2.2.tar.gz`` om VRUtils te te installeren waarmee we de preprocessing kunnen doen, Deze stap is niet nodig voor de tutorial. 
 
 Alles is nu geïnstalleerd en zowel de VRTool als het Dashboard zijn klaar voor gebruik. Als je VRUtils (stap 8.) hebt geïnstalleerd kun je ook de preprocessing doen.
 

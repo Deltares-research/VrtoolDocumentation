@@ -1,0 +1,643 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Betrouwbaarheid dijkbekleding &#8212; vrtool_docs  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/theme-deltares.css?v=aa503ec8" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Achtergronden/Faalkansmodellen/Dijkbekleding';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Maatregelen" href="../Maatregelen/index.html" />
+    <link rel="prev" title="Betrouwbaarheid piping" href="Piping.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/logo_vrtool.svg" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="../../_static/logo_vrtool.svg" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">Veiligheidsrendement</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../Installaties/index.html">
+                        Installaties
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../Tutorials/index.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../Gebruikershandleiding/index.html">
+                        Gebruikershandleiding
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        Achtergronden
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Deltares/Veiligheidsrendement" title="VRTOOL" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" class="icon-link-image" alt="VRTOOL"/></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.deltares.nl/en/" title="Deltares" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../_static/deltares-blue.svg" class="icon-link-image" alt="Deltares"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../Installaties/index.html">
+                        Installaties
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../Tutorials/index.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../Gebruikershandleiding/index.html">
+                        Gebruikershandleiding
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        Achtergronden
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Deltares/Veiligheidsrendement" title="VRTOOL" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" class="icon-link-image" alt="VRTOOL"/></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.deltares.nl/en/" title="Deltares" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../_static/deltares-blue.svg" class="icon-link-image" alt="Deltares"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Faalkansmodellen</a><input checked class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Waterstanden.html">Waterstanden bepalen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Overslag.html">Betrouwbaarheid overslag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Piping.html">Betrouwbaarheid piping</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Betrouwbaarheid dijkbekleding</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Maatregelen/index.html">Maatregelen</a><input checked class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Maatregelen/Versterking%20in%20grond.html">Versterking in grond</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Maatregelen/Stabiliteitsscherm.html">Stabiliteitsscherm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Maatregelen/Diepwand.html">Diepwand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Maatregelen/Verticaal%20Zanddicht%20Geotextiel.html">Verticaal Zanddicht Geotextiel (VZG)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Maatregelen/Maatregelen_dijkbekleding.html">Maatregelen dijkbekleding</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Maatregelen/Custom%20maatregel.html">Custom maatregel</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Optimalisatie/index.html">Bepalen van versterkingsmaatregelen</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Achtergronden</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Faalkansmodellen</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Betrouwbaarh...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="betrouwbaarheid-dijkbekleding">
+<h1>Betrouwbaarheid dijkbekleding<a class="headerlink" href="#betrouwbaarheid-dijkbekleding" title="Link to this heading">#</a></h1>
+<p><strong>NB: dit gedeelte is niet up-to-date en beschrijft alleen de preprocessing.</strong></p>
+<p>Als onderdeel van de preprocessing worden de volgende stappen uitgevoerd:</p>
+<ul class="simple">
+<li><p>Uitvoeren van Q-variant berekeningen</p></li>
+<li><p>Afleiden relatie tussen hoogte overgang en faalkans GEBU</p></li>
+<li><p>Afleiden relatie tussen toplaagdikte en faalkans ZST</p></li>
+</ul>
+<p>De afgeleide relaties van hoogte overgang en toplaagdikte met de faalkans kunnen vervolgens worden gebruikt om de effecten van maatregelen te bepalen. Daarnaast worden de kosten bepaald. Zo kunnen bekledingen worden meegenomen in optimalisaties met de veiligheidsrendementmethode.</p>
+<p>Deze verschillende stappen worden in de volgende paragrafen nader toegelicht.</p>
+<section id="uitvoeren-van-q-variant-berekeningen">
+<h2>Uitvoeren van Q-variant berekeningen<a class="headerlink" href="#uitvoeren-van-q-variant-berekeningen" title="Link to this heading">#</a></h2>
+<p>Ten behoeven van de Q-variant sommen worden eerst waterstandsberekeningen met Hydra-Ring uitgevoerd (per locatie en per zichtjaar). De waterstandsberekeningen worden uitgevoerd voor vier terugkeertijden: 30/ondergrens, 1/signaleringswaarde, 1/(30 x signaleringswaarde) en 1/(100 x signaleringswaarde). De terugkeertijden zijn geselecteerd zodat een brede range van belastingen gedekt kan worden.</p>
+<p>De Q-variant berekeningen (per locatie en per zichtjaar) worden met Hydra-Ring uitgevoerd voor de vier terugkeertijden. Per terugkeertijd worden er verschillende waterstandsniveaus beschouwd: vanaf 0.0 m+NAP tot de waterstand bij de terugkeertijd, met een stap van 1.0 m. De Q-variant berekeningen worden uitgevoerd voor drie modeltypen:</p>
+<ul class="simple">
+<li><p>Golfklap (a = 1.0, b = 0.67, c = 0.0)</p></li>
+<li><p>Golfoploop (a = 1.0, b = 1.7, c = 0.3)</p></li>
+<li><p>Zuilen (a = 1.0, b = 0.4, c = 0.8)</p></li>
+</ul>
+<p>Effectief worden er per locatie en per zichtjaar: 4 terugkeertijden x aantal waterstandsniveaus x 3 modeltypes Q-variant berekeningen uitgevoerd. De resultaten van de Q-variant berekeningen (golfcondities bij de verschillende waterstandniveaus) worden in de volgende stappen gebruikt.</p>
+</section>
+<section id="afleiden-relatie-hoogte-overgang-en-faalkans-gebu">
+<h2>Afleiden relatie hoogte overgang en faalkans GEBU<a class="headerlink" href="#afleiden-relatie-hoogte-overgang-en-faalkans-gebu" title="Link to this heading">#</a></h2>
+<p>De resultaten van de Q-variant berekeningen (modeltype ‘golfklap’ en ‘golfoploop’) worden eerst vertaald naar tijdsverlopen van hydraulische belastingen (waterstand, Hs, Tp en golfinvalshoek). Hier wordt de aanpak uit de “Schematiseringshandleiding Grasbekleding” aangehouden. Eerst wordt het tijdsverloop van de lokale waterstand afgeleid. Dat verschilt per watersysteem. De golfcondities uit de Q-variant berekeningen worden geprojecteerd op de waterstandsverlopen om de golfcondities in de tijd te verkrijgen. Een voorbeeld van de tijdsverlopen van hydraulische belastingen wordt in Figuur 1 weergegeven.</p>
+<p><img alt="Fig1_preprocessingDijkbekleding.png" src="../../_images/Fig1_preprocessingDijkbekleding.png" /></p>
+<p>Figuur 1 Voorbeeld tijdsverlopen van hydraulische belastingen voor een terugkeertijd; watersysteem ‘kust’.</p>
+<p>De tijdsverlopen van hydraulische belastingen (per locatie, per zichtjaar en per terugkeertijd) dienen als input voor berekeningen met DiKErnel. Met DiKErnel wordt de bekleding op golfklap/golfoploop voor verschillende niveaus van de overgang beoordeeld. Hier worden de volgende regels aangehouden:</p>
+<ul class="simple">
+<li><p>Als de maximale waterstand hoger is dan het boven niveau van de grasbekleding, dan wordt de bekleding alleen op golfklap beoordeeld. De berekeningen met DiKErnel worden voor verschillende posities op het buitentalud uitgevoerd (vanaf niveau overgang tot het boven niveau van de grasbekleding met een stap van 10 cm).</p></li>
+<li><p>Als de overgang hoger is dan de maximale waterstand, dan wordt de bekleding alleen op golfoploop beoordeeld. In dat geval wordt één berekening met DiKErnel uitgevoerd: namelijk voor het niveau van de overgang.</p></li>
+<li><p>Als de maximale waterstand tussen de grenzen van de grasbekleding valt, dan wordt de bekleding op zowel golfklap als op golfoploop beoordeeld. Als het om golfklap gaat, dan worden er sommen met DiKErnel gedaan voor verschillende posities op het buitentalud (vanaf niveau overgang tot de maximale waterstand). De golfoploop berekeningen met DiKErnel worden voor één niveau gedaan: namelijk de maximale waterstand.</p></li>
+</ul>
+<p>Naast de tijdsverlopen van hydraulische belastingen gebruikt DiKErnel ook het dijkprofiel en tan(alfa)  als invoer. Figuur 2 presenteert de te beschouwen posities op het buitentalud voor het geval als de maximale waterstand tussen de grenzen van de grasbekleding valt.</p>
+<p><img alt="Fig2_preprocessingDijkbekleding.png" src="../../_images/Fig2_preprocessingDijkbekleding.png" /></p>
+<p>Figuur 2 Voorbeeld van de te beschouwen posities op het buitentalud uitgaande van hoogte overgang = 3 m+NAP en de maximale waterstand (blauw gestipte lijn) die tussen de grenzen van de grasbekleding vaalt; rode punten: golfklap, blauw punt: golfoploop.</p>
+<p>Per locatie, per zichtjaar, per niveau overgang en per terugkeertijd resulteren de berekeningen met DiKErnel in een schadegetal op elk van de beschouwde posities. De schadegetallen voor de verschillende posities worden geaggregeerd door het maximum van de schadegetalen te nemen. Deze maximale schadegetal wordt vertaald naar een veiligheidsfactor (SF):</p>
+<p>SF = 1/max(schadegetal per positie)</p>
+<p>Aangenomen wordt dat de grasbekleding niet aan de belasting voldoet indien SF&lt;1.0.</p>
+<p>Effectief wordt er per locatie, per zichtjaar en per niveau overgang een relatie tussen de terugkeertijd en de veiligheidsfactor verkregen. Figuur 3 geeft een voorbeeld van de relatie. De grafiek toont aan dat de grasbekleding (vanaf 1.0 t/m 6.11 m+NAP) niet aan de opgelegde belasting voldoet (SF&lt;1.0). Verder wordt de veiligheidsfactor lager naarmate de belasting hoger wordt (hoge terugkeertijd), dat is conform de verwachtingen.</p>
+<p><img alt="Fig3_preprocessingDijkbekleding.png" src="../../_images/Fig3_preprocessingDijkbekleding.png" /></p>
+<p>Figuur 3 Voorbeeld van een relatie tussen de terugkeertijd en de veiligheidsfactor (SF) voor overgang = 1 m+NAP (blauw gestipte lijn); de zwarte lijn geeft SF = 1.0 aan.</p>
+<p>Gegeven de relatie tussen de terugkeertijd en de veiligheidsfactor wordt er gezocht naar de terugkeertijd die bij SF = 1.0 hoort: deze terugkeertijd definieert de faalkans van de grasbekleding (per locatie, per zichtjaar en per niveau overgang). Het snijpunt met SF = 1.0 wordt met de bi-sectie methode berekend. In het geval van Figuur 3 wordt het snijpunt met SF = 1.0 bij een terugkeertijd van ca. 50 per jaar gevonden (dat punt ligt buiten de grenzen van de grafiek). Dat betekent dat de faalkans van de bekleding gelijk is aan ca. 1/50 per jaar.</p>
+<p>Voor sommige gevallen kan de bi-sectie methode geen resultaten gegeven. Dat gebeurt bijv. als voor de beschouwde terugkeertijden de veiligheidsfactor altijd gelijk is. In dat geval worden de volgende aannames gedaan:</p>
+<ul class="simple">
+<li><p>Als de berekende veiligheidsfactoren altijd hoger zijn dan 1.0 (de bekleding voldoet aan de verschillende belastingen), dan wordt de faalkans van de bekleding gelijk gesteld aan de hoogste beschouwde terugkeertijd. Dat is een conservatieve aanname.</p></li>
+<li><p>Als de berekende veiligheidsfactoren altijd lager zijn dan 1.0 (de bekleding faalt voor de verschillende belastingen), dan wordt de faalkans van de bekleding gelijk gesteld  aan 0.5 per jaar. Dat is een conservatieve aanname.</p></li>
+</ul>
+<p>De bovenstaande stappen worden per locatie en per zichtjaar herhaald voor de verschillende niveaus van de overgang. Dat leidt uiteindelijk tot een relatie tussen de overgang en de faalkans van de grasbekleding. Figuur 4 geeft een voorbeeld van een dergelijke relatie.</p>
+<p><img alt="Fig4_preprocessingDijkbekleding.png" src="../../_images/Fig4_preprocessingDijkbekleding.png" /></p>
+<p>Figuur 4 Voorbeeld van een relatie tussen de overgang en de faalkans van de grasbekleding.</p>
+</section>
+<section id="afleiden-relatie-toplaagdikte-en-faalkans-zst">
+<h2>Afleiden relatie toplaagdikte en faalkans ZST<a class="headerlink" href="#afleiden-relatie-toplaagdikte-en-faalkans-zst" title="Link to this heading">#</a></h2>
+<p>Om de relatie tussen de toplaagdikte en de faalkans van de steenbekleding te bepalen worden Steentoetsbestanden uit LBO-1 gebruikt.</p>
+<p>Uit een Steentoetsbestand die bij een bepaalde categoriegrens hoort worden voor een dijkprofiel de toplaagdikte en ratio Hs/(delta x D) afgeleid, die net voldoen aan de categoriegrens. Dat wordt als volgt gedaan:
+•	Dvoldoet = huidige toplaagdikte – dikteoverschot
+•	ratiovoldoet = Hs/(delta x Dvoldoet)</p>
+<p>De ratiovoldoet wordt afgeleid voor elk vlak van de bekleding dat met Steentoets beoordeeld is. Een belangrijke aanname is dat we veronderstellen dat de ratiovoldoet voor de verschillende terugkeertijden gelijk is. Onderbouwing van deze aanname is gegeven in Appendix A.</p>
+<p>Vervolgens wordt er gebruikt gemaakt van de Q-variant berekeningen (modeltype ‘zuilen’). De golfhoogtes (Hs) die bij een terugkeertijd horen worden gebruikt om samen met de ratiovoldoet de toplaagdikte die voldoet bij de belasting horend bij deze terugkeertijd te bepalen. Bij een terugkeertijd horen meerdere waarden van Hs (omdat er verschillende waterstandniveaus beschouwd zijn); voor elke Hs wordt de benodigde toplaagdikte als volgt afgeleid:</p>
+<p>D(i) = Hs(i)/(delta x ratiovoldoet)</p>
+<p>In de bovenstaande formule worden alleen de Hs waarden beschouwd die horen bij het waterstandsniveau die het beschouwd dijkvlak bereikt. De verschillende waarden van de toplaagdikte worden vervolgens geaggregeerd tot één waarde door het maximum van de verschillende toplaagdiktes te nemen:</p>
+<p>Dmax = max(D(i))</p>
+<p>Deze maximale toplaagdikte wordt aangehouden als de toplaagdikte met de faalkans correspondeert met de beschouwde terugkeertijd vermenigvuldigd met de faalkansbegroting ZST en de langte-effect factor N.</p>
+<p>De analyse wordt per locatie herhaald voor verschillende zichtjaren, terugkeertijden en dijkvlakken. Figuur 5 geeft een voorbeeld van de verkregen relaties tussen de toplaagdikte en de faalkans van de steenbekleding.</p>
+<p><img alt="Fig5_preprocessingDijkbekleding.png" src="../../_images/Fig5_preprocessingDijkbekleding.png" /></p>
+<p>Figuur 5 Voorbeeld van een relatie tussen de toplaagdikte en de faalkans van de steenbekleding.</p>
+<p>Verder wordt het volgende opgemerkt:</p>
+<ul class="simple">
+<li><p>In het geval van een ontwerp, waarin de hoogte van de overgang hoger is dan de aanwezige overgang wordt er een nieuwe steenbekleding aangelegd (tussen de aanwezige bekleding en de nieuwe overgang). In dergelijk geval wordt een relatie aangehouden die hoort bij het bovenste vlak met een geldige steenzetting.</p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Piping.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Betrouwbaarheid piping</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../Maatregelen/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Maatregelen</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uitvoeren-van-q-variant-berekeningen">Uitvoeren van Q-variant berekeningen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#afleiden-relatie-hoogte-overgang-en-faalkans-gebu">Afleiden relatie hoogte overgang en faalkans GEBU</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#afleiden-relatie-toplaagdikte-en-faalkans-zst">Afleiden relatie toplaagdikte en faalkans ZST</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/Deltares/VrtoolDocumentation/edit/main/docs/Achtergronden/Faalkansmodellen/Dijkbekleding.md">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/Achtergronden/Faalkansmodellen/Dijkbekleding.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2023, Deltares.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.2.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

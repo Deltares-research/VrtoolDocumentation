@@ -2,6 +2,18 @@
 **NB: Dit gedeelte is niet up-to-date en wordt in de komende weken aangepast**
 Vóór het draaien van deze workflow moet eerst een invoerbestand ingevult worden. 
 
+## Structuur van het invoerbestand van de bekledingsberekeningen
+
+.. topic:: Aandachtspunten 
+
+## het vullen van het invoerbestand
+
+.. topic:: Aandachtspunten 
+
+## Draaien van de workflow voor het bepalen van de faalkans van bekledingen
+
+.. topic:: Aandachtspunten 
+
 ## Stap 1: Excel invoerbestand invullen
 
 De basis voor het genereren van de bekleding berekeningen is het invoerbestand `Bekleding_default.csv`. Dit bestand is terug te vinden in: ```.\VRSuiteUtils-main\preprocessing\default_files``` in de ZIP bestand die bij de installatie voor [preprocessing](..\Installaties\VRUtils.md) is gedownload.

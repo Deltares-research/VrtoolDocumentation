@@ -99,10 +99,12 @@ Resultaten optimalisatie
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Op de pagina `Resultaten optimalisatie` worden de resultaten van de optimalisatie vergeleken met die van de referentievariant. Op de verticale as wordt de trajectkans weergegeven, voor de horizontale as kan worden gekozen voor de kosten (LCC) ofwel de versterkte lengte. 
 
-[figuur invoegen]
+.. image:: img/optimalisatie_voorbeeld.png 
+    :width: 80%
+    :align: center
 
 In de weergave zijn 3 lijnen zichtbaar: een groene stippellijn, een groene doorgetrokken lijn en een blauwe doorgetrokken lijn.
-De groene stippellijn geeft het pad weer van de optimalisatie: elke stap is een maatregel die wordt genomen. De bepaling hiervan is nader toegelicht bij de achtergronden van het `algoritme ../../Achtergronden/Optimalisatie/index.html#opzet-van-het-algoritme`_ en in onderstaand kader.
+De groene stippellijn geeft het pad weer van de optimalisatie: elke stap is een maatregel die wordt genomen. De bepaling hiervan is nader toegelicht bij de achtergronden van het `algoritme <../../Achtergronden/Optimalisatie/index.html#opzet-van-het-algoritme>`_ en in onderstaand kader.
     **Weergave van het optimalisatieresultaat**
 
     De groene stippellijn geeft een weergave van de volgorde van optimale maatregelen. Een voorbeeldresultaat is weergegeven in onderstaande tabel.
@@ -116,86 +118,12 @@ De groene stippellijn geeft het pad weer van de optimalisatie: elke stap is een 
 
     Bij de groene doorgetrokken lijn zijn de maatregelen gecombineerd per dijkvak. Voor elk dijkvak worden de stappen van de optimalisatie gecombineerd tot een maatregel. Het eerste dijkvak is het vak wat als eerste voorkomt in het optimalisatiepad, het tweede dijkvak is het vak wat als tweede voorkomt, enzovoorts. In bovenstaand voorbeeld wordt dus (uitgaande van het economisch optimum) eerst een lijnstuk gemaakt met 3.4 M€ aan kosten op dijkvak 1, horend bij een grondversterking met bermbreedte 10 meter en kruinverhoging van 1 meter. Daarna wordt een lijnstuk toegevoegd met 3.3 M€ kosten voor dijkvak 2, horend bij een grondversterking met bermbreedte 8 meter en kruinverhoging van 50 centimeter. De trajectfaalkans bij het eerste punt wordt dan herberekend: bijvoorbeeld na versterking van dijkvak 1 met deze maatregel zal de faalkans kleiner zijn dan 1/1000, maar geen 1/10000. De stippellijn ligt bij een figuur met faalkans en kosten altijd onder of op de doorgetrokken lijn: bij de stippellijn is de faalkans altijd maximaal zo groot als bij de doorgetrokken lijn bij gelijke kosten.
 
-De resultaten van de referentievariant op basis van doorsnede-eisen worden weergegeven door de blauwe lijn. Hierbij wordt in de berekening telkens voor het zwakste vak de maatregel berekend die aan de ontwerpeisen voldoet (zie ook de `achtergronden ../../Achtergronden/Optimalisatie/index.html#referentievariant-op-basis-van-oi2014`_). De volgorde van vakken is dus vanaf het zwakste vak naar het sterkste vak. Vaak komt voor dat de lijn doorloopt tot voorbij de norm: dit is omdat de maatregelen die worden genomen puur op basis van doorsnede-eis worden bepaald en er niet naar de trajecteis wordt gekeken. In principe wordt bij versterken op basis van doorsnede-eisen echter de gehele lijn "uitgevoerd".
-
+De resultaten van de referentievariant op basis van doorsnede-eisen worden weergegeven door de blauwe lijn. Hierbij wordt in de berekening telkens voor het zwakste vak de maatregel berekend die aan de ontwerpeisen voldoet (zie ook de `achtergronden <../../Achtergronden/Optimalisatie/index.html#referentievariant-op-basis-van-oi2014>`_). De volgorde van vakken is dus vanaf het zwakste vak naar het sterkste vak. Vaak komt voor dat de lijn doorloopt tot voorbij de norm: dit is omdat de maatregelen die worden genomen puur op basis van doorsnede-eis worden bepaald en er niet naar de trajecteis wordt gekeken. In principe wordt bij versterken op basis van doorsnede-eisen echter de gehele lijn "uitgevoerd".
 
 Prioriteringsinformatie
 ~~~~~~~~~~~~~~~~~~~~~~~
+<uitleg toevoegen>
 
 Maatregelen
-~~~~~~~~~~
-
-
-
-
-Hier een aantal beschrijvingen van de verschillende figuren en tabbladen opnemen. 
-
-1 hoofdstuk van maken:
-
-
-*Tekst komt nog hier*
-
-Deze handleiding geeft een overzicht van wat er in het dashboard te zien is en worden de verschillende functionaliteiten verder uitgelegd. 
-
-- deze handleiding neemt je mee in hoe het dashboard gebruikt kan worden
-- linker kant input, en rechter kant output
-- plaatje input-
-3 thema's:
-- selecteren van een traject
-- instellingen waarmee je input aangeeft
-- tabbladen, verschillende tabbladen waar we naar verschillende dingen kijken
-
-**Dashboard starten en introductie**
-
-
-*toevoegen hoe je van startpagina naar trajectpagina gaat*
-
-Het dashboard ziet er nu als volgt uit:
-
-
-Het dashboard kent een logische opbouw met aan de linkerkant alle input (Traject selectie, Instellingen en Maatregelen optimalisatie) en aan de rechterkant alle output (de tabbladen: Overzicht, beoordelingsresultaten, versterkingsmaatregelen, Resultaten optimalisatie, prioriteringsinformatie en *Maatregelen).
-
-
-
-In de volgende paragrafen worden 
-
-**Selecteren traject**
-
-Omdat we tijdens de *Tutorial* gebruik hebben gemaakt van dijktraject 24-3, zullen we dit traject hier als voorbeeld gebruiken om resultaten mee weer te geven.
-
-klik op ``Selecteer een bestand config.json`` en navigeer naar de folder met waar de gedownloade bestanden van dijktraject 24-3 zijn opgeslagen.
-
-*NB. Deze bestanden zijn gedownload tijdens het doorlopen van de Tutorial. Mocht u deze stap hebbben overgeslagen dan zijn deze bestanden te downloaden via deze [link](https://github.com/Deltares-research/VrtoolDocumentation/raw/main/vrtool_docs/Bestanden/Tutorial/24-3.zip.*
-
-selecteer en open het ``config.json`` bestand. De resultaten worden nu geladen.
-
-- Economisch optimaal 
-- Faalkans
-
-weergeven resultaten overkoepelend:
- - uitleg logische volgorde van tabbladen. 
- - aan en uitzetten labels in legenda
- - visualisatie of plot downloaden als .png (figuur)
- - uitleg hoe nu verder
-**instellingen**
-
-- inleidende Tekst - 
-
-uitleg:
- - betrouwbaarheid, faalkans & duidingsklassen
- - doorsnede-Eisen & Veiligheidsrendement
- - mechanisme
- - tijdschaal
-
-
-**tabbladen** 
-verschillende tabbladen
-- overzicht
-- beoordelingsresultaten
-- versterkingsmaatregelen
-- Resultaten optimalisatie
- - uitleg hoe figuur te lezen
- - eventueel ondersteunende uitleg over methode
-- prioriteringsinformatie
-
-- figuren opslaan geojson
+~~~~~~~~~~~
+<uitleg toevoegen>

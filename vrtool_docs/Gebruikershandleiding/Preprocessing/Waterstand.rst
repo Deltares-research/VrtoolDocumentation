@@ -83,7 +83,7 @@ Voor deze workflow zijn de volgende waarden in dat bestand van belang:
 
    * De workflow zal crashen wanneer er bestaande resultaten worden gevonden. Deze moeten dan eerst worden verwijderd of verplaatst.
 
-Er wordt enige controle op de uitvoer gedaan door de preprocessor, maar het is raadzaam (al dan niet steekproefsgewijs) de resultaten te controleren. De meeste envoudige manier daarvoor is om naar de ``output_map_waterstand`` te gaan en voor enkele locaties de resultaten te bekijken in het bestand ``DESIGNTABLE_{locatie}.txt``. Een voorbeeld is hieronder weergegeven.
+Er wordt enige controle op de uitvoer gedaan door de preprocessor, maar het is raadzaam (al dan niet steekproefsgewijs) de resultaten te controleren. De meeste eenvoudige manier daarvoor is om naar de ``output_map_waterstand`` te gaan en voor enkele locaties de resultaten te bekijken in het bestand ``DESIGNTABLE_{locatie}.txt``. Een voorbeeld is hieronder weergegeven.
 
 .. image:: img/DesignTableWaterstand.png
    :width: 60%

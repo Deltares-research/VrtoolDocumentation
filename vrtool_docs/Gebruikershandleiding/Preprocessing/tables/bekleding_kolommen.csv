@@ -1,0 +1,13 @@
+Kolom,,Beschrijving
+doorsnede,Verplicht,De doorsnede zoals beschreven in de Vakindeling.csv
+naam_hr_locatie,Verplicht,"Naam van folder met HLCD, HRD en config database"
+Verplicht,Verplicht,Verwijzing naar de bijbehorende locatie in de hydraulische database. Hrlocation kan worden afgeleid o.b.v. hr_koppel.
+region,Verplicht,"Region van het traject. Te kiezen uit: kust, rivieren en meren "
+gws,Verplicht,Gemiddelde buitenwaterstand in m+NAP
+getij_amplitude,Verplicht,Gemiddelde amplitude van het getij in meters
+steentoetsfile,Verplicht,Naam van het steentoetsfile bestand
+dwarsprofiel,Verplicht,Nummer van het dwarsprofiel uit het Steentoetsbestand
+prfl,Verplicht,Naam van het prfl bestand te gebruiken voor bekleding
+begin_bekleding,Optioneel,Ondergrens van de (steen)bekleding. Optioneel maar aanbevolen.
+begin_grasbekleding,Verplicht,hoogte waarop de grasbekleding begint (dus onderste punt) [m+NAP]
+waterstand_stap,Verplicht,Stapgrootte voor de waterstand in Q-variant berekeningen in meters. Dient voor definiëren van waterstandniveaus onder de waterstand bij de norm

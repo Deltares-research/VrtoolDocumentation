@@ -23,7 +23,9 @@ ingevuld moeten worden:
 
 .. topic:: Aandachtspunten
 
-  Let op: bij het opgeven van een koppeling in de kolommen ``piping``, ``stabiliteit`` etc. hoeven deze nog niet te zijn ingevuld voor deze workflow. Echter, bij het maken van de database moet het gegenereerde ``geojson`` bestand wel alle benodigde informatie bevatten.
+  * Bij het opgeven van een koppeling in de kolommen ``piping``, ``stabiliteit`` etc. hoeven deze nog niet te zijn ingevuld voor deze workflow. Echter, bij het maken van de database moet het gegenereerde ``geojson`` bestand wel alle benodigde informatie bevatten.
+
+  * De kolommen pleistoceendiepte en deklaagdikte zijn optioneel, maar wanneer deze niet worden ingevuld wordt standaard 25 respectievelijk 7 meter aangehouden. Dit leidt tot relatief zware maatregelen. Voor een nauwkeurige kostenschatting wordt aanbevolen om deze waarden expliciet in te vullen. Daarbij moet geredeneerd worden vanuit een verwachtingswaarde (dus de dikte/diepte die op het grootste deel van het vak aanwezig is).
 
 Het vullen van het invoerbestand
 -------------------------------
@@ -53,6 +55,8 @@ Waterkeringen wordt een foutmelding gegeven.
   * De m_eind en m_start van alle vakken moeten op elkaar aansluiten
 
   * In principe is het beter om vakken niet té klein te maken. Vaak zorgt dit voor onnodig veel rekentijd, en niet voor een beter resultaat. In de regel is het advies geen vakken kleiner dan pakweg 300 meter te maken, tenzij er sprake is van lokale zwakke plekken.
+
+  * Voor een betrouwbare analyse moeten met name de zwakkere vakken en de vakken met verwachte dure maatregelen (bijv. veel bebouwing) goed worden onderscheiden. Als geen maatregelen worden verwacht, of vakken redelijk homogeen zijn (met name voor de belangrijkste mechanismen) kunnen deze samen worden gevoegd zonder dat de kwaliteit van de berekening er onder lijdt.
 
 
 Draaien van de workflow voor het genereren van een vakindeling

@@ -10,4 +10,6 @@ stabiliteit,Optioneel,Moet overeen komen met een waarde in de kolom doorsnede 
 piping,Optioneel,Moet overeen komen met een waarde in de kolom doorsnede bij Piping_default.csv. Hiermee wordt aangegeven welke doorsnede bij welk vak hoort.
 overslag,Optioneel,Moet overeen komen met een waarde in de kolom doorsnede bij HR_default.csv. Hiermee wordt aangegeven welke doorsnede bij welk vak hoort. 
 bekledingen,Optioneel,Moet overeen komen met een waarde in de kolom doorsnede bij Bekleding_default.csv. Hiermee wordt aangegeven welke doorsnede bij welk vak hoort.
+pleistoceendiepte,Optioneel,"Representatieve pleistoceendiepte voor het dijkvak, gebruikt voor dimensionering maatregelen"
+deklaagdikte,Optioneel,"Representatieve deklaagdikte voor het dijkvak, gebruikt voor dimensionering maatregelen"
 opmerkingen,Optioneel,"Hier kunnen eventuele opmerkingen worden geplaatst. Deze kolom is voor de gebruiker, en wordt niet gebruikt in de VRTOOL."

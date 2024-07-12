@@ -10,7 +10,6 @@ Structuur van het invoerbestand voor stabiliteit binnenwaarts
   :widths: 15, 15, 50
   :header-rows: 1
 
-
 Het vullen van het invoerbestand
 -------------------------------
 Voor stabiliteit wordt in principe met een vereenvoudigde relatie gerekend waarmee bermverbreding wordt vertaald naar een toename van de betrouwbaarheid. Het is ook mogelijk met D-Stability te rekenen. Wanneer in de kolom `stixnaam` een bestandsnaam van een D-Stability berekening wordt ingevoegd wordt deze automatisch meegenomen in de database en gebruikt in de VRTOOL. De stix-bestanden moeten dan handmatig in een folder `\stix` in dezelfde directory als de database worden geplaatst. 

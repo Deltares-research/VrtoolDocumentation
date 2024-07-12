@@ -1,9 +1,9 @@
 # Rekenen met de VRTOOL
 
-**NB: Dit hoofdstuk wordt in de loop van mei geupdate**
+**NB: Dit hoofdstuk wordt in de loop van juli geupdate**
 
 De VRTool kan op twee manieren worden gedraaid:
-* Via het environment van de [preprocessor](../Installaties/index.html). Deze bevat altijd de laatste VRTOOL release, zie hiervoor de pagina over [werken met de preprocessor](../Preprocessing/werken_met_preprocessor.html).
+* Via het environment van de [preprocessor](../../Installaties/index.html). Deze bevat altijd de laatste VRTOOL release, zie hiervoor de pagina over [werken met de preprocessor](../Preprocessing/werken_met_preprocessor.html).
 * Door de VRTOOL als aparte package te installeren.
     
 In beide gevallen kan de VRTool daarna worden aangeroepen met de CLI van Anaconda en de volgende commando: 

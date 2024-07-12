@@ -25,11 +25,10 @@ Dit bestand heeft de volgende kolommen die ingevuld moeten worden:
 
    * Het invoeren van `begin_bekleding` is niet verplicht, maar wel aan te bevelen. Deze wordt gebruikt om de minimale waterstand voor de berekeningen voor de belasting te bepalen.  Wanneer deze niet wordt ingevoerd wordt kan dit leiden tot onnodig veel (vaak onzinnige) berekeningen.
 
-<nog aanvullen>
 
 Het vullen van het invoerbestand
 -------------------------------
-Bij het vullen van het invulbestand moet bij elke doorsnede de benodigde informatie worden ingevuld. Daarbij moet voor elke locatie een corresponderende berekening zijn (dus zelfde doorsnedenaam) in het `HR_default.csv`-bestand. Bij de berekeningen voor de belasting wordt namelijk gebruik gemaakt van de waterstandsberekeningen.
+Bij het vullen van het invulbestand moet bij elke doorsnede de benodigde informatie worden ingevuld. Daarbij moet voor elke locatie in `Bekleding.csv` een corresponderende waterstandsberekening zijn (dus zelfde doorsnedenaam) in het `HR_default.csv`-bestand. Bij de berekeningen voor de belasting wordt namelijk gebruik gemaakt van de waterstandsberekeningen.
 
 De berekeningen voor bekledingen zijn tijdrovend door het grote aantal parametrisaties: het is aan te bevelen om bekledingen alleen mee te nemen wanneer de verwachting is dat dit relevant is voor het eindresultaat. Het is prima mogelijk om op een traject bijvoorbeeld voor 3 van de 40 vakken de bekleding mee te nemen. 
 
@@ -37,7 +36,9 @@ De berekeningen voor bekledingen zijn tijdrovend door het grote aantal parametri
 
    * In de kolom `region` kan kust, meren of rivieren worden ingevuld. Dit is van belang voor de berekening van de grasbekleding omdat daarbij een verschillend waterstandsverloop wordt gehanteerd. Daaraan gerelateerd is het van belang om de `gws` en `getij_amplitude` op juiste wijze in te vullen. Voor de rivieren zijn beide parameters niet van belang.
 
-   * De Steentoetsbestanden moeten het versienummer in de bestandsnaam hebben. Momenteel kunnen Steentoetsbestanden met de versies `17.1.2.1`, `17.1.1.1`, `19.1.1` en `20.1.1` worden gelezen.
+   * De Steentoetsbestanden moeten het versienummer in de bestandsnaam hebben. Momenteel kunnen Steentoetsbestanden met de versies `17.1.2.1`, `17.1.1.1`, `19.1.1` en `20.1.1` worden gelezen. 
+
+   * `begin_grasbekleding` moet overeenkomen met waar in de Steentoetsbestanden toplaagtype 20.0 (gras) begint. Deze moet in de bestanden ook zijn ingevuld anders kan het profiel niet goed worden geinterpreteerd.
 
 Draaien van de workflow voor het bepalen van de faalkans van bekledingdelen
 --------------------------------

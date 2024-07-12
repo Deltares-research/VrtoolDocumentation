@@ -1,0 +1,9 @@
+﻿Optie 1,Optie 2,Toelichting
+Maatregel,Maatregeltype,Typen maatregelen per dijkvak
+Maatregel,Bermverbreding,Lengte van de berm per dijkvak
+Maatregel,Kruinverhoging,Kruinverhoging per dijkvak
+Maatregel,Investeringsjaar,Jaar van investeren
+Betrouwbaarheid,Absoluut,Faalkans/betrouwbaarheid na versterking
+Betrouwbaarheid,Verhouding vr/dsn,Ratio van faalkansen veiligheidsrendement en referentievariant na versterking 
+Kosten,Absoluut,Kosten van de versterking
+Kosten,Verschil vr - dsn,Verschil in kosten tussen veiligheidsrendement en referentievariant

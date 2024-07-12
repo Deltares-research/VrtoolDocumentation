@@ -5,7 +5,7 @@ Ook voor overslag worden net als voor waterstand middels Hydra-Ring nieuwe overl
 berekeningen gemaakt voor de jaren 2023 en 2100. Daarbij wordt voor verschillende kruinhoogtes de
 faalkans voor overslag bepaald. Vóór het draaien van deze workflow moet
 eerst een invoerbestand ingevuld worden. Dit invoerbestand is identiek
-aan die voor `waterstanden <Waterstand.rst>`_.
+aan die voor `waterstanden <Waterstand.html>`_.
 
 Structuur van het invoerbestand van de overslagberekeningen
 -----------------------------------------------

@@ -1,0 +1,544 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Veiligheidsrendement in het kort &#8212; vrtool_docs  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/theme-deltares.css?v=aa503ec8" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Achtergronden/Optimalisatie/Bepaling van optimale maatregelen';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/logo_vrtool.svg" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="../../_static/logo_vrtool.svg" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">Veiligheidsrendement</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Installaties/index.html">
+    Installaties
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Tutorials/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Gebruikershandleiding/index.html">
+    Gebruikershandleiding
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../index.html">
+    Achtergronden
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Deltares/Veiligheidsrendement" title="VRTOOL" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" class="icon-link-image" alt="VRTOOL"/></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.deltares.nl/en/" title="Deltares" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../_static/deltares-blue.svg" class="icon-link-image" alt="Deltares"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Installaties/index.html">
+    Installaties
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Tutorials/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Gebruikershandleiding/index.html">
+    Gebruikershandleiding
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../index.html">
+    Achtergronden
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Deltares/Veiligheidsrendement" title="VRTOOL" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" class="icon-link-image" alt="VRTOOL"/></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.deltares.nl/en/" title="Deltares" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../_static/deltares-blue.svg" class="icon-link-image" alt="Deltares"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Veiligheidsr...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="veiligheidsrendement-in-het-kort">
+<h1>Veiligheidsrendement in het kort<a class="headerlink" href="#veiligheidsrendement-in-het-kort" title="Link to this heading">#</a></h1>
+<p>In Nederland moeten primaire waterkeringen voldoen aan eisen op trajectniveau, die zijn vastgelegd in de Waterwet (in de toekomst Omgevingswet). Deze eisen zijn naast op slachtofferrisico’s ook gebaseerd op basis van een Maatschappelijke Kosten Baten Analyse (MKBA), waarbij gekeken wordt naar de beste manier om de veiligheid te waarborgen tegen zo laag mogelijke kosten. Daarbij zijn versterkingskosten (op trajectniveau) en reductie van het overstromingsrisico tegen elkaar afgewogen.</p>
+<p>Binnen het onderzoeksprogramma AllRisk heeft de Technische Universiteit Delft in samenwerking met Deltares en Waterschap Rivierenland een methode ontwikkeld waarmee de versterkingsopgave op trajectniveau geoptimaliseerd kan worden. Deze methode wordt de veiligheidsrendementmethode genoemd.</p>
+<p>De veiligheidsrendementmethode richt zich op het optimaliseren van investeringen op systeemniveau. In de bestaande praktijk wordt vaak op basis van doorsnede-eisen per faalmechanisme bepaald wat de opgave is of welke versterkingsmaatregel moet worden getroffen. Dit betekent echter dat de toelaatbare faalkans op dezelfde wijze wordt verdeeld over alle dijkvakken en mechanismen, wat in veel gevallen inefficiënt is omdat dijken niet overal hetzelfde zijn en de kosten van dijkversterking sterk kunnen verschillen per locatie en per mechanisme. Een belangrijk verschil is bijvoorbeeld de aanwezige bebouwing/ruimte voor versterking, en de typen maatregelen die beschikbaar zijn voor verschillende mechanismen.</p>
+<p>Met name bij macrostabiliteit en piping is de trajectfaalkans ongeveer gelijk aan de som van de faalkansen van de dijkvakken (bij kleine kansen). Dit betekent dat elke verbetering aan elk dijkvak bijdraagt aan de trajectveiligheid. De veiligheidsrendementmethode kijkt enkel naar de trajecteis, waardoor er kan worden geoptimaliseerd over drie vrijheidsgraden: tijd, faalmechanismen en ruimte (dijkvakken). Voor elk punt in de tijd wordt zo de optimale configuratie van dijkvakken bepaald die voldoet aan de trajecteis.</p>
+<p>Ten eerste wordt door te optimaliseren over de faalmechanismen de faalkansruimte optimaal verdeeld, waardoor de meeste veiligheidswinst wordt geboekt per geïnvesteerde euro. Omdat kosten voor versterken sterk kunnen verschillen tussen mechanismen, levert dit veel winst op. Zo zijn maatregelen voor verbetering van binnenwaartse stabiliteit in dichtbebouwd gebied bijvoorbeeld vaak duurder dan maatregelen voor piping.</p>
+<p>Ten tweede wordt door de optimalisatie per vak de winst van deze verdeling groter: dure vakken met dure versterkingen voor specifieke mechanismen worden enigszins ontzien, terwijl er juist wordt geïnvesteerd in een extra sterke dijk als dat relatief voordelig is. Beide punten leveren veel winst op omdat de kostenfuncties per dijkvak vaak knikken vertonen, bijvoorbeeld in geval van bebouwing, waarbij moet worden overgeschakeld op een duurdere versterkingsmaatregel. De veiligheidsrendementmethode optimaliseert hierin.</p>
+<p>Tot slot kunnen door in de tijd te optimaliseren versterkingen soms worden uitgesteld, bijvoorbeeld als er nu nog geen kruinhoogtetekort is, maar dit in de toekomst wel het geval zal zijn. Op deze manier kan de veiligheid worden gewaarborgd zonder onnodige investeringen te doen.</p>
+<p>Deze aanpak levert een veel efficiëntere versterking op dan de vaak gebruikte (uniforme) doorsnede-eisen. Bij SAFE blijken de totale LCC 30-50% lager uit te vallen dan wanneer bij een configuratie op basis van de hierboven beschreven aanpak o.b.v. doorsnede-eisen per faalmechanisme (Klerk et al., 2021). De winst van de veiligheidsrendementmethode komt voort uit de combinatie van de eerder genoemde factoren ruimte, tijd en mechanismen.</p>
+<p>Opgemerkt moet worden dat ook bij de veiligheidsrendementmethode sommige dijkvakken versterkt moeten worden: zonder het versterken van vakken die op zichzelf al niet voldoen aan de trajecteis kan de trajecteis immers nooit gehaald worden. Bij veiligheidsrendementberekeningen wordt geïnvesteerd op basis van kosten-batenverhouding, maar in ieder geval zo ver dat het traject in 2050 voldoet aan de ondergrens voor het traject. Bij vergelijkende berekeningen op basis van doorsnede-eisen wordt een ontwerp gemaakt wat in 2075 voldoet aan de doorsnede-eisen. Het overstromingsrisico wordt bepaald voor een horizon van 100 jaar (tot 2125).</p>
+<p>In de analyses worden aannames gedaan over de kosten. Dit zijn geen ramingen, maar grove inschattingen van de te verwachten kosten, die gebaseerd zijn op KOSWAT en binnen SAFE ook geverifieerd aan de hand van SSK ramingen uit de versterking. Binnen het lopende innovatieproject wordt ook gewerkt aan hernieuwde kostenfuncties en -kentallen.</p>
+<section id="doel-van-het-innovatieproject-versterkingsaanpak-vanuit-veiligheidsrendement">
+<h2>Doel van het innovatieproject ‘Versterkingsaanpak vanuit Veiligheidsrendement’<a class="headerlink" href="#doel-van-het-innovatieproject-versterkingsaanpak-vanuit-veiligheidsrendement" title="Link to this heading">#</a></h2>
+<p>Binnen het innovatieproject Versterkingsaanpak vanuit Veiligheidsrendement wordt de methode geoperationaliseerd zodat deze gebruikt kan worden als ondersteuning bij het vertalen van beoordelingsresultaten naar beslisinformatie voor de programmering van dijkversterkingen. Daarvoor wordt een toolbox ontwikkeld om beoordelingsresultaten te vertalen naar invoer voor de rekenmethode, wordt de rekenmethode uitgebreid, en wordt gewerkt aan een dashboard om resultaten te ontsluiten en analyseren.</p>
+</section>
+<section id="disclaimer">
+<h2>Disclaimer<a class="headerlink" href="#disclaimer" title="Link to this heading">#</a></h2>
+<p>De veiligheidsrendementmethode wordt op dit moment binnen de proefvlucht van het innovatieproject getest. Deze ervaringen zijn belangrijk om de aanpak later landsbreed te kunnen toepassen.
+Een aandachtspunt is het op de juist wijze interpreteren van de resultaten: omdat de methode wordt toegepast in de fase voor een versterking is het nog niet mogelijk alle gebiedsinformatie en kennis die normaliter in een versterkingsproject voor handen is te benutten. Daarom wordt een optimalisatie gedaan op basis van parameterisaties en een set standaardmaatregelen. Het is de verantwoordelijkheid van de gebruiker om in te schatten of deze parameterisaties lokaal kloppen, en in hoeverre deze de resultaten beinvloeden. Daarvoor is binnen het innovatieproject een gebruikersgroep in het leven geroepen.</p>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#doel-van-het-innovatieproject-versterkingsaanpak-vanuit-veiligheidsrendement">Doel van het innovatieproject ‘Versterkingsaanpak vanuit Veiligheidsrendement’</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#disclaimer">Disclaimer</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/Deltares/VrtoolDocumentation/edit/main/docs/Achtergronden/Optimalisatie/Bepaling van optimale maatregelen.md">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/Achtergronden/Optimalisatie/Bepaling van optimale maatregelen.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2023, Deltares.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

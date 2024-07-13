@@ -5,7 +5,7 @@ Ook voor overslag worden net als voor waterstand middels Hydra-Ring nieuwe overl
 berekeningen gemaakt voor de jaren 2023 en 2100. Daarbij wordt voor verschillende kruinhoogtes de
 faalkans voor overslag bepaald. Vóór het draaien van deze workflow moet
 eerst een invoerbestand ingevuld worden. Dit invoerbestand is identiek
-aan die voor `waterstanden <Waterstand.rst>`_.
+aan die voor `waterstanden <Waterstand.html>`_.
 
 Structuur van het invoerbestand van de overslagberekeningen
 -----------------------------------------------
@@ -95,3 +95,5 @@ Voor deze workflow zijn de volgende waarden in dat bestand van belang:
    * Het is handig om eerst de workflow helemaal te testen voor 1 locatie. Daarvoor kan (tijdelijk) het aantal regels in het ``HR_default.csv`` bestand worden beperkt tot bijv. alleen de eerste locatie. Let wel op dat de boekhouding in orde blijft.
 
    * De workflow zal crashen wanneer er bestaande resultaten worden gevonden. Deze moeten dan eerst worden verwijderd of verplaatst.
+
+Er wordt enige controle op de uitvoer gedaan door de preprocessor, maar het is raadzaam (al dan niet steekproefsgewijs) de resultaten te controleren. De meeste eenvoudige manier daarvoor is om naar de ``output_map_overslag`` te gaan en voor enkele locaties de resultaten te bekijken in het bestand ``DESIGNTABLE_{locatie}.txt``. Hier staat bij `Value` de kruinhoogte, en daarachter faalkans en betrouwbaarheidsindex bij die kruinhoogte. In de regel moeten de faalkansen dalen met stijgende kruinhoogte. Bij het wegschrijven van de database wordt hiervoor gecorrigeerd, maar wanneer dit nodig is zegt het wel iets over de kwaliteit van de berekening. 

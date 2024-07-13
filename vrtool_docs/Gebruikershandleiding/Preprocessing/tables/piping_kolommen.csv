@@ -1,0 +1,18 @@
+﻿Kolom,,Beschrijving
+doorsnede,Verplicht,Naam van het dwarsprofiel.
+scenario,Verplicht,"Indien er meerdere ondergrondscenario’s zijn, dient hier het scenario ID te worden ingevoerd. Deze moet een nummer zijn."
+scenariokans,Verplicht,Conditionele kans op het ondergrondscenario [-]
+mhw,Verplicht,Maatgevend hoogwater [m+NAP]
+polderpeil,Verplicht,Polderpeil [m+NAP]
+d_wvp,Verplicht,Dikte van het watervoerend pakket [m]
+d70,Verplicht,Zeefmaat die 70% (massa) van de zandkorrels van de zandfractie laat passeren [m]
+d_cover,Verplicht,Dike van de deklaag [m]
+h_exit,Verplicht,Bodemhoogte bij uittredepunt [m+NAP]
+r_exit,Verplicht,Dempingsfactor bij uittredepunt [-] (afname van stijghoogte in watervoerend pakket ten gevolge van lek door slappelagenpakket)
+l_voor,Verplicht,Leklengte intredepunt tot binnenteen dijk [m]
+l_achter,Verplicht,Leklengte binnenteen tot uittredepunt [m]
+k,Verplicht,Doorlatendheid van het watervoerend pakket [m/s]
+gamma_sat,Verplicht,Verzadigd gewicht van de deklaag [kN/m3]
+kwelscherm,Verplicht,"Aanwezigheid kwelscherm. 0 = kwelscherm afwezig, 1 = kwelscherm aanwezig"
+dh_exit,Verplicht,Jaarlijkse bodemdaling van het achterland [m/jaar]
+pf_s,Optioneel,"Jaarlijkse faalkans, gegeven het ondergrondscenario [-]. Optioneel, vooral handig als check. Wordt niet gebruikt in berekening"

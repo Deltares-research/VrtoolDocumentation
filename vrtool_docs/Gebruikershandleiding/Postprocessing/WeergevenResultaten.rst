@@ -37,7 +37,7 @@ Instellingen
 ~~~~~~~~~~~~
 Het instellingen gedeelte kan worden gebruikt om de weergave van de resultaten aan te passen. Bovenaan staat een slider, de punten hierop zijn alle jaartallen die voorkomen in de database. Door de slider te verschuiven kan bijvoorbeeld worden gekeken naar de faalkans in verschillende jaren. Wanneer de slider tussen twee punten in staat, wordt de faalkans van het voorgaande jaar waarvoor resultaten zijn weergegeven (dus wanneer 2025 en 2045 beschikbaar zijn wordt bij het selecteren van 2043 het resultaat van 2025 weergegeven.
 
-.. image:: img/instellingen_links.png 
+.. image:: /_images/opties_kaart.png  
    :width: 50%
    :align: center
 

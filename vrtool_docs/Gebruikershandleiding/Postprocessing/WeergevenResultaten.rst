@@ -37,7 +37,7 @@ Instellingen
 ~~~~~~~~~~~~
 Het instellingen gedeelte kan worden gebruikt om de weergave van de resultaten aan te passen. Bovenaan staat een slider, de punten hierop zijn alle jaartallen die voorkomen in de database. Door de slider te verschuiven kan bijvoorbeeld worden gekeken naar de faalkans in verschillende jaren. Wanneer de slider tussen twee punten in staat, wordt de faalkans van het voorgaande jaar waarvoor resultaten zijn weergegeven (dus wanneer 2025 en 2045 beschikbaar zijn wordt bij het selecteren van 2043 het resultaat van 2025 weergegeven.
 
-.. figure:: /_images/opties_kaart.PNG  
+.. figure:: img/instellingen_links.PNG  
    :width: 50%
    :align: center
 
@@ -59,7 +59,7 @@ Op het rechterpaneel is een zestal tabbladen zichtbaar. Deze tabbladen geven inz
 
 De meeste van deze pagina's geven resultaten op kaart weer. Rechtsboven in de kaart wordt een aantal opties weergegeven. Daarmee kan de kaart worden geexporteerd als .png, en kan bijvoorbeeld worden versleept. In de legenda kunnen lagen worden aan en uitgezet door er op te klikken. Zo kan bijvoorbeeld een kaart worden gemaakt met alleen specifieke maatregelen, of alleen versterkingen in een bepaald jaar.
 
-.. image:: img/opties_kaart.png 
+.. image:: img/opties_kaart.PNG 
     :width: 100%
     :align: center
     :caption: Opties om de kaart aan te passen
@@ -82,7 +82,7 @@ Versterkingsmaatregelen
 ~~~~~~~~~~~~~~~~~~~~~~~
 Op de pagina versterkingsmaatregelen kunnen de resultaten van de optimalisatie en de referentievariant worden bekeken. Door te wisselen tussen Doorsnede-Eisen en Veiligheidsrendement in het linkerpaneel kan voor 1 van beiden worden gekozen. Bovenin het scherm is een aantal instellingen te zien. 
 
-.. image:: img/instellingen_maatregelen.png 
+.. image:: img/instellingen_maatregelen.PNG 
     :width: 80%
     :align: center
 

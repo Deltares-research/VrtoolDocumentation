@@ -23,7 +23,7 @@ Traject selectie
 
 Bij het gedeelte `Traject selectie` kan een traject worden geladen. Dat kan via de knop `Selecteer een bestand config.json`, of door een `config.json` bestand er heen te slepen. Wanneer dit is gedaan worden de resultaten van het traject geladen en weergegeven in het rechterpaneel. Afhankelijk van de grootte van het traject kan dit even duren, in het tabblad in de browser wordt dan `Updating...` weergegeven. Wanneer de vakindeling verschijnt op het startscherm is het traject geladen.
 
-.. image:: img/selectie_links.png 
+.. image:: img/selectie_links.PNG 
    :width: 50%
    :align: center
 
@@ -37,7 +37,7 @@ Instellingen
 ~~~~~~~~~~~~
 Het instellingen gedeelte kan worden gebruikt om de weergave van de resultaten aan te passen. Bovenaan staat een slider, de punten hierop zijn alle jaartallen die voorkomen in de database. Door de slider te verschuiven kan bijvoorbeeld worden gekeken naar de faalkans in verschillende jaren. Wanneer de slider tussen twee punten in staat, wordt de faalkans van het voorgaande jaar waarvoor resultaten zijn weergegeven (dus wanneer 2025 en 2045 beschikbaar zijn wordt bij het selecteren van 2043 het resultaat van 2025 weergegeven.
 
-.. figure:: /_images/opties_kaart.png  
+.. figure:: /_images/opties_kaart.PNG  
    :width: 50%
    :align: center
 

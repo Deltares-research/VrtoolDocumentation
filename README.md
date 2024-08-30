@@ -63,7 +63,7 @@ Steps to extend the current documentation using [GIT](https://git-scm.com/) with
 > Important! A pull-request is highly recommended for correct build and publishing of the pages.
 
 # Install the repository.
-Although not required, it is possible to checkout and install the repository locally to build and verify the documents prior to their publishing, we assume you are familiar and have installed [Anaconda](https://www.anaconda.com/download) or [miniconda](https://docs.conda.io/en/latest/miniconda.html). To do so, simply follow these steps from command line:
+Although not required, it is possible to checkout and install the repository locally to build and verify the documents prior to their publishing, we assume you are familiar and have installed an open-source version of `conda` such as [miniforge](https://conda-forge.org/miniforge/). To do so, simply follow these steps from command line:
 
 ```bash
 cd repos

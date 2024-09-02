@@ -1,13 +1,10 @@
 Afleiden dijkprofielen en karakteristieke punten
 ================================================
 
-Met de workflow ``genereer_dijkprofielen`` worden voor een gegeven
-traject elke x meter dijkprofielen gegenereerd op basis van het AHN4.
-Voor elk van deze profielen worden de karakteristieke punten afgeleid: 2
-punten op de kruin, en op zowel het buiten- als het binnentalud beide
-maximaal 3 punten. Vervolgens kan met de workflow ``selecteer_profiel``
-voor verschillende dijkvakken het meest representatieve profiel worden
-geselecteerd.
+Met de workflow ``genereer_dijkprofielen`` worden voor een gegeven traject elke x meter dijkprofielen gegenereerd op basis van het AHN4.
+Voor elk van deze profielen worden de karakteristieke punten afgeleid: 2 punten op de kruin, en op zowel het buiten- als het binnentalud beide
+maximaal 3 punten. Vervolgens kan met de workflow ``selecteer_profiel`` voor verschillende dijkvakken het meest representatieve profiel worden
+geselecteerd. Deze representatieve profielen zijn nodig voor het bepalen van het volume grond bij een kruinverhoging en/of bermverbreding. 
 
 Genereren van dijkprofielen op basis van het AHN4
 -------------------------------------------------
@@ -60,4 +57,4 @@ De resulterende profielen zoals die moeten worden gebruikt in de database worden
 
    * Voor elk vak moet een profiel aanwezig zijn. Wanneer dit niet het geval is, kan geen database worden gegenereerd.
 
-   * De nauwkeurigheid van het profiel heeft maar beperkte invloed op de resultaten van de veiligheidsrendementberekeningen. Het is daarom niet nodig om voor elk vak een zeer nauwkeurig profiel te hebben. Eventuele afwijkingen resulteren vooral in iets verkeerd geschatte grondvolumes voor de versterking, maar meestal is dit van marginale betekenis voor de totale versterkingskosten.
+   * De nauwkeurigheid van het profiel heeft maar beperkte invloed op de resultaten van de veiligheidsrendementberekeningen. Het is daarom niet nodig om voor elk vak een zeer nauwkeurig profiel te hebben. Eventuele afwijkingen resulteren vooral in iets verkeerd geschatte grondvolumes voor de versterking, maar meestal is dit van marginale betekenis voor de totale versterkingskosten omdat hierin aanwezige bebouwing rond de dijk en het plaatsen van constructies veel zwaarder meewegen.

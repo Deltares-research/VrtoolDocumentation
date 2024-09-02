@@ -1,6 +1,3 @@
-**NB: Dit gedeelte is niet up-to-date en wordt in de komende weken
-aangepast**
-
 Afleiden teenlijn
 =================
 Met de workflow ``genereer_teenlijn`` wordt de binnenteenlijn van een dijktraject bepaald. Dit is belangrijke invoer voor de bepaling van de bebouwing. De teenlijn wordt weggeschreven naar `teenlijn_geojson`.

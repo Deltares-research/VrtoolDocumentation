@@ -1,5 +1,5 @@
 ***************************************************************************
-Uitvoeren van veiligheidsrendementberekeningen met de VRTOOL
+Rekenen met de VRTOOL
 ***************************************************************************
 
 Opzet van een berekening

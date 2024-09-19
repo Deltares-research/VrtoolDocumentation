@@ -21,5 +21,5 @@ Daarnaast wordt gebruik gemaakt van frequentielijnen voor de `waterstanden <Wate
    Waterstanden
    Overslag
    Piping
-   Binnenwaartse macrostabiliteit
+   Binnenwaartse_macrostabiliteit
    Dijkbekleding

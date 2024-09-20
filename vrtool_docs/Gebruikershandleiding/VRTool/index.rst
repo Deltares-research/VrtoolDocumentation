@@ -1,5 +1,5 @@
 ***************************************************************************
-Uitvoeren van veiligheidsrendementberekeningen met de VRTOOL
+Rekenen met de VRTOOL
 ***************************************************************************
 
 Opzet van een berekening
@@ -23,14 +23,15 @@ Een veiligheidsrendementberekening bestaat uit 3 stappen, die individueel of gez
 
     Naast de optimalisatie wordt ook een referentie doorgerekend. Daarbij is het uitgangspunt dat alle dijkvakken op basis van de doorsnede-eisen uit OI2014 voor een planperiode van 50 jaar worden versterkt.
 
-.. image:: Rekenstappen.png
+.. image:: img/Rekenstappen.png
     :width: 75%
     :align: center
 
 Voor meer achtergronden over het rekenmodel en de optimalisatie wordt verwezen naar `Achtergronden <../../Achtergronden/index.html>`_. 
 
-.. include:: Rekenen met de VRTOOL.md
-    :parser: myst_parser.sphinx_
+.. include:: Rekenen met de VRTOOL.rst
+    :parser: rst
+
 
 
 

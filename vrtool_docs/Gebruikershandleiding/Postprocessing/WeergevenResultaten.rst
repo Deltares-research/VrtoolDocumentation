@@ -62,7 +62,7 @@ De meeste van deze pagina's geven resultaten op kaart weer. Rechtsboven in de ka
 .. image:: img/opties_kaart.PNG 
     :width: 100%
     :align: center
-    :caption: Opties om de kaart aan te passen
+    :alt: Opties om de kaart aan te passen
 
 
 Overzicht
@@ -122,8 +122,26 @@ De resultaten van de referentievariant op basis van doorsnede-eisen worden weerg
 
 Prioriteringsinformatie
 ~~~~~~~~~~~~~~~~~~~~~~~
-<uitleg toevoegen>
+Op de pagina `Prioritering` wordt samengevat wat de meest aantrekkelijke volgorde van versterken is. Bij veiligheidsrendement worden de vakken gesorteerd op de volgorde dat ze voorkomen in het optimalisatiepad. Bij doorsnede-eisen worden de vakken gesorteerd op basis van het veiligheidstekort. In de figuur wordt weergegeven wat de eerste 5 kilometers zijn die versterkt moeten worden, de kilometers 5-10, enzovoorts. Dit geeft een beeld van de ruimtelijke samenhang van de opgave en kan daarmee input zijn voor het definieren van de scope van een project.
 
+
+.. figure:: img/prioritering.png 
+    :width: 100%
+    :align: center
+    :alt: Voorbeeld van de prioriteringsinformatie zoals weergegeven in het dashboard.
+
+    Voorbeeld van de prioriteringsinformatie zoals weergegeven in het dashboard.
 Maatregelen
 ~~~~~~~~~~~
-<uitleg toevoegen>
+Op de pagina `Maatregelen` kunnen de beschikbare maatregelen per dijkvak worden bekeken. Na het selecteren van een dijkvak wordt voor alle beschikbare maatregelen de kosten en de faalkans/betrouwbaarheid weergegeven. Met de instellingen in het linkerpaneel kan dit voor een specifiek mechanisme, of voor alle mechanismen samen worden gedaan. De zwarte puntjes zijn de verschillende maatregelen die beschikbaar zijn, in groen zijn de maatregelen weergegeven die in het optimalisatiepad van veiligheidsrendement voorkomen. De blauwe en rode diamanten geven de uiteindelijke maatregelen weer die worden genomen in de referentievariant en de economisch optimale variant. 
+
+.. figure:: img/maatregelen_voorbeeld.png 
+    :width: 100%
+    :align: center
+    :alt: Voorbeeld van de maatregelen voor een geselecteerd dijkvak voor faalmechanisme piping.
+
+    Voorbeeld van de maatregelen voor een geselecteerd dijkvak voor faalmechanisme piping
+
+.. tip::
+    In deze weergave geldt voor de gezamenlijke faalkans typisch dat de groene puntjes op het 'front' van de wolk met zwarte punten liggen. Maatregelen met lage kosten en een lage faalkans (hoge :math:`\beta` ) 
+    worden gekozen in de optimalisatie. Wanneer een specifiek mechanisme wordt geselecteerd hoeft dit niet het geval te zijn: wanneer bijvoorbeeld de faalkans voor overslag wordt weergeven kosten bermen wel geld, maar hebben deze geen effect op de faalkans voor overslag. In het voorbeeld is er te zien dat er een aantal maatregelen zijn die een lagere pipingfaalkans hebben, deze scoren echter op andere mechanismen minder gunstig en worden daarom toch niet gekozen. 

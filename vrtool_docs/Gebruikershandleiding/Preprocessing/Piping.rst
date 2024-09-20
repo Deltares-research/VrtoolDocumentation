@@ -1,6 +1,3 @@
-**NB: Dit gedeelte is niet up-to-date en wordt in de komende weken
-aangepast**
-
 Piping
 ======
 Voor piping is geen aparte workflow nodig. De gegevens die in het invoerbestand worden ingevuld kunnen direct in de database worden weggeschreven.

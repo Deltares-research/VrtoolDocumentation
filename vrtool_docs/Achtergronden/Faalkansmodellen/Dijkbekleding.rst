@@ -9,7 +9,7 @@ Bij bekledingen worden graserosie buitentalud (GEBU) en stabiliteit zetsteen (ZS
 
 Deze verschillende stappen, en hoe hiermee wordt omgegaan in de VRTOOL wordt in de volgende paragrafen nader toegelicht.
 
-Uitvoeren van Q-variant berekeningen
+Afleiden van de belasting met behulp van de Q-variant
 ------------------------------------
 De eerste stap is om met Hydra-Ring de golfcondities te bepalen voor de betreffende locaties. Daarvoor worden met Hydra-Ring met de Q-variant berekeningen uitgevoerd voor 4 overschrijdingskansen voor zichtjaren 2023 en 2100:
 
@@ -25,6 +25,8 @@ De Q-variant berekeningen worden uitgevoerd voor drie modeltypen:
 - Zuilen (:math:`a = 1.0, b = 0.4, c = 0.8`)
 
 Daarbij geldt dat elk model enkel voor het relevante bereik aan waterstanden op de bekleding wordt bepaald: gras golfklap alleen boven de bestaande overgang, gras golfoploop vanaf de bestaande overgang, en zuilen voor het hele gedeelte waar steenbekleding ligt. De waterstandsberekeningen zoals beschreven in de paragraaf `Waterstanden <Waterstanden.html>`_ worden gebruikt als invoer voor de Q-variant berekeningen.
+
+Resultaat van deze stap is per locatie een `.json`-bestand met daarin de relatie tussen waterstanden en golfcondities (:math:`H_s`, :math:`T_p`, golfinvalshoek) voor de verschillende modeltypen en overschrijdingskansen. Deze kunnen vervolgens worden gebruikt in de volgende stappen.
 
 
 Afleiden relatie hoogte overgang en faalkans GEBU

@@ -1,6 +1,3 @@
-**NB: Dit gedeelte is niet up-to-date en wordt in de komende weken
-aangepast**
-
 Genereren database
 ==================
 

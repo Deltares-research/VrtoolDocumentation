@@ -1,7 +1,7 @@
 Bekledingen
 =============================
 
-Bij bekledingen worden graserosie buitentalud (GEBU) en stabiliteit zetsteen (ZST) meegenomen. Dit gebeurt in de VRTOOL voor GEBU door een relatie af te leiden tussen de hoogte van de overgang en de faalkans van de grasbekleding. Voor ZST wordt een relatie afgeleid tussen de toplaagdikte en de faalkans van de steenbekleding. Het zwaartepunt van de berekeningen ligt in de preprocessor waar deze relaties worden afgeleid. Omdat het binnen het WBI/BOI niet eenvoudig is om dergelijke relaties te bepalen is er een aparte methodiek ontwikkeld waarmee we toch iets kunnen zeggen over de faalkans van bekledingen. Daarvoor doorlopen we in de preprocessor de volgende 3 stappen:
+Bij bekledingen worden graserosie buitentalud (GEBU) en stabiliteit zetsteen (ZST) beschouwd. Dit gebeurt in de VRTOOL voor GEBU door een relatie af te leiden tussen de hoogte van de overgang en de faalkans van de grasbekleding. Voor ZST wordt een relatie afgeleid tussen de toplaagdikte en de faalkans van de steenbekleding. Het zwaartepunt van de berekeningen ligt in de preprocessor waar deze relaties worden afgeleid. Omdat het binnen het WBI/BOI niet eenvoudig is om dergelijke relaties te bepalen is er een aparte methodiek ontwikkeld waarmee we toch iets kunnen zeggen over de faalkans van bekledingen. Daarvoor doorlopen we in de preprocessor de volgende 3 stappen:
 
 - Afleiden van de belasting met behulp van de Q-variant
 - Afleiden relatie tussen hoogte overgang en faalkans GEBU met behulp van DiKErnel 
@@ -32,80 +32,66 @@ Resultaat van deze stap is per locatie een `.json`-bestand met daarin de relatie
 Afleiden relatie hoogte overgang en faalkans GEBU
 -------------------------------------------------
 
-De resultaten van de Q-variant berekeningen (modeltype ‘golfklap’ en ‘golfoploop’) worden eerst vertaald naar tijdsverlopen van hydraulische belastingen (waterstand, Hs, Tp en golfinvalshoek). Hier wordt de aanpak uit de “Schematiseringshandleiding Grasbekleding” aangehouden. Eerst wordt het tijdsverloop van de lokale waterstand afgeleid. Dat verschilt per watersysteem. De golfcondities uit de Q-variant berekeningen worden geprojecteerd op de waterstandsverlopen om de golfcondities in de tijd te verkrijgen. Een voorbeeld van de tijdsverlopen van hydraulische belastingen wordt in Figuur 1 weergegeven.
+De resultaten van de Q-variant berekeningen (modeltypen ‘golfklap’ en ‘golfoploop’) worden eerst vertaald naar tijdsverlopen van hydraulische belastingen (waterstand, Hs, Tp en golfinvalshoek). Hier wordt de aanpak uit de “Schematiseringshandleiding Grasbekleding” aangehouden. Eerst wordt het tijdsverloop van de lokale waterstand afgeleid. Dat verschilt per watersysteem. De golfcondities uit de Q-variant berekeningen worden geprojecteerd op de waterstandsverlopen om de golfcondities in de tijd te verkrijgen. Een voorbeeld van de tijdsverlopen van hydraulische belastingen wordt in Figuur 1 weergegeven.
 
-.. figure:: Fig1_preprocessingDijkbekleding.png
-   :alt: Fig1_preprocessingDijkbekleding.png
+.. figure:: img/Fig1_preprocessingDijkbekleding.png
+   :alt: Voorbeeld tijdsverlopen van hydraulische belastingen voor watersysteem ‘kust’.
+   :width: 400px
 
-   Fig1_preprocessingDijkbekleding.png
+   Figuur 1 Voorbeeld tijdsverlopen van hydraulische belastingen voor watersysteem ‘kust’.
 
-Figuur 1 Voorbeeld tijdsverlopen van hydraulische belastingen voor een terugkeertijd; watersysteem ‘kust’.
+De tijdsverlopen van hydraulische belastingen (per locatie, per zichtjaar en per terugkeertijd) dienen als input voor berekeningen met DiKErnel. Met DiKErnel wordt de bekleding op golfklap/golfoploop voor verschillende niveaus van de overgang beoordeeld. Hier onderscheiden we 2 situaties:
 
-De tijdsverlopen van hydraulische belastingen (per locatie, per zichtjaar en per terugkeertijd) dienen als input voor berekeningen met DiKErnel. Met DiKErnel wordt de bekleding op golfklap/golfoploop voor verschillende niveaus van de overgang beoordeeld. Hier worden de volgende regels aangehouden: - Als de maximale waterstand hoger is dan het boven niveau van de grasbekleding, dan wordt de bekleding alleen op golfklap beoordeeld. De berekeningen met DiKErnel worden voor verschillende posities op het buitentalud uitgevoerd (vanaf niveau overgang tot het boven niveau van de grasbekleding met een stap van 10 cm). - Als de overgang hoger is dan de maximale waterstand, dan wordt de bekleding alleen op golfoploop beoordeeld. In dat geval wordt één berekening met DiKErnel uitgevoerd: namelijk voor het niveau van de overgang. - Als de maximale waterstand tussen de grenzen van de grasbekleding valt, dan wordt de bekleding op zowel golfklap als op golfoploop beoordeeld. Als het om golfklap gaat, dan worden er sommen met DiKErnel gedaan voor verschillende posities op het buitentalud (vanaf niveau overgang tot de maximale waterstand). De golfoploop berekeningen met DiKErnel worden voor één niveau gedaan: namelijk de maximale waterstand.
+* De overgang van harde bekleding naar gras ligt dicht bij de kruin (minder dan 25 cm verschil). In dat geval wordt de faalkans van de grasbekleding verwaarloosbaar verondersteld. Zelfs wanneer het gras op het buitentalud zal falen is dit waarschijnlijk zeer sterk gecorreleerd met het falen op overslag, en hoeft het dus niet expliciet te worden beschouwd.
+* Wanneer de overgang lager op het talud ligt wordt afhankelijk van de combinatie van belasting en hoogte van de overgang een golfklap/golfoploop berekening uitgevoerd met DiKErnel.
 
-Naast de tijdsverlopen van hydraulische belastingen gebruikt DiKErnel ook het dijkprofiel en tan(alfa) als invoer. Figuur 2 presenteert de te beschouwen posities op het buitentalud voor het geval als de maximale waterstand tussen de grenzen van de grasbekleding valt.
+Voor de DiKErnel berekeningen worden de waterstandsverlopen voor elke locatie, per zichtjaar en terugkeertijd afgeleid (conform Figuur 1). Afhankelijk van de hoogte van de overgang worden de volgende berekeningen uitgevoerd:
 
-.. figure:: Fig2_preprocessingDijkbekleding.png
-   :alt: Fig2_preprocessingDijkbekleding.png
+- Als de maximale waterstand hoger is dan de overgang, dan wordt de bekleding alleen op golfklap beoordeeld omdat dit dan altijd maatgevend is. 
+- Als de overgang hoger is dan de maximale waterstand, dan wordt de bekleding alleen op golfoploop beoordeeld. In dat geval wordt één berekening met DiKErnel uitgevoerd: namelijk voor het niveau van de overgang. 
 
-   Fig2_preprocessingDijkbekleding.png
+De berekeningen met DiKErnel worden voor verschillende posities op het buitentalud uitgevoerd (vanaf niveau overgang tot het boven niveau van de grasbekleding met een stap van 10 cm). Afhankelijk van de waterstand wordt dus of met golfklap, of met golfoploop gerekend. Figuur 2 geeft een voorbeeld van de te beschouwen posities op het buitentalud: in dit geval worden overgangshoogtes onder de blauwe stippellijn (maximale waterstand) op golfklap beoordeeld, en overgangshoogtes boven de blauwe stippellijn op golfoploop. DiKErnel berekent op basis hiervan voor elke situatie het schadegetal.
 
-Figuur 2 Voorbeeld van de te beschouwen posities op het buitentalud uitgaande van hoogte overgang = 3 m+NAP en de maximale waterstand (blauw gestipte lijn) die tussen de grenzen van de grasbekleding vaalt; rode punten: golfklap, blauw punt: golfoploop.
+.. figure:: img/Fig2_preprocessingDijkbekleding.png
+   :alt: Beschouwde posities op het talud voor GEBU.
+   :width: 400px
 
-Per locatie, per zichtjaar, per niveau overgang en per terugkeertijd resulteren de berekeningen met DiKErnel in een schadegetal op elk van de beschouwde posities. De schadegetallen voor de verschillende posities worden geaggregeerd door het maximum van de schadegetalen te nemen. Deze maximale schadegetal wordt vertaald naar een veiligheidsfactor (SF):
+   Figuur 2 Voorbeeld van de te beschouwen posities (rood = golfklap, blauw = golfoploop) op het buitentalud uitgaande van hoogte overgang = 3 m+NAP en de maximale waterstand (blauw gestippelde lijn) die tussen de grenzen van de grasbekleding valt.
 
-SF = 1/max(schadegetal per positie)
+Op basis van de berekeningen met DiKErnel wordt per locatie en zichtjaar een relatie afgeleid tussen de hoogte van de overgang en de faalkans. Om de faalkans gegeven een overgangshoogte te bepalen wordt de relatie bepaald tussen de veiligheidsfactor van de bekleding en de terugkeertijd van de belasting. De veiligheidsfactor wordt als volgt bepaald: 
+:math:`SF = 1/max(schadegetal)`, waarbij gekeken wordt naar het schadegetal over het gehele belaste talud. De bekleding voldoet niet aan de belasting als :math:`SF < 1.0`. De faalkans wordt bepaald als de terugkeertijd waarbij :math:`SF = 1.0`. Dit punt wordt vervolgens met een bi-sectie methode bepaald wat per hoogte van de overgang een faalkans geeft. Deze relatie is invoer voor de VRTOOL. Een voorbeeld is gegeven in onderstaande figuur.
 
-Aangenomen wordt dat de grasbekleding niet aan de belasting voldoet indien SF<1.0.
+.. figure:: img/Faalkans_overgangshoogte.png
+   :align: center
+   :width: 400px
 
-Effectief wordt er per locatie, per zichtjaar en per niveau overgang een relatie tussen de terugkeertijd en de veiligheidsfactor verkregen. Figuur 3 geeft een voorbeeld van de relatie. De grafiek toont aan dat de grasbekleding (vanaf 1.0 t/m 6.11 m+NAP) niet aan de opgelegde belasting voldoet (SF<1.0). Verder wordt de veiligheidsfactor lager naarmate de belasting hoger wordt (hoge terugkeertijd), dat is conform de verwachtingen.
+   Voorbeeld van een relatie tussen de overgang en de faalkans van de grasbekleding.
 
-.. figure:: Fig3_preprocessingDijkbekleding.png
-   :alt: Fig3_preprocessingDijkbekleding.png
+Na het afleiden van de relatie wordt nog een nabewerkingsslag uitgevoerd op de resultaten. Daarbij wroden de volgende aanpassingen gedaan:
+1. De waarden worden zo aangepast dat een verhoging van de overgang altijd leidt tot een lagere faalkans voor GEBU.
+2. Er wordt gecorrigeerd zodanig dat de toekomstige situatie nooit beter is dan de huidige situatie.
+3. De faalkans van de grasbekleding voor overgahngshoogten dicht bij de kruin (minder dan 1 cm verschil) wordt verwaarloosbaar gesteld.
 
-   Fig3_preprocessingDijkbekleding.png
-
-Figuur 3 Voorbeeld van een relatie tussen de terugkeertijd en de veiligheidsfactor (SF) voor overgang = 1 m+NAP (blauw gestipte lijn); de zwarte lijn geeft SF = 1.0 aan.
-
-Gegeven de relatie tussen de terugkeertijd en de veiligheidsfactor wordt er gezocht naar de terugkeertijd die bij SF = 1.0 hoort: deze terugkeertijd definieert de faalkans van de grasbekleding (per locatie, per zichtjaar en per niveau overgang). Het snijpunt met SF = 1.0 wordt met de bi-sectie methode berekend. In het geval van Figuur 3 wordt het snijpunt met SF = 1.0 bij een terugkeertijd van ca. 50 per jaar gevonden (dat punt ligt buiten de grenzen van de grafiek). Dat betekent dat de faalkans van de bekleding gelijk is aan ca. 1/50 per jaar.
-
-Voor sommige gevallen kan de bi-sectie methode geen resultaten gegeven. Dat gebeurt bijv. als voor de beschouwde terugkeertijden de veiligheidsfactor altijd gelijk is. In dat geval worden de volgende aannames gedaan: - Als de berekende veiligheidsfactoren altijd hoger zijn dan 1.0 (de bekleding voldoet aan de verschillende belastingen), dan wordt de faalkans van de bekleding gelijk gesteld aan de hoogste beschouwde terugkeertijd. Dat is een conservatieve aanname. - Als de berekende veiligheidsfactoren altijd lager zijn dan 1.0 (de bekleding faalt voor de verschillende belastingen), dan wordt de faalkans van de bekleding gelijk gesteld aan 0.5 per jaar. Dat is een conservatieve aanname.
-
-De bovenstaande stappen worden per locatie en per zichtjaar herhaald voor de verschillende niveaus van de overgang. Dat leidt uiteindelijk tot een relatie tussen de overgang en de faalkans van de grasbekleding. Figuur 4 geeft een voorbeeld van een dergelijke relatie.
-
-.. figure:: Fig4_preprocessingDijkbekleding.png
-   :alt: Fig4_preprocessingDijkbekleding.png
-
-   Fig4_preprocessingDijkbekleding.png
-
-Figuur 4 Voorbeeld van een relatie tussen de overgang en de faalkans van de grasbekleding.
-
-Afleiden relatie toplaagdikte en faalkans ZST
+Afleiden relatie toplaagdikte en faalkans steenbekleding
 ---------------------------------------------
+Naast de faalkans van de grasbekleding wordt ook gekeken naar de stabiliteit van de steenzetting (ZST). Om de relatie tussen de toplaagdikte en de faalkans van de steenbekleding te bepalen worden Steentoetsbestanden uit LBO-1 gebruikt. Specifiek voor veiligheidsrendementanalyses is een benaderingsmethode ontwikkeld waarmee de faalkans van een steenzetting kan worden geschat op basis van de gegevens uit Steentoets. 
 
-Om de relatie tussen de toplaagdikte en de faalkans van de steenbekleding te bepalen worden Steentoetsbestanden uit LBO-1 gebruikt.
+De basis van deze aanpak rust op de aanname dat de ratio :math:`H_s/(\Delta D)` waarbij een steenzetting ongeveer gelijk blijft, ongeacht de belasting. Dit is gevalideerd voor een aantal cases, en blijkt een redelijke aanname te zijn, hoewel in sommige gevallen de resulterende steendikte waarbij de bekleding stabiel is iets afwijkt (orde 5 centimeter). 
 
-Uit een Steentoetsbestand die bij een bepaalde categoriegrens hoort worden voor een dijkprofiel de toplaagdikte en ratio Hs/(delta x D) afgeleid, die net voldoen aan de categoriegrens. Dat wordt als volgt gedaan: • Dvoldoet = huidige toplaagdikte – dikteoverschot • ratiovoldoet = Hs/(delta x Dvoldoet)
+We kijken apart naar alle losse bekledingdelen, daarbij wordt uit de Steentoetsbestanden de :math:`ratio_{voldoet} = H_s/(\Delta D_{voldoet})` afgeleid waarmee de bekleding precies voldoet. Dat wordt gedaan door :math:`D_{voldoet}` gelijk te stellen aan de huidige dikte plus het berekende dikteoverschot. Dit wordt gedaan voor elk bekledingvlak met een steenbekleding.
 
-De ratiovoldoet wordt afgeleid voor elk vlak van de bekleding dat met Steentoets beoordeeld is. Een belangrijke aanname is dat we veronderstellen dat de ratiovoldoet voor de verschillende terugkeertijden gelijk is. Onderbouwing van deze aanname is gegeven in Appendix A.
+Vervolgens wordt op basis van de Q-variantberekeningen (modeltype `zuilen`) de benodigde toplaagdikte afgeleid voor de verschillende terugkeertijden voor waterstandsniveaus die samenvallen met de bekleding. De toplaagdikte wordt afgeleid met de volgende formule:
+:math:`D(i) = Hs(i)/(\Delta \cdot ratio_{voldoet})`
+Waarbij :math:`Hs(i)` de golfhoogte bij een bepaalde terugkeertijd is. Vervolgens wordt de benodigde steendikte afgeleid door de maximale dikte voor het bereik van het bekledingdeel te nemen. Dit geeft een relatie tussen steendikte en faalkans, voor elk bekledingvak.
 
-Vervolgens wordt er gebruikt gemaakt van de Q-variant berekeningen (modeltype ‘zuilen’). De golfhoogtes (Hs) die bij een terugkeertijd horen worden gebruikt om samen met de ratiovoldoet de toplaagdikte die voldoet bij de belasting horend bij deze terugkeertijd te bepalen. Bij een terugkeertijd horen meerdere waarden van Hs (omdat er verschillende waterstandniveaus beschouwd zijn); voor elke Hs wordt de benodigde toplaagdikte als volgt afgeleid:
+In onderstaande figuur is een voorbeeld resultaat weergegeven. Links is het profiel zoals gelezen uit Steentoets te zien, rechts de relaties tussen steendikte en faalkans voor verschillende vakken met een steenbekleding.
 
-D(i) = Hs(i)/(delta x ratiovoldoet)
+.. figure:: img/Faalkans_steendikte.png
+   :align: center
+   :width: 800px
 
-In de bovenstaande formule worden alleen de Hs waarden beschouwd die horen bij het waterstandsniveau die het beschouwd dijkvlak bereikt. De verschillende waarden van de toplaagdikte worden vervolgens geaggregeerd tot één waarde door het maximum van de verschillende toplaagdiktes te nemen:
+   Voorbeeld van een relatie tussen de steendikte en de faalkans van de steenbekleding. Links het profiel met verschillende bekledingdelen. Rechts de relatie tussen steendikte en faalkans voor elk steenbekledingdeel.
 
-Dmax = max(D(i))
+Net als bij de relaties voor grasbekleding worden de resultaten nabewerkt. Ook bij steenzettingen geldt dat de faalkans bij gegeven steendikte altijd moet toenemen in de tijd. Daarnaast wordt, afhankelijk van de gekozen optie voor de verbetering van de steenbekleding (vervangen of uitbreiden), de effectieve steendikte waarmee de VRTOOL rekent aangepast. Zie voor meer toelichting de paragraaf `Maatregelen dijkbekleding <../Maatregelen/Maatregelen_dijkbekleding.html>`_.
 
-Deze maximale toplaagdikte wordt aangehouden als de toplaagdikte met de faalkans correspondeert met de beschouwde terugkeertijd vermenigvuldigd met de faalkansbegroting ZST en de langte-effect factor N.
-
-De analyse wordt per locatie herhaald voor verschillende zichtjaren, terugkeertijden en dijkvlakken. Figuur 5 geeft een voorbeeld van de verkregen relaties tussen de toplaagdikte en de faalkans van de steenbekleding.
-
-.. figure:: Fig5_preprocessingDijkbekleding.png
-   :alt: Fig5_preprocessingDijkbekleding.png
-
-   Fig5_preprocessingDijkbekleding.png
-
-Figuur 5 Voorbeeld van een relatie tussen de toplaagdikte en de faalkans van de steenbekleding.
-
-Verder wordt het volgende opgemerkt: - In het geval van een ontwerp, waarin de hoogte van de overgang hoger is dan de aanwezige overgang wordt er een nieuwe steenbekleding aangelegd (tussen de aanwezige bekleding en de nieuwe overgang). In dergelijk geval wordt een relatie aangehouden die hoort bij het bovenste vlak met een geldige steenzetting.
+#TODO bij maatregelen: vervangen/uitbreiden toelichten.

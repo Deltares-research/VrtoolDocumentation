@@ -8,7 +8,9 @@ Directe invoer
 
 Bij de directe invoer voor binnenwaartse macrostabiliteit moet de betrouwbaarheid β of de stabiliteitsfactor uit een semi-probabilistische beoordeling op 1 tijdstip aangegeven worden. Omdat stabiliteitsfactoren vaak redelijk tijdsonafhankelijk zijn is tijdsafhankelijkheid hier (nog) niet geimplementeerd.
 
-In sommige gevallen zijn verschillende scenario’s mogelijk. In dat geval is het mogelijk zowel de geaggregeerde β over alle scenario’s, als de β per scenario (incl. scenariokans) in te voeren. Voor de berekening maakt dit verder niet uit.
+In sommige gevallen zijn verschillende scenario’s van toepassing. In dat geval is het mogelijk zowel de geaggregeerde β over alle scenario’s, als de β per scenario (incl. scenariokans) in te voeren. Voor de berekening maakt dit verder niet uit.
+
+De effecten van maatregelen worden nader toegelicht in de betreffende paragrafen in de sectie `Maatregelen <../Maatregelen/index.html>`_
 
 
 D-Stability

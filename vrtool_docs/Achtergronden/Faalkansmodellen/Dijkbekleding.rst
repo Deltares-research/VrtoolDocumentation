@@ -18,7 +18,7 @@ De eerste stap is om met Hydra-Ring de golfcondities te bepalen voor de betreffe
 - :math:`P_{signaleringswaarde}`
 - :math:`P_{signaleringswaarde}/1000`
 
-De Q-variant berekeningen worden uitgevoerd voor drie modeltypen: 
+De Q-variant berekeningen worden uitgevoerd voor drie modeltypen (a, b en c zijn de parameters voor bepaling van de golfcondities conform WBI-2017): 
 
 - Gras golfklap (:math:`a = 1,0, b = 0,67, c = 0,0`) 
 - Gras golfoploop (:math:`a = 1,0, b = 1,7, c = 0,3`) 

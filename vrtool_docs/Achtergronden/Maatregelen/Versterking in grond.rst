@@ -53,11 +53,11 @@ Voor piping wordt de bermverbreding meegenomen als een toename van de kwelweg. D
 
    L_\mathrm{achter} = L_3
 
-Bij een versterking in grond wordt vanaf de binnenteen binnenwaarts versterkt met een berm. Dat betekent dat :math:`L_\mathrm{voor}` wordt vergroot. Wanneer geldt dat :math:`L_\mathrm{achter} > 0` is wordt de kwelweglengte echter niet effectief langer. Bij een bermverlenging :math:`\Delta L` geldt dus:
+Bij een versterking in grond wordt vanaf de binnenteen binnenwaarts versterkt met een berm. Dat betekent dat :math:`L_\mathrm{voor}` wordt vergroot doordat de dijkzate (:math:`L_2`) toeneemt. Wanneer geldt dat :math:`L_\mathrm{achter} > 0` is wordt de kwelweglengte echter niet langer zolang de bermverbreding kleiner is dan de afstand van de originele locatie van de teen tot het uittredepunt. Bij een bermverlenging :math:`\Delta L` geldt dus:
 
 .. math::
    L_\mathrm{voor} = L_{voor} + \Delta L
-   L_\mathrm{achter} = \max(0, L_{achter} - \Delta L)
+   L_\mathrm{achter} = \max(0, \Delta L - L_{achter})
 
 Verder geldt voor piping dat naast de waterstandsstijging ook de daling van het achterland wordt meegenomen. Deze daling wordt gegeven met :math:`dh_{exit}`. De bodemhoogte bij het uittredepunt wordt verlaagd met :math:`dh_{exit}`. Dit resulteert in een hogere stijghoogte en daarmee een hogere kans op piping.
 

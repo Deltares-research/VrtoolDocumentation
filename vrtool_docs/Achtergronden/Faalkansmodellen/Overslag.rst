@@ -2,8 +2,9 @@ Overslag
 ========================
 
 Voor het bepalen van de betrouwbaarheid voor overloop/overslag (gras erosie kruin- en binnentalud) wordt de volgende invoer gebruikt:
-- Een relatie tussen kruinhoogte en betrouwbaarheidsindex β in de huidige situatie (2023)
-- Een relatie tussen kruinhoogte en betrouwbaarheidsindex β in de toekomst (2100)
+
+* Een relatie tussen kruinhoogte en betrouwbaarheidsindex β in de huidige situatie (2023)
+* Een relatie tussen kruinhoogte en betrouwbaarheidsindex β in de toekomst (2100)
 
 Deze relaties worden in de preprocessing bepaald middels Hydra-Ring. Een voorbeeld van een dergelijke relatie is weergegeven in de onderstaande figuur.
 

@@ -1,38 +1,36 @@
 Verticale pipingoplossing
 ==========================
+Het doel van de verticale pipingoplossing is het significant verlagen van de faalkans voor piping. In vroege versies van de VRTOOL werd dit gedaan door een Verticaal Zanddicht Geotextiel (VZG) aan te brengen. In de meer recente versies van de VRTOOL is dit veralgemeniseerd omdat VZG niet altijd goed maakbaar is, en in de praktijk ook veel andere oplossingen worden toegepast. Daarom is de verticale pipingoplossing nu een algemene maatregel die de faalkans voor piping verlaagt. De onderliggende maatregel is daarbij afhankelijk van de deklaagdikte:
 
+* Bij deklagen tot 2 meter wordt uitgegaan van een grofzandbarriere.
+* Bij deklagen tot 4 meter wordt uitgegaan van een Verticaal Zanddicht Geotextiel.
+* Bij dikkere deklagen wordt uitgegaan van een heavescherm tot 6 meter onder de deklaag.
 
-Verticaal Zanddicht Geotextiel (VZG)
-====================================
+.. figure:: img/Piping_VZG.png
+   :alt: Verticaal Zanddicht Geotextiel
+   :width: 500px
 
-Verticaal Zanddicht Geotextiel (VZG) is een innovatieve manier om ‘piping’ te voorkomen en daarmee verzakking of bezwijking van de dijk. Het geotextiel laat wel water door, maar geen zand. Het VZG wordt horizontaal vanaf de dijklichaam tot aan de zandlaag geplaatst, zie figuur hieronder.
+.. figure:: img/Piping_GZB.png
+   :alt: Grofzandbarriere
+   :width: 500px
 
-.. figure:: VZG.png
-   :alt: VZG.png
+.. figure:: img/Piping_Heavescherm.png
+   :alt: Heavescherm
+   :width: 500px
 
-   VZG.png
+Invloed op faalkansen
+---------------------
+De verticale pipingoplossing heeft enkel effect op de faalkans voor piping. Daarbij geldt wel dat deze maatregel gecombineerd kan worden met een grondversterking, waarbij eerst het effect van de grondversterking in rekening wordt gebracht, en daarna het effect van de verticale pipingoplossing. De faalkansreductie voor piping wordt in rekening gebracht door middel van een reductiefactor op de pipingfaalkans van 1000. Er is dus nog steeds falen mogelijk, maar dit komt met name voort uit scenarios waarin de verticale oplossing niet goed werkt. In het verleden werd dit expliciet in rekening gebracht door een foutenboom te hanteren zoals weergegeven in onderstaande figuur. Daarin wordt zowel de kans op falen van de oplossing als de kans op piping bij functionerende oplossing expliciet meegenomen. De huidige benadering is echter eenvoudiger en geeft nagenoeg hetzelfde resultaat. 
 
-Een VZG sluit falen door piping vrijwel uit, maar heeft geen invloed op stabiliteit en overslag. Voor een VZG gebruiken we onderstaande foutenboom (NB: deze is algemeen voor grondverbeteringen, maar ook voor VZG van toepassing):
-
-.. figure:: VZG_foutenboom.png
+.. figure:: img/VZG_foutenboom.png
    :alt: VZG_foutenboom.png
 
-   VZG_foutenboom.png
+   Foutenboom voor het falen van een grondverbetering (uit TR grondverbeteringen). Deze is ook toepasbaar voor andere oplossingen zoals verticale pipingoplossingen.
 
-De veiligheid voor piping wordt gelijkgesteld aan:
+Uiteraard is het in latere fasen van belang om de faalkans van pipingmaatregelen verder uit te werken met een daadwerkelijke foutenboom met daarin alle relevante faalmechanismen. Een reductie van de faalkans van 1000 is echter in het algemeen daarbij goed haalbaar. In termen van de foutenboom betekent dit dat (bij verwaarloosbare pipingfaalkans bij functionerende oplossing) de faalkans van de maatregel zelf (dus bijv. doorloopsheid van het VZG) ongeveer 1/1000 is.
 
-.. figure:: VZG_Eq1.PNG
-   :alt: VZG_Eq1.png
+Kostenberekening
+----------------
+Voor de grofzandbarriere zijn geen kostenkentallen beschikbaar. Voor het Verticaal Zanddicht Geotextiel is een kostenkental van 1.700 €/m² aangehouden. Deze waarde is ook gehanteerd in OKADER, een instrument voor beleidsanalyses en correspondeert met prijspeil 2023.
 
-   VZG_Eq1.png
-
-Daarbij worden de volgende kansen aangenomen:
-
-.. figure:: VZG_Eq2.PNG
-   :alt: VZG_Eq2.png
-
-   VZG_Eq2.png
-
-Voor |VZG_Eq3.png| geldt de pipingfaalkans zonder VZG (dus de originele som voor het dijkvak, eventueel uitgebreid met een berm).
-
-.. |VZG_Eq3.png| image:: VZG_Eq3.PNG
+Voor het heavescherm wordt uitgegaan van een goedkope damwandconstructie (relatief beperkte lengte, onverankerd). Omdat de damwand geen functie heeft t.b.v. stabiliteit wordt daarvoor uitgegaan van een eenheidsprijs van 400 €/m². 

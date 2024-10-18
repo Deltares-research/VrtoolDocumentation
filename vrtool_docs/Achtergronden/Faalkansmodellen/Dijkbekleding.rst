@@ -20,9 +20,9 @@ De eerste stap is om met Hydra-Ring de golfcondities te bepalen voor de betreffe
 
 De Q-variant berekeningen worden uitgevoerd voor drie modeltypen: 
 
-- Gras golfklap (:math:`a = 1.0, b = 0.67, c = 0.0`) 
-- Gras golfoploop (:math:`a = 1.0, b = 1.7, c = 0.3`) 
-- Zuilen (:math:`a = 1.0, b = 0.4, c = 0.8`)
+- Gras golfklap (:math:`a = 1,0, b = 0,67, c = 0,0`) 
+- Gras golfoploop (:math:`a = 1,0, b = 1,7, c = 0,3`) 
+- Zuilen (:math:`a = 1,0, b = 0,4, c = 0,8`)
 
 Daarbij geldt dat elk model enkel voor het relevante bereik aan waterstanden op de bekleding wordt bepaald: gras golfklap alleen boven de bestaande overgang, gras golfoploop vanaf de bestaande overgang, en zuilen voor het hele gedeelte waar steenbekleding ligt. De waterstandsberekeningen zoals beschreven in de paragraaf `Waterstanden <Waterstanden.html>`_ worden gebruikt als invoer voor de Q-variant berekeningen.
 
@@ -59,15 +59,15 @@ De berekeningen met DiKErnel worden voor verschillende posities op het buitental
    Figuur 2 Voorbeeld van de te beschouwen posities (rood = golfklap, blauw = golfoploop) op het buitentalud uitgaande van hoogte overgang = 3 m+NAP en de maximale waterstand (blauw gestippelde lijn) die tussen de grenzen van de grasbekleding valt.
 
 Op basis van de berekeningen met DiKErnel wordt per locatie en zichtjaar een relatie afgeleid tussen de hoogte van de overgang en de faalkans. Om de faalkans gegeven een overgangshoogte te bepalen wordt de relatie bepaald tussen de veiligheidsfactor van de bekleding en de terugkeertijd van de belasting. De veiligheidsfactor wordt als volgt bepaald: 
-:math:`SF = 1/max(schadegetal)`, waarbij gekeken wordt naar het schadegetal over het gehele belaste talud. De bekleding voldoet niet aan de belasting als :math:`SF < 1.0`. De faalkans wordt bepaald als de terugkeertijd waarbij :math:`SF = 1.0`. Dit punt wordt vervolgens met een bi-sectie methode bepaald wat per hoogte van de overgang een faalkans geeft. Deze relatie is invoer voor de VRTOOL. Een voorbeeld is gegeven in onderstaande figuur.
+:math:`SF = 1/max(schadegetal)`, waarbij gekeken wordt naar het schadegetal over het gehele belaste talud. De bekleding voldoet niet aan de belasting als :math:`SF < 1.0`. De faalkans wordt bepaald als de terugkeertijd waarbij :math:`SF = 1.0`. Dit punt wordt vervolgens met een bi-sectie methode bepaald wat per hoogte van de overgang een faalkans geeft. Deze relatie is invoer voor de VRTOOL. Een voorbeeld is gegeven in Figuur 3.
 
 .. figure:: img/Faalkans_overgangshoogte.png
    :align: center
    :width: 400px
 
-   Voorbeeld van een relatie tussen de overgang en de faalkans van de grasbekleding.
+   Figuur 3 Voorbeeld van een relatie tussen de overgang en de faalkans van de grasbekleding.
 
-Na het afleiden van de relatie wordt nog een nabewerkingsslag uitgevoerd op de resultaten. Daarbij wroden de volgende aanpassingen gedaan:
+Na het afleiden van de relatie wordt nog een nabewerkingsslag uitgevoerd op de resultaten. Daarbij worden de volgende aanpassingen gedaan:
 1. De waarden worden zo aangepast dat een verhoging van de overgang altijd leidt tot een lagere faalkans voor GEBU.
 2. Er wordt gecorrigeerd zodanig dat de toekomstige situatie nooit beter is dan de huidige situatie.
 3. De faalkans van de grasbekleding voor overgahngshoogten dicht bij de kruin (minder dan 1 cm verschil) wordt verwaarloosbaar gesteld.
@@ -84,13 +84,13 @@ Vervolgens wordt op basis van de Q-variantberekeningen (modeltype `zuilen`) de b
 :math:`D(i) = Hs(i)/(\Delta \cdot ratio_{voldoet})`
 Waarbij :math:`Hs(i)` de golfhoogte bij een bepaalde terugkeertijd is. Vervolgens wordt de benodigde steendikte afgeleid door de maximale dikte voor het bereik van het bekledingdeel te nemen. Dit geeft een relatie tussen steendikte en faalkans, voor elk bekledingvak.
 
-In onderstaande figuur is een voorbeeld resultaat weergegeven. Links is het profiel zoals gelezen uit Steentoets te zien, rechts de relaties tussen steendikte en faalkans voor verschillende vakken met een steenbekleding.
+In Figuur 4 is een voorbeeld resultaat weergegeven. Links is het profiel zoals gelezen uit Steentoets te zien, rechts de relaties tussen steendikte en faalkans voor verschillende vakken met een steenbekleding.
 
 .. figure:: img/Faalkans_steendikte.png
    :align: center
    :width: 800px
 
-   Voorbeeld van een relatie tussen de steendikte en de faalkans van de steenbekleding. Links het profiel met verschillende bekledingdelen. Rechts de relatie tussen steendikte en faalkans voor elk steenbekledingdeel.
+   Figuur 4 Voorbeeld van een relatie tussen de steendikte en de faalkans van de steenbekleding. Links het profiel met verschillende bekledingdelen. Rechts de relatie tussen steendikte en faalkans voor elk steenbekledingdeel.
 
 Net als bij de relaties voor grasbekleding worden de resultaten nabewerkt. Ook bij steenzettingen geldt dat de faalkans bij gegeven steendikte altijd moet toenemen in de tijd. Daarnaast wordt, afhankelijk van de gekozen optie voor de verbetering van de steenbekleding (vervangen of uitbreiden), de effectieve steendikte waarmee de VRTOOL rekent aangepast. Zie voor meer toelichting de paragraaf `Maatregelen dijkbekleding <../Maatregelen/Maatregelen_dijkbekleding.html>`_.
 

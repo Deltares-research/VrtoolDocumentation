@@ -1,0 +1,21 @@
+﻿Naam,Type,Mechanisme,T,Vaknaam,Kosten,Beta
+Keermuur,combinable,overflow,0,Dijkvak 1,500000,5
+Keermuur,combinable,overflow,25,Dijkvak 1,500000,4.9
+Keermuur,combinable,overflow,50,Dijkvak 1,500000,4.8
+Keermuur,combinable,overflow,75,Dijkvak 1,500000,4.7
+Keermuur,combinable,overflow,100,Dijkvak 1,500000,4.6
+Kruinverbreding 10 meter + verhoging 50 cm,full,overflow,0,Dijkvak 1,5000000,5.39349
+Kruinverbreding 10 meter + verhoging 50 cm,full,overflow,25,Dijkvak 1,5000000,5.19855
+Kruinverbreding 10 meter + verhoging 50 cm,full,overflow,50,Dijkvak 1,5000000,5.00361
+Kruinverbreding 10 meter + verhoging 50 cm,full,overflow,75,Dijkvak 1,5000000,4.94335
+Kruinverbreding 10 meter + verhoging 50 cm,full,overflow,100,Dijkvak 1,5000000,4.8144
+Kruinverbreding 10 meter + verhoging 50 cm,full,stability_inner,0,Dijkvak 1,5000000,6.7
+Mangrove,revetment,revetment,0,Dijkvak 4,1000000,5.17264
+Mangrove,revetment,revetment,25,Dijkvak 4,1000000,5.12264
+Mangrove,revetment,revetment,50,Dijkvak 4,1000000,5.07264
+Mangrove,revetment,revetment,75,Dijkvak 4,1000000,5.02264
+Mangrove,revetment,revetment,100,Dijkvak 4,1000000,4.97264
+Inkassing voorland,partial,piping,12,Dijkvak 24,1000000,4.68545
+Inkassing voorland,partial,piping,34,Dijkvak 24,1000000,5.626149987
+Inkassing voorland,partial,piping,75,Dijkvak 24,1000000,5.382429996
+Kwelscherm oude stadsmuur,full,piping,0,Noviomagus,5000000,7.3

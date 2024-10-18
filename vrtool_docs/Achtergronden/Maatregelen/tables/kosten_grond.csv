@@ -1,0 +1,9 @@
+﻿Omschrijving,Symbool,Waarde,Eenheid
+Startkosten binnenwaarts,":math:`C_\mathrm{in,start}`",252.44,€/m
+Volumekosten binnenwaarts,":math:`C_\mathrm{in,volume}`",58.76,€/m³
+Kosten toegevoegd volume buitenwaarts,":math:`C_\mathrm{out,added}`",50.75,€/m³
+Kosten hergebruikt volume buitenwaarts,":math:`C_\mathrm{out,reuse}`",18.59,€/m³
+Hergebruiksfactor,:math:`f_\mathrm{reuse}`,0.7,-
+Compensatiefactor buitenwaarts,:math:`f_\mathrm{compens}`,0.5,-
+Buitenwaarts afgevoerd volume,":math:`C_\mathrm{out,afgev}`",27.59,€/m³
+Vernieuwing weg,:math:`C_\mathrm{weg}`,1070,€/m

@@ -20,7 +20,7 @@ Bekledingtypen waarvan in de tabel is aangegeven dat de dikte niet aanpasbaar is
    :widths: 10, 30, 15, 10
    :header-rows: 1
 
-Invloed op de faalkansen
+Invloed op faalkansen
 -------------------------
 Voor de grasbekleding wordt de faalkans bepaald op basis van de hoogte van de overgang zoals toegelicht in de sectie `faalkansmodellen <../Faalkansmodellen/Dijkbekleding.html#afleiden-relatie-hoogte-overgang-en-faalkans-gebu>`_. Bij het verhogen van de overgang wordt de faalkans van de grasbekleding bepaald op basis van de relatie tussen overgangshoogte en faalkans zoals beschikbaar in de database (tabel `GrassRevetmentRelation`). Daarbij wordt aangenomen dat op het gedeelte waarover de grasbekleding wordt aangelegd een steenbekleding conform het bovenste bekledingdeel met een steenbekleding wordt aangelegd. Dus wanneer een overgang van 20 cm Basaltonzuilen 2 meter wordt verhoogd, betekent dit dat er op dat deel ook Basaltonzuilen van 20 centimeter worden geplaatst. In de VRTOOL wordt voor het verhogen van de overgang met verticale stappen van 1 meter (configureerbaar in de tabel `StandardMeasure`in de database) tot aan de kruin de faalkans voor een verhoogde overgang bepaald. Daarbij wordt de faalkans voor overgangen dicht bij de kruin (<25 cm eronder) verwaarloosbaar aangenomen. De faalkans van de grasbekleding zal dan meestal bepaald worden door overslag, en de mechanismen worden sterk gecorreleerd.
 

@@ -9,7 +9,7 @@ Bij een kruinverhoging wordt simpelweg de kruin verhoogd met de betreffende verh
 
    Schematische weergave van een kruinverhoging.
 
-Bij een bermverbreding Δb wordt de berm verbreed met Δb. Dat wordt gedaan door de x-coordinaten van de Einde Berm Landzijde (EBL) en BinnenTeen (BIT) te verschuiven met Δb. Aanname is dat alle taluds verder gelijk blijven. Wanneer er geen berm aanwezig is in het originele profiel wordt een bermhoogte van 2 meter aangenomen.
+Bij een bermverbreding Δb wordt de berm verbreed met Δb. Dat wordt gedaan door de x-coordinaten van de Einde Berm Landzijde (EBL) en BinnenTeen (BIT) te verschuiven met Δb. Aanname is dat alle taluds verder gelijk blijven. Wanneer er geen berm aanwezig is in het originele profiel wordt een bermhoogte van 2 meter aangenomen. Standaard wordt gerekend met kruinverhogingen in stappen van 25 cm tot 2 meter, en bermverbredingen van 5, 8, 10, 12, 15, 20 en 30 meter.
 
 .. figure:: img/Berm_aanbrengen.png
    :alt: Berm_aanbrengen.png

@@ -90,7 +90,7 @@ Hierin zijn :math:`C_\mathrm{start}` de startkosten in €/m' en :math:`C_\mathr
 
    Afleiding van kostenfunctie voor binnenwaartse versterking in grond.
 
-Voor buitendijkse versterking wordt de volgende volgorde aangehouden: afgraven, afvoeren en hergebruiken, aanvullen en compenseren. Dat leidt tot formule gebruikt voor de kosten per strekkende meter :math:`C_\mathrm{out,grond}`:
+Voor buitendijkse versterking wordt de volgende volgorde aangehouden: afgraven en afvoeren, hergebruiken en aanvullen en tot slot compenseren. Dat leidt tot de volgende formule voor de kosten per strekkende meter :math:`C_\mathrm{out,grond}`:
 
 .. math::
    \begin{align*}

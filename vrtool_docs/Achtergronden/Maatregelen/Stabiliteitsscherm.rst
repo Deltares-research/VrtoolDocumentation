@@ -13,7 +13,7 @@ Invloed op faalkansen
 ----------------------
 Stabiliteit binnenwaarts
 ~~~~~~~~~~~~~~~~~~~~~~~~
-Het effect op stabiliteit binnenwaarts wordt in rekening gebracht met een toeslag op de stabiliteitsfactor, óf door de damwand door te rekenen in D-Stability. Daarbij wordt de damwand geschematiseerd als een forbidden line. Wanneer met een toeslag wordt gerekend wordt de stabiliteitsfactor met 0.2 verhoogd bij een damwand van 3 meter onder de deklaag, en 0.4 bij 6 meter onder de deklaag. Deze waarden zijn afgeleid op basis van een gevoeligheidsanalyse op basis van een aantal cases met verschillende deklaagdiktes (zie onderstaande figuur). Er wordt aangenomen dat de damwand zelf niet faalt.
+Het effect op stabiliteit binnenwaarts wordt in rekening gebracht met een toeslag op de stabiliteitsfactor, óf door de damwand door te rekenen in D-Stability. Daarbij wordt de damwand geschematiseerd als een forbidden line. Wanneer met een toeslag wordt gerekend wordt de stabiliteitsfactor met 0,2 verhoogd bij een damwand van 3 meter onder de deklaag, en 0,4 bij 6 meter onder de deklaag. Deze waarden zijn afgeleid op basis van een gevoeligheidsanalyse op basis van een aantal cases met verschillende deklaagdiktes (zie onderstaande figuur). Er wordt aangenomen dat de damwand zelf niet faalt.
 
 .. figure:: img/Damwand_gevoeligheid.png
    :alt: Relatie tussen toename stabiliteit en lengte damwand.
@@ -26,7 +26,7 @@ Belangrijk om op te merken is dat het stabiliteitsscherm kan worden gecombineerd
 
 Piping
 ~~~~~~
-Voor piping wordt, analoog aan de `Verticale pipingmaatregelen <Verticale Piping Maatregelen.html>_`, het effect in rekening gebracht als een reductiefactor op de pipingfaalkans. Ook hier geldt dat het effect cumulatief is met de grondversterking: eerst wordt de bermverbreding in rekening gebracht, en daarna de faalkansreductie door het scherm. Voor een scherm van 3 meter bedraagt deze factor 100, voor 6 meter 1000. Deze waarden zijn gebaseerd op de gehanteerde waarden voor een de verticale pipingmaatregelen, waarbij voor 6 meter wordt uitgegaan van hetzelfde effect als een heavescherm. 
+Voor piping wordt, analoog aan de `Verticale pipingmaatregelen <Verticale Piping Maatregelen.html>`_, het effect in rekening gebracht als een reductiefactor op de pipingfaalkans. Ook hier geldt dat het effect cumulatief is met de grondversterking: eerst wordt de bermverbreding in rekening gebracht, en daarna de faalkansreductie door het scherm. Voor een scherm van 3 meter bedraagt deze factor 100, voor 6 meter 1000. Deze waarden zijn gebaseerd op de gehanteerde waarden voor een de verticale pipingmaatregelen, waarbij voor 6 meter wordt uitgegaan van hetzelfde effect als een heavescherm. 
 
 Kostenberekening
 ----------------

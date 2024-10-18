@@ -67,7 +67,47 @@ Bij een verhoging van de kruin wordt de betrouwbaarheid voor overslag bepaald aa
 
 Kostenberekening
 ----------------
-De kosten van maatregelen zijn bepaald door kostenkentallen te bepalen op basis van de eenheidsprijzen van het prijsniveau 2023. Dit zijn de eenheidsprijzen die gehanteerd worden in KOSWAT, op basis van input van gegevens van Rijkswaterstaat.
+De kosten van maatregelen zijn bepaald door kostenkentallen te bepalen op basis van de eenheidsprijzen van het prijsniveau 2023. Dit zijn de eenheidsprijzen die gehanteerd worden in KOSWAT, op basis van input van gegevens van Rijkswaterstaat. Bij deze herziening zijn ook de opslagfactoren (bijv. voor engineering en risico's) naar boven bijgesteld. Een overzicht van de kostenkentallen voor grondversterking is weergegeven in onderstaande tabel. Deze getallen zijn gebaseerd op basis van een aantal referentiecases. 
 
+.. csv-table:: Kostenkentallen grondversterking
+  :file: tables/kosten_grond.csv
+  :widths: 50, 15, 15, 15
+  :header-rows: 1
 
-De kosten worden, op basis van volume en lengte van het dijkvak bepaald met de DetermineCosts functie. Daarvoor worden unit_costs uit unit_costs.csv gebruikt (worden in de config ingelezen, maar dat kan netter). Op termijn kunnen we dit vervangen door een koppeling met KOSWAT.
+Kosten grondwerk
+~~~~~~~~~~~~~~~~
+Voor het grondwerk bij een binnendijkse versterking wordt de volgende formule gebruikt voor de kosten per strekkende meter :math:`C_\mathrm{in,grond}`:
+
+.. math::
+   C_\mathrm{in,grond} = C_\mathrm{start} + C_\mathrm{variabel} \cdot \text{A}
+
+Hierin zijn :math:`C_\mathrm{start}` de startkosten in €/m' en :math:`C_\mathrm{variabel}` en de kosten per m³ aangebrachte grond. :math:`A` is de toegevoegde oppervlakte in het profiel in m². De kostenkentallen zijn inclusief de kosten voor het verwerven van (vaak dure) grond, maar exclusief uitkoop/amoveren van huizen en exclusief kosten van de vernieuwing van de weg. De gebruikte kentallen zijn gebaseerd op een analyse van een aantal cases zoals weergegeven in onderstaande figuur.
+
+.. figure:: img/Kosten_grondversterking_binnenwaarts.png
+   :alt: Afleiding kostenfunctie binnenwaartse grondversterking
+   :align: center
+   :width: 600px
+
+   Afleiding van kostenfunctie voor binnenwaartse versterking in grond.
+
+Voor buitendijkse versterking wordt de volgende volgorde aangehouden: afgraven, afvoeren en hergebruiken, aanvullen en compenseren. Dat leidt tot formule gebruikt voor de kosten per strekkende meter :math:`C_\mathrm{out,grond}`:
+
+.. math::
+   \begin{align*}
+   C_\mathrm{out,grond} = & C_\mathrm{out,afgev} \cdot (1-f_\mathrm{reuse}) \cdot A_\mathrm{afgegraven} + \\
+   &\quad C_\mathrm{out,reuse} \cdot (A_\mathrm{afgegraven} \cdot f_\mathrm{reuse}) + \\
+   &\quad C_\mathrm{out,added} \cdot f_\mathrm{reuse}) \cdot (A - A_\mathrm{afgegraven} + \\
+   &\quad C_\mathrm{out,afgev} \cdot f_\mathrm{compens} \cdot A \\
+   \end{align*}
+
+Daarbij geven de regels achtereenvolgens de kosten van het afvoeren van niet-herbruikbare grond, de kosten van het hergebruik van grond, de kosten van het toevoegen van grond, en de kosten van rivierkundige compensatiemaatregelen. Opgemerkt moet worden dat buitenwaarts versterken niet default wordt gebruikt in de VRTOOL. 
+
+Kosten bebouwing en weg
+~~~~~~~~~~~~~~~~~~~~~~~~
+Zowel bij binnen- als buitenwaarts versterken worden na het bepalen van de kosten voor het grondwerk de kosten voor de vernieuwing van de weg en het treffen van passende maatregelen voor bebouwing opgeteld. Voor de bebouwing wordt per pand in het BAG een vast bedrag in rekening gebracht. Daarbij wordt dus geen rekening gehouden met eventuele spreiding en de grote diversiteit aan panden (van schuurtjes tot appartementencomplexen). Lokaal kan dit tot afwijkingen leiden, met name wanneer wordt uitgegaan van amoveren als hoofdoplossing. In de praktijk wordt echter vaak bij panden maatwerk getroffen in de vorm van bijvoorbeeld damwanden. Met lokale relatief lichte damwandconstructies kan dan toch een pand (of meerdere) gespaard worden. Omdat we de VRTOOL doorgaans inzetten in een stadium waar nog geen sprake is van een uitwerking van de maatregelen op dit detailniveau is gekozen voor een kostenkental van €500,000 per pand. Dit bedrag licht ongeveer op het snijpunt van amoveren en een 10 meter lange damwand bij een pandoppervlakte van 75 m².
+
+.. figure:: img/Bebouwing_damwand_amoveren.png
+   :alt: Kosten amoveren/lokale maatregel
+   :align: center
+
+   Kosten voor amoveren of lokale maatregel bij bebouwing. Voor de damwandprofielen is uitgegaan van AZ18, AZ26 en AZ36 voor de verschillende lengtes.

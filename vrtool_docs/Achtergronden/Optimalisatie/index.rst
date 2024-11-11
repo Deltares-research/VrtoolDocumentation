@@ -19,5 +19,6 @@ Op basis van de resultaten van de eerdere stappen worden 2 versterkingsvarianten
 
 .. toctree:: 
    BepalingTrajectfaalkansen
+   BepalingKostenBaten
    Veiligheidsrendement
    Referentieaanpak

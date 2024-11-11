@@ -2,11 +2,12 @@ Bepaling van kosten en baten
 ==================================
 Voor de kosten wordt de life-cycle cost (LCC) bepaald, gegeven het investeringsjaar van de maatregel. Dit is configureerbaar vanuit het dashboard, bij een Basisberekening wordt dit standaard op 2025 gezet, en voor grondversterkingen is ook 2045 een optie.
 
-De baten worden bepaald door de risicoreductie van de maatregelen. Dit wordt bepaald door de trajectfaalkans te vermenigvuldigen met de verdisconteerde overstromingsschade. De trajectfaalkans wordt bepaald door de faalkansen van de mechanismen te combineren, en de overstromingsschade wordt bepaald op basis van de economische schade in het jaar 2050 uit de :ref:`Factsheets normering primaire waterkeringen<https://www.helpdeskwater.nl/publish/pages/132790/factsheets_compleet19122016.pdf>`.
-Voor de baten wordt gebruik gemaakt van de verdisconteerde overstromingsschade. De verdiscontering wordt gedaan met een discontovoet van 3% (zie voor meer toelichting :ref:`_verdiscontering_section`. Zo is de schade :math:`S` in jaar :math:`t` gelijk aan:
+De baten worden bepaald door de risicoreductie van de maatregelen. Dit wordt bepaald door de trajectfaalkans te vermenigvuldigen met de verdisconteerde overstromingsschade. De trajectfaalkans wordt bepaald door de faalkansen van de mechanismen te combineren, en de overstromingsschade wordt bepaald op basis van de economische schade in het jaar 2050 uit de `Factsheets normering primaire waterkeringen <https://www.helpdeskwater.nl/publish/pages/132790/factsheets_compleet19122016.pdf>`_.
+Voor de baten wordt gebruik gemaakt van de verdisconteerde overstromingsschade. De verdiscontering wordt gedaan met een discontovoet van 3% (zie voor meer toelichting :ref:`verdiscontering_section`. Zo is de schade :math:`S` in jaar :math:`t` gelijk aan:
 
 .. math::
    S(t) = S(0) \cdot (1 + r)^t,
+
 waarbij :math:`S(0)` de schade in het basisjaar is (conform de factsheet), en :math:`r` de discontovoet. Dit wordt gedaan voor een horizon van 100 jaar. Risico(reductie) na 100 jaar wordt niet meegenomen.
 
 De kansen worden gecombineerd conform de meest recente assemblageregels uit het BOI: daarbij worden eerst de faalkansen van de vakken gecombineerd (zie ook `Bepaling trajectfaalkansen <BepalingTrajectfaalkansen.html>`_). Daarvoor wordt aangenomen dat dijkvakken voor piping en stabiliteit onafhankelijk zijn, conform de volgende formule:

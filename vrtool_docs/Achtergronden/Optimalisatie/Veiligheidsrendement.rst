@@ -11,21 +11,22 @@ De invoer voor de optimalisatie bestaat uit de faalkansen van de dijkvakken voor
 
 Opzet van het algoritme
 --------------------------------
-Binnen een veiligheidsrendementberekening wordt gezocht naar de combinatie van maatregelen met minimale totale kosten (overstromingsrisico & versterkingskosten). Omdat de omvang van het traject, en het aantal beschikbare maatregelen dit optimalisatieprobleem zeer groot maakt wordt gebruik gemaakt van een benaderingsmethode. Het gebruikte algoritme is een lokale optimalisatie, deze is ontwikkeld en gevalideerd in het `NWO-programma All-Risk <https://www.sciencedirect.com/science/article/pii/S0951832020308346>`_. 
+Binnen een veiligheidsrendementberekening wordt gezocht naar de combinatie van maatregelen met minimale totale kosten (overstromingsrisico & versterkingskosten). Omdat de omvang van het traject, en het aantal beschikbare maatregelen dit optimalisatieprobleem zeer groot maakt, wordt gebruik gemaakt van een benaderingsmethode. Het gebruikte algoritme is een lokale optimalisatie, deze is ontwikkeld en gevalideerd in het `NWO-programma All-Risk <https://www.sciencedirect.com/science/article/pii/S0951832020308346>`_. 
 
 Bij deze rekenmethode wordt steeds, gegeven een bepaalde situatie (veiligheid van de dijkvakken en het traject als geheel), de beste maatregel bepaald. Dit wordt gedaan door de kosten en baten van de maatregelen te bepalen, en de maatregel te kiezen met de hoogste baten/kosten-verhouding (BC-ratio). Door dit stapsgewijs te doen wordt het punt met minimale totale kosten gevonden of in ieder geval zeer goed benaderd.
 
 Daarbij zijn 2 methoden om de kosten-batenverhouding te bepalen:
-1. De BC-ratio van elke individuele maatregel. Dit is gericht op maatregelen die de faalmechanismen beinvloeden waarvoor vakken als onafhankelijk beschouwd worden. 
-2. De BC-ratio van een combinatie van maatregelen. Dit is gericht op maatregelen die de faalmechanismen beinvloeden waarvoor vakken als afhankelijk beschouwd worden, dus voor overloop/overslag en bekleding. 
 
-Vervolgens wordt gekeken welke maatregel het gunstigste is. Daarbij wordt eerst gekeken of de kosten-batenverhouding van een combinatie hoger is dan die van een individuele maatregel. Als dat het geval is, wordt de combinatie gekozen. Als dat niet het geval is, wordt de individuele maatregel gekozen. Daarbij wordt de maatregel gekozen op het dijkvak met de gunstigste maatregel waarvan de kosten-batenverhouding een factor 1.5 gunstiger is dan de beste maatregel op de andere vakken. 
+1. De BC-ratio van elke individuele maatregel. Dit is gericht op maatregelen die de faalmechanismen beïnvloeden waarvoor vakken als onafhankelijk beschouwd worden. 
+2. De BC-ratio van een combinatie van maatregelen. Dit is gericht op maatregelen die de faalmechanismen beïnvloeden waarvoor vakken als afhankelijk beschouwd worden, dus voor overloop/overslag en bekleding. 
+
+Vervolgens wordt gekeken welke maatregel het gunstigste is. Daarbij wordt eerst gekeken of de kosten-batenverhouding van een combinatie hoger is dan die van een individuele maatregel. Als dat het geval is, wordt de combinatie gekozen. Als dat niet het geval is, wordt de individuele maatregel gekozen. Daarbij wordt de maatregel gekozen op het dijkvak met de gunstigste maatregel waarvan de kosten-batenverhouding een factor 1,5 gunstiger is dan de beste maatregel op de andere vakken. 
 
 .. tip::
-   NB: de factor 1.5 is configureerbaar door in config.json de waarde van 'f_cautious' aan te passen. Echter, in de wetenschappelijke publicatie is deze waarde onderzocht en 1.5 blijkt daarin het beste te werken.
+   NB: de factor 1,5 is configureerbaar door in config.json de waarde van 'f_cautious' aan te passen. Echter, in de wetenschappelijke publicatie is deze waarde onderzocht en 1,5 blijkt daarin het beste te werken.
 
 
-De optimalisatieberekening gaat door tot de BC-ratio van de beste maatregel < 0.1 is, of het maximaal aantal iteraties (600) is bereikt. In het algemeen leidt het stopcriterium er toe dat er een economisch optimum wordt gevonden. Dit economisch optimum betekent niet per definitie dat de norm wordt gehaald, maar meestal is dit wel het geval. Denkbare uitzonderingen zijn trajecten waar de norm voor Lokaal Individueel Risico veel strenger is dan de MKBA norm. 
+De optimalisatieberekening gaat door tot de BC-ratio van de beste maatregel < 0,1 is, of het maximaal aantal iteraties (600) is bereikt. In het algemeen leidt het stopcriterium er toe dat er een economisch optimum wordt gevonden. Dit economisch optimum betekent niet per definitie dat de norm wordt gehaald, maar meestal is dit wel het geval. Denkbare uitzonderingen zijn trajecten waar de norm voor Lokaal Individueel Risico strenger is dan de MKBA norm. 
 
 Regelmatig komt het zelfs voor dat verder dan de norm versterken economisch aantrekkelijk is. In het dashboard kan er dan voor gekozen worden ofwel te werken met de economisch optimale set maatregelen, ofwel te kiezen voor een oplossing die voldoet aan een bepaalde kans in een gegeven jaar. In feite wordt dan voor een andere doelfunctie gekozen: in plaats van `optimale dijkversterking op basis van totale kosten`, gaat het dan om de `dijkversterking met minimale totale kosten gegeven een specifieke kans in een gegeven jaar`. In het onderliggende `paper <https://www.sciencedirect.com/science/article/pii/S0951832020308346>`_ is onderbouwd dat het optimalisatiepad (de stapsgewijze reeks van maatregelen) ongeveer het Pareto front van de oplossing vormt voor totaal risico en totale kosten. Daarom zullen de dan gekozen maatregelen dicht bij het optimum liggen voor de iets andere doelfunctie.
 

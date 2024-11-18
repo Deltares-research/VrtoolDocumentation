@@ -1,5 +1,6 @@
 Optimalisatie van maatregelen op basis van veiligheidsrendement  
 ===============================================================
+
 Bij een optimalisatie op basis van veiligheidsrendement worden helemaal geen eisen gesteld aan de faalkans op mechanisme- of doorsnede-/vakniveau. In plaats daarvan wordt gekeken naar de kosten en baten van maatregelen.
 
 

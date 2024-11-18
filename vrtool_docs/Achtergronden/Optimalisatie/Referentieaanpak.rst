@@ -1,5 +1,6 @@
 Referentievariant op basis van OI2014
 ==============================================
+
 De referentievariant heeft als doel de resultaten te vergelijken met een gangbare werkwijze. Daarvoor gaan we uit van de standaardfaalkansbegroting en lengte-effectfactoren uit het OI2014. 
 Daarvoor hanteren we de volgende factoren voor de faalkansruimte, en de lengte-effectfactoren N, a en b:
 
@@ -16,5 +17,5 @@ Als er geen maatregel is die aan alle eisen voldoet, wordt de maatregel gekozen 
 
 Op dit moment zijn de factoren voor de faalkansbegroting enkel te configureren door deze handmatig aan te passen in de database, specifiek in tabel DikeTrajectInfo.
 
-Opgemerkt moet worden dat bij het bepalen van de trajectfaalkans aangenomen wordt dat de doorsnedekansen niet worden opgeschaald binnen de vakken. Daardoor kan het voorkomen dat de resulterende trajectfaalkans een stuk lager is dan de trajectfaalkans. Tegelijkertijd moet worden opgemerkt dat wanneer dit wel zou worden opgeschaald van doorsnede naar vakniveau het afhankelijk is van de precieze mate van opschaling wat de resulterende trajectfaalkans wordt, waarbij geen garantie is dat de trajectfaalkans in het jaar 2075 daadwerkelijk kleiner is dan de norm.
+Opgemerkt moet worden dat bij het bepalen van de trajectfaalkans aangenomen wordt dat de doorsnedekansen niet worden opgeschaald binnen de vakken. Daardoor kan het voorkomen dat de resulterende trajectfaalkans een stuk lager is dan de norm. Tegelijkertijd moet worden opgemerkt dat wanneer dit wel zou worden opgeschaald van doorsnede naar vakniveau het afhankelijk is van de precieze mate van opschaling wat de resulterende trajectfaalkans wordt, waarbij geen garantie is dat de trajectfaalkans in het jaar 2075 daadwerkelijk kleiner is dan de norm.
 

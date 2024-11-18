@@ -1,5 +1,6 @@
 Bepaling van kosten en baten
 ==================================
+
 Voor de kosten wordt de life-cycle cost (LCC) bepaald, gegeven het investeringsjaar van de maatregel. Dit is configureerbaar vanuit het dashboard, bij een Basisberekening wordt dit standaard op 2025 gezet, en voor grondversterkingen is ook 2045 een optie.
 
 De baten worden bepaald door de risicoreductie van de maatregelen. Dit wordt bepaald door de trajectfaalkans te vermenigvuldigen met de verdisconteerde overstromingsschade. De trajectfaalkans wordt bepaald door de faalkansen van de mechanismen te combineren, en de overstromingsschade wordt bepaald op basis van de economische schade in het jaar 2050 uit de `Factsheets normering primaire waterkeringen <https://www.helpdeskwater.nl/publish/pages/132790/factsheets_compleet19122016.pdf>`_.

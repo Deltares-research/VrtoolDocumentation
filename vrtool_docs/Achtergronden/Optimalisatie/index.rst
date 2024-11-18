@@ -1,23 +1,17 @@
 =============================================
 Bepalen van versterkingsmaatregelen
 =============================================
+Met de VRTOOL worden op 2 manieren de versterkingsmaatregelen bepaald:
 
+* De economisch optimale maatregelen op basis van veiligheidsrendement
+* Referentiemaatregelen met een aanpak op basis van het OI2014
 
-* Wat doet VRM
-   * Hoe berekenen we kosten en baten
-   * Hoe werkt het algoritme
-* Wat doet de referentievariant
-   * Welke regels hanteren we 
-* Onzekerheden, is e.e.a. vergelijkbaar?
+In deze sectie worden de aannames onderliggend aan deze aanpakken toegelicht en wordt uitgewerkt hoe de beide varianten vervolgens berekend worden.
 
+.. toctree::
+   :caption: Inhoudsopgave
+   :maxdepth: 1
 
-Op basis van de resultaten van de eerdere stappen worden 2 versterkingsvarianten bepaald: 
-* Een referentievariant op basis van het OI2014, waarbij 50 jaar vooruit en integraal wordt versterkt.
-* Een optimalisatie van maatregelen op basis van veiligheidsrendement.
-
-
-
-.. toctree:: 
    BepalingTrajectfaalkansen
    BepalingKostenBaten
    Veiligheidsrendement

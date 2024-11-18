@@ -25,9 +25,7 @@ De methoden en onderliggende aannames zijn nader beschreven in `Bepalen van vers
    :hidden:
    :maxdepth: 0
 
-   Preprocessing_dijkbekleding
    Faalkansmodellen/index
    Maatregelen/index
-   Kosten
    Optimalisatie/index
 

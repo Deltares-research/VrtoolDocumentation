@@ -19,4 +19,4 @@ De 4 mogelijke pagina's in het dashboard zijn:
     Weergeven van resultaten in het dashboard <WeergevenResultaten>
     Berekeningen aansturen via het dashboard <BerekeningenMetDashboard>
     Vergelijken van optimalisatieberekeningen <VergelijkenOptimalisatieberekeningen>
-   Programmeren van versterkingen op 1 of meerdere trajecten (volgt dit najaar) <ProgrammerenVersterkingen>
+    Programmeren van versterkingen op 1 of meerdere trajecten (volgt dit najaar) <ProgrammerenVersterkingen>

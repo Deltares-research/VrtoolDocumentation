@@ -12,7 +12,7 @@ Binnen het assemblageprotocol geldt in principe dat voor de faalkans 2 gecombine
    
    P_\mathrm{mech} = min(P_1, P_2)
 
-Hierbij correspondeert :math:`P_1` met de kans bij onafhankelijkheid tussen vakken, dit is de theoretische bovengrens van de kans. :math:`P_2` correspondeert met de kans bij (sterke) afhankelijkheid tussen vakken. In de praktijk geldt daarbij dat :math:`P_1` met name van toepassing is bij geotechnische mechanismen, waar sterke onafhankelijkheid is door de grote ruimtelijke variabiliteit. En :math:`P_2` geldt bij belastinggedreven mechanismen zoals bekledingen en overloop/overslag. In de rekenmethode van de VRTOOL wordt daarom standaard :math:`P_1` gehanteerd voor piping en binnenwaartse stabiliteit, en :math:`P_2` voor bekledingen en overloop/overslag. Dit is in lijn met de meest recente voorschriften voor assemblage uit het BOI.
+Hierbij correspondeert :math:`P_1` met de kans bij onafhankelijkheid tussen vakken, dit is de theoretische bovengrens van de kans. :math:`P_2` correspondeert met de kans bij (sterke) afhankelijkheid tussen vakken, waarbij :math:`N_\mathrm{mech}` een factor is om onafhankelijke delen (bijv. als gevolg van onafhankelijke windrichtingen) in rekening te brengen. In de praktijk geldt daarbij dat :math:`P_1` met name van toepassing is bij geotechnische mechanismen, waar sterke onafhankelijkheid is door de grote ruimtelijke variabiliteit. En :math:`P_2` geldt bij belastinggedreven mechanismen zoals bekledingen en overloop/overslag. In de rekenmethode van de VRTOOL wordt daarom standaard :math:`P_1` gehanteerd voor piping en binnenwaartse stabiliteit, en :math:`P_2` voor bekledingen en overloop/overslag. Dit is in lijn met de meest recente voorschriften voor assemblage uit het BOI.
 
     :math:`P_1` **of** :math:`P_2` **, maakt het uit?**
 
@@ -29,7 +29,9 @@ Hierbij correspondeert :math:`P_1` met de kans bij onafhankelijkheid tussen vakk
          - .. image:: img/UnequalComponents.png
               :width: 100%
               :alt: Unequal Components
-    *Situatie met 10 dijkvakken waarbij links alle vakken een betrouwbaarheidsindex van 3.5 hebben, en rechts er 1 van de dijkvakken een betrouwbaarheidsindex van 2.5 heeft, met verschillende correlatie (horizontale as). Stippen geven de grenzen* :math:`P_1` *en* :math:`P_2` *aan.*
+
+    *Situatie met 10 dijkvakken waarbij links alle vakken een betrouwbaarheidsindex van 3.5 hebben, en rechts 1 van de dijkvakken een betrouwbaarheidsindex van 2.5 heeft, met verschillende correlatie* :math:`\rho` *(horizontale as). Stippen geven de grenzen* :math:`P_1` *en* :math:`P_2` *aan.*
+
 
 In de uitwerking daarvan zijn 2 belangrijke aandachtspunten:
 

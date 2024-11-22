@@ -1,7 +1,7 @@
 Faalkansmodellen
 =======================================
 
-In de VRTOOL worden 4 mechanismen gebruikt om de faalkansen te berekenen. Dit zijn:
+In de VRTOOL worden 4 mechanismen beschouwd. Dit zijn:
 
 * `Overloop/overslag <Overslag.html>`_
 

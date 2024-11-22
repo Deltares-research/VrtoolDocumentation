@@ -9,7 +9,7 @@ Bij een kruinverhoging wordt simpelweg de kruin verhoogd met de betreffende verh
 
    Schematische weergave van een kruinverhoging.
 
-Bij een bermverbreding Δb wordt de berm verbreed met Δb. Dat wordt gedaan door de x-coordinaten van de Einde Berm Landzijde (EBL) en BinnenTeen (BIT) te verschuiven met Δb. Aanname is dat alle taluds verder gelijk blijven. Wanneer er geen berm aanwezig is in het originele profiel wordt een bermhoogte van 2 meter aangenomen. Standaard wordt gerekend met kruinverhogingen in stappen van 25 cm tot 2 meter, en bermverbredingen van 5, 8, 10, 12, 15, 20 en 30 meter.
+Bij een bermverbreding Δb wordt de berm verbreed met Δb. Dat wordt gedaan door de x-coordinaten van de Einde Berm Landzijde (EBL) en BinnenTeen (BIT) te verschuiven met Δb. Aanname is dat alle taluds verder gelijk blijven. Wanneer er in het oorspronkelijke profiel geen berm aanwezig is wordt bij versterking uitgegaan van een bermhoogte van 2 meter. Standaard wordt gerekend met kruinverhogingen in stappen van 25 cm tot 2 meter, en bermverbredingen van 5, 8, 10, 12, 15, 20 en 30 meter.
 
 .. figure:: img/Berm_aanbrengen.png
    :alt: Berm_aanbrengen.png
@@ -23,6 +23,7 @@ Wanneer ook buitenwaarts versterkt kan worden wordt eerst zover mogelijk naar bu
 
    Schematische weergave van een buitenwaartse versterking met een berm.
 
+Opgemerkt moet worden dat deze functionaliteit op dit moment niet standaard wordt ontsloten, maar de onderliggende logica nog wel aanwezig is in de VRTOOL.
 
 Invloed op faalkansen 
 ----------------------
@@ -57,6 +58,7 @@ Bij een versterking in grond wordt vanaf de binnenteen binnenwaarts versterkt me
 
 .. math::
    L_\mathrm{voor} = L_{voor} + \Delta L
+
    L_\mathrm{achter} = \max(0, \Delta L - L_{achter})
 
 Verder geldt voor piping dat naast de waterstandsstijging ook de daling van het achterland wordt meegenomen. Deze daling wordt gegeven met :math:`dh_{exit}`. De bodemhoogte bij het uittredepunt wordt verlaagd met :math:`dh_{exit}`. Dit resulteert in een hogere stijghoogte en daarmee een hogere kans op piping.
@@ -67,7 +69,7 @@ Bij een verhoging van de kruin wordt de betrouwbaarheid voor overslag bepaald aa
 
 Kostenberekening
 ----------------
-De kosten van maatregelen zijn bepaald door kostenkentallen te bepalen op basis van de eenheidsprijzen van het prijsniveau 2023. Dit zijn de eenheidsprijzen die gehanteerd worden in KOSWAT, op basis van input van gegevens van Rijkswaterstaat. Bij deze herziening zijn ook de opslagfactoren (bijv. voor engineering en risico's) naar boven bijgesteld. Een overzicht van de kostenkentallen voor grondversterking is weergegeven in onderstaande tabel. Deze getallen zijn gebaseerd op basis van een aantal referentiecases. 
+De kosten van maatregelen zijn bepaald door kostenkentallen te bepalen op basis van de eenheidsprijzen van het prijsniveau 2023. Dit zijn de eenheidsprijzen die gehanteerd worden in KOSWAT, op basis van input van gegevens van Rijkswaterstaat. Bij totstandkoming van deze eenheidsprijzen zijn ook de opslagfactoren (bijv. voor engineering en risico's) naar boven bijgesteld. Een overzicht van de kostenkentallen voor grondversterking is weergegeven in onderstaande tabel. Deze getallen zijn gebaseerd op basis van een aantal referentiecases in KOSWAT. 
 
 .. csv-table:: Kostenkentallen grondversterking
   :file: tables/kosten_grond.csv
@@ -104,9 +106,9 @@ Daarbij geven de regels achtereenvolgens de kosten van het afvoeren van niet-her
 
 Kosten bebouwing en weg
 ~~~~~~~~~~~~~~~~~~~~~~~~
-Zowel bij binnen- als buitenwaarts versterken worden na het bepalen van de kosten voor het grondwerk de kosten voor de vernieuwing van de weg en het treffen van passende maatregelen voor bebouwing opgeteld. Voor de bebouwing wordt per pand in het BAG een vast bedrag in rekening gebracht. Daarbij wordt dus geen rekening gehouden met eventuele spreiding en de grote diversiteit aan panden (van schuurtjes tot appartementencomplexen). Lokaal kan dit tot afwijkingen leiden, met name wanneer wordt uitgegaan van amoveren als hoofdoplossing. In de praktijk wordt echter vaak bij panden maatwerk getroffen in de vorm van bijvoorbeeld damwanden. Met lokale relatief lichte damwandconstructies kan dan toch een pand (of meerdere) gespaard worden. Omdat we de VRTOOL doorgaans inzetten in een stadium waar nog geen sprake is van een uitwerking van de maatregelen op dit detailniveau is gekozen voor een kostenkental van €500.000 per pand. Dit bedrag licht ongeveer op het snijpunt van amoveren en een 10 meter lange damwand bij een pandoppervlakte van 75 m².
+Zowel bij binnen- als buitenwaarts versterken worden na het bepalen van de kosten voor het grondwerk de kosten voor de vernieuwing van de weg en het treffen van passende maatregelen voor bebouwing opgeteld. Voor de bebouwing wordt per pand in het BAG een vast bedrag in rekening gebracht. Daarbij wordt dus geen rekening gehouden met eventuele spreiding en de grote diversiteit aan panden (van schuurtjes tot appartementencomplexen). Lokaal kan dit tot afwijkingen leiden, met name wanneer wordt uitgegaan van amoveren als hoofdoplossing. In de praktijk wordt echter vaak bij panden maatwerk getroffen in de vorm van bijvoorbeeld damwanden. Met lokale relatief lichte damwandconstructies kan dan toch een pand (of meerdere) gespaard worden. Omdat we de VRTOOL doorgaans inzetten in een stadium waar nog geen sprake is van een uitwerking van de maatregelen op dit detailniveau is gekozen voor een kostenkental van €500.000 per pand. Dit bedrag ligt ongeveer op het snijpunt van amoveren en een 10 meter lange damwand bij een pandoppervlakte van 75 m².
 
-.. figure:: img/Bebouwing_damwand_amoveren.png
+.. figure:: img/bebouwing_damwand_amoveren.png
    :alt: Kosten amoveren/lokale maatregel
    :align: center
 

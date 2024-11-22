@@ -19,7 +19,7 @@ Doel van de workflow is om voor elk dijkvak de relatie tussen faalkans en kruinh
 Het invoerbestand ``HR_default.csv`` heeft de volgende kolommen die ingevuld moeten worden:
 
 .. csv-table:: Kolommen in invoerbestand waterstand & overslag
-  :file: tables/HR_kolommen.csv
+  :file: tables/hr_kolommen.csv
   :widths: 15, 15, 50
   :header-rows: 1
 
@@ -96,4 +96,4 @@ Voor deze workflow zijn de volgende waarden in dat bestand van belang:
 
    * De workflow zal crashen wanneer er bestaande resultaten worden gevonden. Deze moeten dan eerst worden verwijderd of verplaatst.
 
-Er wordt enige controle op de uitvoer gedaan door de preprocessor, maar het is raadzaam (al dan niet steekproefsgewijs) de resultaten te controleren. De meeste eenvoudige manier daarvoor is om naar de ``output_map_overslag`` te gaan en voor enkele locaties de resultaten te bekijken in het bestand ``DESIGNTABLE_{locatie}.txt``. Hier staat bij `Value` de kruinhoogte, en daarachter faalkans en betrouwbaarheidsindex bij die kruinhoogte. In de regel moeten de faalkansen dalen met stijgende kruinhoogte. Bij het wegschrijven van de database wordt hiervoor gecorrigeerd, maar wanneer dit nodig is zegt het wel iets over de kwaliteit van de berekening. 
+Er wordt enige controle op de uitvoer gedaan door de preprocessor, maar het is raadzaam (al dan niet steekproefsgewijs) de resultaten te controleren. De meeste eenvoudige manier daarvoor is om naar de ``output_map_overslag`` te gaan en voor enkele locaties de resultaten te bekijken in het bestand ``DESIGNTABLE_{locatie}.txt``. Hier staat bij `Value` de kruinhoogte, en daarachter faalkans en betrouwbaarheidsindex bij die kruinhoogte. In de regel moeten de faalkansen dalen met stijgende kruinhoogte. Bij het wegschrijven van de database wordt hiervoor gecorrigeerd, maar wanneer dit nodig is zegt het wel iets over de kwaliteit van de berekening: het kan bijvoorbeeld wijzen op een instabiele probabilistische berekening, of een inconsistentie in de database.

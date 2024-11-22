@@ -2,7 +2,7 @@
 doorsnede,Verplicht,Naam van het dwarsprofiel.
 scenario,Verplicht,"Indien er meerdere ondergrondscenario’s zijn, dient hier het scenario ID te worden ingevoerd. Deze moet een nummer zijn."
 scenariokans,Verplicht,Conditionele kans op het ondergrondscenario [-]
-wbn,Verplicht,Waterstand bij norm [m+NAP]
+wbn,Optioneel,Waterstand bij norm. Wordt berekend in de VRTool [m+NAP]
 polderpeil,Verplicht,Polderpeil [m+NAP]
 d_wvp,Verplicht,Dikte van het watervoerend pakket [m]
 d70,Verplicht,Zeefmaat die 70% (massa) van de zandkorrels van de zandfractie laat passeren [m]

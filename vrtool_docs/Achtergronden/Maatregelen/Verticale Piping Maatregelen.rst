@@ -3,7 +3,7 @@ Verticale pipingoplossing
 Het doel van de verticale pipingoplossing is het significant verlagen van de faalkans voor piping. In vroege versies van de VRTOOL werd dit gedaan door een Verticaal Zanddicht Geotextiel (VZG) aan te brengen. In de meer recente versies van de VRTOOL is dit veralgemeniseerd omdat VZG niet altijd goed maakbaar is, en in de praktijk ook veel andere oplossingen worden toegepast. Daarom is de verticale pipingoplossing nu een algemene maatregel die de faalkans voor piping verlaagt. De onderliggende maatregel is daarbij afhankelijk van de deklaagdikte:
 
 * Bij deklagen tot 2 meter wordt uitgegaan van een grofzandbarriere.
-* Bij deklagen tot 4 meter wordt uitgegaan van een Verticaal Zanddicht Geotextiel.
+* Bij deklagen van 2 tot 4 meter wordt uitgegaan van een Verticaal Zanddicht Geotextiel.
 * Bij dikkere deklagen wordt uitgegaan van een heavescherm tot 6 meter onder de deklaag.
 
 .. figure:: img/Piping_VZG.png

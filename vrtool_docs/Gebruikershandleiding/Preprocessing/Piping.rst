@@ -10,7 +10,7 @@ Structuur van het invoerbestand voor piping
   :widths: 15, 15, 50
   :header-rows: 1
 
-In het bestand staan nog enkele kolommen die niet in gebruik zijn. Deze kunnen worden genegeerd en worden bij een toekomstige release verwijderd.
+In het bestand staan nog enkele kolommen die niet in gebruik zijn (WBN & pf_s). Deze kunnen worden genegeerd en worden bij een toekomstige release verwijderd.
 
 Het vullen van het invoerbestand
 -------------------------------

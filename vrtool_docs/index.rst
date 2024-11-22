@@ -32,7 +32,6 @@ Voor vragen kan contact worden opgenomen met Deltares:
 
 * Wouter Jan Klerk (wouterjan.klerk@deltares.nl)
 * Stephan Rikkert (stephan.rikkert@deltares.nl)
-* Eduard Jas (eduard.jas@deltares.nl)
 
 
 .. toctree::

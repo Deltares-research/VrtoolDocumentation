@@ -10,11 +10,12 @@ Op basis van de invoerdatabase wordt voor de komende 100 jaar de veiligheid van 
 
 Bepaling van kosten en veiligheid bij maatregelen
 -------------------------------------------------------------------------
-De tweede stap is om op de effecten van verschillende maatregelen in te schatten. Elke maatregel heeft invloed op de veiligheid van 1 of meerdere faalmechanismen, en een specifieke kostenfunctie. De achtergronden hiervan zijn beschreven in de sectie `Maatregelen <Maatregelen/index.html>`_
+De tweede stap is om op de effecten van verschillende maatregelen in te schatten. Elke maatregel heeft invloed op de veiligheid van 1 of meerdere faalmechanismen, en bij elke maatregel hoort een specifieke kostenfunctie. De achtergronden hiervan zijn beschreven in de sectie `Maatregelen <Maatregelen/index.html>`_
 
 Bepaling van dijkversterkingsmaatregelen voor optimalisatie en referentie
 -------------------------------------------------------------------------
 Op basis van de resultaten van de eerdere stappen worden vervolgens 2 versterkingsvarianten bepaald: 
+
 * Een optimalisatie van maatregelen op basis van veiligheidsrendement.
 * Een referentievariant op basis van het OI2014, waarbij 50 jaar vooruit en integraal wordt versterkt.
 

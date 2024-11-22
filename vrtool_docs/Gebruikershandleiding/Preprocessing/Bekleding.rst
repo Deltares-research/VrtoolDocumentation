@@ -17,7 +17,7 @@ Het invoerbestand ``Bekleding_default.csv`` heeft de volgende kolommen die ingev
 Dit bestand heeft de volgende kolommen die ingevuld moeten worden:
 
 .. csv-table:: Kolommen in invoerbestand bekledingen
-  :file: tables/Bekleding_kolommen.csv
+  :file: tables/bekleding_kolommen.csv
   :widths: 15, 15, 50
   :header-rows: 1
 
@@ -53,7 +53,7 @@ Het bepalen van de belasting gaat middels het volgende commando:
 
    python -m preprocessing bekleding_qvariant --config_file {config_bestand}
 
-Let op: bij deze stap wordt voor elke doorsnede de belasting op de bekleding bepaald voor de jaren 2023 en 2100, voor golfklap, golfoploop en zuilen, en voor verschillende kansen en waterstanden. Dit is een tijdrovende stap, zeker voor meer complexe watersystemen. In een toekomstige release verbeteren we de feedback over de voortgang van deze stap.
+Let op: bij deze stap wordt voor elke doorsnede de belasting op de bekleding bepaald voor de jaren 2023 en 2100, voor golfklap, golfoploop en zuilen, en voor verschillende kansen en waterstanden. Dit is een tijdrovende stap, zeker voor meer complexe watersystemen. 
 
 Na afronding van de berekening voor een locatie wordt een bestand `Qvar_{locatie}` weggeschreven in de map `output_map_bekleding`. 
 

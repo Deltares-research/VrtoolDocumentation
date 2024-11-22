@@ -27,11 +27,15 @@ Bij het gedeelte `Traject selectie` kan een traject worden geladen. Dat kan via 
    :width: 50%
    :align: center
 
+.. tip:: 
+    Voor het openen moet in het config.json bestand de padnaam naar de database worden gecontroleerd. Deze verwijzing moet kloppen, en het is belangrijk dat deze in het volgende format in de json staat ``"database_path": "C:/MijnDatabase"``. Dus met forward-slashes.
+
+
 Met het dropdown menu kan vervolgens de gewenste berekening worden geselecteerd. Alle berekeningen in de database worden hier automatisch weergegeven. Bij het selecteren van een andere berekening zullen de resultaten opnieuw geupdatet moeten worden.
 
 De laatste optie is het selecteren van ofwel `Economisch optimaal`, ofwel `Faalkans`. Bij de optie `Economisch optimaal` worden de resultaten van de economisch optimale maatregelen weergegeven. In de VRTOOL wordt een hele reeks maatregelen doorgerekend, tot de kosten-batenverhouding kleiner is dan 0.1. Het economisch optimum, de combinatie van maatregelen met minimale totale kosten (versterking + risico) ligt dus al eerder. Met deze optie wordt gekozen welke maatregelen moeten worden meegenomen in de weergave. Met `Economisch optimaal` zijn dat alle maatregelen tot het punt dat de totale kosten minimaal zijn.
 
-In sommige gevallen is het wenselijk om de maatregelen weer te geven die voldoen aan een bepaalde kans in een bepaald jaar. Dit kan worden gedaan door `Faalkans` te selecteren. Hierbij kan een betrouwbaarheidsindex (omgerekende faalkans) worden ingevoerd samen met een jaar. Vervolgens wordt het optimalisatiepad 'afgekapt' op het punt waarbij de trajectfaalkans in het opgegeven jaar kleiner is dan de opgegeven faalkans. Door op `update`` te klikken kunnen de resultaten worden geupdatet.
+In sommige gevallen is het wenselijk om de maatregelen weer te geven die voldoen aan een bepaalde kans in een bepaald jaar. Dit kan worden gedaan door `Faalkans` te selecteren. Hierbij kan een betrouwbaarheidsindex (omgerekende faalkans) worden ingevoerd samen met een jaar. Vervolgens wordt het optimalisatiepad 'afgekapt' op het punt waarbij de trajectfaalkans in het opgegeven jaar kleiner is dan de opgegeven faalkans. Door op `recompute` te klikken kunnen de resultaten worden geupdatet.
 
 Instellingen
 ~~~~~~~~~~~~
@@ -86,7 +90,7 @@ Op de pagina versterkingsmaatregelen kunnen de resultaten van de optimalisatie e
     :width: 80%
     :align: center
 
-Met de knoppen linksboven kan gewisseld worden tussen weergaven van het tyep maatregel, de betrouwbaarheid na versterking, en de kosten. Rechts worden, afhankelijk van de gemaakte keuze wisselende knoppen weergegeven. Een overzicht van de combinaties en wat wordt getoond is gegeven in onderstaande tabel.
+Met de knoppen linksboven kan gewisseld worden tussen weergaven van het type maatregel, de betrouwbaarheid na versterking, en de kosten. Rechts worden, afhankelijk van de gemaakte keuze wisselende knoppen weergegeven. Een overzicht van de combinaties en wat wordt getoond is gegeven in onderstaande tabel.
 
 .. csv-table:: Opties weergave versterkingsmaatregelen
     :file: tables/opties_versterking.csv
@@ -105,6 +109,7 @@ Op de pagina `Resultaten optimalisatie` worden de resultaten van de optimalisati
 
 In de weergave zijn 3 lijnen zichtbaar: een groene stippellijn, een groene doorgetrokken lijn en een blauwe doorgetrokken lijn.
 De groene stippellijn geeft het pad weer van de optimalisatie: elke stap is een maatregel die wordt genomen. De bepaling hiervan is nader toegelicht bij de achtergronden van het `algoritme <../../Achtergronden/Optimalisatie/index.html#opzet-van-het-algoritme>`_ en in onderstaand kader.
+
     **Weergave van het optimalisatieresultaat**
 
     De groene stippellijn geeft een weergave van de volgorde van optimale maatregelen. Een voorbeeldresultaat is weergegeven in onderstaande tabel.
@@ -131,6 +136,8 @@ Op de pagina `Prioritering` wordt samengevat wat de meest aantrekkelijke volgord
     :alt: Voorbeeld van de prioriteringsinformatie zoals weergegeven in het dashboard.
 
     Voorbeeld van de prioriteringsinformatie zoals weergegeven in het dashboard.
+
+
 Maatregelen
 ~~~~~~~~~~~
 Op de pagina `Maatregelen` kunnen de beschikbare maatregelen per dijkvak worden bekeken. Na het selecteren van een dijkvak wordt voor alle beschikbare maatregelen de kosten en de faalkans/betrouwbaarheid weergegeven. Met de instellingen in het linkerpaneel kan dit voor een specifiek mechanisme, of voor alle mechanismen samen worden gedaan. De zwarte puntjes zijn de verschillende maatregelen die beschikbaar zijn, in groen zijn de maatregelen weergegeven die in het optimalisatiepad van veiligheidsrendement voorkomen. De blauwe en rode diamanten geven de uiteindelijke maatregelen weer die worden genomen in de referentievariant en de economisch optimale variant. 

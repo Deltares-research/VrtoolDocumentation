@@ -18,7 +18,7 @@ Doel van de workflow is om voor elk dijkvak een waterstandsfrequentielijn af te 
 Het invoerbestand ``HR_default.csv`` heeft de volgende kolommen die ingevuld moeten worden:
 
 .. csv-table:: Kolommen in invoerbestand waterstand & overslag
-  :file: tables/HR_kolommen.csv
+  :file: tables/hr_kolommen.csv
   :widths: 15, 15, 50
   :header-rows: 1
 
@@ -34,7 +34,7 @@ Het vullen van het invoerbestand
 -------------------------------
 Voor het doorrekenen van de waterstandsfrequentielijnen moet per dijkvak 1 locatie worden opgegeven. Het is handig (en meestal logisch) als deze locatie hetzelfde is als voor overslag. In de beoordeling zijn door beheerders vaak waterstands- en overslagberekeningen gemaakt op doorsneden op 100 meter afstand tot elkaar. Dit is voor veiligheidsrendement niet nodig. Het advies is om voor elk vak de maatgevende locatie voor overslag te kiezen, en deze locatie ook te gebruiken voor waterstandsberekeningen.
 
-De kolommen ``bovengrens`` en ``ondergrens`` moeten worden ingevuld met een voldoende hoge en lage waterstand. Vervolgens wordt hier door de preprocessor een grid van gemaakt. Deze waarden zijn doorgaans beschikbaar vanuit de beoordeling. 
+De kolommen ``bovengrens`` en ``ondergrens`` moeten worden ingevuld met een voldoende hoge en lage waterstand. Dat wil zeggen: een waterstand met een kans van bijvoorbeeld 1/10-1/30 en een waterstand met een kans fors kleiner dan de norm (bijv. de waterstand bij categorie A+ uit het WBI) Vervolgens wordt hier door de preprocessor een grid van gemaakt waarmee een frequentielijn wordt afgeleid. De grenswaarden zijn doorgaans beschikbaar vanuit de beoordeling. 
 
 .. topic:: Aandachtspunten 
 

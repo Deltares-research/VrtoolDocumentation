@@ -7,10 +7,10 @@ Bij bekledingen worden graserosie buitentalud (GEBU) en stabiliteit zetsteen (ZS
 - Afleiden relatie tussen hoogte overgang en faalkans GEBU met behulp van DiKErnel 
 - Afleiden relatie tussen toplaagdikte en faalkans ZST met behulp van een benaderingsmethode
 
-Deze verschillende stappen, en hoe hiermee wordt omgegaan in de VRTOOL wordt in de volgende paragrafen nader toegelicht.
+Deze verschillende stappen en hoe hiermee wordt omgegaan in de VRTOOL wordt in de volgende paragrafen nader toegelicht.
 
 Afleiden van de belasting met behulp van de Q-variant
-------------------------------------
+------------------------------------------------------
 De eerste stap is om met Hydra-Ring de golfcondities te bepalen voor de betreffende locaties. Daarvoor worden met Hydra-Ring met de Q-variant berekeningen uitgevoerd voor 4 overschrijdingskansen voor zichtjaren 2023 en 2100:
 
 - :math:`30 * P_{ondergrens}`
@@ -70,15 +70,15 @@ Op basis van de berekeningen met DiKErnel wordt per locatie en zichtjaar een rel
 Na het afleiden van de relatie wordt nog een nabewerkingsslag uitgevoerd op de resultaten. Daarbij worden de volgende aanpassingen gedaan:
 1. De waarden worden zo aangepast dat een verhoging van de overgang altijd leidt tot een lagere faalkans voor GEBU.
 2. Er wordt gecorrigeerd zodanig dat de toekomstige situatie nooit beter is dan de huidige situatie.
-3. De faalkans van de grasbekleding voor overgahngshoogten dicht bij de kruin (minder dan 1 cm verschil) wordt verwaarloosbaar gesteld.
+3. De faalkans van de grasbekleding voor overgangshoogten dicht bij de kruin (minder dan 1 cm verschil) wordt verwaarloosbaar gesteld.
 
 Afleiden relatie toplaagdikte en faalkans steenbekleding
----------------------------------------------
+-----------------------------------------------------------
 Naast de faalkans van de grasbekleding wordt ook gekeken naar de stabiliteit van de steenzetting (ZST). Om de relatie tussen de toplaagdikte en de faalkans van de steenbekleding te bepalen worden Steentoetsbestanden uit LBO-1 gebruikt. Specifiek voor veiligheidsrendementanalyses is een benaderingsmethode ontwikkeld waarmee de faalkans van een steenzetting kan worden geschat op basis van de gegevens uit Steentoets. 
 
-De basis van deze aanpak rust op de aanname dat de ratio :math:`H_s/(\Delta D)` waarbij een steenzetting ongeveer gelijk blijft, ongeacht de belasting. Dit is gevalideerd voor een aantal cases, en blijkt een redelijke aanname te zijn, hoewel in sommige gevallen de resulterende steendikte waarbij de bekleding stabiel is iets afwijkt (orde 5 centimeter). 
+De basis van deze aanpak rust op de aanname dat de ratio :math:`H_s/(\Delta \cdot D)` waarbij een steenzetting ongeveer gelijk blijft, ongeacht de belasting. Dit is gevalideerd voor een aantal cases, en blijkt een redelijke aanname te zijn, hoewel in sommige gevallen de resulterende steendikte waarbij de bekleding stabiel is iets afwijkt (orde 5 centimeter). :math:`H_s` is hier de significante golfhoogte, :math:`\Delta` is het relatieve steengewicht en :math:`D` de steendikte.	
 
-We kijken apart naar alle losse bekledingdelen, daarbij wordt uit de Steentoetsbestanden de :math:`ratio_{voldoet} = H_s/(\Delta D_{voldoet})` afgeleid waarmee de bekleding precies voldoet. Dat wordt gedaan door :math:`D_{voldoet}` gelijk te stellen aan de huidige dikte plus het berekende dikteoverschot. Dit wordt gedaan voor elk bekledingvlak met een steenbekleding.
+We kijken apart naar alle losse bekledingdelen, daarbij wordt uit de Steentoetsbestanden de :math:`ratio_{voldoet} = H_s/(\Delta \cdot D_{voldoet})` afgeleid waarmee de bekleding precies voldoet. Dat wordt gedaan door :math:`D_{voldoet}` gelijk te stellen aan de huidige dikte plus het berekende dikteoverschot. Dit wordt gedaan voor elk bekledingvlak met een steenbekleding.
 
 Vervolgens wordt op basis van de Q-variantberekeningen (modeltype `zuilen`) de benodigde toplaagdikte afgeleid voor de verschillende terugkeertijden voor waterstandsniveaus die samenvallen met de bekleding. De toplaagdikte wordt afgeleid met de volgende formule:
 :math:`D(i) = Hs(i)/(\Delta \cdot ratio_{voldoet})`
@@ -93,5 +93,3 @@ In Figuur 4 is een voorbeeld resultaat weergegeven. Links is het profiel zoals g
    Figuur 4 Voorbeeld van een relatie tussen de steendikte en de faalkans van de steenbekleding. Links het profiel met verschillende bekledingdelen. Rechts de relatie tussen steendikte en faalkans voor elk steenbekledingdeel.
 
 Net als bij de relaties voor grasbekleding worden de resultaten nabewerkt. Ook bij steenzettingen geldt dat de faalkans bij gegeven steendikte altijd moet toenemen in de tijd. Daarnaast wordt, afhankelijk van de gekozen optie voor de verbetering van de steenbekleding (vervangen of uitbreiden), de effectieve steendikte waarmee de VRTOOL rekent aangepast. Zie voor meer toelichting de paragraaf `Maatregelen dijkbekleding <../Maatregelen/Maatregelen_dijkbekleding.html>`_.
-
-#TODO bij maatregelen: vervangen/uitbreiden toelichten.

@@ -1,4 +1,4 @@
-Rekenen met de VRTOOL
+Uitvoeren van een berekening
 =====================
 
 De VRTool kan worden aangeroepen met de CLI van Anaconda en het volgende commando:
@@ -8,7 +8,7 @@ De VRTool kan worden aangeroepen met de CLI van Anaconda en het volgende command
    python -m vrtool {desired_run} {MODEL_DIRECTORY}
 
 
-Vervang ``{desired_run}`` met de gewenste berekening. Hierbij kan worden gekozen voor één van de drie stappen van de `veiligheidsrendementberekning <Opzet%20van%20een%20berekening.md>`__ of alle drie tegelijk: 
+Vervang ``{desired_run}`` met de gewenste berekening. Hierbij kan worden gekozen voor één van de drie stappen van de veiligheidsrendementberekening, of alle drie tegelijk: 
 
 - ``assessment``: hiermee wordt alleen de beoordeling/projectie van de huidige veiligheid uitgevoerd 
 - ``measures``: hiermee worden de maatregelen per dijkvak doorgerekend 

@@ -8,19 +8,19 @@ Definitie van projecten
 
 Importeren van berekeningen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Deze pagina is als eerste zichtbaar bij het openen van het scherm voor een analyse op gebiedsniveau. De eerste stap is om 1 of meerdere dijktrajecten te laten (d.m.v. bij de analyse op trajectniveau opgeslagen json-bestanden). Er kan 1 json-bestand per traject worden gebruikt, wanneer een nieuwe wordt geladen wordt de oude vervangen.
+Deze pagina is als eerste zichtbaar bij het openen van het scherm voor een analyse op gebiedsniveau. De eerste stap is om 1 of meerdere dijktrajecten te laden (d.m.v. bij de analyse op trajectniveau opgeslagen json-bestanden). Er kan 1 json-bestand per traject worden gebruikt. Wanneer een nieuwe wordt geladen, wordt de oude vervangen.
 
 Het is ook mogelijk om een compleet json-bestand inclusief projectdefinities te laden, dat wordt toegelicht in de volgende paragraaf.[ref?]
 
 In het deel `Geimporteerde berekeningen` is zichtbaar voor welk traject welke berekening beschikbaar is. In dit scherm wordt alleen gerekend met de resultaten van veiligheidsrendement, niet van de berekening op basis van doorsnede-eisen.
 
 .. tip::
-    Het is mogelijk om het json-bestand van een andere berekening te laden ook wanneer er al projecten zijn gedefinieerd. Let dan wel op dat de vakindeling van beide berekeningen hetzelfde is, anders kunnen de projecten niet meer worden gekoppeld aan het traject.
+    Het is mogelijk om het json-bestand van een andere berekening te laden, ook wanneer er al projecten zijn gedefinieerd. Let dan wel op dat de vakindeling van beide berekeningen hetzelfde is, anders kunnen de projecten niet meer worden gekoppeld aan het traject.
 
 Aanmaken van projecten
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Bij `Overzicht projecten`` kan een nieuw project worden aangemaakt, of een bestaand project worden aangepast of verwijderd. Dit wordt gedaan door een (unieke) naam toe te voegen voor het project, en dijkvakken te selecteren die onder dit project vallen. Daarnaast moet een startjaar en eindjaar worden opgegeven: de kosten van het project (conform veiligheidsrendement) worden uitgesmeerd over deze periode.
+Bij `Overzicht projecten` kan een nieuw project worden aangemaakt, of een bestaand project worden aangepast of verwijderd. Dit wordt gedaan door een (unieke) naam toe te voegen voor het project, en dijkvakken te selecteren die onder dit project vallen. Daarnaast moet een startjaar en eindjaar worden opgegeven: de kosten van het project (conform veiligheidsrendement) worden uitgesmeerd over deze periode.
 
 .. tip:: 
     Wanneer een dijkvak wordt geselecteerd wat al in een ander project voorkomt geeft dit een foutmelding. Het is niet mogelijk om een dijkvak in meerdere projecten te hebben. Het vak moet dan eerst uit het andere project worden verwijderd. Of het andere project kan volledig worden verwijderd met de knop 'Verwijder project'.
@@ -38,6 +38,11 @@ Weergave van trajecten en projecten
 
 Aan de rechterkant is een kaart zichtbaar met daarop de geladen trajecten en daar kunnen 4 weergaven worden gekozen die kunnen helpen bij het definieren van projecten. 
 Er zijn 4 weergavemogelijkheden:
+
+* Trajecten
+* Projecten
+* Faalkans 2025
+* VR index
 
 Met de keuze voor `Trajecten` worden de geladen trajecten weergegeven, én wordt in rood weergegeven welke dijkvakken zijn geselecteerd bij het project wat wordt aangemaakt. In onderstaand voorbeeld zijn bijvoorbeeld de dijkvakken 1, 2 en 4 op traject 10-3 in rood weergegeven.
 
@@ -67,7 +72,7 @@ Resultaten op gebiedsniveau
 Overzicht van projecten
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Wanneer alle gewenste projecten zijn gedefineerd kan de effectiviteit van het programma worden geanalyseerd in het scherm `Resultaten op gebiedsniveau`. Een overzicht daarvan is gegeven in onderstaande figuur.
+Wanneer alle gewenste projecten zijn gedefinieerd kan de effectiviteit van het programma worden geanalyseerd in het scherm `Resultaten op gebiedsniveau`. Een overzicht daarvan is gegeven in onderstaande figuur.
 
 .. figure:: img/gebiedspagina_resultaten_overzicht.png
     :width: 100%

@@ -1,7 +1,7 @@
 Berekeningen aansturen via het dashboard
 ========================================
 
-Vanuit het dashboard kunnen nieuwe berekeningen worden aangestuurd. Daarvoor moet eerst een database met resultaten van een basisberekening worden geimporteerd. Vervolgens kan met het dashboard een nieuwe berekening worden geconfigureerd. De pagina hiervoor is te benaderen door bovenin bij `paginas` te kiezen voor `Draaien optimalisatieberekeningen`. Zie ook onderstaand screenshot.
+Vanuit het dashboard kunnen nieuwe berekeningen worden aangestuurd. Daarvoor moet eerst een database met resultaten van een basisberekening worden geïmporteerd. Vervolgens kan met het dashboard een nieuwe berekening worden geconfigureerd. De pagina hiervoor is te benaderen door bovenin bij `paginas` te kiezen voor `Draaien optimalisatieberekeningen`. Zie ook onderstaand screenshot.
 
 .. figure:: img/berekening_dashboard_1.png
     :width: 50%
@@ -28,11 +28,11 @@ De berekening is `Aangepaste optimalisatie v0.1` genoemd. De berekening kan word
 De duur van de berekening is sterk afhankelijk van de computer waarop deze wordt uitgevoerd, en het aantal maatregelen en dijkvakken dat wordt meegenomen in de berekening. In het algemeen duurt het optimalisatiedeel van de berekeningen wel meer dan 5 minuten per analyse (tot circa 1 uur voor trajecten met veel dijkvakken en maatregelen). Een berekening is klaar als dit wordt aangegeven in het venster, en als er in het tabblad in de browser geen `updating...` meer staat.
 
 .. tip::
-    Het draaien van een berekening vanuit het dashboard kan alleen worden uitgevoerd als eerst in ieder geval ``measures`` is doorgerekend omdat er gegevens over de maatregelen beschikbaar moeten zijn. Zie ook `hier <../VRTool/index.html#uitvoeren-van-een-berekening>`_
+    Het draaien van een berekening vanuit het dashboard kan alleen worden uitgevoerd als eerst in ieder geval ``measures`` is doorgerekend omdat er gegevens over de maatregelen beschikbaar moeten zijn. Zie ook `hier <../VRTool/index.html#uitvoeren-van-een-berekening>`_.
 
 Het draaien van aangepaste berekeningen kan handig zijn wanneer:
 
-* Met een specifiek versterkingsjaar moet worden gerekend (voor bepaalde dijkvakken). Het kan dan inzicht geven in de mate waarop de timing van de maatregelen de maatregelen op het betreffende vak of andere vakken beinvloedt.
+* Met een specifiek versterkingsjaar moet worden gerekend (voor bepaalde dijkvakken). Het kan dan inzicht geven in de mate waarop de timing van de maatregelen de maatregelen op het betreffende vak of andere vakken beïnvloedt.
 * Een specifieke maatregel moet worden uitgezet of afgedwongen. Dit kan bijvoorbeeld zijn omdat een maatregel niet mogelijk is door beperkingen die niet anderszins worden meegenomen, of omdat vanuit omgeving juist een specifiek type maatregel wenselijk is.
 * Men wil kijken naar het beperken van de geografische scope door specifieke dijkvakken uit te zetten en daarmee uit te sluiten van versterking.
 

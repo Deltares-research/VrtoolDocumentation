@@ -13,7 +13,7 @@ Aan- en uitzetten van maatregelen
 Via het tabblad `Run Optimize` kan met de knoppen een nieuwe berekening worden geconfigureerd. In onderstaand voorbeeld is bijvoorbeeld aangegeven dat op dijkvak 3 alleen een grondversterking kan worden uitgevoerd, en op dijkvakken 4 t/m 8 geen versterking. Op dijkvak 3 kan ook alleen in het jaar 2030 worden versterkt.
 
 .. figure:: img/instellingen_dashboard_berekening.png
-    :width: 50%
+    :width: 100%
     :align: center
 
 De berekening is `Aangepaste optimalisatie v0.1` genoemd. De berekening kan worden gestart door op de knop `Start optimalisatieberekening` te klikken. De berekening wordt nu gestart en de voortgang is te volgen in de live logging. Een berekening kan enige tijd duren, de voortgang wordt gelogd in een pop-up scherm zoals hieronder weergegeven. Hier is bijvoorbeeld te zien dat er in stap 2 van de berekening een maatregel is gekozen met een BC-ratio van 11381.77.

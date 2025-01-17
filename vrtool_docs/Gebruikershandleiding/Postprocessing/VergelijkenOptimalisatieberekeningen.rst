@@ -1,7 +1,7 @@
 Vergelijken van optimalisatieberekeningen
 =========================================
 
-Via het scherm ``Vergelijken berekeningen`` kunnen verschillende berekeningen van hetzelfde (of een ander) traject met elkaar worden vergeleken. Dit kan worden gedaan door 2 of meer ``json``-bestanden die geexporteerd zijn bij de `analyse per traject <WeergevenResultaten.html#exporteren-van-resultaten>`_ te selecteren. Deze zijn vervolgens zichtbaar in het linkerpaneel.
+Via het scherm ``Vergelijken berekeningen`` kunnen verschillende berekeningen van hetzelfde (of een ander) traject met elkaar worden vergeleken. Dit kan worden gedaan door 2 of meer ``json``-bestanden die geëxporteerd zijn bij de `analyse per traject <WeergevenResultaten.html#exporteren-van-resultaten>`_ te selecteren. Deze zijn vervolgens zichtbaar in het linkerpaneel.
 
 .. figure:: img/vergelijken_berekeningen_geladen.png
     :width: 80%
@@ -53,7 +53,7 @@ In het scherm ``Overzichtstabel maatregelen`` wordt een tabel weergegeven met vo
     :width: 100%
     :align: center
 
-Van boven naar beneden worden op volgorde de verschillende dijkvakken weergegeven. Wanneer een regel als geheel grijs is betekent dit dat er een ander type maatregel is gekozen. Wanneer een cel groen is, betekent het dat de dimensie van de maatregel verschilt. In het voorbeeld is te zien dat op dijkvak 27 in beide berekeningen voor een grondversterking wordt gekozen. In de eerste berekening met 15 meter berm, in de tweede met 10 meter berm. Op dijkvak 31 wordt in berekening 1 een berm aangelegd (8 meter) en in berekening 2 geen maatregel getroffen. In de tabel worden de volgende kolommen weergegeven.
+Van boven naar beneden worden op volgorde de verschillende dijkvakken weergegeven. Wanneer een regel als donkergrijs is weergegeven, betekent dit dat er een ander type maatregel is gekozen. Wanneer een cel groen is, betekent het dat de dimensie van de maatregel verschilt. In het voorbeeld is te zien dat op dijkvak 27 in beide berekeningen voor een grondversterking wordt gekozen. In de eerste berekening met 15 meter berm, in de tweede met 10 meter berm. Op dijkvak 31 wordt in berekening 1 een berm aangelegd (8 meter) en in berekening 2 geen maatregel getroffen. In de tabel worden de volgende kolommen weergegeven.
 
 .. csv-table:: Kolommen in tabel met overzicht maatregelen
   :file: tables/kolommen_maatregeltabel.csv

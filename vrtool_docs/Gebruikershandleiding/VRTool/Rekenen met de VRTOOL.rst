@@ -17,13 +17,13 @@ Vervang ``{desired_run}`` met de gewenste berekening. Hierbij kan worden gekozen
 
 Vervang ``{MODEL_DIRECTORY}`` met het path naar de database (.db) en config bestand (.json) uit de preprocessor, zie foto hieronder. Beide bestanden worden automatisch gegenereerd via de preprocessor, zie `Genereren database <../Preprocessing/Genereren_database.html>`__.
 
-.. image:: img/TweeBestanden_Preprocessing.PNG
+.. figure:: img/TweeBestanden_Preprocessing.PNG
 
 Configuratiebestand
 ========================
 Het config bestand bevat de instellingen voor de berekening. Na het genereren met de preprocessor ziet het config bestand er als volgt uit:
 
-.. image:: img/configbestand.png
+.. figure:: img/configbestand.png
 
 De belangrijkste instellingen zijn:
 

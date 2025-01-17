@@ -23,7 +23,7 @@ Een veiligheidsrendementberekening bestaat uit 3 stappen, die individueel of gez
 
     Naast de optimalisatie wordt ook een referentie doorgerekend. Daarbij is het uitgangspunt dat alle dijkvakken op basis van de doorsnede-eisen uit OI2014 voor een planperiode van 50 jaar worden versterkt.
 
-.. image:: img/Rekenstappen.png
+.. figure:: img/Rekenstappen.png
     :width: 75%
     :align: center
 

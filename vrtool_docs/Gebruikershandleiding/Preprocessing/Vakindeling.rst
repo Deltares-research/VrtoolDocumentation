@@ -40,7 +40,7 @@ dikgedrukte doorsnede ``ET_VOLDOET``). Deze hoeft dan slechts 1x genoemd
 te worden in het STBI invoerbestand, maar kan bij meerdere vakken worden
 gebruikt. 
 
-.. image:: img/Filling_Vakindeling_stbi.PNG
+.. figure:: img/Filling_Vakindeling_stbi.PNG
     :alt: Voorbeeld van het vullen van het invoerbestand van de vakindeling
     :align: center
 
@@ -117,6 +117,6 @@ Bij grote verschillen is wel raadzaam om de ligging van de vakken op
 basis van het NBPW en de shape die als bron voor de M-waarden is
 gebruikt te vergelijken.
 
-.. image:: img/te_kort_traject.PNG
+.. figure:: img/te_kort_traject.PNG
     :alt: Foutmelding bij een te kort traject
     :align: center

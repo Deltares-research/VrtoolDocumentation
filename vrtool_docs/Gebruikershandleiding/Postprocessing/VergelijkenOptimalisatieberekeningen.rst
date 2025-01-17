@@ -1,9 +1,9 @@
 Vergelijken van optimalisatieberekeningen
 =========================================
 
-Via het scherm ``Vergelijken berekeningen`` kunnen verschillende berekeningen van hetzelfde (of een ander) traject met elkaar worden vergeleken. Dit kan worden gedaan door 2 of meer ``json``-bestanden die geexporteerd zijn uit de `Analyse per traject<../WeergevenResultaten.html#selectie-instellingen-database>`_ te selecteren. Deze zijn vervolgens zichtbaar in het linkerpaneel.
+Via het scherm ``Vergelijken berekeningen`` kunnen verschillende berekeningen van hetzelfde (of een ander) traject met elkaar worden vergeleken. Dit kan worden gedaan door 2 of meer ``json``-bestanden die geexporteerd zijn bij de `analyse per traject <WeergevenResultaten.html#exporteren-van-resultaten>`_ te selecteren. Deze zijn vervolgens zichtbaar in het linkerpaneel.
 
-.. image:: img/vergelijken_berekeningen_geladen.png
+.. figure:: img/vergelijken_berekeningen_geladen.png
     :width: 80%
     :align: center
 
@@ -17,7 +17,7 @@ Resultaten optimalisatie
 ------------------------
 Met het scherm ``Resultaten optimalisatie`` kunnen de resultaten van de optimalisatieberekeningen worden vergeleken. Hierbij worden de resultaten van de veiligheidsrendementberekeningen van de verschillende invoerbestanden weergegeven in termen van kosten en betrouwbaarheid/faalkans. Dit is met name zinvol om 2 scenario's (bijv. voor verschillende maatregelen, of verschillende beoordelingsinvoer) te vergelijken op resulterende faalkans en kosten.
 
-.. image:: img/vergelijken_berekeningen_optimalisatie.png
+.. figure:: img/vergelijken_berekeningen_optimalisatie.png
     :width: 80%
     :align: center
 
@@ -32,7 +32,7 @@ Maatregelen op kaart
 -------------------
 In het scherm ``Maatregelen op kaart`` kunnen de maatregelen van verschillende cases worden weergegeven per dijkvak. Daarbij worden twee cases die geselecteerd worden met de `Activeer`-knop naast elkaar weergegeven. De eerste case wordt aan de waterkant van het traject weergegeven, de tweede aan de landzijde. Een voorbeeld is gegeven in onderstaande figuur.
 
-.. image:: img/vergelijken_berekeningen_maatregelenkaart.png
+.. figure:: img/vergelijken_berekeningen_maatregelenkaart.png
     :width: 80%
     :align: center
 
@@ -41,7 +41,7 @@ Met deze kaart kan eenvoudig inzicht worden gekregen in de verschillen tussen de
 .. tip::
     Omdat de lijnen een verschuiving betreffen van het originele traject kan de weergave bij korte dijkvakken en veel (scherpe) bochten soms wat merkwaardig ogen (zie hieronder voor een voorbeeld). Door met de muis over de vakken te gaan wordt meer informatie weergegeven wat bij onduidelijkheid de vergelijking kan vergemakkelijken.
 
-    .. image:: img/vergelijken_berekeningen_maatregelen_weergavefout.png
+    .. figure:: img/vergelijken_berekeningen_maatregelen_weergavefout.png
         :width: 80%
         :align: center
 
@@ -49,7 +49,7 @@ Overzichtstabel maatregelen
 ---------------------------
 In het scherm ``Overzichtstabel maatregelen`` wordt een tabel weergegeven met voor 2 berekeningen de maatregelen per dijkvak. Daarbij kan met de activeerknoppen in het linkerpaneel worden gekozen welke berekening moet worden weergegeven. Een voorbeeld is gegeven in onderstaande figuur.
 
-.. image:: img/vergelijken_berekeningen_maatregeltabel.png
+.. figure:: img/vergelijken_berekeningen_maatregeltabel.png
     :width: 100%
     :align: center
 

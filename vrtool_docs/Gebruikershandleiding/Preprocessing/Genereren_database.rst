@@ -23,6 +23,6 @@ De structuur van de database is in onderstaande figuur weergegeven. De tabellen 
 * **Resultaten doorrekening maatregelen** Hier staan alle resulterende waarden van stap 2 van de VRTOOL berekening: kosten en betrouwbaarheid na het treffen van de verschillende maatregelen.
 * **Resultaten optimalisatie** hier staan de resultaten van de optimalisatieberekening, zoals de totale lcc & het totale risico, en de volgorde van de maatregelen. 
 
-.. image:: img/vrtool_sql_input.drawio.svg
+.. figure:: img/vrtool_sql_input.drawio.svg
     :alt: Diagram van de structuur van de database
     :align: center

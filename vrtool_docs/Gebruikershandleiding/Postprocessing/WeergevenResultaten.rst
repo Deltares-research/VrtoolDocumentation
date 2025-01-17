@@ -2,7 +2,7 @@ Weergeven van resultaten op trajectniveau
 =============================================
 Wanneer vanuit het hoofdscherm wordt gekozen voor de pagina `Analyse per traject` kom je op de volgende pagina terecht. Hierin zijn een linkerpaneel en een rechterpaneel zichtbaar. In de volgende paragrafen worden deze nader toegelicht. 
 
-.. image:: img/Dashboard_inputoutput.png 
+.. figure:: img/Dashboard_inputoutput.png 
 
 Gebruik van het linkerpaneel
 ----------------------------
@@ -19,7 +19,7 @@ Selectie & instellingen database
 
 Bij het gedeelte `Selectie & instellingen database` kan een traject worden geladen. Dat kan via de knop `Importeer een configuratiebestand (config.json)`, of door een `config.json` bestand er heen te slepen. Wanneer dit is gedaan worden de resultaten van het traject geladen en weergegeven in het rechterpaneel. Afhankelijk van de grootte van het traject kan dit even duren, in het tabblad in de browser wordt dan `Updating...` weergegeven. Wanneer de vakindeling verschijnt op het startscherm is het traject geladen.
 
-.. image:: img/selectie_links.PNG 
+.. figure:: img/selectie_links.PNG 
    :width: 50%
    :align: center
 
@@ -32,6 +32,9 @@ Met het dropdown menu kan vervolgens de gewenste berekening worden geselecteerd.
 De laatste optie is het selecteren van ofwel `Economisch optimaal`, ofwel `Faalkans`. Bij de optie `Economisch optimaal` worden de resultaten van de economisch optimale maatregelen weergegeven. In de VRTOOL wordt een hele reeks maatregelen doorgerekend, tot de kosten-batenverhouding kleiner is dan 0.1. Het economisch optimum, de combinatie van maatregelen met minimale totale kosten (versterking + risico) ligt dus al eerder dan dit punt (rond B/C=1). Met deze optie wordt gekozen welke maatregelen moeten worden meegenomen in de weergave. Met `Economisch optimaal` zijn dat alle maatregelen tot het punt dat de totale kosten minimaal zijn.
 
 In sommige gevallen is het wenselijk om de maatregelen weer te geven die voldoen aan een bepaalde kans in een bepaald jaar. Dit kan worden gedaan door `Faalkans` te selecteren. Hierbij kan een betrouwbaarheidsindex (omgerekende faalkans) worden ingevoerd samen met een jaar. Vervolgens wordt het optimalisatiepad 'afgekapt' op het punt waarbij de trajectfaalkans in het opgegeven jaar kleiner is dan de opgegeven faalkans. Door op `Ververs resultaten` te klikken kunnen de resultaten worden geupdatet.
+
+Exporteren van resultaten
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In het laatste deel van het gedeelte `Selectie & instellingen database` kunnen de resultaten wordeng exporteert in JSON formaat. Hiervoor kan een bestandsnaam worden ingevoerd en op `Opslaan` worden geklikt. Met dit json-bestand kunnen de resultaten worden geimporteerd in bijv. het scherm `Vergelijken berekeningen` en voor analyses op gebiedsniveau. Zo kunnen resultaten voor bijvoorbeeld een specifieke faalkanseis in een specifiek jaar bewaard worden en later hergebruikt.
 
@@ -64,7 +67,7 @@ Op het rechterpaneel is een zestal tabbladen zichtbaar. Deze tabbladen geven inz
 
 De meeste van deze pagina's geven resultaten op kaart weer. Rechtsboven in de kaart wordt een aantal opties weergegeven. Daarmee kan de kaart worden geexporteerd als .png, en kan bijvoorbeeld worden versleept. In de legenda kunnen lagen worden aan en uitgezet door er op te klikken. Zo kan bijvoorbeeld een kaart worden gemaakt met alleen specifieke maatregelen, of alleen versterkingen in een bepaald jaar.
 
-.. image:: img/opties_kaart.PNG 
+.. figure:: img/opties_kaart.PNG 
     :width: 40%
     :align: center
     :alt: Opties om de kaart aan te passen
@@ -74,7 +77,7 @@ Overzicht
 ~~~~~~~~~
 Op de overzichtspagina (direct zichtbaar bij opstarten) wordt een overzicht gegeven van de dijkvakken. In blauw en geel zijn dijkvakken weergegeven die mee zijn genomen in de analyse. Zwart zijn de dijkvakken die uit staan in de berekening. Op deze pagina kan gecheckt worden of de invoer op vakniveau klopt: zijn de vakgrenzen goed ingevoerd, zijn de vakken die uit staan in de berekening correct?
 
-.. image:: img/Dashboard_overzicht.png 
+.. figure:: img/Dashboard_overzicht.png 
 
 
 Beoordelingsresultaten
@@ -87,7 +90,7 @@ Versterkingsmaatregelen
 ~~~~~~~~~~~~~~~~~~~~~~~
 Op de pagina versterkingsmaatregelen kunnen de resultaten van de optimalisatie en de referentievariant worden bekeken. Door te wisselen tussen Doorsnede-Eisen en Veiligheidsrendement in het linkerpaneel kan voor 1 van beiden worden gekozen. Bovenin het scherm is een aantal instellingen te zien. 
 
-.. image:: img/instellingen_maatregelen.PNG 
+.. figure:: img/instellingen_maatregelen.PNG 
     :width: 80%
     :align: center
 
@@ -105,7 +108,7 @@ Resultaten optimalisatie
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Op de pagina `Resultaten optimalisatie` worden de resultaten van de optimalisatie vergeleken met die van de referentievariant. Op de verticale as wordt de trajectkans weergegeven, voor de horizontale as kan worden gekozen voor de kosten (LCC) ofwel de versterkte lengte. 
 
-.. image:: img/optimalisatie_voorbeeld.png 
+.. figure:: img/optimalisatie_voorbeeld.png 
     :width: 80%
     :align: center
 

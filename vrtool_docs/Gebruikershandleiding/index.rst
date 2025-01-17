@@ -7,7 +7,7 @@ Na het voorbereiden van de gegevens kunnen berekeningen worden uitgevoerd met de
 
 Wanneer een berekening is uitgevoerd kunnen de resultaten worden weergegeven in het dashboard. Met het dashboard kunnen verschillende analyses worden uitgevoerd en nieuwe berekeningen worden gestart met andere instellingen. Dat is beschreven op de pagina `Vakindeling <Postprocessing/index.html>`_.
 
-.. image:: img/Flowchart_VRTools.png 
+.. figure:: img/Flowchart_VRTools.png 
    :width: 80%
    :align: center
 

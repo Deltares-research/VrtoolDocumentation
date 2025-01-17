@@ -7,7 +7,7 @@ Het dashboard kan worden gestart door in Anaconda Prompt ``python -m src.index``
 
 Wanneer het dashboard wordt geopend verschijnt eerst de startpagina:
 
-.. image:: img/dashboard_navigatiepagina.png
+.. figure:: img/dashboard_navigatiepagina.png
 
 
 Van hieruit kan naar 3 pagina's worden genavigeerd:

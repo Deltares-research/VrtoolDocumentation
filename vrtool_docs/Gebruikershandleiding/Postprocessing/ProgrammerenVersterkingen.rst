@@ -27,7 +27,7 @@ Bij `Overzicht projecten`` kan een nieuw project worden aangemaakt, of een besta
 
 In onderstaande figuur is een voorbeeld van het maken van een project weergegeven. 
 
-.. image:: img/gebiedspagina_project_maken.png
+.. figure:: img/gebiedspagina_project_maken.png
     :width: 80%
     :align: center
 
@@ -41,13 +41,13 @@ Er zijn 4 weergavemogelijkheden:
 
 Met de keuze voor `Trajecten` worden de geladen trajecten weergegeven, én wordt in rood weergegeven welke dijkvakken zijn geselecteerd bij het project wat wordt aangemaakt. In onderstaand voorbeeld zijn bijvoorbeeld de dijkvakken 1, 2 en 4 op traject 10-3 in rood weergegeven.
 
-.. image:: img/gebiedspagina_project_maken_trajecten.png
+.. figure:: img/gebiedspagina_project_maken_trajecten.png
     :width: 80%
     :align: center
 
 Door te kiezen voor `Projecten` worden alle gedefinieerde projecten overzichtelijk weergegeven. 
 
-.. image:: img/gebiedspagina_project_maken_projecten.png
+.. figure:: img/gebiedspagina_project_maken_projecten.png
     :width: 80%
     :align: center
 
@@ -55,7 +55,7 @@ In bovenstaand voorbeeld zijn de gedefinieerde projecten te zien. Daarbij is ook
 
 Die effectiviteit kan ook in beeld worden gebracht middels de `VR index`. In die weergave wordt een index berekend die het veiligheidsrendement per dijkvak weergeeft. Een voorbeeld is te zien in onderstaande figuur.
 
-.. image:: img/gebiedspagina_vrindex.png
+.. figure:: img/gebiedspagina_vrindex.png
     :width: 80%
     :align: center
 
@@ -69,7 +69,7 @@ Overzicht van projecten
 
 Wanneer alle gewenste projecten zijn gedefineerd kan de effectiviteit van het programma worden geanalyseerd in het scherm `Resultaten op gebiedsniveau`. Een overzicht daarvan is gegeven in onderstaande figuur.
 
-.. image:: img/gebiedspagina_resultaten_overzicht.png
+.. figure:: img/gebiedspagina_resultaten_overzicht.png
     :width: 100%
     :align: center
 
@@ -82,7 +82,7 @@ In het rechterdeel van het scherm wordt informatie gegeven over de kosten van de
 
 In de figuur er onder kan per traject worden gekeken wat het verloop van de veiligheid in de tijd is. Daarbij kan worden gekozen voor een weergave in betrouwbaarheidsindex, trajectfaalkans, afstand tot de norm (hoog getal = onvoldoende veilig) of 2 indicatoren voor het overstromingsrisico. Bij het kiezen voor `Risico` wordt het (niet-verdisconteerde) overstromingsrisico per jaar weergegeven. Bij de `Risico factor` wordt dit gedaan door het risico te delen door het risico wanneer de trajectfaalkans gelijk is aan de ondergrens. In onderstaande figuur is als voorbeeld de faalkans in de tijd weergegeven.
 
-.. image:: img/gebiedspagina_faalkansen.png
+.. figure:: img/gebiedspagina_faalkansen.png
     :width: 80%
     :align: center
 

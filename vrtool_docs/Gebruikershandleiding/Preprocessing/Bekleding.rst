@@ -68,7 +68,7 @@ Na het uitvoeren van de berekeningen voor de belasting kan dit worden vertaald n
 
 Uitvoer van deze stap zijn bestanden `GEBU_{locatie}_{zichtjaar}` en `ZST_{locatie}_{zichtjaar}`. Een voorbeeld voor GEBU is in onderstaande figuur weergegeven. Hier is te zien dat voor elke `grasbekleding_begin` (d.w.z. hoogte van de overgang) een betrouwbaarheidsindex `betaFalen` wordt bepaald. 
 
-.. image:: img/gebu_json.PNG
+.. figure:: img/gebu_json.PNG
     :alt: Voorbeeld van een uitvoerbestand voor grasbekleding
     :align: center
 

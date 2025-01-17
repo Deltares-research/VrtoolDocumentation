@@ -13,7 +13,7 @@ Met de preprocessing worden gegevens over het dijktraject vertaald naar een invo
 
 Voor onderdelen 1 en 2 zijn gegevens van de beoordeling nodig. Onderdeel 3 wordt op basis van open data uitgevoerd. De oranje parallelogrammen geven de standaard invoerbestanden weer, de blauw rechthoeken zijn de verschillende workflows van de preprocessor weergegeven. Oranje 'cilinders' geven tussenuitvoer van de verschillende workflows weer.
 
-.. image:: img/Overzicht_preprocessing.png
+.. figure:: img/Overzicht_preprocessing.png
    :width: 600
 
 Alle workflows (de blauwe rechthoeken in de figuur hierboven) worden op dezelfde manier uitgevoerd, dit is verder uitgelegd op de pagina `werken met de preprocessor <werken_met_preprocessor.html>`_.

@@ -1,0 +1,9 @@
+﻿Kolom,Beschrijving
+Dijkvak,Naam van het dijkvak in beide berekeningen
+L (m),Lengte van het dijkvak in meters
+Maatregel,Type van de maatregel. In sommige gevallen kan een combinatie worden weergegeven.
+Dberm,Lengte van de aangelegde berm in meters.
+Dcrest,Kruinverhoging in meters.
+Lscherm,Lengte van het stabiliteitsscherm in meters onder de deklaag
+Kosten (M€),Kosten van de versterking in miljoenen €'s.
+

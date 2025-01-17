@@ -1,4 +1,4 @@
-Rekenen met de VRTOOL
+Uitvoeren van een berekening
 =====================
 
 De VRTool kan worden aangeroepen met de CLI van Anaconda en het volgende commando:
@@ -8,7 +8,7 @@ De VRTool kan worden aangeroepen met de CLI van Anaconda en het volgende command
    python -m vrtool {desired_run} {MODEL_DIRECTORY}
 
 
-Vervang ``{desired_run}`` met de gewenste berekening. Hierbij kan worden gekozen voor één van de drie stappen van de `veiligheidsrendementberekning <Opzet%20van%20een%20berekening.md>`__ of alle drie tegelijk: 
+Vervang ``{desired_run}`` met de gewenste berekening. Hierbij kan worden gekozen voor één van de drie stappen van de veiligheidsrendementberekening, of alle drie tegelijk: 
 
 - ``assessment``: hiermee wordt alleen de beoordeling/projectie van de huidige veiligheid uitgevoerd 
 - ``measures``: hiermee worden de maatregelen per dijkvak doorgerekend 
@@ -17,13 +17,13 @@ Vervang ``{desired_run}`` met de gewenste berekening. Hierbij kan worden gekozen
 
 Vervang ``{MODEL_DIRECTORY}`` met het path naar de database (.db) en config bestand (.json) uit de preprocessor, zie foto hieronder. Beide bestanden worden automatisch gegenereerd via de preprocessor, zie `Genereren database <../Preprocessing/Genereren_database.html>`__.
 
-.. image:: img/TweeBestanden_Preprocessing.PNG
+.. figure:: img/TweeBestanden_Preprocessing.PNG
 
 Configuratiebestand
 ========================
 Het config bestand bevat de instellingen voor de berekening. Na het genereren met de preprocessor ziet het config bestand er als volgt uit:
 
-.. image:: img/configbestand.png
+.. figure:: img/configbestand.png
 
 De belangrijkste instellingen zijn:
 

@@ -22,11 +22,11 @@ Hierbij correspondeert :math:`P_1` met de kans bij onafhankelijkheid tussen vakk
        :width: 100%
        :class: borderless
 
-       * - .. image:: img/EqualComponents.png
+       * - .. figure:: img/EqualComponents.png
               :width: 100%
               :alt: Equal Components
      
-         - .. image:: img/UnequalComponents.png
+         - .. figure:: img/UnequalComponents.png
               :width: 100%
               :alt: Unequal Components
 

@@ -5,6 +5,9 @@ Met het scherm voor een `Analyse op gebiedsniveau` kan voor 1 of meerdere trajec
 
 Definitie van projecten
 ------------------------
+
+Importeren van berekeningen
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Deze pagina is als eerste zichtbaar bij het openen van het scherm voor een analyse op gebiedsniveau. De eerste stap is om 1 of meerdere dijktrajecten te laten (d.m.v. bij de analyse op trajectniveau opgeslagen json-bestanden). Er kan 1 json-bestand per traject worden gebruikt, wanneer een nieuwe wordt geladen wordt de oude vervangen.
 
 Het is ook mogelijk om een compleet json-bestand inclusief projectdefinities te laden, dat wordt toegelicht in de volgende paragraaf.[ref?]
@@ -13,6 +16,9 @@ In het deel `Geimporteerde berekeningen` is zichtbaar voor welk traject welke be
 
 .. tip::
     Het is mogelijk om het json-bestand van een andere berekening te laden ook wanneer er al projecten zijn gedefinieerd. Let dan wel op dat de vakindeling van beide berekeningen hetzelfde is, anders kunnen de projecten niet meer worden gekoppeld aan het traject.
+
+Aanmaken van projecten
+~~~~~~~~~~~~~~~~~~~~~~~
 
 Bij `Overzicht projecten`` kan een nieuw project worden aangemaakt, of een bestaand project worden aangepast of verwijderd. Dit wordt gedaan door een (unieke) naam toe te voegen voor het project, en dijkvakken te selecteren die onder dit project vallen. Daarnaast moet een startjaar en eindjaar worden opgegeven: de kosten van het project (conform veiligheidsrendement) worden uitgesmeerd over deze periode.
 
@@ -25,9 +31,12 @@ In onderstaande figuur is een voorbeeld van het maken van een project weergegeve
     :width: 80%
     :align: center
 
-In dit voorbeeld is voor het project `Test project` een drietal dijkvakken geselecteerd in traject 10-3 (zie pop-up). Het project start in 2025 en eindigt in 2031. Wanneer nu op `Maak project` wordt geklikt wordt het project toegevoegd aan de lijst met projecten, óf wordt een foutmelding gegeven als de betreffende vakken al onderdeel zijn van een ander project.
+In dit voorbeeld is voor het project `Test project` een drietal dijkvakken geselecteerd in traject 10-3 (zie pop-up). Het project start in 2025 en eindigt in 2031. Wanneer nu op `Maak project` wordt geklikt wordt het project toegevoegd aan de lijst met projecten, óf wordt een foutmelding gegeven als de betreffende vakken al onderdeel zijn van een ander project. Op deze wijze kunnen meerdere projecten worden gedefinieerd. 
 
-Op deze wijze kunnen meerdere projecten worden gedefinieerd. Aan de rechterkant is een kaart zichtbaar met daarop de geladen trajecten en daar kunnen 4 weergaven worden gekozen die kunnen helpen bij het definieren van projecten. 
+Weergave van trajecten en projecten
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Aan de rechterkant is een kaart zichtbaar met daarop de geladen trajecten en daar kunnen 4 weergaven worden gekozen die kunnen helpen bij het definieren van projecten. 
 Er zijn 4 weergavemogelijkheden:
 
 Met de keuze voor `Trajecten` worden de geladen trajecten weergegeven, én wordt in rood weergegeven welke dijkvakken zijn geselecteerd bij het project wat wordt aangemaakt. In onderstaand voorbeeld zijn bijvoorbeeld de dijkvakken 1, 2 en 4 op traject 10-3 in rood weergegeven.
@@ -54,17 +63,25 @@ Hierbij geldt dat hoge waarden corresponderen met een hoog veiligheidsrendement:
 
 Resultaten op gebiedsniveau
 ---------------------------
+
+Overzicht van projecten
+~~~~~~~~~~~~~~~~~~~~~~~
+
 Wanneer alle gewenste projecten zijn gedefineerd kan de effectiviteit van het programma worden geanalyseerd in het scherm `Resultaten op gebiedsniveau`. Een overzicht daarvan is gegeven in onderstaande figuur.
 
-.. image:: img/gebiedspagina_overzicht.png
+.. image:: img/gebiedspagina_resultaten_overzicht.png
     :width: 100%
     :align: center
 
 In het midden is een kaart zichtbaar met daarop de gedefinieerde projecten. Daaronder is een tabel weergegeven met de projecten, en een aantal eigenschappen: aantal dijkvakken, start- en eindjaar, lengte van de versterking en de kosten op basis van de veiligheidsrendementberekening. De kolommen `Faalkans beoordeling` en `Faalkans na versterking` geven de faalkans in het jaar 2025 weer voor de huidige situatie en na uitvoeren van de versterkingsmaatregelen. Let op: het betreft hier enkel de faalkans van de dijkvakken die onderdeel zijn van het project! 
 
+Informatie over faalkans, risico en cashflow
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 In het rechterdeel van het scherm wordt informatie gegeven over de kosten van de verschillende projecten in de tijd. Daarbij worden kosten evenredig verdeeld tussen start- en eindjaar. Dit kan helpen bij het bepalen van de capaciteit die nodig is voor de uitvoering van de projecten, en de cashflow die daarbij hoort. Door te schuiven met projecten kan de cashflow beter verdeeld worden in de tijd. In dit geval is er bijvoorbeeld een gat tussen 2031 en 2035, wat zou kunnen worden opgevuld door 1 van de projecten tussen 2025 en 2031 naar achteren te schuiven, of een van de andere projecten naar voren te halen.
 
 In de figuur er onder kan per traject worden gekeken wat het verloop van de veiligheid in de tijd is. Daarbij kan worden gekozen voor een weergave in betrouwbaarheidsindex, trajectfaalkans, afstand tot de norm (hoog getal = onvoldoende veilig) of 2 indicatoren voor het overstromingsrisico. Bij het kiezen voor `Risico` wordt het (niet-verdisconteerde) overstromingsrisico per jaar weergegeven. Bij de `Risico factor` wordt dit gedaan door het risico te delen door het risico wanneer de trajectfaalkans gelijk is aan de ondergrens. In onderstaande figuur is als voorbeeld de faalkans in de tijd weergegeven.
+
 .. image:: img/gebiedspagina_faalkansen.png
     :width: 80%
     :align: center
@@ -73,5 +90,11 @@ Te zien is dat de faalkans stapsgewijs afneemt tot deze uiteindelijk voor alle t
 
 Linksboven wordt voor de huidige programmering een overzicht gegeven van de totale versterkingskosten en het risico in de jaren 2030, 2040, 2050 en 2075. Dat laatste wordt berekend door het risico van de afzonderlijke trajecten op te tellen. Er wordt dus aangenomen dat het risico van de trajecten onafhankelijk is.
 
-Wat blijkt uit deze programmering is dat het risico relatief lang vrij hoog blijft
-[todo voorbeeld verschuiven.]
+Wat blijkt uit deze programmering is dat het risico relatief lang vrij hoog blijft. Een mogelijkheid om dit te verlagen is om de als laatste uitgevoerde projecten naar voren te halen. In onderstaande figuur is te zien dat dit leidt tot een fors lager risico in 2040: van 295 M€/jaar naar ... M€/jaar.
+
+.. figure:: img/gebiedspagina_risico_origineel.png
+    :width: 50%
+    :align: center
+    :alt: Risico in 2040 bij de originele en aangepaste (nog toevoegen) programmering
+    
+    Links risico in originele programmering, rechts risico in aangepaste programmering (nog toevoegen)

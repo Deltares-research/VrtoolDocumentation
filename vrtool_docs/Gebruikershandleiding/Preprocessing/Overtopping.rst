@@ -1,11 +1,11 @@
 Overslag
 ========
 
-Ook voor overslag worden net als voor waterstand middels Hydra-Ring nieuwe overloop/overslag
-berekeningen gemaakt voor de jaren 2023 en 2100. Daarbij wordt voor verschillende kruinhoogtes de
-faalkans voor overslag bepaald. Vóór het draaien van deze workflow moet
-eerst een invoerbestand ingevuld worden. Dit invoerbestand is identiek
-aan die voor `waterstanden <Waterstand.html>`_.
+Ook voor overslag worden net als voor waterstand middels Hydra-Ring nieuwe overloop/overslag berekeningen gemaakt voor de jaren 2023 en 2100. Daarbij wordt voor verschillende kruinhoogtes de
+faalkans voor overslag bepaald. Vóór het draaien van deze workflow moet eerst een invoerbestand ingevuld worden. Dit invoerbestand is identiek aan die voor `waterstanden <Waterstand.html>`_.
+
+.. tip::
+  Het is ook mogelijk om Hydra-NL resultaten te gebruiken voor overslag maar dit is experimentele functionaliteit. Indien dit wenselijk is, neem dan contact op met Deltares.
 
 Structuur van het invoerbestand van de overslagberekeningen
 -----------------------------------------------

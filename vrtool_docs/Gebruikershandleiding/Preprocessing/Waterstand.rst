@@ -1,10 +1,11 @@
 Waterstandsberekeningen
-==========
+=======================
 
-Invoer voor de veiligheidsrendementberekening zijn met Hydra-Ring
-afgeleide waterstandsfrequentielijnen voor het jaar 2023 en 2100. Deze
-worden afgeleid middels een gestandaardiseerde workflow. Vóór het
-draaien van deze workflow moet eerst een invoerbestand ingevult worden.
+Invoer voor de veiligheidsrendementberekening zijn met Hydra-Ring afgeleide waterstandsfrequentielijnen voor het jaar 2023 en 2100. Deze worden afgeleid middels een gestandaardiseerde workflow. Vóór het draaien van deze workflow moet eerst een invoerbestand ingevult worden.
+
+.. tip::
+  Het is ook mogelijk om Hydra-NL resultaten te gebruiken voor waterstandsberekeningen maar dit is experimentele functionaliteit. Indien dit wenselijk is, neem dan contact op met Deltares.
+
 
 Structuur van het invoerbestand van de waterstandsberekeningen
 -----------------------------------------------

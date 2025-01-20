@@ -95,11 +95,11 @@ Te zien is dat de faalkans stapsgewijs afneemt tot deze uiteindelijk voor alle t
 
 Linksboven wordt voor de huidige programmering een overzicht gegeven van de totale versterkingskosten en het risico in de jaren 2030, 2040, 2050 en 2075. Dat laatste wordt berekend door het risico van de afzonderlijke trajecten op te tellen. Er wordt dus aangenomen dat het risico van de trajecten onafhankelijk is.
 
-Wat blijkt uit deze programmering is dat het risico relatief lang vrij hoog blijft. Een mogelijkheid om dit te verlagen is om de als laatste uitgevoerde projecten naar voren te halen. In onderstaande figuur is te zien dat dit leidt tot een fors lager risico in 2040: van 295 M€/jaar naar ... M€/jaar.
+Wat blijkt uit deze programmering is dat het risico relatief lang vrij hoog blijft. Een mogelijkheid om dit te verlagen is om de als laatste uitgevoerde projecten naar voren te halen (voor 2040). In onderstaande figuur is te zien dat dit leidt tot een fors lager risico in 2040: van 25 M€/jaar naar 4.2 M€/jaar.
 
-.. figure:: img/gebiedspagina_risico_origineel.png
-    :width: 50%
+.. figure:: img/gebiedspagina_risico.png
+    :width: 80%
     :align: center
-    :alt: Risico in 2040 bij de originele en aangepaste (nog toevoegen) programmering
+    :alt: Risico bij de originele en aangepaste programmering
     
-    Links risico in originele programmering, rechts risico in aangepaste programmering (nog toevoegen)
+    Links risico bij de originele programmering, rechts het risico bij de aangepaste programmering

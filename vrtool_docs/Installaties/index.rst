@@ -35,11 +35,11 @@ Volg de onderstaande stappen om de software te installeren en te gebruiken:
 
 7. Run ``pip install vrtool-1.0.1.tar.gz`` om de VRTool te installeren
 
-8. Run ``pip install vr_dash-0.6.2.tar.gz`` om het Dashboard te installeren
+8. Run ``pip install vr_dash-1.0.1.tar.gz`` om het Dashboard te installeren
 
-9. Run ``pip install VRSuiteUtils-1.0.1.tar.gz`` om VRUtils te te installeren waarmee we de preprocessing kunnen doen, Deze stap is niet nodig voor de tutorial. 
+9. Run ``pip install VRSuiteUtils-1.1.tar.gz`` om VRUtils te installeren waarmee we de preprocessing kunnen doen, Deze stap is niet nodig voor de tutorial. 
 
-Alles is nu geïnstalleerd en zowel de VRTool als het Dashboard zijn klaar voor gebruik. Als je VRUtils (stap 8.) hebt geïnstalleerd kun je ook de preprocessing doen.
+Alles is nu geïnstalleerd en zowel de VRTool als het Dashboard zijn klaar voor gebruik. Als je VRUtils (stap 9) hebt geïnstalleerd kun je ook de preprocessing doen.
 
 Voor het starten van het dashboard volg je de volgende stappen:
 

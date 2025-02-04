@@ -93,3 +93,6 @@ In Figuur 4 is een voorbeeld resultaat weergegeven. Links is het profiel zoals g
    Figuur 4 Voorbeeld van een relatie tussen de steendikte en de faalkans van de steenbekleding. Links het profiel met verschillende bekledingdelen. Rechts de relatie tussen steendikte en faalkans voor elk steenbekledingdeel.
 
 Net als bij de relaties voor grasbekleding worden de resultaten nabewerkt. Ook bij steenzettingen geldt dat de faalkans bij gegeven steendikte altijd moet toenemen in de tijd. Daarnaast wordt, afhankelijk van de gekozen optie voor de verbetering van de steenbekleding (vervangen of uitbreiden), de effectieve steendikte waarmee de VRTOOL rekent aangepast. Zie voor meer toelichting de paragraaf `Maatregelen dijkbekleding <../Maatregelen/Maatregelen_dijkbekleding.html>`_.
+
+.. tip::
+   Bij steenzettingen wordt gebruik gemaakt van de kalibratieregel uit het WBI-2017. Daarbij geldt dat het kunnen keren van een belasting met een terugkeertijd :math:`T` betekent dat de faalkans ongeveer 80 keer kleiner is (door lengte-effect en gehanteerde faalkansruimtefactor). Het kan dus voorkomen dat hoewel er een beperkt diktetekort is bij een belasting met een hoge terugkeertijd (bijv. 1/30) de faalkans toch orde 1/2000 is.  

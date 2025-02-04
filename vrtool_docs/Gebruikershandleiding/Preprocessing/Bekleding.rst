@@ -14,8 +14,6 @@ Doel van de workflow is om voor elk dijkvak de relatie tussen faalkans en bekled
 
 Het invoerbestand ``Bekleding_default.csv`` heeft de volgende kolommen die ingevuld moeten worden:
 
-Dit bestand heeft de volgende kolommen die ingevuld moeten worden:
-
 .. csv-table:: Kolommen in invoerbestand bekledingen
   :file: tables/bekleding_kolommen.csv
   :widths: 15, 15, 50
@@ -24,6 +22,7 @@ Dit bestand heeft de volgende kolommen die ingevuld moeten worden:
 .. topic:: Aandachtspunten
 
    * Het invoeren van `begin_bekleding` is niet verplicht, maar wel aan te bevelen. Deze wordt gebruikt om de minimale waterstand voor de berekeningen voor de belasting te bepalen.  Wanneer deze niet wordt ingevoerd wordt kan dit leiden tot onnodig veel (vaak onzinnige) berekeningen.
+   * Bij Steentoetsberekeningen wordt een terugkeertijd van de gehanteerde golfcondities aangenomen. Deze is vaak opgenomen in de bestandsnaam. Voor de berekening maakt het niet uit welke terugkeertijd de golfcondities hebben, de preprocessor kan er altijd mee overweg. Echter, wanneer bijv. golfcondities met een hele lage terugkeertijd worden gehanteerd kan het zijn dat de hoger gelegen bekledingdelen niet belast worden waardoor de faalkans daarvan wordt onderschat. 
 
 
 Het vullen van het invoerbestand

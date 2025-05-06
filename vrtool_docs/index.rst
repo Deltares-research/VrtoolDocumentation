@@ -18,7 +18,7 @@ Uit de ervaringen binnen het project blijkt de veiligheidsrendementmethode een a
 
 Hoe ga je aan de slag?
 ----------------------------
-Deze website geeft de handleiding voor het gebruik van de tooling die is ontwikkeld voor de analyses. Voor meer context over mogelijke toepassingen wordt verwezen naar de `Handreiking Veiligheidsrendement <https://deltares-research.github.io/VrtoolDocumentation/Bestanden/HandreikingVeiligheidsrendement.pdf>`_.
+Deze website geeft de handleiding voor het gebruik van de tooling die is ontwikkeld voor de analyses. Voor meer context over mogelijke toepassingen wordt verwezen naar de :download:`Handreiking Veiligheidsrendement <Bestanden/HandreikingVeiligheidsrendement.pdf>`.
 
 De tooling voor veiligheidsrendement is ontwikkeld in Python en bestaat uit 3 onderdelen:
 

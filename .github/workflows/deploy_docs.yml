@@ -20,7 +20,7 @@ jobs:
       - name: Setup environment
         uses: conda-incubator/setup-miniconda@v2
         with:
-          # miniforge-variant: Miniforge3
+          miniforge-variant: Miniforge3
           # channels: conda-forge, defaults
           channel-priority: strict
           environment-file: .config/environment.yml

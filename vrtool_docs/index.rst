@@ -18,7 +18,7 @@ Uit de ervaringen binnen het project blijkt de veiligheidsrendementmethode een a
 
 Hoe ga je aan de slag?
 ----------------------------
-Deze website geeft de handleiding voor het gebruik van de tooling die is ontwikkeld voor de analyses. Voor meer context over mogelijke toepassingen wordt verwezen naar de :download:`Handreiking Veiligheidsrendement <Bestanden/HandreikingVeiligheidsrendement.pdf>`.
+Deze website geeft de handleiding voor het gebruik van de tooling die is ontwikkeld voor de analyses. Voor meer context over mogelijke toepassingen wordt verwezen naar de `Handreiking Veiligheidsrendement <https://www.hwbp.nl/binaries/hoogwaterbeschermingsprogramma/documenten/handreikingen/2025/04/24/handreiking-veiligheidsrendement/Handreiking+Veiligheidsrendement+fase+2.pdf>`_.
 
 De tooling voor veiligheidsrendement is ontwikkeld in Python en bestaat uit 3 onderdelen:
 

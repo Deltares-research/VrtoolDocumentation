@@ -1,7 +1,7 @@
 Afleiden dijkprofielen en karakteristieke punten
 ================================================
 
-Met de workflow ``genereer_dijkprofielen`` worden voor een gegeven traject elke x meter dijkprofielen gegenereerd op basis van het AHN4.
+Met de workflow ``genereer_profielen`` worden voor een gegeven traject elke x meter dijkprofielen gegenereerd op basis van het AHN4.
 Voor elk van deze profielen worden de karakteristieke punten afgeleid: 2 punten op de kruin, en op zowel het buiten- als het binnentalud beide
 maximaal 3 punten. Vervolgens kan met de workflow ``selecteer_profiel`` voor verschillende dijkvakken het meest representatieve profiel worden
 geselecteerd. Deze representatieve profielen zijn nodig voor het bepalen van het volume grond bij een kruinverhoging en/of bermverbreding. 
@@ -12,9 +12,9 @@ Het genereren van profielen kan worden gedaan met het volgende commando:
 
 ::
 
-   python -m preprocessing genereer_dijkprofielen --config_file {config_bestand}
+   python -m preprocessing genereer_profielen --config_file {config_bestand}
 
-De workflow ``genereer dijkprofielen`` bevat 2 stappen, die achter elkaar worden uitgevoerd als de workflow wordt aangeroepen: eerst worden de AHN profielen afgeleid, daarna worden de karakteristieke punten bepaald.
+De workflow ``genereer profielen`` bevat 2 stappen, die achter elkaar worden uitgevoerd als de workflow wordt aangeroepen: eerst worden de AHN profielen afgeleid, daarna worden de karakteristieke punten bepaald.
 
 In `output_map_ahn_profielen` worden profielen uit AHN4 weggeschreven naar csv-bestanden. Dit is een submap van `output_map_profielen`. In `output_map_profielen` wordt ook een overzicht opgeslagen met informatie over elk profiel (m-waarde, naam CSV-bestand, x- en y-coördinaten van het uiterste punt op het voorland en het achterland): ``traject_profiles.csv``. 
 
@@ -31,7 +31,7 @@ In `karakteristieke_profielen_map` wordt voor elk AHN-profiel karakteristieke (k
 Selecteren van het meest representatieve profiel per dijkvak
 ------------------------------------------------------------
 
-Op basis van de profielen die met ``genereer_dijkprofielen`` zijn afgeleid kan vervolgens per vak het meest representatieve profiel worden geselecteerd. Daarvoor wordt de eerder afgeleide vakindeling gebruikt. Deze workflow kan worden aangeroepen met het volgende commando:
+Op basis van de profielen die met ``genereer_profielen`` zijn afgeleid kan vervolgens per vak het meest representatieve profiel worden geselecteerd. Daarvoor wordt de eerder afgeleide vakindeling gebruikt. Deze workflow kan worden aangeroepen met het volgende commando:
 
 ::
 

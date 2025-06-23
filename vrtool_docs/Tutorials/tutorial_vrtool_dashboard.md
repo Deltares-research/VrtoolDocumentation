@@ -15,7 +15,7 @@ In de map staan nu de volgende bestanden:
 - ``24-3.geojson``: Hiermee kunnen de resultaten op kaart weergegeven worden
 
 2. Open Anaconda Prompt, activeer het environment, en roep de VRTool aan met het volgende commando: 
-``python -m vrtool {desired_run} {MODEL_DIRECTORY}``. 
+``python -m vrtool {desired_run} {config_file}``. 
 
 Vervang ``{desired_run}`` met de gewenste berekening. Hierbij kan worden gekozen voor één van de drie stappen van de veiligheidsrendementberekening of alle drie tegelijk:
 
@@ -24,11 +24,11 @@ Vervang ``{desired_run}`` met de gewenste berekening. Hierbij kan worden gekozen
 - ``optimization``: Hiermee wordt alleen de optimalisatie van maatregelen voor dijktrajecten uitgevoerd.
 - ``run_full``: Hiermee worden alle drie de stappen in een keer doorgerekend.
 
-vervang ``{MODEL_DIRECTORY}`` met de folder met daarin de database (.db) en het config bestand (.json). (waarschijnlijk  ``"C:\Veiligheidsrendement\Tutorial"``). 
+vervang ``{config_file}`` met het pad naar het gewenste config bestand (.json). (waarschijnlijk  ``"C:\Veiligheidsrendement\Tutorial\config.json"``). 
 
 Bijvoorbeeld:
 ```
-python -m vrtool run_full C:\Veiligheidsrendement\Tutorial
+python -m vrtool run_full C:\Veiligheidsrendement\Tutorial\config.json
 ```
 
 *NB: De berekening kan enkele minuten duren afhankelijk van welke desired_run er gekozen is. Het spreekt voor zich dat de run_full het langst duurt.*

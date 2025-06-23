@@ -5,7 +5,7 @@ De VRTool kan worden aangeroepen met de CLI van Anaconda en het volgende command
 
 .. code-block:: bash
 
-   python -m vrtool {desired_run} {MODEL_DIRECTORY}
+   python -m vrtool {desired_run} {config_file} 
 
 
 Vervang ``{desired_run}`` met de gewenste berekening. Hierbij kan worden gekozen voor één van de drie stappen van de veiligheidsrendementberekening, of alle drie tegelijk: 
@@ -15,7 +15,7 @@ Vervang ``{desired_run}`` met de gewenste berekening. Hierbij kan worden gekozen
 - ``optimization``: hiermee wordt alleen de optimalisatie van maatregelen voor dijktrajecten uitgevoerd 
 - ``run_full``: hiermee worden alle drie de stappen doorgerekend
 
-Vervang ``{MODEL_DIRECTORY}`` met het path naar de database (.db) en config bestand (.json) uit de preprocessor, zie foto hieronder. Beide bestanden worden automatisch gegenereerd via de preprocessor, zie `Genereren database <../Preprocessing/Genereren_database.html>`__.
+Vervang ``{config_file}`` met het pad naar het gewenste config bestand (.json) uit de preprocessor, zie foto hieronder. Beide bestanden worden automatisch gegenereerd via de preprocessor, zie `Genereren database <../Preprocessing/Genereren_database.html>`__.
 
 .. figure:: img/TweeBestanden_Preprocessing.PNG
 

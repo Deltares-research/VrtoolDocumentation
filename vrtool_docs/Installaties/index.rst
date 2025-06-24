@@ -33,11 +33,11 @@ Volg de onderstaande stappen om de software te installeren en te gebruiken:
 
 6. Activeer de environment met ``conda activate "C:\Veiligheidsrendement\.env\"``
 
-7. Run ``pip install vrtool-1.1.0.tar.gz`` om de VRTool te installeren
+7. Run ``pip install vrtool-1.1.1.tar.gz`` om de VRTool te installeren
 
-8. Run ``pip install vr_dash-1.1.1.tar.gz`` om het Dashboard te installeren
+8. Run ``pip install vr_dash-1.1.2.tar.gz`` om het Dashboard te installeren
 
-9. Run ``pip install VRSuiteUtils-1.2.tar.gz`` om VRUtils te installeren waarmee we de preprocessing kunnen doen, Deze stap is niet nodig voor de tutorial. 
+9. Run ``pip install vr_preprocessing-1.2.1.tar.gz`` om VRUtils te installeren waarmee we de preprocessing kunnen doen, Deze stap is niet nodig voor de tutorial. 
 
 Alles is nu geïnstalleerd en zowel de VRTool als het Dashboard zijn klaar voor gebruik. Als je VRUtils (stap 9) hebt geïnstalleerd kun je ook de preprocessing doen.
 

@@ -1,7 +1,7 @@
 Uitvoeren van een berekening
 =====================
 
-De VRTool kan worden aangeroepen met de CLI van Anaconda en het volgende commando:
+De VRTool kan worden aangeroepen met de CLI vanuit Miniforge (of Anaconda) en het volgende commando:
 
 .. code-block:: bash
 

@@ -9,6 +9,7 @@ Structuur van het invoerbestand voor stabiliteit binnenwaarts
   :file: tables/stbi_kolommen.csv
   :widths: 15, 15, 50
   :header-rows: 1
+  :class: small-table
 
 Het vullen van het invoerbestand
 -------------------------------

@@ -3,6 +3,9 @@ Genereren database
 
 Met de workflow ``maak_database`` kan een invoerdatabase voor de VRTOOL worden gegenereerd. Daarbij moeten de met de overige workflows gegenereerde bestanden als invoer worden opgegeven. Wanneer de voorgaande workflows niet goed zijn uitgevoerd is het niet mogelijk om een goede database te maken. 
 
+.. tip::
+   Als het niet lukt om een database te maken, kijk dan goed in het logbestand waar en of er fouten zijn opgetreden. Het logbestand wordt weggeschreven in de map waar de database wordt aangemaakt, en heeft de naam ``write_database.log``.
+   
 De workflow kan worden aangeroepen met het volgende commando:
 
 ::
@@ -10,6 +13,9 @@ De workflow kan worden aangeroepen met het volgende commando:
    python -m preprocessing maak_database --config_file {config_bestand}
 
 Een database kan alleen worden aangemaakt als de daarvoor bestemde directory leeg is. Naast een database wordt ook de geojson van de vakindeling weggeschreven, alsmede een config.json bestand voor de VRTOOL.
+
+.. tip::
+   Bij het maken van de vakindeling is een bestand weggeschreven met de naam `configuratie_maatregelen.csv` (zelfde map als de vakindeling). Met dit bestand kan worden geconfigureerd welke maatregelen in de database worden gekoppeld aan de dijkvakken. Door in dit bestand maatregelen op TRUE/FALSE te zetten kan zo bijvoorbeeld een buitenwaartse grondversterking worden meegenomen, of andere maatregelen worden uitgezet.
 
 Structuur van de database
 -------------------------

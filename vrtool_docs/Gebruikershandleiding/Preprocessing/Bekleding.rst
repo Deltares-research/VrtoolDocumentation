@@ -18,6 +18,7 @@ Het invoerbestand ``Bekleding_default.csv`` heeft de volgende kolommen die ingev
   :file: tables/bekleding_kolommen.csv
   :widths: 15, 15, 50
   :header-rows: 1
+  :class: small-table
 
 .. topic:: Aandachtspunten
 

@@ -46,7 +46,7 @@ ___________________________
 In de map ``input_files`` zijn 5 submappen aangemaakt:
 
 * ``bag_gebouwen``: hierin kan een geopackage van de Basisadministratie Adressen en Gebouwen (BAG) worden geplaatst. Deze is te downloaden vanaf de website van `PDOK <https://service.pdok.nl/lv/bag/atom/downloads/bag-light.gpkg>`_. Let op: dit is een zeer groot bestand (ca. 7 GB), dus het kan even duren.
-* ``default_files``: hierin kunnen de standaardinvoerbestanden (ingevuld) worden neergezet. Deze zijn te vinden in ``C:\Veiligheidsrendement\.env\Lib\site-packages\preprocessing\default_files`` (bij installatie in de standaardlocatie).
+* ``default_files``: hierin worden automatisch de standaardinvoerbestanden neergezet. Deze kunnen worden aangepast op basis van de gegevens van het traject.
 * ``HR_databases``: hier kunnen de hydraulische databases worden geplaatst voor 2023 (WBI) en 2100 (ontwerpdatabases). Deze zijn `hier <https://fbwvl.stackstorage.com/s/cQJwECwRv88jqsc/nl>`_ te downloaden. Elke map moet 1 database bevatten (combinatie van HRD, HLCD-bestand en .config bestand zoals aangeboden op de website).
 * ``prfl``: hier kunnen de `*.prfl`-bestanden worden geplaatst ten behoeve van de workflows voor overloop/overslag en bekleding.
 * ``steentoets``: indien van toepassing kunnen hier de Steentoetsbestanden uit de beoordeling worden geplaatst.

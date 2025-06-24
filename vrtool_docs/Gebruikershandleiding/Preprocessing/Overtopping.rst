@@ -22,6 +22,7 @@ Het invoerbestand ``HR_default.csv`` heeft de volgende kolommen die ingevuld moe
   :file: tables/hr_kolommen.csv
   :widths: 15, 15, 50
   :header-rows: 1
+  :class: small-table
 
 .. topic:: Aandachtspunten
 

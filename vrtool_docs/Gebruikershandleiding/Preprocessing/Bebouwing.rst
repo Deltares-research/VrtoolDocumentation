@@ -1,7 +1,7 @@
 Afleiden bebouwing
 ==================
 
-De workflow ``tel_gebouwen`` gebruikt de binnenteen-GeoJSON en de vakindeling-GeoJSON als invoerbestand. Daarnaast is een Geopackage bestand nodig van de BAG (Basis Administratie Gebouwen). Op dit moment is het nog niet mogelijk meer dan 1000 gebouwen rechtstreeks uit de BAG te halen via internet. Daarom moet de Geopackage van de BAG direct naar een lokale schijf `worden gedownload<https://service.pdok.nl/lv/bag/atom/bag.xml>`_ worden gedownload (Let er op dat je de Geopackage download). Deze moet worden geplaatst in `bag_gebouwen_geopackage`.
+De workflow ``tel_gebouwen`` gebruikt de binnenteen-GeoJSON en de vakindeling-GeoJSON als invoerbestand. Daarnaast is een Geopackage bestand nodig van de BAG (Basis Administratie Gebouwen). Op dit moment is het nog niet mogelijk meer dan 1000 gebouwen rechtstreeks uit de BAG te halen via internet. Daarom moet de Geopackage van de BAG direct naar een lokale schijf `worden gedownload <https://service.pdok.nl/lv/bag/atom/bag.xml>`_ (Let er op dat je de Geopackage download). Deze moet worden geplaatst in ``bag_gebouwen_geopackage``.
 
 De workflow kan worden gestart met het volgende commando:
 

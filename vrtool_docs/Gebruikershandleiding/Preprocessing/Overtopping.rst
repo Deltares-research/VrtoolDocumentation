@@ -28,8 +28,6 @@ Het invoerbestand ``HR_default.csv`` heeft de volgende kolommen die ingevuld moe
 
    * De kolommen ``bovengrens`` en ``ondergrens`` zijn voor de overslagberekeningen niet relevant. 
 
-   * De kolom ``m_value`` is niet meer in gebruik en zal in een toekomstige versie worden verwijderd.
-
    * De waarden in de kolom ``doorsnede`` moeten overeenkomen met die in de kolom ``overslag`` in de `vakindeling <Vakindeling.html>`__.
 
 Het vullen van het invoerbestand
@@ -98,3 +96,5 @@ Voor deze workflow zijn de volgende waarden in dat bestand van belang:
    * De workflow zal crashen wanneer er bestaande resultaten worden gevonden. Deze moeten dan eerst worden verwijderd of verplaatst.
 
 Er wordt enige controle op de uitvoer gedaan door de preprocessor, maar het is raadzaam (al dan niet steekproefsgewijs) de resultaten te controleren. De meeste eenvoudige manier daarvoor is om naar de ``output_map_overslag`` te gaan en voor enkele locaties de resultaten te bekijken in het bestand ``DESIGNTABLE_{locatie}.txt``. Hier staat bij `Value` de kruinhoogte, en daarachter faalkans en betrouwbaarheidsindex bij die kruinhoogte. In de regel moeten de faalkansen dalen met stijgende kruinhoogte. Bij het wegschrijven van de database wordt hiervoor gecorrigeerd, maar wanneer dit nodig is zegt het wel iets over de kwaliteit van de berekening: het kan bijvoorbeeld wijzen op een instabiele probabilistische berekening, of een inconsistentie in de database.
+
+In het logbestand wordt ook aangegeven wanneer er mogelijk problemen zijn met de resultaten. Kijk daarom ook altijd even in het logbestand of er opmerkingen met `WARNING` of `ERROR` zijn. 

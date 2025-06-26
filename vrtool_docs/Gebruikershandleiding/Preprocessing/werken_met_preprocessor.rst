@@ -57,9 +57,7 @@ In de map ``vrtool_database`` wordt de database weggeschreven die nodig is voor 
 
 Het ``preprocessing.config``-bestand bevat de configuratie van de preprocessor. Hierin kunnen de locaties van de verschillende bestanden worden aangepast. In de basis is het advies dit niet te doen, tenzij dit uitdrukkelijk staat vermeld in de documentatie van de betreffende workflow. 
 
-.. note:: 
-    **Tips** 
-
+.. tip:: 
     * Wanneer paden worden aangepast in het ``preprocessing.config``-bestand, zijn er 2 mogelijkheden: 
         
         1. Invoeren van een *relatief* pad ten opzichte van de map waarin de preprocessor wordt uitgevoerd. Deze wordt dan automatisch gecombineerd met de ``project_dir``.
@@ -74,12 +72,11 @@ Nadat de mappenstructuur is aangemaakt en de benodigde bestanden zijn geplaatst,
 
 .. code-block:: bash
 
-    python -m preprocessing vakindeling --config_file C:/Veiligheidsrendement/preprocessor_werkmap/dijktraject 100-1/preprocessing.config
+    python -m preprocessing vakindeling --config_file C:/Veiligheidsrendement/preprocessor_werkmap/100-1/preprocessing.config
 
 Wanneer een workflow wordt uitgevoerd wordt logging weggeschreven naar de commandline én naar een logbestand. Dit logbestand wordt opgeslagen naast de resultaten van de workflow in de map ``intermediate_results``. Het is aan te raden om deze logbestanden te bekijken wanneer er iets misgaat, omdat hier vaak meer informatie in staat over de oorzaak van het probleem.
 
-.. note::
-    **Tip**
+.. tip::
     Bij het openen van het logbestand is eerst algemene informatie te vinden en de parameters die zijn gebruikt als invoer. Daarna worden comments met INFO, WARNING en ERROR-niveau weggeschreven. Deze zijn te herkennen aan de voorvoegsels ``[INFO]``, ``[WARNING]`` en ``[ERROR]``. Het is aan te raden om deze berichten goed door te nemen, omdat ze vaak belangrijke informatie bevatten over de uitvoering van de workflow. Het kan bijvoorbeeld voorkomen dat er bij het afleiden van profielen enkele profielen niet goed kunnen worden weergegeven. Een voorbeeld is hieronder weergegeven:
 
     .. figure:: img/logging_warning_example.png

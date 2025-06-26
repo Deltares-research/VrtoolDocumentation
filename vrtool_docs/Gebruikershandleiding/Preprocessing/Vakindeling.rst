@@ -5,20 +5,19 @@ De basis van een veiligheidsrendementberekening is één vakindeling die voor al
 
 .. admonition:: Aandachtspunten bij het maken van een vakindeling
 
-  Bij het maken van een vakindeling wordt het traject opgedeeld in een aantal relatief homogene dijkvakken. Daarbij is de kern dat de beoordelingsinformatie van de verschillende mechanismen goed wordt gerepresenteerd. In aanvulling daarop is van belang dat wordt gekeken vanuit het perspectief van de versterkingsmaatregelen. Bijvoorbeeld wanneer een deel van een in de beoordeling 'homogeen' vak heel dichtbebouwd is, en een deel niet, kan dit vak beter worden gesplitst. Streef bij het opsplitsen naar ongeveer 40 vakken op het dijktraject, waarbij de vakken niet kleiner dan 300 meter moeten zijn. Dit is een vuistregel, maar in principe geldt dat kleinere vakken niet altijd leiden tot betere resultaten, en zeker wel tot meer rekenwerk (o.a. voor preprocessing en VRTOOL). Focus moet liggen op:
+  Bij het maken van een vakindeling wordt het traject opgedeeld in een aantal relatief homogene dijkvakken. Daarbij is de kern dat de beoordelingsinformatie van de verschillende mechanismen goed wordt gerepresenteerd. In aanvulling daarop is van belang dat wordt gekeken vanuit het perspectief van de versterkingsmaatregelen. Wanneer bijvoorbeeld een deel van een in de beoordeling 'homogeen' vak heel dichtbebouwd is, en een deel niet, kan dit vak beter worden gesplitst. Streef bij het opsplitsen naar ongeveer 40 vakken op het dijktraject, waarbij de vakken niet kleiner dan 300 meter moeten zijn. Dit is een vuistregel, maar in principe geldt dat kleinere vakken niet altijd leiden tot betere resultaten, en zeker wel tot meer rekenwerk (o.a. voor preprocessing en VRTOOL). Focus moet liggen op:
 
-  * Goed onderscheiden van de zwakkere vakken. Dus vakken waar de faalkans voor 1 of meerdere mechanismen hoog is moeten goed onderscheiden worden. Houd de indeling van de vakken voor de slechtste mechanismen als basis aan.
+  * Goed onderscheiden van de zwakkere vakken. Dus vakken waar de faalkans voor 1 of meerdere mechanismen hoog is moeten goed onderscheiden worden. Houd de indeling van de vakken voor de dominante mechanismen als basis aan.
 
   * Goed onderscheiden van de vakken met duidelijk andere maatregelen (bijvoorbeeld bij veel bebouwing), ook als het oordeel relatief homogeen is.
 
-  * Niet te veel vakken maken waar nauwelijks maatregelen worden verwacht, of waar de maatregelen redelijk homogeen zijn (met name voor de belangrijkste mechanismen). Deze kunnen vaak worden samengevoegd zonder dat de kwaliteit van de berekening er onder lijdt. Een gedeelte van bijv. 10 km wat voor alle mechanismen ruim voldoet kan prima als 1 vak beschouwd worden.
+  * Beperken van grote aantallen vakken  waar nauwelijks maatregelen worden verwacht, of waar de maatregelen redelijk homogeen zijn (met name voor de belangrijkste mechanismen). Deze kunnen vaak worden samengevoegd zonder dat de kwaliteit van de berekening er onder lijdt. Een gedeelte van bijv. 10 km wat voor alle mechanismen ruim voldoet kan prima als 1 vak beschouwd worden.
 
 Structuur van het invoerbestand van de vakindeling
 -----------------------------------------------
 
 De basis voor het genereren van de vakindeling is het invoerbestand
-``Vakindeling.csv``. Dit bestand is, ervan uitgaande dat de standaardinstallatieinstructies gevolgd zijn terug te vinden in:
-``C:\Veiligheidsrendement\.env\Lib\site-packages\preprocessing\default_files``. Doel van deze workflow is een ``geojson`` bestand te creeren waarin alle vakken geografisch zijn gerepresenteerd. Dit bestand is ook invoer voor andere workflows. Dit bestand wordt in de mappenstructuur weggeschreven in ``intermediate_files\vakindeling\``.
+``Vakindeling.csv``. Doel van deze workflow is een ``geojson`` bestand te creeren met alle dijkvakken. Dit bestand is ook invoer voor andere workflows. Dit bestand wordt in de mappenstructuur weggeschreven in ``intermediate_files\vakindeling\``.
 
 .. tip:: 
   We onderscheiden bij de invoer 3 niveau's van ruimtelijk detail: traject - dijkvak - doorsnede. De vakindeling beschrijft welke dijkvakken onderdeel zijn van het traject, én welke doorsnede-berekeningen daarbij horen. Het kan daarbij voorkomen dat meerdere dijkvakken dezelfde doorsnede hebben voor een bepaald mechanisme.
@@ -44,7 +43,7 @@ Het vullen van het invoerbestand
 
 In onderstaande figuur is met een voorbeeld voor stabiliteit
 geillustreerd hoe de koppeling tussen doorsnedes en de vakindeling moet
-worden ingevoerd. Merk op dat het mogelijk is voor meerdere vakken
+worden gelegd. Merk op dat het mogelijk is voor meerdere vakken
 dezelfde doorsnede te hanteren (een voorbeeld in de figuur is de
 dikgedrukte doorsnede ``ET_VOLDOET``). Deze hoeft dan slechts 1x genoemd
 te worden in het STBI invoerbestand, maar kan bij meerdere vakken worden
@@ -61,8 +60,6 @@ lengte van de shape uit het Nationaal Basisbestand Primaire
 Waterkeringen wordt een foutmelding gegeven.
 
 .. topic:: Aandachtspunten 
-
-  * De separator in de csv files moet een komma zijn, en het teken voor decimalen een punt. 
 
   * De m_eind en m_start van alle vakken moeten op elkaar aansluiten
 
@@ -98,7 +95,7 @@ Voor deze workflow zijn de volgende waarden in het configuratiebestand van belan
    * - output_folder_vakindeling
      - Pad naar de map waar de geojson van de vakindeling moet worden opgeslagen. Hier wordt ook automatisch een kaart van de vakindeling gegenereerd.
    * - traject_shape
-     - Default wordt deze niet gebruikt, maar hier kan een alternatieve shape van het traject worden ingevoerd. Standaard wordt de shape uit het Nationaal Basisbestand Primaire Waterkeringen gebruikt.
+     - Default wordt deze niet gebruikt, maar hier kan een pad naar een alternatieve shape van het traject worden ingevoerd. Standaard wordt de shape uit het Nationaal Basisbestand Primaire Waterkeringen gebruikt.
    * - flip_traject
      - In sommige gevallen is de vakindeling in de tegenovergestelde richting van de shapefile gedefinieerd. Door hier ``True`` te kiezen kan deze worden omgedraaid.
 
@@ -117,9 +114,10 @@ Mogelijke foutmeldingen
 Uit het logbestand, wat wordt weggeschreven in vakindeling_csv_path (meestal ``intermediate_files\vakindeling\``) worden de meeste foutmeldingen gerapporteerd. Meestal zal dit gaan over bijv. dubbele waarden die uniek moeten zijn, of kolommen die niet compleet zijn. Een belangrijke mogelijke foutmelding is wanneer de lengte van het traject niet overeenkomt met de shape uit het Nationaal Basisbestand Primaire Waterkeringen (NWPB). Dit wordt hieronder verder toegelicht.
 
 .. admonition:: Fouten in de trajectlengte
+
   Een foutmelding die vaak voorkomt is wanneer de totale lengte van het traject niet overeenkomt met het NWBP. Daarvoor wordt gekeken naar de hoogste M-waarde, en de lengte van de shape uit het Nationaal Basisbestand Primaire Waterkeringen. Deze moeten ongeveer (op de meter nauwkeurig) overeenkomen. 
 
-  *Let op* de totale trajectlengte moet afgerond op 5 cijfers (dus bij een lengte van >10000 meter afgerond op 1 meter) niet korter zijn dan de verwachte trajectlengte, maar mag zeker niet langer zijn. Dus rond altijd de verwachte lengte af naar beneden. Onderstaand is een voorbeeld van een foutmelding weergegeven wanneer de lengte in vakindeling.csv te kort is. Wanneer er een klein verschil is in trajectlengte is het advies om de waarde op basis van de foutmelding in het csv-bestand aan te passen: een meter meer of minder heeft geen invloed op de resultaten. Bij grote verschillen is wel raadzaam om de ligging van de vakken op basis van het NBPW en de shape die als bron voor de M-waarden is gebruikt te vergelijken. Dit kan bijvoorbeeld worden gedaan door beide in QGIS of ArcGIS weer te geven.
+  *Let op* de totale trajectlengte moet afgerond op 5 cijfers (dus bij een lengte van >10000 meter afgerond op 1 meter) niet korter zijn dan de verwachte trajectlengte, maar mag zeker niet langer zijn. Dus rond altijd de verwachte lengte af naar beneden. Onderstaand is een voorbeeld van een foutmelding weergegeven wanneer de lengte in vakindeling.csv te kort is. Wanneer er een klein verschil is in trajectlengte is het advies om de waarde op basis van de foutmelding in het csv-bestand aan te passen: een meter meer of minder heeft geen invloed op de resultaten. Bij grote verschillen is wel raadzaam om de ligging van de vakken op basis van het NBPW en de shape die als bron voor de M-waarden is gebruikt te vergelijken. Dit kan bijvoorbeeld worden gedaan door beide in QGIS of ArcGIS weer te geven. Het komt bijvoorbeeld in sommige gevallen voor dat de referentielijn van de legger van de beheerder bij kunstwerken niet helemaal overeenkomt met de referentielijn van het NBPW. In dat geval moet de metriering worden aangepast, of de shape van de legger als invoer worden gegeven (via traject_shape).
 
   .. figure:: img/te_kort_traject.PNG
       :alt: Foutmelding bij een te kort traject

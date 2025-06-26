@@ -11,8 +11,7 @@ Structuur van het invoerbestand van de waterstandsberekeningen
 -----------------------------------------------
 
 De basis voor het genereren van berekeningen voor waterstand en overslag
-is het invoerbestand ``HR_default.csv``. Dit bestand is terug te vinden
-in: ``C:\Veiligheidsrendement\.env\Lib\site-packages\preprocessing\default_files``.
+is het invoerbestand ``HR_default.csv``.
 
 Doel van de workflow is om voor elk dijkvak een waterstandsfrequentielijn af te leiden voor de jaren 2023 en 2100. 
 
@@ -34,7 +33,7 @@ Het invoerbestand ``HR_default.csv`` heeft de volgende kolommen die ingevuld moe
 
 Het vullen van het invoerbestand
 -------------------------------
-Voor het doorrekenen van de waterstandsfrequentielijnen moet per dijkvak 1 locatie worden opgegeven. Het is handig (en meestal logisch) als deze locatie hetzelfde is als voor overslag. In de beoordeling zijn door beheerders vaak waterstands- en overslagberekeningen gemaakt op doorsneden op 100 meter afstand tot elkaar. Dit is voor veiligheidsrendement niet nodig. Het advies is om voor elk vak de maatgevende locatie voor overslag te kiezen, en deze locatie ook te gebruiken voor waterstandsberekeningen.
+Voor het doorrekenen van de waterstandsfrequentielijnen moet per dijkvak 1 locatie worden opgegeven. Het is handig (en meestal logisch) als deze locatie hetzelfde is als voor overslag. In de beoordeling zijn door beheerders vaak waterstands- en overslagberekeningen gemaakt op doorsneden op 100 meter afstand tot elkaar. Dit is voor veiligheidsrendement niet nodig. Het advies is om voor elk vak de maatgevende locatie voor overslag te kiezen, en deze locatie ook te gebruiken voor waterstandsberekeningen. Als de HR vergelijkbaar zijn kan zelfs voor meerdere vakken dezelfde locatie worden gehanteerd.
 
 De kolommen ``bovengrens`` en ``ondergrens`` moeten worden ingevuld met een voldoende hoge en lage waterstand. Dat wil zeggen: een waterstand met een kans van bijvoorbeeld 1/10-1/30 en een waterstand met een kans fors kleiner dan de norm (bijv. de waterstand bij categorie A+ uit het WBI) Vervolgens wordt hier door de preprocessor een grid van gemaakt waarmee een frequentielijn wordt afgeleid. De grenswaarden zijn doorgaans beschikbaar vanuit de beoordeling. 
 
@@ -48,7 +47,7 @@ De kolommen ``bovengrens`` en ``ondergrens`` moeten worden ingevuld met een vold
 Draaien van de workflow voor het afleiden van waterstandsfrequentielijnen
 -------------------------------
 
-De gebruiker kan de workflow als volgt aanroepen vanuit de Anaconda
+De gebruiker kan de workflow als volgt aanroepen vanuit de Miniforge/Anaconda
 Prompt (activeer eerst environment):
 
 ::
@@ -79,7 +78,7 @@ Voor deze workflow zijn de volgende waarden in dat bestand van belang:
 
    * Met het uitvoeren van deze workflow wordt een groot aantal probabilistische berekeningen uitgevoerd met Hydra-Ring. Zeker voor locaties in bijvoorbeeld het benedenrivierengebied zijn deze complex, en kan het doorrekenen enige tijd duren. 
 
-   * Voor de databases moet telkens een drietal bestanden aanwezig zijn: een HRD-bestand met typisch een bestandsnaam als ``WBI2017_Westerschelde_222_223_30-2_31-1_v03.sqlite``, een configuratiebestand met bovengenoemde naam maar extensie ``*.config.sqlite`` en een hlcd-bestand met de naam ``*hlcd*.sqlite`` (NB: de tekens op de plaats van * worden genegeerd).
+   * Voor de databases moet telkens een drietal bestanden aanwezig zijn: een HRD-bestand met typisch een bestandsnaam als ``WBI2017_Westerschelde_222_223_30-2_31-1_v03.sqlite``, een configuratiebestand met bovengenoemde naam maar extensie ``*.config.sqlite`` en een hlcd-bestand met de naam ``hlcd*.sqlite`` (waarbij * wordt ingevuld afhankelijk van het scenario).
 
    * Het is handig om eerst de workflow helemaal te testen voor 1 locatie. Daarvoor kan (tijdelijk) het aantal regels in het ``HR_default.csv`` bestand worden beperkt tot bijv. alleen de eerste locatie. Let wel op dat de boekhouding in orde blijft.
 
@@ -92,3 +91,5 @@ Er wordt enige controle op de uitvoer gedaan door de preprocessor, maar het is r
    :align: center
 
 Belangrijke waarden om te controleren zijn in het algemeen de terugkeertijden bij de verschillende waterstanden, maar ook de kansen bij de laagste en hoogste waterstand. In de regel zou het bereik van kansen grofweg tussen 1/10 en 1 of 2 orde groottes kleiner dan de signaleringswaarde moeten liggen.
+
+In het logbestand wordt ook aangegeven wanneer er mogelijk problemen zijn met de resultaten. Kijk daarom ook altijd even in het logbestand of er opmerkingen met `WARNING` of `ERROR` zijn. 

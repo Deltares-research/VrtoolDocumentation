@@ -1,6 +1,6 @@
 Weergeven van resultaten op trajectniveau
 =============================================
-Wanneer vanuit het hoofdscherm wordt gekozen voor de pagina `Analyse per traject` kom je op de volgende pagina terecht. Hierin zijn een linkerpaneel en een rechterpaneel zichtbaar. In de volgende paragrafen worden deze nader toegelicht. 
+Wanneer vanuit het hoofdscherm wordt gekozen voor de pagina `Analyse per traject` wordt het deel van het dashboard geopend waarmee resultaten van veiligheidsrendementberekeningen op trajectniveau kunnen worden bekeken. Op de startpagina (hieronder weergegeven) zijn een linkerpaneel en een rechterpaneel zichtbaar. In de volgende paragrafen worden deze nader toegelicht. 
 
 .. figure:: img/Dashboard_inputoutput.png 
 
@@ -17,14 +17,14 @@ In het linkerpaneel worden 2 delen weergegeven:
 Selectie & instellingen database
 ~~~~~~~~~~~~~~~~
 
-Bij het gedeelte `Selectie & instellingen database` kan een traject worden geladen. Dat kan via de knop `Importeer een configuratiebestand (config.json)`, of door een `config.json` bestand er heen te slepen. Wanneer dit is gedaan, worden de resultaten van het traject geladen en weergegeven in het rechterpaneel. Afhankelijk van de grootte van het traject kan dit even duren. In het tabblad in de browser wordt dan `Updating...` weergegeven. Wanneer de vakindeling verschijnt op het startscherm is het traject geladen.
+Bij het gedeelte `Selectie & instellingen database` kan een database van een traject worden geladen. Dat kan via de knop `Importeer een configuratiebestand (config.json)`, of door een `config.json` bestand er heen te slepen. Wanneer dit is gedaan, worden de resultaten van het traject geladen en weergegeven in het rechterpaneel. Afhankelijk van de grootte van het traject kan dit even duren. In het tabblad in de browser wordt dan `Updating...` weergegeven. Wanneer de vakindeling verschijnt op het startscherm is het traject geladen.
 
 .. figure:: img/selectie_links.PNG 
    :width: 50%
    :align: center
 
 .. tip:: 
-    Voor het openen moet in het config.json bestand de padnaam naar de database worden gecontroleerd. Deze verwijzing moet kloppen, en het is belangrijk dat deze in het volgende format in de json staat ``"database_path": "C:/MijnDatabase"``. Dus met forward-slashes en zonder afsluitende /.
+    Voor het openen moet in het config.json bestand de padnaam naar de database worden gecontroleerd. Deze verwijzing moet kloppen, en het is belangrijk dat deze in het volgende format in de json staat ``"database_path": "C:/MijnDatabase"``. Dus met forward-slashes en zonder afsluitende /. Daarnaast moet een ``geojson`` bestand met de vakindeling aanwezig zijn, anders kunnen de resultaten niet op kaart worden weergegeven.
 
 
 Met het dropdown menu kan vervolgens de gewenste berekening worden geselecteerd. Alle berekeningen in de database worden hier automatisch weergegeven. Bij het selecteren van een andere berekening zullen de resultaten opnieuw geupdatet moeten worden (met de knop `Ververs resultaten`).
@@ -32,6 +32,9 @@ Met het dropdown menu kan vervolgens de gewenste berekening worden geselecteerd.
 De laatste optie is het selecteren van ofwel `Economisch optimaal`, ofwel `Faalkans`. Bij de optie `Economisch optimaal` worden de resultaten van de economisch optimale maatregelen weergegeven. In de VRTOOL wordt een hele reeks maatregelen doorgerekend, tot de kosten-batenverhouding kleiner is dan 0,1. Het economisch optimum, de combinatie van maatregelen met minimale totale kosten (versterking + risico) ligt dus al eerder dan dit punt (rond B/C=1). Met deze optie wordt gekozen welke maatregelen moeten worden meegenomen in de weergave. Met `Economisch optimaal` zijn dat alle maatregelen tot het punt dat de totale kosten minimaal zijn.
 
 In sommige gevallen is het wenselijk om de maatregelen weer te geven die voldoen aan een bepaalde kans in een bepaald jaar. Dit kan worden gedaan door `Faalkans` te selecteren. Hierbij kan een betrouwbaarheidsindex (omgerekende faalkans) worden ingevoerd samen met een jaar. Vervolgens wordt het optimalisatiepad 'afgekapt' op het punt waarbij de trajectfaalkans in het opgegeven jaar kleiner is dan de opgegeven faalkans. Door op `Ververs resultaten` te klikken kunnen de resultaten worden geupdatet.
+
+.. tip::
+    Het omrekenen van een faalkans naar een betrouwbaarheidsindex kan op basis van de standaard normaalverdeling. In Excel kan een betrouwbaarheidsindex worden berekend met de functie `=NORM.S.INV(1 - faalkans)`. En de bijbehorende faalkans met `=1 - NORM.S.DIST(beta, TRUE)`. 
 
 Exporteren van resultaten
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -102,7 +105,7 @@ Met de knoppen linksboven kan gewisseld worden tussen weergaven van het type maa
     :header-rows: 1
     :widths: 20, 20, 40
 
-Opgemerkt moet worden dat bij de weergave van de maatregelen de slider ook werkt: wanneer bijv. 2025 wordt geselecteerd worden alle maatregelen tot en met 2025 weergegeven, wanneer 2050 wordt geselecteerd worden alle maatregelen tot dat jaar weergegeven.
+Opgemerkt moet worden dat bij de weergave van de maatregelen de slider ook werkt: wanneer bijv. 2025 wordt geselecteerd worden alle maatregelen die in de veiligheidsrendement berekening een jaar van investeren tot en met 2025 hebben weergegeven, maar maatregelen daarna niet. Daarvoor moet de slider dan worden verschoven.
 
 Resultaten optimalisatie
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -146,7 +149,7 @@ Op de pagina `Prioriteringsinformatie` wordt samengevat wat de meest aantrekkeli
 
 Maatregelen
 ~~~~~~~~~~~
-Op de pagina `Maatregelen` kunnen de beschikbare maatregelen per dijkvak worden bekeken. Na het selecteren van een dijkvak wordt voor alle beschikbare maatregelen de kosten en de faalkans/betrouwbaarheid weergegeven. Met de instellingen in het linkerpaneel kan dit voor een specifiek mechanisme, of voor alle mechanismen samen worden gedaan. De zwarte puntjes zijn de verschillende maatregelen die beschikbaar zijn, in groen zijn de maatregelen weergegeven die in het optimalisatiepad van veiligheidsrendement voorkomen. De blauwe en rode diamanten geven de uiteindelijke maatregelen weer die worden genomen in de referentievariant en de economisch optimale variant. 
+Op de pagina `Maatregelen` kunnen de beschikbare maatregelen per dijkvak worden bekeken. Na het selecteren van een dijkvak wordt voor alle beschikbare maatregelen de kosten en de faalkans/betrouwbaarheid weergegeven. Met de instellingen in het linkerpaneel kan dit voor een specifiek mechanisme, of voor alle mechanismen samen worden gedaan. De zwarte puntjes zijn de verschillende maatregelen die beschikbaar zijn, in groen zijn de maatregelen weergegeven die in het optimalisatiepad van veiligheidsrendement voorkomen. De blauwe en rode diamanten geven de uiteindelijke maatregelen weer die worden genomen in de referentievariant en de gekozen oplossing voor veiligheidsrendement (bijv. de economisch optimale variant of een andere keuze). 
 
 .. figure:: img/maatregelen_voorbeeld.png 
     :width: 100%

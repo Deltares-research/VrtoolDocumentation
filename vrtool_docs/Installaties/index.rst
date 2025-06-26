@@ -15,9 +15,15 @@ Om de installatie goed te doorlopen is het nodig om eerst Miniforge of een alter
 
 **Download bestanden** 
 
-2. Download de bestanden via deze `link <https://github.com/Deltares-research/VrtoolDocumentation/raw/main/vrtool_docs/Bestanden/Installatie/Release.zip>`_. In deze zipfile staan de verschillende bestanden die nodig zijn voor de installatie en het gebruik van de VRTOOL, preprocessor en het dashboard.
+De bestanden kunnen worden gedownload via de Github pagina's van de verschillende software onderdelen. 
 
-3. Pak de zip-file uit en zet de ``tar.gz`` bestanden in een lege folder (we gebruiken even ``"C:\Veiligheidsrendement"`` als voorbeeld)
+1. Download de meest recente release van de VRTOOL (v1.1.1) door via deze `link <https://github.com/Deltares/Veiligheidsrendement/releases/tag/v1.1.1>`_ het bestand ``vrtool-1.1.1.tar.gz`` te downloaden. 
+
+2. Download de meest recente release van het Dashboard (v1.1.1) door via deze `link <https://github.com/Deltares-research/VrtoolDashboard/releases/tag/v1.1.1>`_ het bestand ``vr_dash-1.1.1.tar.gz`` te downloaden.
+
+3. Download de meest recente release van de preprocessor (v1.2.1) door via deze `link <https://github.com/Deltares/VRSuiteUtils/releases/tag/v1.2.1>`_ het bestand ``vr_preprocessing-1.2.1.tar.gz`` te downloaden.
+
+Merk op dat via de Github pagina's ook oudere of nieuwere versies kunnen worden gedownload. De versies die hierboven zijn genoemd zijn getest en werken goed samen. 
 
 **Installeren van de software**
 

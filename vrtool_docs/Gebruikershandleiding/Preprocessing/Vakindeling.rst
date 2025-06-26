@@ -3,7 +3,7 @@ Vakindeling
 
 De basis van een veiligheidsrendementberekening is één vakindeling die voor alle faalmechanismen gebruikt wordt. Als eerste wordt een invoerbestand gevuld, waarna de workflow voor het maken van de vakindeling kan worden gedraaid.
 
-.. note:: Aandachtspunten bij het maken van een vakindeling
+.. admonition:: Aandachtspunten bij het maken van een vakindeling
 
   Bij het maken van een vakindeling wordt het traject opgedeeld in een aantal relatief homogene dijkvakken. Daarbij is de kern dat de beoordelingsinformatie van de verschillende mechanismen goed wordt gerepresenteerd. In aanvulling daarop is van belang dat wordt gekeken vanuit het perspectief van de versterkingsmaatregelen. Bijvoorbeeld wanneer een deel van een in de beoordeling 'homogeen' vak heel dichtbebouwd is, en een deel niet, kan dit vak beter worden gesplitst. Streef bij het opsplitsen naar ongeveer 40 vakken op het dijktraject, waarbij de vakken niet kleiner dan 300 meter moeten zijn. Dit is een vuistregel, maar in principe geldt dat kleinere vakken niet altijd leiden tot betere resultaten, en zeker wel tot meer rekenwerk (o.a. voor preprocessing en VRTOOL). Focus moet liggen op:
 
@@ -116,7 +116,7 @@ Mogelijke foutmeldingen
 
 Uit het logbestand, wat wordt weggeschreven in vakindeling_csv_path (meestal ``intermediate_files\vakindeling\``) worden de meeste foutmeldingen gerapporteerd. Meestal zal dit gaan over bijv. dubbele waarden die uniek moeten zijn, of kolommen die niet compleet zijn. Een belangrijke mogelijke foutmelding is wanneer de lengte van het traject niet overeenkomt met de shape uit het Nationaal Basisbestand Primaire Waterkeringen (NWPB). Dit wordt hieronder verder toegelicht.
 
-.. note::
+.. admonition:: Fouten in de trajectlengte
   Een foutmelding die vaak voorkomt is wanneer de totale lengte van het traject niet overeenkomt met het NWBP. Daarvoor wordt gekeken naar de hoogste M-waarde, en de lengte van de shape uit het Nationaal Basisbestand Primaire Waterkeringen. Deze moeten ongeveer (op de meter nauwkeurig) overeenkomen. 
 
   *Let op* de totale trajectlengte moet afgerond op 5 cijfers (dus bij een lengte van >10000 meter afgerond op 1 meter) niet korter zijn dan de verwachte trajectlengte, maar mag zeker niet langer zijn. Dus rond altijd de verwachte lengte af naar beneden. Onderstaand is een voorbeeld van een foutmelding weergegeven wanneer de lengte in vakindeling.csv te kort is. Wanneer er een klein verschil is in trajectlengte is het advies om de waarde op basis van de foutmelding in het csv-bestand aan te passen: een meter meer of minder heeft geen invloed op de resultaten. Bij grote verschillen is wel raadzaam om de ligging van de vakken op basis van het NBPW en de shape die als bron voor de M-waarden is gebruikt te vergelijken. Dit kan bijvoorbeeld worden gedaan door beide in QGIS of ArcGIS weer te geven.

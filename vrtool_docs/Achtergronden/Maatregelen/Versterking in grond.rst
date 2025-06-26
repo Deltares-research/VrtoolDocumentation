@@ -102,7 +102,7 @@ Voor buitendijkse versterking wordt de volgende volgorde aangehouden: afgraven e
    &\quad C_\mathrm{out,afgev} \cdot f_\mathrm{compens} \cdot A \\
    \end{align*}
 
-Daarbij geven de regels achtereenvolgens de kosten van het afvoeren van niet-herbruikbare grond, de kosten van het hergebruik van grond, de kosten van het toevoegen van grond, en de kosten van rivierkundige compensatiemaatregelen. Opgemerkt moet worden dat buitenwaarts versterken niet default wordt gebruikt in de VRTOOL. 
+Daarbij geven de regels achtereenvolgens de kosten van het afvoeren van niet-herbruikbare grond, de kosten van het hergebruik van grond, de kosten van het toevoegen van grond, en de kosten van rivierkundige compensatiemaatregelen. Opgemerkt moet worden dat buitenwaarts versterken niet default wordt gebruikt in de VRTOOL. Dit moet expliciet worden aangezet in de configuratie van maatregelen bij `het maken van een invoerdatabase <../../Gebruikershandleiding/Preprocessing/Genereren_database.html>`_. 
 
 Kosten bebouwing en weg
 ~~~~~~~~~~~~~~~~~~~~~~~~

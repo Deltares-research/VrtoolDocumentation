@@ -27,7 +27,7 @@ De verticale pipingoplossing heeft enkel effect op de faalkans voor piping. Daar
 
    Foutenboom voor het falen van een grondverbetering (uit TR grondverbeteringen). Deze is ook toepasbaar voor andere oplossingen zoals verticale pipingoplossingen.
 
-Uiteraard is het in latere fasen van belang om de faalkans van pipingmaatregelen verder uit te werken met een daadwerkelijke foutenboom met daarin alle relevante faalmechanismen. Een reductie van de faalkans van 1000 is echter in het algemeen daarbij goed haalbaar. In termen van de foutenboom betekent dit dat (bij verwaarloosbare pipingfaalkans bij functionerende oplossing) de faalkans van de maatregel zelf (dus bijv. doorloopsheid van het VZG) ongeveer 1/1000 is.
+Uiteraard is het in latere fasen van belang om de faalkans van pipingmaatregelen verder uit te werken met een daadwerkelijke foutenboom met daarin alle relevante faalmechanismen. Een reductie van de faalkans van 1000 is echter in het algemeen daarbij goed haalbaar. In termen van de foutenboom betekent dit dat (bij verwaarloosbare pipingfaalkans bij functionerende oplossing) de faalkans van de maatregel zelf (dus bijv. doorloopsheid van het VZG) ongeveer 1/1000 is. Daarbij wordt dan wel conservatief uitgegaan van volledig falen van de maatregel (dus de originele betrouwbaarheid zonder maatregel).
 
 Kostenberekening
 ----------------

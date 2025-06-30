@@ -11,7 +11,7 @@ De basis van een veiligheidsrendementberekening is één vakindeling die voor al
 
   * Goed onderscheiden van de vakken met duidelijk andere maatregelen (bijvoorbeeld bij veel bebouwing), ook als het oordeel relatief homogeen is.
 
-  * Beperken van grote aantallen vakken  waar nauwelijks maatregelen worden verwacht, of waar de maatregelen redelijk homogeen zijn (met name voor de belangrijkste mechanismen). Deze kunnen vaak worden samengevoegd zonder dat de kwaliteit van de berekening er onder lijdt. Een gedeelte van bijv. 10 km wat voor alle mechanismen ruim voldoet kan prima als 1 vak beschouwd worden.
+  * Beperken van grote aantallen vakken  waar nauwelijks maatregelen worden verwacht, of waar de maatregelen redelijk homogeen zijn (met name voor de belangrijkste mechanismen). Deze kunnen vaak worden samengevoegd zonder dat de kwaliteit van de berekening er onder lijdt. Een gedeelte van bijv. 10 km dat voor alle mechanismen ruim voldoet kan prima als 1 vak beschouwd worden.
 
 Structuur van het invoerbestand van de vakindeling
 -----------------------------------------------
@@ -36,7 +36,7 @@ Het invoerbestand ``Vakindeling.csv`` heeft de volgende kolommen die ingevuld mo
 
   * Invullen van de kolommen pleistoceendiepte en deklaagdikte is optioneel, maar wanneer deze niet worden ingevuld wordt standaard 25 respectievelijk 7 meter aangehouden. Dit leidt tot relatief zware maatregelen. Voor een nauwkeurige kostenschatting wordt aanbevolen om deze waarden expliciet in te vullen. Daarbij moet geredeneerd worden vanuit een verwachtingswaarde (dus de dikte/diepte die op het grootste deel van het vak aanwezig is).
 
-  * De parameters ``a_piping`` en ``a_stabiliteit`` geven de lengte van het dijkvak wat gevoelig is voor piping/stabiliteit binnenwaarts aan. Daarmee wordt dus het lengte-effect binnen het dijkvak in rekening gebracht. Wanneer deze niet worden ingevuld wordt aangenomen (conservatief) dat 100% van de lengte van het dijkvak gevoelig is voor piping/stabiliteit. Het advies is om, zeker voor de zwakkere vakken, deze waarden goed te bepalen omdat anders de trajectfaalkans zeer hoog kan worden.
+  * De parameters ``a_piping`` en ``a_stabiliteit`` geven de lengte van het dijkvak dat gevoelig is voor piping/stabiliteit binnenwaarts aan. Daarmee wordt dus het lengte-effect binnen het dijkvak in rekening gebracht. Wanneer deze niet worden ingevuld wordt aangenomen (conservatief) dat 100% van de lengte van het dijkvak gevoelig is voor piping/stabiliteit. Het advies is om, zeker voor de zwakkere vakken, deze waarden goed te bepalen omdat anders de trajectfaalkans zeer hoog kan worden.
 
 Het vullen van het invoerbestand
 -------------------------------
@@ -111,13 +111,13 @@ Na het genereren van de vakindeling is het altijd belangrijk deze goed te contro
 Mogelijke foutmeldingen
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Uit het logbestand, wat wordt weggeschreven in vakindeling_csv_path (meestal ``intermediate_files\vakindeling\``) worden de meeste foutmeldingen gerapporteerd. Meestal zal dit gaan over bijv. dubbele waarden die uniek moeten zijn, of kolommen die niet compleet zijn. Een belangrijke mogelijke foutmelding is wanneer de lengte van het traject niet overeenkomt met de shape uit het Nationaal Basisbestand Primaire Waterkeringen (NWPB). Dit wordt hieronder verder toegelicht.
+Uit het logbestand, dat wordt weggeschreven in vakindeling_csv_path (meestal ``intermediate_files\vakindeling\``) worden de meeste foutmeldingen gerapporteerd. Meestal zal dit gaan over bijv. dubbele waarden die uniek moeten zijn, of kolommen die niet compleet zijn. Een belangrijke mogelijke foutmelding is wanneer de lengte van het traject niet overeenkomt met de shape uit het Nationaal Basisbestand Primaire Waterkeringen (NWPB). Dit wordt hieronder verder toegelicht.
 
 .. admonition:: Fouten in de trajectlengte
 
   Een foutmelding die vaak voorkomt is wanneer de totale lengte van het traject niet overeenkomt met het NWBP. Daarvoor wordt gekeken naar de hoogste M-waarde, en de lengte van de shape uit het Nationaal Basisbestand Primaire Waterkeringen. Deze moeten ongeveer (op de meter nauwkeurig) overeenkomen. 
 
-  *Let op* de totale trajectlengte moet afgerond op 5 cijfers (dus bij een lengte van >10000 meter afgerond op 1 meter) niet korter zijn dan de verwachte trajectlengte, maar mag zeker niet langer zijn. Dus rond altijd de verwachte lengte af naar beneden. Onderstaand is een voorbeeld van een foutmelding weergegeven wanneer de lengte in vakindeling.csv te kort is. Wanneer er een klein verschil is in trajectlengte is het advies om de waarde op basis van de foutmelding in het csv-bestand aan te passen: een meter meer of minder heeft geen invloed op de resultaten. Bij grote verschillen is wel raadzaam om de ligging van de vakken op basis van het NBPW en de shape die als bron voor de M-waarden is gebruikt te vergelijken. Dit kan bijvoorbeeld worden gedaan door beide in QGIS of ArcGIS weer te geven. Het komt bijvoorbeeld in sommige gevallen voor dat de referentielijn van de legger van de beheerder bij kunstwerken niet helemaal overeenkomt met de referentielijn van het NBPW. In dat geval moet de metriering worden aangepast, of de shape van de legger als invoer worden gegeven (via traject_shape).
+  *Let op* de totale trajectlengte moet afgerond op 5 significante cijfers (dus bij een lengte van >10000 meter afgerond op 1 meter) niet korter zijn dan de verwachte trajectlengte, maar mag zeker niet langer zijn. Dus rond altijd de verwachte lengte af naar beneden. Onderstaand is een voorbeeld van een foutmelding weergegeven wanneer de lengte in vakindeling.csv te kort is. Wanneer er een klein verschil is in trajectlengte is het advies om de waarde op basis van de foutmelding in het csv-bestand aan te passen: een meter meer of minder heeft geen invloed op de resultaten. Bij grote verschillen is wel raadzaam om de ligging van de vakken op basis van het NBPW en de shape die als bron voor de M-waarden is gebruikt te vergelijken. Dit kan bijvoorbeeld worden gedaan door beide in QGIS of ArcGIS weer te geven. Het komt bijvoorbeeld in sommige gevallen voor dat de referentielijn van de legger van de beheerder bij kunstwerken niet helemaal overeenkomt met de referentielijn van het NBPW. In dat geval moet de metriering worden aangepast, of de shape van de legger als invoer worden gegeven (via traject_shape).
 
   .. figure:: img/te_kort_traject.PNG
       :alt: Foutmelding bij een te kort traject

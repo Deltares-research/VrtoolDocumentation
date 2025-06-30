@@ -70,7 +70,6 @@ Na het vullen van het csv-bestand kan deze worden geupload via het blok in de in
     :align: center
 
 .. admonition:: Basisregels bij het toevoegen van maatregelen
-    Bij het toevoegen van custom maatregelen gelden de volgende basisregels:
 
     1. Bij het toevoegen van nieuwe custom maatregelen wordt altijd een backup van de database gemaakt. Deze is terug te vinden in de folder van de originele database.
     2. Als de naam van een maatregel al bestaat wordt deze niet opnieuw toegevoegd. Dus ook als een deel van de invoer (bijv. de kosten) wordt aangepast wordt dit niet aangepast.

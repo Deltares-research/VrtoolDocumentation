@@ -6,10 +6,12 @@ m_eind,Verplicht,eindpunt op lijn van traject
 in_analyse,Verplicht,Vak meenemen in analyse of niet (TRUE/FALSE)
 van_dp,Optioneel,Begrenzing dijkpaalnummers
 tot_dp,Optioneel,Begrenzing dijkpaalnummers
-stabiliteit,Optioneel,Moet overeen komen met een waarde in de kolom doorsnede bij Stabiliteit_default.csv. Hiermee wordt aangegeven welke doorsnede bij welk vak hoort.
+deklaagdikte,Optioneel,"Representatieve deklaagdikte voor het dijkvak, gebruikt voor dimensionering maatregelen"
+pleistoceendiepte,Optioneel,"Representatieve pleistoceendiepte voor het dijkvak, gebruikt voor dimensionering maatregelen"
+stabiliteit,Optioneel,Moet overeen komen met een waarde in de kolom doorsnede bij Stabiliteit_default.csv. Hiermee wordt aangegeven welke doorsnede bij welk vak hoort.
 piping,Optioneel,Moet overeen komen met een waarde in de kolom doorsnede bij Piping_default.csv. Hiermee wordt aangegeven welke doorsnede bij welk vak hoort.
 overslag,Optioneel,Moet overeen komen met een waarde in de kolom doorsnede bij HR_default.csv. Hiermee wordt aangegeven welke doorsnede bij welk vak hoort. 
 bekledingen,Optioneel,Moet overeen komen met een waarde in de kolom doorsnede bij Bekleding_default.csv. Hiermee wordt aangegeven welke doorsnede bij welk vak hoort.
-pleistoceendiepte,Optioneel,"Representatieve pleistoceendiepte voor het dijkvak, gebruikt voor dimensionering maatregelen"
-deklaagdikte,Optioneel,"Representatieve deklaagdikte voor het dijkvak, gebruikt voor dimensionering maatregelen"
+a_piping,Optioneel,"Gevoelige fractie van het dijkvak voor piping, gebruikt voor lengte-effect binnen dijkvak. Default wordt 1.0 aangenomen."
+a_stabiliteit,Optioneel,"Gevoelige fractie van het dijkvak voor stabiliteit binnenwaarts, gebruikt voor lengte-effect binnen dijkvak. Default wordt 1.0 aangenomen."
 opmerkingen,Optioneel,"Hier kunnen eventuele opmerkingen worden geplaatst. Deze kolom is voor de gebruiker, en wordt niet gebruikt in de VRTOOL."

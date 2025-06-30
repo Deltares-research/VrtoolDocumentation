@@ -30,3 +30,7 @@ html[data-theme="light"] {
 img.icon-link-image {
     height: 2.5em !important;
 }
+
+.small-table {
+    font-size: 0.75em !important; /* or any size you prefer */
+}

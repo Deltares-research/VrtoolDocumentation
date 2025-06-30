@@ -3,7 +3,7 @@ Werken met het dashboard
 
 Na het rekenen met de VRTOOL kan de database met resultaten worden geimporteerd in het dashboard. Met dit dashboard kunnen resultaten worden weergegeven en geanalyseerd, en kunnen nieuwe optimalisatieberekeningen met nieuwe instellingen worden uitgevoerd. 
 
-Het dashboard kan worden gestart door in Anaconda Prompt ``python -m src.index`` uit te voeren. Het dashboard verschijnt nu automatisch in de browser. Mocht dit niet gebeuren, kopieer dan de url (http://127.0.0.1:8050/) en open deze in je browser.
+Het dashboard kan worden gestart door in Miniforge/Anaconda Prompt ``python -m src.index`` uit te voeren. Het dashboard verschijnt nu automatisch in de browser. Mocht dit niet gebeuren, kopieer dan de url (http://127.0.0.1:8050/) en open deze in je browser.
 
 Wanneer het dashboard wordt geopend verschijnt eerst de startpagina:
 

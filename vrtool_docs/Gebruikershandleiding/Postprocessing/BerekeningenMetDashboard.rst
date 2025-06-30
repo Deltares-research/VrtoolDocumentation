@@ -39,22 +39,40 @@ Het draaien van aangepaste berekeningen kan handig zijn wanneer:
 
 Werken met custom maatregelen
 -----------------------------
-Naast het rekenen met de standaard maatregelen is het ook mogelijk om met custom maatregelen te rekenen. Dit kan bijvoorbeeld handig zijn wanneer er een specifieke maatregel moet worden meegenomen die niet in de standaard set zit. Denk aan een specifieke maatwerkoplossing op een bepaald dijkvak. Custom maatregelen kunnen worden ingevoerd in het tabblad ``Custom maatregelen``. Hier is een tabel zichtbaar zoals in onderstaande figuur. In dit geval zijn er 2 custom maatregelen ingevoerd: maatregel `Test 1` op dijkvak 1, en `Test 2` op dijkvak 2.
+Naast het rekenen met de standaard maatregelen is het ook mogelijk om met custom maatregelen te rekenen. Of deze moeten worden meegenomen kan in het tabblad `Run optimize` worden aangevinkt. Dit kan bijvoorbeeld handig zijn wanneer er een specifieke maatregel moet worden meegenomen die niet in de standaard set zit. Denk aan een specifieke maatwerkoplossing op een bepaald dijkvak. Custom maatregelen kunnen worden ingevoerd in het tabblad ``Custom maatregelen``. Hier is een tabel zichtbaar zoals in onderstaande figuur. In dit geval zijn er 2 custom maatregelen ingevoerd: maatregel `Test 1` op vak 24, en `Test 2` op vak 23.
 
 .. figure:: img/custom_measure_interface.png
     :width: 80%
     :align: center
 
-Voor beide maatregelen zijn kosten & betrouwbaarheid ingevoerd. Voor de kosten geldt dat bij `Test 1` 2 verschillende bedragen zijn ingevoerd. In dat geval neemt de VRTOOL het hoogste bedrag. Voor de betrouwbaarheid wordt de betrouwbaarheid van de maatregel ingevoerd voor verschillende jaren en mechanismen. Daarbij worden de getallen in de tabel geinterpreteerd als in onderstaande figuur. Wanneer niets wordt ingevoerd wordt aangenomen dat de betrouwbaarheid gelijk blijft. Custom maatregelen worden niet gecombineerd met andere maatregelen.
+Voor beide maatregelen zijn kosten & betrouwbaarheid ingevoerd. Voor de kosten geldt dat bij `Test 1` 2 verschillende bedragen zijn ingevoerd. In dat geval neemt de VRTOOL het eerste bedrag uit de tabel ``CustomMeasureDetail`` in de database. Voor de betrouwbaarheid wordt de betrouwbaarheid van de maatregel ingevoerd voor verschillende jaren en mechanismen. Daarbij worden de getallen in de tabel geinterpreteerd als in onderstaande figuur. Wanneer niets wordt ingevoerd wordt aangenomen dat de betrouwbaarheid gelijk blijft. Custom maatregelen worden niet gecombineerd met andere maatregelen.
+
+.. warning::
+    Het advies is om goed te controleren of de kosten van de maatregel goed zijn ingevoerd: wanneer er verschillende bedragen zijn ingevoerd, wordt alleen het eerste bedrag meegenomen in de berekening. Dit kan leiden tot onjuiste resultaten.
 
 .. figure:: img/custom_measure_concept.png
     :width: 80%
     :align: center
 
-De custom maatregelen zijn terug te vinden door de SQLite te openen in een database viewer. In de tabel ``CustomMeasureDetail`` zijn de ingevoerde waarden te zien. In de tabellen ``MeasureResultMechanism`` en ``MeasureResultSection`` is te zien hoe de betrouwbaarheidsindex en kosten zijn geinterpreteerd. 
+Het invoeren van custom maatregelen gaat via een csv-bestand. Dit csv-bestand moet de volgende kolommen bevatten:
+
+* maatregelen: de naam van de maatregel. Op basis hiervan worden verschillende regels voor dezelfde maatregel aan elkaar gekoppeld in de database.
+* dijkvak: het dijkvak waarop de maatregel van toepassing is. Dit moet overeenkomen met de naam van een dijkvak in de database.
+* mechanism: het mechanisme waarop de regel van de maatregel van toepassing is. Toegestane waarden zijn: Stabiliteit, Piping, Overslag en Bekleding.
+* tijd: het tijdstip waarop de regel van toepassing is. Dit moet een waarde tussen 0 en 100 zijn.
+* kosten: de kosten van de maatregel. Dit moet een positief getal zijn. Let op dat alle kosten voor dezelfde maatregel gelijk zijn. Alleen de eerste waarde wordt meegenomen in de berekening.
+* beta: de betrouwbaarheidsindex van de maatregel.
+
+Na het vullen van het csv-bestand kan deze worden geupload via het blok in de interface. Daarna worden alle maatregelen in de database weergegeven in de tabel. De wijze waarop deze in de database zijn opgeslagen is terug te vinden door de SQLite te openen in een database viewer. In de tabel ``CustomMeasureDetail`` zijn de ingevoerde waarden te zien. In de tabellen ``MeasureResultMechanism`` en ``MeasureResultSection`` is te zien hoe de betrouwbaarheidsindex en kosten zijn geinterpreteerd.
 
 .. figure:: img/custom_measure_sqlite.png
     :width: 80%
     :align: center
 
-Bij het toevoegen van custom maatregelen wordt altijd een backup gemaakt van de bestaande database om te voorkomen dat de originele resultaten verloren gaan. Deze zijn terug te vinden in de folder van de originele database.
+.. admonition:: Basisregels bij het toevoegen van maatregelen
+
+    1. Bij het toevoegen van nieuwe custom maatregelen wordt altijd een backup van de database gemaakt. Deze is terug te vinden in de folder van de originele database.
+    2. Als de naam van een maatregel al bestaat wordt deze niet opnieuw toegevoegd. Dus ook als een deel van de invoer (bijv. de kosten) wordt aangepast wordt dit niet aangepast.
+    3. De kosten van de maatregel moeten gelijk zijn voor alle regels. Als dit niet zo is wordt alleen de eerste waarde meegenomen in de berekening.
+    4. Als een deel van de maatregel(namen) al bestaat worden deze maatregelen niet toegevoegd, de andere maatregelen in de csv wel.
+    5. Met de knop ``Verwijder alle custom maatregelen uit database`` kunnen custom maatregelen worden verwijderd. Dit is een ``safe`` verwijdering: alle maatregelen die zijn gebruikt in een berekening blijven bestaan. Wanneer er daadwerkelijk foute maatregelen zijn toegevoegd kan de database worden hersteld vanuit de automatisch gemaakte backup. 

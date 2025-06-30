@@ -64,7 +64,7 @@ Die effectiviteit kan ook in beeld worden gebracht middels de `VR index`. In die
     :width: 80%
     :align: center
 
-Hierbij geldt dat hoge waarden corresponderen met een hoog veiligheidsrendement: in dit geval bijvoorbeeld de dijkvakken in de buurt van Hasselt. Zwarte delen zijn delen die niet worden versterkt (in principe hebben deze een heel laag veiligheidsrendement). Omdat het veiligheidsrendement zeker voor de zwakke vakken sterk wordt bepaald door het risico zullen vakken met een hoge VR index meestal ook een hoge faalkans hebben. De wijze van berekenen van de VR index is in hoofdstuk 4 van de handreiking nader toegelicht.
+Hierbij geldt dat hoge waarden corresponderen met een hoog veiligheidsrendement: in dit geval bijvoorbeeld de dijkvakken in de buurt van Hasselt. Zwarte delen zijn delen die niet worden versterkt (in principe hebben deze een heel laag veiligheidsrendement). Omdat het veiligheidsrendement zeker voor de zwakke vakken sterk wordt bepaald door het risico zullen vakken met een hoge VR index meestal ook een hoge faalkans hebben. De wijze van berekenen van de VR index is in hoofdstuk 4 van de `Handreiking Veiligheidsrendement <https://www.hwbp.nl/binaries/hoogwaterbeschermingsprogramma/documenten/handreikingen/2025/04/24/handreiking-veiligheidsrendement/Handreiking+Veiligheidsrendement+fase+2.pdf>`_ nader toegelicht.
 
 Resultaten op gebiedsniveau
 ---------------------------

@@ -54,8 +54,10 @@ Voor het starten van het dashboard volg je de volgende stappen:
 11.  In je commandline verschijnt nu een url en wordt het dashboard automatisch geopend in je browser. Mocht dit niet gebeuren, kopieer dan de url (http://127.0.0.1:8050/) en open deze in je browser. Het Dashboard wordt gestart.
 
 .. note::
-   De verschillende packages kunnen ook direct worden gedownload vanuit de verschillende repositories:
+   De code van de verschillende onderdelen is open beschikbaar vanuit de verschillende repositories:
+
    * `VRTool <https://github.com/Deltares/Veiligheidsrendement>`_
    * `VRDashboard <https://github.com/Deltares-research/VrtoolDashboard>`_
    * `VRUtils <https://github.com/Deltares/VRSuiteUtils>`_
+   
    Daar kan ook de meest recente versie worden gekozen, waarbij wel moet worden opgelet dat de juiste versies samen worden gebruikt. De versies die hierboven zijn genoemd zijn getest en werken goed samen.

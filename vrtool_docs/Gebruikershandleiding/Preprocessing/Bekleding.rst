@@ -18,18 +18,19 @@ Het invoerbestand ``Bekleding_default.csv`` heeft de volgende kolommen die ingev
   :file: tables/bekleding_kolommen.csv
   :widths: 15, 15, 50
   :header-rows: 1
+  :class: small-table
 
 .. topic:: Aandachtspunten
 
    * Het invoeren van `begin_bekleding` is niet verplicht, maar wel aan te bevelen. Deze wordt gebruikt om de minimale waterstand voor de berekeningen voor de belasting te bepalen.  Wanneer deze niet wordt ingevoerd wordt kan dit leiden tot onnodig veel (vaak onzinnige) berekeningen.
-   * Bij Steentoetsberekeningen wordt een terugkeertijd van de gehanteerde golfcondities aangenomen. Deze is vaak opgenomen in de bestandsnaam. Voor de berekening maakt het niet uit welke terugkeertijd de golfcondities hebben, de preprocessor kan er altijd mee overweg. Echter, wanneer bijv. golfcondities met een hele lage terugkeertijd worden gehanteerd kan het zijn dat de hoger gelegen bekledingdelen niet belast worden waardoor de faalkans daarvan wordt onderschat. 
+   * Bij Steentoetsberekeningen wordt een terugkeertijd van de gehanteerde golfcondities aangenomen. Deze is vaak opgenomen in de bestandsnaam. Voor de berekening maakt het niet uit welke terugkeertijd de golfcondities hebben, de preprocessor kan er altijd mee overweg. Echter, wanneer bijv. golfcondities met een hele lage terugkeertijd worden gehanteerd kan het zijn dat de hoger gelegen bekledingdelen niet belast worden waardoor de faalkans daarvan wordt onderschat. Dit leidt tot een fout resultaat.
 
 
 Het vullen van het invoerbestand
 -------------------------------
 Bij het vullen van het invulbestand moet bij elke doorsnede de benodigde informatie worden ingevuld. Daarbij moet voor elke locatie in `Bekleding.csv` een corresponderende waterstandsberekening zijn (dus zelfde doorsnedenaam) in het `HR_default.csv`-bestand. Bij de berekeningen voor de belasting wordt namelijk gebruik gemaakt van de waterstandsberekeningen.
 
-De berekeningen voor bekledingen zijn tijdrovend door het grote aantal parametrisaties: het is aan te bevelen om bekledingen alleen mee te nemen wanneer de verwachting is dat dit relevant is voor het eindresultaat. Het is prima mogelijk om op een traject bijvoorbeeld voor 3 van de 40 vakken de bekleding mee te nemen. 
+De berekeningen voor bekledingen zijn tijdrovend door het grote aantal parametrisaties: het is aan te bevelen om bekledingen alleen mee te nemen wanneer de verwachting is dat dit relevant is voor het eindresultaat. Dit kan per vak worden bepaald, er kan bijvoorbeeld op een traject voor 3 van de 40 vakken met bekleding worden gerekend. 
 
 .. topic:: Overige aandachtspunten bij het vullen van het bestand
 
@@ -54,7 +55,7 @@ Het bepalen van de belasting gaat middels het volgende commando:
 
 Let op: bij deze stap wordt voor elke doorsnede de belasting op de bekleding bepaald voor de jaren 2023 en 2100, voor golfklap, golfoploop en zuilen, en voor verschillende kansen en waterstanden. Dit is een tijdrovende stap, zeker voor meer complexe watersystemen. 
 
-Na afronding van de berekening voor een locatie wordt een bestand `Qvar_{locatie}` weggeschreven in de map `output_map_bekleding`. 
+Na afronding van de berekening voor een locatie wordt een bestand `Qvar_{locatie}.json` weggeschreven in de map `output_map_bekleding`. 
 
 .. tip:: 
    Mocht een berekening vastlopen of worden onderbroken dan kan de berekening niet opnieuw worden gestart omdat de `output_map_bekleding` leeg moet zijn. Het advies is om dan de resulterende `.json` bestanden elders op te slaan. Om tijd te besparen kan dan (tijdelijk) het `bekleding.csv` bestand worden aangepast door alle al berekende locaties te verwijderen. Met zorgvuldig kopieren en plakken kan zo flink tijd worden bespaard.

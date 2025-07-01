@@ -20,7 +20,7 @@ Voor overslag wordt aangenomen dat de kering in 2075 voldoet aan de doorsnede-ei
 
 Kostenberekening
 ----------------
-Voor de damwand wordt uitgegaan van een verankerd profiel AZ36, kosten 1100 €/m². De benodigde lengte van de damwand wordt als volgt bepaald:
+Voor de damwand wordt uitgegaan van een verankerd profiel AZ36, kosten 1.100 €/m². De benodigde lengte van de damwand wordt als volgt bepaald:
 
 .. math::
    L = min((h_\mathrm{dijk} + d_\mathrm{cover}) \cdot 3, 20)

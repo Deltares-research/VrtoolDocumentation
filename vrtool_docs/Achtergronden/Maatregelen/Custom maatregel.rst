@@ -1,7 +1,8 @@
 Custom maatregelen
 ==================
 In aanvulling op de standaard geparametriseerde maatregelen is het ook mogelijk om handmatig extra maatregelen toe te voegen.
-Dat kan via de database, of via een eigen routine waarbij op basis van een csv-bestand een lijst maatregelen wordt toegevoegd. In de toekomst wordt dit ook vanuit het dashboard gefaciliteerd. 
+Dat kan via de database, of via een eigen routine waarbij op basis van een csv-bestand een lijst maatregelen wordt toegevoegd. Dat laatste wordt ook gefaciliteerd via het dashboard. 
+Zie daarvoor de paragraaf `Werken met custom maatregelen <../../Gebruikershandleiding/Postprocessing/BerekeningenMetDashboard.html#werken-met-custom-maatregelen>`_.
 
 Het idee van custom maatregelen is dat het mogelijk wordt om in latere fasen van een project voorkeursalternatieven mee te wegen, of in gevallen waar de standaardmaatregelen incorrect zijn verbeterde resultaten toe te voegen. In onderstaande tabel is een voorbeeld gegeven van een divers aantal custom maatregelen op een dijkvak. We lopen deze stapsgewijs af om de invoer toe te lichten:
 
@@ -16,4 +17,4 @@ Het idee van custom maatregelen is dat het mogelijk wordt om in latere fasen van
     :widths: 30, 5, 5, 5, 5, 5, 5
     :header-rows: 1
 
-Via het dashboard kunnen ook maatregelen worden verwijderd uit de database. Dit kan ook via de functies `safe_clear_custom_measure` en `brute_clear_custom_measure`. Bij de tweede optie heeft dit wel consequenties voor de resultaten omdat ook maatregelen worden verwijderd die voorkomen in oude optimalisatieberekeningen. Deze kunnen dan mogelijk niet goed meer worden weergegeven. Bij het werken met custom maatregelen is het altijd raadzaam om regelmatig de database te backuppen om dergelijke problemen te voorkomen. Voor meer informatie over het gebruik van custom maatregelen via het dashboard wordt verwezen naar de pagina `Berekeningen aansturen via het dashboard <../../Gebruikershandleiding/Postprocessing/BerekeningenMetDashboard.html>`_.
+Custom maatregelen kunnen uit de database worden verwijderd via de functies `safe_clear_custom_measure` en `brute_clear_custom_measure`. De eerste optie is beschikbaar via het dashboard. De tweede optie moet via Python/Command line worden aangeroepen. Gebruik hiervan heeft consequenties voor de resultaten omdat ook maatregelen worden verwijderd die voorkomen in oude optimalisatieberekeningen. Deze kunnen dan niet goed meer worden weergegeven. Bij het werken met custom maatregelen is het altijd raadzaam om regelmatig de database te backuppen om dergelijke problemen te voorkomen. Voor meer informatie over het gebruik van custom maatregelen via het dashboard wordt verwezen naar de pagina `Werken met custom maatregelen <../../Gebruikershandleiding/Postprocessing/BerekeningenMetDashboard.html#werken-met-custom-maatregelen>`_. 

@@ -37,14 +37,14 @@ Om de invloed van de discontovoet te illustreren is traject 24-3 doorgerekend me
     :alt: Vergelijking van kosten en faalkans in 2075 voor traject 24-3 met verschillende discontovoeten
     :align: center
 
-Binnen de berekening wordt momenteel de risicoreductie bepaald op basis van de geextrapoleerde faalkans tot 2125. Voor overslag, bekleding en piping is deze lager dan de faalkans in 2100 en de huidige faalkans. De onderliggende aanname is gestoeld op het feit dat door verdiscontering de bijdrage van het risico in de laatste jaren beperkt is, en het waarschijnlijk niet aantrekkelijk is dat in de huidige versterking al te reduceren. Echter, met een lagere discontovoet kan dit wat veranderen, hoewel uit de bovenstaande figuur blijkt dat dit alleszins meevalt. Er zijn voor de bepaling van het risico een aantal strategieën mogelijk, die zijn geïllustreerd in onderstaande figuur. 
+Binnen de berekening wordt momenteel de risicoreductie bepaald op basis van de geextrapoleerde faalkans tot 2125. Voor overslag, bekleding en piping is deze hoger dan de faalkans in 2100 en de huidige faalkans. De onderliggende aanname is gestoeld op het feit dat door verdiscontering de bijdrage van het risico in de laatste jaren beperkt is, en het waarschijnlijk niet aantrekkelijk is dat in de huidige versterking al te reduceren. Echter, met een lagere discontovoet kan dit wat veranderen, hoewel uit de bovenstaande figuur blijkt dat dit alleszins meevalt. Richting de toekomst zijn er voor de bepaling van het risico een aantal verbeteropties, die zijn geïllustreerd in onderstaande figuur. 
 
 .. figure:: img/vb_risico_verdiscontering.png
     :width: 60%
     :alt: Conceptuele weergave van de verdiscontering van risico en welke delen worden meegenomen.
     :align: center
 
-Grofweg zijn er 2 strategieën mogelijk:
+Daarvan zijn er 2 opties het meest kansrijk:
 
 1. De risicoreductie wordt bepaald op basis van de faalkans in 2125. Dit is de huidige aanpak. Dan worden delen A, B en C in de figuur meegenomen.
 2. De risicoreductie wordt bepaald op basis van de faalkans in 2100. Dit vermijdt een (soms zeer nadelig uitpakkende) extrapolatie van faalkansen. Dan worden delen A en B in de figuur meegenomen.

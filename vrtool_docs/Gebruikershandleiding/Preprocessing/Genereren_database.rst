@@ -23,11 +23,11 @@ De structuur van de database is onderstaand weergegeven. De database is in SQLit
 
 De structuur van de database is in onderstaande figuur weergegeven. De tabellen zijn grofweg op te delen in 5 delen:
 
-* **Informatie over het dijktraject en de dijkvakken**: Hier staan algemene gegevens over het dijktraject, en de dijkvakspecifieke eigenschappen zoals bebouwing en het dijkprofiel.
-* **Invoer t.b.v. het doorrekenen van de mechanismen**: Dit gedeelte bevat gegevens over de mechanismen en rekenscenario's die moeten worden meegenomen in het bepalen van de (huidige) veiligheid. Daarnaast bijvoorbeeld ook de gegevens van de bekledingdelen, en eventuele verwijzingen naar stix-bestanden. Resultaten van de berekeningen hiermee zijn te vinden in de tabellen `AssessmentMechanismResult`en `AssessmentSectionResult`.
-* **Invoer t.b.v. maatregelen**: Hier zijn de basisparameters van de maatregelen te vinden, waarbij in CustomMeasureDetail de invoer van custom maatregelen staat (zie ook `Toevoegen van maatregelen <Postprocessing/BerekeningenMetDashboard.html>`_).
-* **Resultaten doorrekening maatregelen**: Hier staan alle resulterende waarden van stap 2 van de VRTOOL berekening: kosten en betrouwbaarheid na het treffen van de verschillende maatregelen.
-* **Resultaten optimalisatie**: Hier staan de resultaten van de optimalisatieberekening, zoals de totale lcc & het totale risico, en de volgorde van de maatregelen.
+* **Informatie over het dijktraject en de dijkvakken** Hier staan algemene gegevens over het dijktraject, en de dijkvakspecifieke eigenschappen zoals bebouwing en het dijkprofiel.
+* **Invoer t.b.v. het doorrekenen van de mechanismen** Dit gedeelte bevat gegevens over de mechanismen en rekenscenario's die moeten worden meegenomen in het bepalen van de (huidige) veiligheid. Daarnaast bijvoorbeeld ook de gegevens van de bekledingdelen, en eventuele verwijzingen naar stix-bestanden. Resultaten van de berekeningen hiermee zijn te vinden in de tabellen `AssessmentMechanismResult`en `AssessmentSectionResult`.
+* **Invoer t.b.v. maatregelen** Hier zijn de basisparameters van de maatregelen te vinden, waarbij in CustomMeasureDetail de invoer van custom maatregelen staat (zie ook `Toevoegen van maatregelen <../Postprocessing/BerekeningenMetDashboard.html>`_).
+* **Resultaten doorrekening maatregelen** Hier staan alle resulterende waarden van stap 2 van de VRTOOL berekening: kosten en betrouwbaarheid na het treffen van de verschillende maatregelen.
+* **Resultaten optimalisatie** Hier staan de resultaten van de optimalisatieberekening, zoals de totale lcc & het totale risico, en de volgorde van de maatregelen.
 
 .. figure:: img/vrtool_sql_input.drawio.svg
     :alt: Diagram van de structuur van de database

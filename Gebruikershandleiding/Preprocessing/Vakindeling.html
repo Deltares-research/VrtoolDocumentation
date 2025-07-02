@@ -1,0 +1,776 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Vakindeling &#8212; vrtool_docs  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/theme-deltares.css?v=a5d64199" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Gebruikershandleiding/Preprocessing/Vakindeling';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Waterstandsberekeningen" href="Waterstand.html" />
+    <link rel="prev" title="Werken met de preprocessor" href="werken_met_preprocessor.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/logo_vrtool.svg" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="../../_static/logo_vrtool.svg" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">Veiligheidsrendement</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Installaties/index.html">
+    Installaties
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Tutorials/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    Gebruikershandleiding
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Achtergronden/index.html">
+    Achtergronden
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Deltares/Veiligheidsrendement" title="VRTOOL" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" class="icon-link-image" alt="VRTOOL"/></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.deltares.nl/en/" title="Deltares" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../_static/deltares-blue.svg" class="icon-link-image" alt="Deltares"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Installaties/index.html">
+    Installaties
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Tutorials/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    Gebruikershandleiding
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Achtergronden/index.html">
+    Achtergronden
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Deltares/Veiligheidsrendement" title="VRTOOL" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" class="icon-link-image" alt="VRTOOL"/></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.deltares.nl/en/" title="Deltares" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../_static/deltares-blue.svg" class="icon-link-image" alt="Deltares"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Preprocessing</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="werken_met_preprocessor.html">Werken met de preprocessor</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Vakindeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Waterstand.html">Waterstandsberekeningen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Overtopping.html">Overslag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Bekleding.html">Bekledingen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Macro.html">Stabiliteit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Piping.html">Piping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Dijkprofielen.html"> Afleiden dijkprofielen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Teenlijn.html"> Afleiden teenlijn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Bebouwing.html"> Afleiden bebouwing per dijkvak</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Genereren_database.html">Genereren database</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../VRTool/index.html">Rekenen met de VRTOOL</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Postprocessing/index.html">Werken met het dashboard</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Postprocessing/WeergevenResultaten.html"> Weergeven van resultaten op trajectniveau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Postprocessing/BerekeningenMetDashboard.html"> Berekeningen aansturen via het dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Postprocessing/VergelijkenOptimalisatieberekeningen.html"> Vergelijken van optimalisatieberekeningen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Postprocessing/ProgrammerenVersterkingen.html"> Analyse op gebiedsniveau</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Gebruikershandleiding</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Preprocessing</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Vakindeling</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="vakindeling">
+<h1>Vakindeling<a class="headerlink" href="#vakindeling" title="Link to this heading">#</a></h1>
+<p>De basis van een veiligheidsrendementberekening is één vakindeling die voor alle faalmechanismen gebruikt wordt. Als eerste wordt een invoerbestand gevuld, waarna de workflow voor het maken van de vakindeling kan worden gedraaid.</p>
+<div class="admonition-aandachtspunten-bij-het-maken-van-een-vakindeling admonition">
+<p class="admonition-title">Aandachtspunten bij het maken van een vakindeling</p>
+<p>Bij het maken van een vakindeling wordt het traject opgedeeld in een aantal relatief homogene dijkvakken. Daarbij is de kern dat de beoordelingsinformatie van de verschillende mechanismen goed wordt gerepresenteerd. In aanvulling daarop is van belang dat wordt gekeken vanuit het perspectief van de versterkingsmaatregelen. Wanneer bijvoorbeeld een deel van een in de beoordeling ‘homogeen’ vak heel dichtbebouwd is, en een deel niet, kan dit vak beter worden gesplitst. Streef bij het opsplitsen naar ongeveer 40 vakken op het dijktraject, waarbij de vakken niet kleiner dan 300 meter moeten zijn. Dit is een vuistregel, maar in principe geldt dat kleinere vakken niet altijd leiden tot betere resultaten, en zeker wel tot meer rekenwerk (o.a. voor preprocessing en VRTOOL). Focus moet liggen op:</p>
+<ul class="simple">
+<li><p>Goed onderscheiden van de zwakkere vakken. Dus vakken waar de faalkans voor 1 of meerdere mechanismen hoog is moeten goed onderscheiden worden. Houd de indeling van de vakken voor de dominante mechanismen als basis aan.</p></li>
+<li><p>Goed onderscheiden van de vakken met duidelijk andere maatregelen (bijvoorbeeld bij veel bebouwing), ook als het oordeel relatief homogeen is.</p></li>
+<li><p>Beperken van grote aantallen vakken  waar nauwelijks maatregelen worden verwacht, of waar de maatregelen redelijk homogeen zijn (met name voor de belangrijkste mechanismen). Deze kunnen vaak worden samengevoegd zonder dat de kwaliteit van de berekening er onder lijdt. Een gedeelte van bijv. 10 km dat voor alle mechanismen ruim voldoet kan prima als 1 vak beschouwd worden.</p></li>
+</ul>
+</div>
+<section id="structuur-van-het-invoerbestand-van-de-vakindeling">
+<h2>Structuur van het invoerbestand van de vakindeling<a class="headerlink" href="#structuur-van-het-invoerbestand-van-de-vakindeling" title="Link to this heading">#</a></h2>
+<p>De basis voor het genereren van de vakindeling is het invoerbestand
+<code class="docutils literal notranslate"><span class="pre">Vakindeling.csv</span></code>. Doel van deze workflow is een <code class="docutils literal notranslate"><span class="pre">geojson</span></code> bestand te creeren met alle dijkvakken. Dit bestand is ook invoer voor andere workflows. Dit bestand wordt in de mappenstructuur weggeschreven in <code class="docutils literal notranslate"><span class="pre">intermediate_files\vakindeling\</span></code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>We onderscheiden bij de invoer 3 niveau’s van ruimtelijk detail: traject - dijkvak - doorsnede. De vakindeling beschrijft welke dijkvakken onderdeel zijn van het traject, én welke doorsnede-berekeningen daarbij horen. Het kan daarbij voorkomen dat meerdere dijkvakken dezelfde doorsnede hebben voor een bepaald mechanisme.</p>
+</div>
+<p>Het invoerbestand <code class="docutils literal notranslate"><span class="pre">Vakindeling.csv</span></code> heeft de volgende kolommen die ingevuld moeten worden:</p>
+<div class="pst-scrollable-table-container"><table class="small-table table" id="id1">
+<caption><span class="caption-text">Kolommen in invoerbestand vakindeling</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 11.1%" />
+<col style="width: 11.1%" />
+<col style="width: 77.8%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Kolom</p></th>
+<th class="head"></th>
+<th class="head"><p>Beschrijving</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>objectid</p></td>
+<td><p>Verplicht</p></td>
+<td><p>Unieke identifier (moeten verschillende getallen zijn)</p></td>
+</tr>
+<tr class="row-odd"><td><p>vaknaam</p></td>
+<td><p>Verplicht</p></td>
+<td><p>Nummer/naam van het dijkvak (moet uniek zijn, kan identiek zijn aan OBJECTID)</p></td>
+</tr>
+<tr class="row-even"><td><p>m_start</p></td>
+<td><p>Verplicht</p></td>
+<td><p>startpunt op lijn van traject</p></td>
+</tr>
+<tr class="row-odd"><td><p>m_eind</p></td>
+<td><p>Verplicht</p></td>
+<td><p>eindpunt op lijn van traject</p></td>
+</tr>
+<tr class="row-even"><td><p>in_analyse</p></td>
+<td><p>Verplicht</p></td>
+<td><p>Vak meenemen in analyse of niet (TRUE/FALSE)</p></td>
+</tr>
+<tr class="row-odd"><td><p>van_dp</p></td>
+<td><p>Optioneel</p></td>
+<td><p>Begrenzing dijkpaalnummers</p></td>
+</tr>
+<tr class="row-even"><td><p>tot_dp</p></td>
+<td><p>Optioneel</p></td>
+<td><p>Begrenzing dijkpaalnummers</p></td>
+</tr>
+<tr class="row-odd"><td><p>deklaagdikte</p></td>
+<td><p>Optioneel</p></td>
+<td><p>Representatieve deklaagdikte voor het dijkvak, gebruikt voor dimensionering maatregelen</p></td>
+</tr>
+<tr class="row-even"><td><p>pleistoceendiepte</p></td>
+<td><p>Optioneel</p></td>
+<td><p>Representatieve pleistoceendiepte voor het dijkvak, gebruikt voor dimensionering maatregelen</p></td>
+</tr>
+<tr class="row-odd"><td><p>stabiliteit</p></td>
+<td><p>Optioneel</p></td>
+<td><p>Moet overeen komen met een waarde in de kolom doorsnede bij Stabiliteit_default.csv. Hiermee wordt aangegeven welke doorsnede bij welk vak hoort.</p></td>
+</tr>
+<tr class="row-even"><td><p>piping</p></td>
+<td><p>Optioneel</p></td>
+<td><p>Moet overeen komen met een waarde in de kolom doorsnede bij Piping_default.csv. Hiermee wordt aangegeven welke doorsnede bij welk vak hoort.</p></td>
+</tr>
+<tr class="row-odd"><td><p>overslag</p></td>
+<td><p>Optioneel</p></td>
+<td><p>Moet overeen komen met een waarde in de kolom doorsnede bij HR_default.csv. Hiermee wordt aangegeven welke doorsnede bij welk vak hoort.</p></td>
+</tr>
+<tr class="row-even"><td><p>bekledingen</p></td>
+<td><p>Optioneel</p></td>
+<td><p>Moet overeen komen met een waarde in de kolom doorsnede bij Bekleding_default.csv. Hiermee wordt aangegeven welke doorsnede bij welk vak hoort.</p></td>
+</tr>
+<tr class="row-odd"><td><p>a_piping</p></td>
+<td><p>Optioneel</p></td>
+<td><p>Gevoelige fractie van het dijkvak voor piping, gebruikt voor lengte-effect binnen dijkvak. Default wordt 1.0 aangenomen.</p></td>
+</tr>
+<tr class="row-even"><td><p>a_stabiliteit</p></td>
+<td><p>Optioneel</p></td>
+<td><p>Gevoelige fractie van het dijkvak voor stabiliteit binnenwaarts, gebruikt voor lengte-effect binnen dijkvak. Default wordt 1.0 aangenomen.</p></td>
+</tr>
+<tr class="row-odd"><td><p>opmerkingen</p></td>
+<td><p>Optioneel</p></td>
+<td><p>Hier kunnen eventuele opmerkingen worden geplaatst. Deze kolom is voor de gebruiker, en wordt niet gebruikt in de VRTOOL.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<aside class="topic">
+<p class="topic-title">Aandachtspunten</p>
+<ul class="simple">
+<li><p>Bij het opgeven van een koppeling in de kolommen <code class="docutils literal notranslate"><span class="pre">piping</span></code>, <code class="docutils literal notranslate"><span class="pre">stabiliteit</span></code> etc. hoeven deze nog niet te zijn ingevuld voor deze workflow. Echter, bij het maken van de database moet het gegenereerde <code class="docutils literal notranslate"><span class="pre">geojson</span></code> bestand wel alle benodigde informatie bevatten.</p></li>
+<li><p>Invullen van de kolommen pleistoceendiepte en deklaagdikte is optioneel, maar wanneer deze niet worden ingevuld wordt standaard 25 respectievelijk 7 meter aangehouden. Dit leidt tot relatief zware maatregelen. Voor een nauwkeurige kostenschatting wordt aanbevolen om deze waarden expliciet in te vullen. Daarbij moet geredeneerd worden vanuit een verwachtingswaarde (dus de dikte/diepte die op het grootste deel van het vak aanwezig is).</p></li>
+<li><p>De parameters <code class="docutils literal notranslate"><span class="pre">a_piping</span></code> en <code class="docutils literal notranslate"><span class="pre">a_stabiliteit</span></code> geven de lengte van het dijkvak dat gevoelig is voor piping/stabiliteit binnenwaarts aan. Daarmee wordt dus het lengte-effect binnen het dijkvak in rekening gebracht. Wanneer deze niet worden ingevuld wordt aangenomen (conservatief) dat 100% van de lengte van het dijkvak gevoelig is voor piping/stabiliteit. Het advies is om, zeker voor de zwakkere vakken, deze waarden goed te bepalen omdat anders de trajectfaalkans zeer hoog kan worden.</p></li>
+</ul>
+</aside>
+</section>
+<section id="het-vullen-van-het-invoerbestand">
+<h2>Het vullen van het invoerbestand<a class="headerlink" href="#het-vullen-van-het-invoerbestand" title="Link to this heading">#</a></h2>
+<p>In onderstaande figuur is met een voorbeeld voor stabiliteit
+geillustreerd hoe de koppeling tussen doorsnedes en de vakindeling moet
+worden gelegd. Merk op dat het mogelijk is voor meerdere vakken
+dezelfde doorsnede te hanteren (een voorbeeld in de figuur is de
+dikgedrukte doorsnede <code class="docutils literal notranslate"><span class="pre">ET_VOLDOET</span></code>). Deze hoeft dan slechts 1x genoemd
+te worden in het STBI invoerbestand, maar kan bij meerdere vakken worden
+gebruikt.</p>
+<figure class="align-center">
+<img alt="Voorbeeld van het vullen van het invoerbestand van de vakindeling" src="../../_images/Filling_Vakindeling_stbi.PNG" />
+</figure>
+<p>Belangrijk bij het genereren van de vakindeling zijn met name de
+<code class="docutils literal notranslate"><span class="pre">m_start</span></code> en <code class="docutils literal notranslate"><span class="pre">m_eind</span></code> parameters. Wanneer de lengte van het traject
+(dus de maximale <code class="docutils literal notranslate"><span class="pre">m_eind</span></code>) teveel afwijkt (grofweg &gt;1 meter) van de
+lengte van de shape uit het Nationaal Basisbestand Primaire
+Waterkeringen wordt een foutmelding gegeven.</p>
+<aside class="topic">
+<p class="topic-title">Aandachtspunten</p>
+<ul class="simple">
+<li><p>De m_eind en m_start van alle vakken moeten op elkaar aansluiten</p></li>
+<li><p>In principe is het beter om vakken niet té klein te maken. Vaak zorgt dit voor onnodig veel rekentijd, en niet voor een beter resultaat. In de regel is het advies geen vakken kleiner dan pakweg 300 meter te maken, tenzij er sprake is van lokale zwakke plekken.</p></li>
+<li><p>Voor een betrouwbare analyse moeten met name de zwakkere vakken en de vakken met verwachte dure maatregelen (bijv. veel bebouwing) goed worden onderscheiden. Als geen maatregelen worden verwacht, of vakken redelijk homogeen zijn (met name voor de belangrijkste mechanismen) kunnen deze samen worden gevoegd zonder dat de kwaliteit van de berekening er onder lijdt.</p></li>
+</ul>
+</aside>
+</section>
+<section id="draaien-van-de-workflow-voor-het-genereren-van-een-vakindeling">
+<h2>Draaien van de workflow voor het genereren van een vakindeling<a class="headerlink" href="#draaien-van-de-workflow-voor-het-genereren-van-een-vakindeling" title="Link to this heading">#</a></h2>
+<p>De gebruiker kan de workflow als volgt aanroepen vanuit de Anaconda
+Prompt (activeer eerst environment):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">preprocessing</span> <span class="n">vakindeling</span> <span class="o">--</span><span class="n">config_file</span> <span class="p">{</span><span class="n">config_bestand</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Daarbij moet <code class="docutils literal notranslate"><span class="pre">{config_bestand}</span></code> verwijzen naar de locatie van het <code class="docutils literal notranslate"><span class="pre">preprocessing.config</span></code> bestand.</p>
+<p>Voor deze workflow zijn de volgende waarden in het configuratiebestand van belang:</p>
+<div class="pst-scrollable-table-container"><table class="small-table table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Omschrijving</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>traject_id</p></td>
+<td><p>Naam van het traject</p></td>
+</tr>
+<tr class="row-odd"><td><p>vakindeling_csv</p></td>
+<td><p>Pad naar het invoerbestand van de vakindeling. Deze moet eventueel nog worden aangepast.</p></td>
+</tr>
+<tr class="row-even"><td><p>output_folder_vakindeling</p></td>
+<td><p>Pad naar de map waar de geojson van de vakindeling moet worden opgeslagen. Hier wordt ook automatisch een kaart van de vakindeling gegenereerd.</p></td>
+</tr>
+<tr class="row-odd"><td><p>traject_shape</p></td>
+<td><p>Default wordt deze niet gebruikt, maar hier kan een pad naar een alternatieve shape van het traject worden ingevoerd. Standaard wordt de shape uit het Nationaal Basisbestand Primaire Waterkeringen gebruikt.</p></td>
+</tr>
+<tr class="row-even"><td><p>flip_traject</p></td>
+<td><p>In sommige gevallen is de vakindeling in de tegenovergestelde richting van de shapefile gedefinieerd. Door hier <code class="docutils literal notranslate"><span class="pre">True</span></code> te kiezen kan deze worden omgedraaid.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Wanneer de workflow succesvol is uitgevoerd wordt in de map output_folder_vakindeling een viertal bestanden weggeschreven:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">vakindeling.log</span></code>: een logbestand waarin de voortgang van de workflow wordt bijgehouden, en eventuele foutmeldingen worden gerapporteerd.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Vakindeling_{traject_id}.geojson</span></code>: het geojson bestand waarin de vakindeling is opgeslagen. Dit bestand wordt gebruikt als invoer voor andere workflows.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Vakindeling_{traject_id}.png</span></code>: een kaart van de vakindeling, die kan worden gebruikt om de vakindeling te controleren.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">configuratie_maatregelen.csv</span></code>: een csv-bestand waarin de configuratie van de maatregelen is opgeslagen. Dit bestand kan worden gebruikt om maatregelen per dijkvak aan of uit te zetten. Dit is verder beschreven bij de workflow <a class="reference external" href="Genereren_database.html">Genereren database</a>.</p></li>
+</ul>
+<p>Na het genereren van de vakindeling is het altijd belangrijk deze goed te controleren: de vakindeling is een belangrijke basis voor de volgende workflows. Dit kan eenvoudig worden gedaan in QGIS of ArcGIS.</p>
+<section id="mogelijke-foutmeldingen">
+<h3>Mogelijke foutmeldingen<a class="headerlink" href="#mogelijke-foutmeldingen" title="Link to this heading">#</a></h3>
+<p>Uit het logbestand, dat wordt weggeschreven in vakindeling_csv_path (meestal <code class="docutils literal notranslate"><span class="pre">intermediate_files\vakindeling\</span></code>) worden de meeste foutmeldingen gerapporteerd. Meestal zal dit gaan over bijv. dubbele waarden die uniek moeten zijn, of kolommen die niet compleet zijn. Een belangrijke mogelijke foutmelding is wanneer de lengte van het traject niet overeenkomt met de shape uit het Nationaal Basisbestand Primaire Waterkeringen (NWPB). Dit wordt hieronder verder toegelicht.</p>
+<div class="admonition-fouten-in-de-trajectlengte admonition">
+<p class="admonition-title">Fouten in de trajectlengte</p>
+<p>Een foutmelding die vaak voorkomt is wanneer de totale lengte van het traject niet overeenkomt met het NWBP. Daarvoor wordt gekeken naar de hoogste M-waarde, en de lengte van de shape uit het Nationaal Basisbestand Primaire Waterkeringen. Deze moeten ongeveer (op de meter nauwkeurig) overeenkomen.</p>
+<p><em>Let op</em> de totale trajectlengte moet afgerond op 5 significante cijfers (dus bij een lengte van &gt;10000 meter afgerond op 1 meter) niet korter zijn dan de verwachte trajectlengte, maar mag zeker niet langer zijn. Dus rond altijd de verwachte lengte af naar beneden. Onderstaand is een voorbeeld van een foutmelding weergegeven wanneer de lengte in vakindeling.csv te kort is. Wanneer er een klein verschil is in trajectlengte is het advies om de waarde op basis van de foutmelding in het csv-bestand aan te passen: een meter meer of minder heeft geen invloed op de resultaten. Bij grote verschillen is wel raadzaam om de ligging van de vakken op basis van het NBPW en de shape die als bron voor de M-waarden is gebruikt te vergelijken. Dit kan bijvoorbeeld worden gedaan door beide in QGIS of ArcGIS weer te geven. Het komt bijvoorbeeld in sommige gevallen voor dat de referentielijn van de legger van de beheerder bij kunstwerken niet helemaal overeenkomt met de referentielijn van het NBPW. In dat geval moet de metriering worden aangepast, of de shape van de legger als invoer worden gegeven (via traject_shape).</p>
+<figure class="align-center">
+<img alt="Foutmelding bij een te kort traject" src="../../_images/te_kort_traject.PNG" />
+</figure>
+</div>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="werken_met_preprocessor.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Werken met de preprocessor</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Waterstand.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Waterstandsberekeningen</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structuur-van-het-invoerbestand-van-de-vakindeling">Structuur van het invoerbestand van de vakindeling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#het-vullen-van-het-invoerbestand">Het vullen van het invoerbestand</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#draaien-van-de-workflow-voor-het-genereren-van-een-vakindeling">Draaien van de workflow voor het genereren van een vakindeling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mogelijke-foutmeldingen">Mogelijke foutmeldingen</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/Deltares/VrtoolDocumentation/edit/main/docs/Gebruikershandleiding/Preprocessing/Vakindeling.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/Gebruikershandleiding/Preprocessing/Vakindeling.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2023, Deltares.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

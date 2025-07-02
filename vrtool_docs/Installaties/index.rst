@@ -19,7 +19,7 @@ De bestanden kunnen worden gedownload via de Github pagina's van de verschillend
 
 1. Download de meest recente release van de VRTOOL (v1.1.1) door via deze `link <https://github.com/Deltares/Veiligheidsrendement/releases/tag/v1.1.1>`_ het bestand ``vrtool-1.1.1.tar.gz`` te downloaden. 
 
-2. Download de meest recente release van het Dashboard (v1.1.1) door via deze `link <https://github.com/Deltares-research/VrtoolDashboard/releases/tag/v1.1.1>`_ het bestand ``vr_dash-1.1.1.tar.gz`` te downloaden.
+2. Download de meest recente release van het Dashboard (v1.1.2) door via deze `link <https://github.com/Deltares-research/VrtoolDashboard/releases/tag/v1.1.2>`_ het bestand ``vr_dash-1.1.2.tar.gz`` te downloaden.
 
 3. Download de meest recente release van de preprocessor (v1.2.1) door via deze `link <https://github.com/Deltares/VRSuiteUtils/releases/tag/v1.2.1>`_ het bestand ``vr_preprocessing-1.2.1.tar.gz`` te downloaden.
 

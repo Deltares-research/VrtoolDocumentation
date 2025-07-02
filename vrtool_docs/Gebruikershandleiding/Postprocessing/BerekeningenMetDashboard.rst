@@ -39,7 +39,7 @@ Het draaien van aangepaste berekeningen kan handig zijn wanneer:
 
 Werken met custom maatregelen
 -----------------------------
-Naast het rekenen met de standaard maatregelen is het ook mogelijk om met custom maatregelen te rekenen. Of deze moeten worden meegenomen kan in het tabblad `Run optimize` worden aangevinkt. Dit kan bijvoorbeeld handig zijn wanneer er een specifieke maatregel moet worden meegenomen die niet in de standaard set zit. Denk aan een specifieke maatwerkoplossing op een bepaald dijkvak. Custom maatregelen kunnen worden ingevoerd in het tabblad ``Custom maatregelen``. Hier is een tabel zichtbaar zoals in onderstaande figuur. In dit geval zijn er 2 custom maatregelen ingevoerd: maatregel `Test 1` op vak 24, en `Test 2` op vak 23.
+Naast het rekenen met de standaard maatregelen is het ook mogelijk om met custom maatregelen te rekenen. Of deze moeten worden meegenomen kan in het tabblad `Run optimize` worden aangevinkt. Dit kan bijvoorbeeld handig zijn wanneer er een specifieke maatregel moet worden meegenomen die niet in de standaard set zit. Denk aan een specifieke maatwerkoplossing op een bepaald dijkvak. Custom maatregelen kunnen worden ingevoerd in het tabblad ``Custom maatregelen``. Hier is een tabel zichtbaar zoals in onderstaande figuur waarin de maatregelen die in de database staan zijn weergegeven. In dit geval staan er 2 custom maatregelen in de database: maatregel `Test 1` op vak 24, en `Test 2` op vak 23.
 
 .. figure:: img/custom_measure_interface.png
     :width: 80%

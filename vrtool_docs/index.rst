@@ -1,10 +1,10 @@
 =============================================
-Versterkingsaanpak vanuit Veiligheidsrendement
+Technische documentatie Veiligheidsrendementmethode
 =============================================
 
-Wat doen we in het project?
+Wat is de veiligheidsrendementmethode?
 ----------------------------
-Versterkingsaanpak vanuit Veiligheidsrendement is een project in het kader van de HWBP kennis & innovatieagenda. Binnen het project werken waterschappen en Deltares aan de toepassing van de veiligheidsrendementmethode voor het vertalen van beoordelingsresultaten naar een versterkingsopgave. Daarmee het een bouwsteen voor het programmeren van dijkversterkingsprojecten, en geeft het in een vroeg stadium inzicht in de te verwachten opgave.
+In het HWBP KIA project Versterkingsaanpak vanuit Veiligheidsrendement is in 2023-2025 door waterschappen en Deltares de veiligheidsrendementmethode doorontwikkeld. De veiligheidsrendementmethode is een aanpak voor het vertalen van beoordelingsresultaten naar een versterkingsopgave. Daarmee het een bouwsteen voor het programmeren van dijkversterkingsprojecten, en geeft het in een vroeg stadium inzicht in de te verwachten opgave.
 
 .. figure:: logos_deelnemers.png
 
@@ -15,10 +15,11 @@ Uit de ervaringen binnen het project blijkt de veiligheidsrendementmethode een a
 * In het algemeen blijken versterkingsvarianten qua kosten aanzienlijk gunstiger uit te vallen dan versterking op basis van doorsnede-eisen (conform OI2014).
 * Door direct na een beoordeling deze analyses uit te voeren wordt snel inzicht verkregen in de te verwachten opgave, wat waardevol is voor het aanscherpen van het veiligheidsbeeld en onderbouwen van de trajectaanpak.
 * Door over meerdere trajecten de methodiek toe te passen kan een beheerder veiligheidsrendement gebruiken om het onderdeel veiligheid van zijn dijkversterkingsprogramma nader te onderbouwen. Dat zorgt voor consistentie, helderheid en transparantie.
+* Met de methode zijn eenvoudig gevoeligheidsanalyses uit te voeren, bijvoorbeeld om de invloed van onzekere beoordelingsresultaten of kosten van dijkversterking op de scope en voorkeursmaatregelen te onderzoeken.
 
 Hoe ga je aan de slag?
 ----------------------------
-Deze website geeft de handleiding voor het gebruik van de tooling die is ontwikkeld voor de analyses. Voor meer context over mogelijke toepassingen wordt verwezen naar de `Handreiking Veiligheidsrendement <https://www.hwbp.nl/binaries/hoogwaterbeschermingsprogramma/documenten/handreikingen/2025/04/24/handreiking-veiligheidsrendement/Handreiking+Veiligheidsrendement+fase+2.pdf>`_.
+Deze website geeft de handleiding voor het gebruik van de tooling die is ontwikkeld voor de analyses. Voor meer context over mogelijke toepassingen wordt verwezen naar de `Handreiking Veiligheidsrendement <https://www.hwbp.nl/site/binaries/site-content/collections/documents/2025/04/24/handreiking-veiligheidsrendement/Handreiking+Veiligheidsrendement+fase+2.pdf>`_. Via deze `link <https://www.hwbp.nl/site/binaries/site-content/collections/documents/2025/09/01/veiligheidsrendement/Pitch_Veiligheidsrendement.pdf>`_ is een korte pitch over de methode te vinden.
 
 De tooling voor veiligheidsrendement is ontwikkeld in Python en bestaat uit 3 onderdelen:
 

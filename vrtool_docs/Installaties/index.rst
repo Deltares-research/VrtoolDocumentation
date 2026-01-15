@@ -21,7 +21,7 @@ Om de installatie goed te doorlopen is het nodig om eerst Miniforge of een alter
 
 4. Activeer de environment met ``.venv\Scripts\activate``.
 
-5. Vervolgens kan door de preprocessor te installeren automatisch ook de rest van de pakketten worden geinstalleerd. Doe dit door in de Miniforge Prompt in de werkmap het volgende commando uit te voeren: ``pip install git+https://github.com/Deltares/VRSuiteUtils.git@1.2.0``. 1.2.0 past bij de laatste gevalideerde combinatie van tools. Uiteraard kan ook een latere versie worden geprobeerd, gebruik daarvoor de betreffende hash of tag vanuit Github.
+5. Vervolgens kan door de preprocessor te installeren automatisch ook de rest van de pakketten worden geinstalleerd. Doe dit door in de Miniforge Prompt in de werkmap het volgende commando uit te voeren: ``pip install git+https://github.com/Deltares/VRSuiteUtils.git@1.3.0``. 1.3.0 past bij de laatste gevalideerde combinatie van tools. Uiteraard kan ook een latere versie worden geprobeerd, gebruik daarvoor de betreffende hash of tag vanuit Github.
 
 Alle tools van de veiligheidsrendementmethode zijn nu gereed voor gebruik. Voor het starten van het dashboard volg je de volgende stappen:
 
@@ -38,4 +38,4 @@ Het draaien van de preprocessor en de VRTool kan vanuit dezelfde omgeving worden
    * `VRDashboard <https://github.com/Deltares-research/VrtoolDashboard>`_
    * `VRUtils <https://github.com/Deltares/VRSuiteUtils>`_
    
-   Daar kan ook de meest recente versie worden gekozen, waarbij wel moet worden opgelet dat de juiste versies samen worden gebruikt. Door de laatste tag van VRUtils te gebruiken, wordt automatisch de bijpassende versie van de andere onderdelen meegeïnstalleerd.
+   Daar kan ook de meest recente versie worden gekozen, waarbij wel moet worden opgelet dat de juiste versies samen worden gebruikt. Door de laatste tag van VRUtils te gebruiken, wordt automatisch de bijpassende versie van de andere onderdelen meegeïnstalleerd. 

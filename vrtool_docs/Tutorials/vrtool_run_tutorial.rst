@@ -9,7 +9,7 @@ VRTOOL - uitvoeren van berekeningen
    - ``24-3_database.db``: De invoer en uitvoer van de betreffende berekening
    - ``24-3.geojson``: Hiermee kunnen de resultaten op kaart weergegeven worden
 
-2. Open Anaconda Prompt, activeer het environment, en roep de VRTool aan met het volgende commando::
+2. Open Miniforge Prompt, activeer het environment, en roep de VRTool aan met het volgende commando::
 
        python -m vrtool {desired_run} {config_file}
 
@@ -21,5 +21,3 @@ VRTOOL - uitvoeren van berekeningen
    - ``run_full``: Hiermee worden alle drie de stappen in een keer doorgerekend.
 
    Vervang ``{config_file}`` met het pad naar het gewenste config bestand (.json). (waarschijnlijk ``"C:\Veiligheidsrendement\Tutorial\config.json"``).
-
-   Bijvoorbeeld

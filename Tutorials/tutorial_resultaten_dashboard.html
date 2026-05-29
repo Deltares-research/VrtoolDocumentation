@@ -1,0 +1,622 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Dashboard - lezen van resultaten &#8212; vrtool_docs  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/theme-deltares.css?v=a5d64199" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Tutorials/tutorial_resultaten_dashboard';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Dashboard - berekenen en vergelijken" href="tutorial_rekenen_dashboard.html" />
+    <link rel="prev" title="VRTOOL - uitvoeren van berekeningen" href="vrtool_run_tutorial.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../_static/logo_vrtool.svg" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="../_static/logo_vrtool.svg" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">Veiligheidsrendement</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../Installaties/index.html">
+    Installaties
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../Gebruikershandleiding/index.html">
+    Gebruikershandleiding
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../Achtergronden/index.html">
+    Achtergronden
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Deltares/Veiligheidsrendement" title="VRTOOL" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" class="icon-link-image" alt="VRTOOL"/></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.deltares.nl/en/" title="Deltares" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static/deltares-blue.svg" class="icon-link-image" alt="Deltares"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../Installaties/index.html">
+    Installaties
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../Gebruikershandleiding/index.html">
+    Gebruikershandleiding
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../Achtergronden/index.html">
+    Achtergronden
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Deltares/Veiligheidsrendement" title="VRTOOL" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" class="icon-link-image" alt="VRTOOL"/></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.deltares.nl/en/" title="Deltares" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static/deltares-blue.svg" class="icon-link-image" alt="Deltares"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="vrtool_run_tutorial.html">1. VRTOOL - uitvoeren van berekeningen</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Dashboard - lezen van resultaten</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial_rekenen_dashboard.html">3. Dashboard - berekenen en vergelijken</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Tutorials</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Dashboard -...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="dashboard-lezen-van-resultaten">
+<h1>Dashboard - lezen van resultaten<a class="headerlink" href="#dashboard-lezen-van-resultaten" title="Link to this heading">#</a></h1>
+<p>Nu de VRTool de verschillende berekeningen heeft uitgevoerd kunnen we de rekenresultaten laten zien met het Dashboard.</p>
+<ol class="arabic" start="3">
+<li><p>Run in Anaconda Prompt het volgende commando om het dashboard te starten:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">src</span><span class="o">.</span><span class="n">index</span>
+</pre></div>
+</div>
+<p>Het dashboard verschijnt nu automatisch in de browser. Mocht dit niet gebeuren, kopieer dan de URL (<a class="reference external" href="http://127.0.0.1:8050/">http://127.0.0.1:8050/</a>) en open deze in je browser.
+(Mocht dit niet werken omdat je nog niet alle packages hebt geïnstalleerd, volg dan eerst de <a class="reference external" href="../Installaties/index.rst">installatieinstructies</a>).</p>
+</li>
+<li><p>Afhankelijk van de folder waarin de bestanden zijn uitgepakt moet de padnaam in het <code class="docutils literal notranslate"><span class="pre">config.json</span></code> worden aangepast.</p>
+<p>Open het <code class="docutils literal notranslate"><span class="pre">config.json</span></code> bestand in <code class="docutils literal notranslate"><span class="pre">Notepad</span></code> of <code class="docutils literal notranslate"><span class="pre">Textpad</span></code>. Je ziet nu een tekstbestand met bij <code class="docutils literal notranslate"><span class="pre">input_directory</span></code> de padnaam (‘’C:/…./…’’).
+Deze padnaam moet gelijk zijn aan de map waar <code class="docutils literal notranslate"><span class="pre">config.json</span></code> staat. Kopieer de padnaam waar de database staat (waarschijnlijk ‘’C:VeiligheidsrendementTutorial’’)
+en pas dit bij <code class="docutils literal notranslate"><span class="pre">input_directory</span></code> aan. Let op dat je <code class="docutils literal notranslate"><span class="pre">/</span></code> gebruikt in plaats van <code class="docutils literal notranslate"><span class="pre">\</span></code>. Er moet geen <code class="docutils literal notranslate"><span class="pre">/</span></code> op het eind van de padnaam staan.</p>
+<img alt="../_images/config.png" src="../_images/config.png" />
+</li>
+<li><p>Ga nu naar de browser waar het Dashboard geopend is. Sleep het <code class="docutils literal notranslate"><span class="pre">config.json</span></code> bestand naar het vak ‘’Traject selectie’’. De resultaten worden nu geladen.</p>
+<img alt="../_images/Traject_selectie.png" src="../_images/Traject_selectie.png" />
+</li>
+</ol>
+<p>Uiteindelijk ziet het dashboard er als volgt uit:</p>
+<img alt="../_images/voorbeeldDashboard.png" src="../_images/voorbeeldDashboard.png" />
+<section id="oefenvragen-dashboard">
+<h2>Oefenvragen dashboard<a class="headerlink" href="#oefenvragen-dashboard" title="Link to this heading">#</a></h2>
+<p>Welk dijkvak heeft in 2050 voor de beoordeling een β van 3.54 voor stabiliteit?</p>
+<div style="margin-top: 0.5em; margin-bottom: 1.5em;">
+<details>
+<summary><em>klik hier om het antwoord te zien</em></summary>
+<p>dijkvak 24.</p>
+</details>
+</div><p>Op welk dijkvak wordt voor veiligheidsrendement geadviseerd een binnenwaartse grondversterking toe te passen, en wat zijn de dimensies en kosten?</p>
+<div style="margin-top: 0.5em; margin-bottom: 1.5em;">
+<details>
+<summary><em>klik hier om het antwoord te zien</em></summary>
+<p>Dijkvak 28. De dimensies zijn 0.75 meter kruinverhoging met 10 meter berm. De kosten zijn 0.81 M€.</p>
+</details>
+</div><p>Wat zijn de kosten voor veiligheidsrendement om in 2050 aan de ondergrens te voldoen?</p>
+<div style="margin-top: 0.5em; margin-bottom: 1.5em;">
+<details>
+<summary><em>klik hier om het antwoord te zien</em></summary>
+<p>Dit wordt bereikt bij versterkingsstap 14. De kosten zijn €19.57 miljoen. Dit is af te lezen uit de stippellijn in het tabblad 'Resultaten optimalisatie'.</p>
+</details>
+</div><p>Wat is het meest urgente dijkvak om te versterken?</p>
+<div style="margin-top: 0.5em; margin-bottom: 1.5em;">
+<details>
+<summary><em>klik hier om het antwoord te zien</em></summary>
+<p>Vak 26 komt als eerste voor in de prioriteringsvolgorde. Dit is te zien in tabblad 'Resultaten optimalisatie', of 'Prioriteringsinformatie'.</p>
+</details>
+</div><p>Wat kost het versterken van vak 25 met 10 meter berm en 1 meter kruinverhoging (binnenwaarts)?</p>
+<div style="margin-top: 0.5em; margin-bottom: 1.5em;">
+<details>
+<summary><em>klik hier om het antwoord te zien</em></summary>
+<p>Dit is af te lezen in tabblad 'Maatregelen'. De kosten van deze maatregel zijn €24.45 mln, resulterend in een beta op vakniveau van 3.98 (in 2050).</p>
+</details>
+</div><p>Wat is het verschil in kosten tussen veiligheidsrendement en doorsnede-eisen op vak 24?</p>
+<div style="margin-top: 0.5em; margin-bottom: 1.5em;">
+<details>
+<summary><em>klik hier om het antwoord te zien</em></summary>
+<p>Het verschil in kosten is 3.16 M€, waarbij veiligheidsrendement goedkoper is. Dit is te vinden in tabblad 'Versterkingsmaatregelen', door vervolgens 'Kosten' en 'Verschil vr - dsn' te selecteren.</p>
+</details>
+</div><p>Meer uitleg over de verschillende tabbladen in het dashboard en hoe er verder mee gewerkt kan worden is te vinden in de <a class="reference external" href="../Gebruikershandleiding/Postprocessing/index.rst">gebruikershandleiding</a>.
+Daar valt ook meer te vinden over het <a class="reference external" href="../Gebruikershandleiding/VRTool/index.rst">rekenen met de VRTOOL</a>.</p>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="vrtool_run_tutorial.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">VRTOOL - uitvoeren van berekeningen</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="tutorial_rekenen_dashboard.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Dashboard - berekenen en vergelijken</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oefenvragen-dashboard">Oefenvragen dashboard</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/Deltares/VrtoolDocumentation/edit/main/docs/Tutorials/tutorial_resultaten_dashboard.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/Tutorials/tutorial_resultaten_dashboard.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2023, Deltares.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,680 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Vergelijken van optimalisatieberekeningen &#8212; vrtool_docs  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/theme-deltares.css?v=a5d64199" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Gebruikershandleiding/Postprocessing/VergelijkenOptimalisatieberekeningen';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Analyse op gebiedsniveau" href="ProgrammerenVersterkingen.html" />
+    <link rel="prev" title="Berekeningen aansturen via het dashboard" href="BerekeningenMetDashboard.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/logo_vrtool.svg" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="../../_static/logo_vrtool.svg" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">Veiligheidsrendement</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Installaties/index.html">
+    Installaties
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Tutorials/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    Gebruikershandleiding
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Achtergronden/index.html">
+    Achtergronden
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Deltares/Veiligheidsrendement" title="VRTOOL" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" class="icon-link-image" alt="VRTOOL"/></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.deltares.nl/en/" title="Deltares" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../_static/deltares-blue.svg" class="icon-link-image" alt="Deltares"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Installaties/index.html">
+    Installaties
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Tutorials/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    Gebruikershandleiding
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Achtergronden/index.html">
+    Achtergronden
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Deltares/Veiligheidsrendement" title="VRTOOL" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" class="icon-link-image" alt="VRTOOL"/></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.deltares.nl/en/" title="Deltares" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../_static/deltares-blue.svg" class="icon-link-image" alt="Deltares"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Preprocessing/index.html">Preprocessing</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Preprocessing/werken_met_preprocessor.html">Werken met de preprocessor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Preprocessing/Vakindeling.html">Vakindeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Preprocessing/Waterstand.html">Waterstandsberekeningen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Preprocessing/Overtopping.html">Overslag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Preprocessing/Bekleding.html">Bekledingen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Preprocessing/Macro.html">Stabiliteit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Preprocessing/Piping.html">Piping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Preprocessing/Dijkprofielen.html"> Afleiden dijkprofielen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Preprocessing/Teenlijn.html"> Afleiden teenlijn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Preprocessing/Bebouwing.html"> Afleiden bebouwing per dijkvak</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Preprocessing/Genereren_database.html">Genereren database</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../VRTool/index.html">Rekenen met de VRTOOL</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Werken met het dashboard</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="WeergevenResultaten.html"> Weergeven van resultaten op trajectniveau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BerekeningenMetDashboard.html"> Berekeningen aansturen via het dashboard</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#"> Vergelijken van optimalisatieberekeningen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProgrammerenVersterkingen.html"> Analyse op gebiedsniveau</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Gebruikershandleiding</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Werken met het dashboard</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Vergelijken...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="vergelijken-van-optimalisatieberekeningen">
+<h1>Vergelijken van optimalisatieberekeningen<a class="headerlink" href="#vergelijken-van-optimalisatieberekeningen" title="Link to this heading">#</a></h1>
+<p>Via het scherm <code class="docutils literal notranslate"><span class="pre">Vergelijken</span> <span class="pre">berekeningen</span></code> kunnen verschillende berekeningen van hetzelfde (of een ander) traject met elkaar worden vergeleken. Dit kan worden gedaan door 2 of meer <code class="docutils literal notranslate"><span class="pre">json</span></code>-bestanden die geëxporteerd zijn bij de <a class="reference external" href="WeergevenResultaten.html#exporteren-van-resultaten">analyse per traject</a> te selecteren. Deze zijn vervolgens zichtbaar in het linkerpaneel.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/vergelijken_berekeningen_geladen.png"><img alt="../../_images/vergelijken_berekeningen_geladen.png" src="../../_images/vergelijken_berekeningen_geladen.png" style="width: 80%;" />
+</a>
+</figure>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Het is mogelijk om berekeningen van verschillende trajecten te vergelijken, maar dit kan leiden tot onverwachte resultaten. Het is daarom aan te raden om enkel berekeningen van hetzelfde traject met elkaar te vergelijken, dat is in principe waar deze pagina voor is gemaakt.</p>
+</div>
+<p>Bovenin het rechterpaneel kan een aantal weergaves worden geselecteerd. Deze weergaves worden hieronder kort toegelicht.</p>
+<section id="resultaten-optimalisatie">
+<h2>Resultaten optimalisatie<a class="headerlink" href="#resultaten-optimalisatie" title="Link to this heading">#</a></h2>
+<p>Met het scherm <code class="docutils literal notranslate"><span class="pre">Resultaten</span> <span class="pre">optimalisatie</span></code> kunnen de resultaten van de optimalisatieberekeningen worden vergeleken. Hierbij worden de resultaten van de veiligheidsrendementberekeningen van de verschillende invoerbestanden weergegeven in termen van kosten en betrouwbaarheid/faalkans. Dit is met name zinvol om 2 scenario’s (bijv. voor verschillende maatregelen, of verschillende beoordelingsinvoer) te vergelijken op resulterende faalkans en kosten.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/vergelijken_berekeningen_optimalisatie.png"><img alt="../../_images/vergelijken_berekeningen_optimalisatie.png" src="../../_images/vergelijken_berekeningen_optimalisatie.png" style="width: 80%;" />
+</a>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Wanneer er veel verschillende invoerbestanden worden geladen kan de figuur wat onoverzichtelijk worden. Door in de legenda op een van de items te klikken kan deze worden uitgezet. Dit kan helpen om de figuur overzichtelijk te houden en bijvoorbeeld alleen de gewenste lijnen/cases te exporteren.</p>
+</div>
+</section>
+<section id="faalkans-in-tijd">
+<h2>Faalkans in tijd<a class="headerlink" href="#faalkans-in-tijd" title="Link to this heading">#</a></h2>
+<p>Met het scherm <code class="docutils literal notranslate"><span class="pre">Faalkans</span> <span class="pre">in</span> <span class="pre">tijd</span></code> kan de trajectfaalkans/-betrouwbaarheid van verschillende cases worden weergegeven. Dit kan nuttig zijn bij het bepalen van de snelheid van toename van de faalkans richting de toekomst, en zo extra inzicht geven in wat bijv. een effectieve tijdshorizon voor de versterking is.</p>
+</section>
+<section id="maatregelen-op-kaart">
+<h2>Maatregelen op kaart<a class="headerlink" href="#maatregelen-op-kaart" title="Link to this heading">#</a></h2>
+<p>In het scherm <code class="docutils literal notranslate"><span class="pre">Maatregelen</span> <span class="pre">op</span> <span class="pre">kaart</span></code> kunnen de maatregelen van verschillende cases worden weergegeven per dijkvak. Daarbij worden twee cases die geselecteerd worden met de <cite>Activeer</cite>-knop naast elkaar weergegeven. De eerste case wordt aan de waterkant van het traject weergegeven, de tweede aan de landzijde. Een voorbeeld is gegeven in onderstaande figuur.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/vergelijken_berekeningen_maatregelenkaart.png"><img alt="../../_images/vergelijken_berekeningen_maatregelenkaart.png" src="../../_images/vergelijken_berekeningen_maatregelenkaart.png" style="width: 80%;" />
+</a>
+</figure>
+<p>Met deze kaart kan eenvoudig inzicht worden gekregen in de verschillen tussen de maatregelen van verschillende cases. Zo verkrijgt men een beeld van de invloed van verschillende aannames in scenario’s op het type maatregel.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Omdat de lijnen een verschuiving betreffen van het originele traject kan de weergave bij korte dijkvakken en veel (scherpe) bochten soms wat merkwaardig ogen (zie hieronder voor een voorbeeld). Door met de muis over de vakken te gaan wordt meer informatie weergegeven wat bij onduidelijkheid de vergelijking kan vergemakkelijken.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/vergelijken_berekeningen_maatregelen_weergavefout.png"><img alt="../../_images/vergelijken_berekeningen_maatregelen_weergavefout.png" src="../../_images/vergelijken_berekeningen_maatregelen_weergavefout.png" style="width: 80%;" />
+</a>
+</figure>
+</div>
+</section>
+<section id="overzichtstabel-maatregelen">
+<h2>Overzichtstabel maatregelen<a class="headerlink" href="#overzichtstabel-maatregelen" title="Link to this heading">#</a></h2>
+<p>In het scherm <code class="docutils literal notranslate"><span class="pre">Overzichtstabel</span> <span class="pre">maatregelen</span></code> wordt een tabel weergegeven met voor 2 berekeningen de maatregelen per dijkvak. Daarbij kan met de activeerknoppen in het linkerpaneel worden gekozen welke berekening moet worden weergegeven. Een voorbeeld is gegeven in onderstaande figuur.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/vergelijken_berekeningen_maatregeltabel.png"><img alt="../../_images/vergelijken_berekeningen_maatregeltabel.png" src="../../_images/vergelijken_berekeningen_maatregeltabel.png" style="width: 100%;" />
+</a>
+</figure>
+<p>Van boven naar beneden worden op volgorde de verschillende dijkvakken weergegeven. Wanneer een regel als donkergrijs is weergegeven, betekent dit dat er een ander type maatregel is gekozen. Wanneer een cel groen is, betekent het dat de dimensie van de maatregel verschilt. In het voorbeeld is te zien dat op dijkvak 27 in beide berekeningen voor een grondversterking wordt gekozen. In de eerste berekening met 15 meter berm, in de tweede met 10 meter berm. Op dijkvak 31 wordt in berekening 1 een berm aangelegd (8 meter) en in berekening 2 geen maatregel getroffen. In de tabel worden de volgende kolommen weergegeven.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="id1">
+<caption><span class="caption-text">Kolommen in tabel met overzicht maatregelen</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
+<colgroup>
+<col style="width: 23.1%" />
+<col style="width: 76.9%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Kolom</p></th>
+<th class="head"><p>Beschrijving</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Dijkvak</p></td>
+<td><p>Naam van het dijkvak in beide berekeningen</p></td>
+</tr>
+<tr class="row-odd"><td><p>L (m)</p></td>
+<td><p>Lengte van het dijkvak in meters</p></td>
+</tr>
+<tr class="row-even"><td><p>Maatregel</p></td>
+<td><p>Type van de maatregel. In sommige gevallen kan een combinatie worden weergegeven.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dberm</p></td>
+<td><p>Lengte van de aangelegde berm in meters.</p></td>
+</tr>
+<tr class="row-even"><td><p>Dcrest</p></td>
+<td><p>Kruinverhoging in meters.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Lscherm</p></td>
+<td><p>Lengte van het stabiliteitsscherm in meters onder de deklaag</p></td>
+</tr>
+<tr class="row-even"><td><p>Kosten (M€)</p></td>
+<td><p>Kosten van de versterking in miljoenen €’s.</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="volgorde-dijkvakken">
+<h2>Volgorde dijkvakken<a class="headerlink" href="#volgorde-dijkvakken" title="Link to this heading">#</a></h2>
+<p>In het scherm <code class="docutils literal notranslate"><span class="pre">Volgorde</span> <span class="pre">dijkvakken</span></code> kan de volgorde van de dijkvakken in de optimalisatie worden weergegeven. Daarbij wordt voor beide berekeningen aangegeven welke dijkvakken als eerste in de optimalisatievolgorde voorkomen. Dit kan helpen bij het bepalen of een ander rekenscenario leidt tot een andere optimale investeringsvolgorde en dus een andere optimale scope van dijkvakken met het hoogste rendement.</p>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="BerekeningenMetDashboard.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Berekeningen aansturen via het dashboard</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="ProgrammerenVersterkingen.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Analyse op gebiedsniveau</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resultaten-optimalisatie">Resultaten optimalisatie</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#faalkans-in-tijd">Faalkans in tijd</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maatregelen-op-kaart">Maatregelen op kaart</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overzichtstabel-maatregelen">Overzichtstabel maatregelen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#volgorde-dijkvakken">Volgorde dijkvakken</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/Deltares/VrtoolDocumentation/edit/main/docs/Gebruikershandleiding/Postprocessing/VergelijkenOptimalisatieberekeningen.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/Gebruikershandleiding/Postprocessing/VergelijkenOptimalisatieberekeningen.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2023, Deltares.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

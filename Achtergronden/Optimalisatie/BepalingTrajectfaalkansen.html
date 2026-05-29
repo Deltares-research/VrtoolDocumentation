@@ -1,0 +1,643 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bepaling van trajectfaalkansen &#8212; vrtool_docs  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/theme-deltares.css?v=a5d64199" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Achtergronden/Optimalisatie/BepalingTrajectfaalkansen';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Bepaling van kosten en baten" href="BepalingKostenBaten.html" />
+    <link rel="prev" title="Bepalen van versterkingsmaatregelen" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/logo_vrtool.svg" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="../../_static/logo_vrtool.svg" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">Veiligheidsrendement</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Installaties/index.html">
+    Installaties
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Tutorials/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Gebruikershandleiding/index.html">
+    Gebruikershandleiding
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    Achtergronden
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Deltares/Veiligheidsrendement" title="VRTOOL" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" class="icon-link-image" alt="VRTOOL"/></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.deltares.nl/en/" title="Deltares" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../_static/deltares-blue.svg" class="icon-link-image" alt="Deltares"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Installaties/index.html">
+    Installaties
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Tutorials/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Gebruikershandleiding/index.html">
+    Gebruikershandleiding
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    Achtergronden
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Deltares/Veiligheidsrendement" title="VRTOOL" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" class="icon-link-image" alt="VRTOOL"/></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.deltares.nl/en/" title="Deltares" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../_static/deltares-blue.svg" class="icon-link-image" alt="Deltares"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Faalkansmodellen/index.html">Faalkansmodellen</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Faalkansmodellen/Waterstanden.html">Bepaling waterstanden</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Faalkansmodellen/Overslag.html">Overslag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Faalkansmodellen/Piping.html">Piping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Faalkansmodellen/Binnenwaartse_macrostabiliteit.html">Binnenwaartse macrostabiliteit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Faalkansmodellen/Dijkbekleding.html">Bekledingen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Maatregelen/index.html">Maatregelen</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Maatregelen/Versterking%20in%20grond.html">Versterking in grond</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Maatregelen/Stabiliteitsscherm.html">Stabiliteitsscherm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Maatregelen/Zelfkerende%20Constructie.html">Zelfkerende constructie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Maatregelen/Verticale%20Piping%20Maatregelen.html">Verticale pipingoplossing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Maatregelen/Maatregelen_dijkbekleding.html">Verbeteren dijkbekleding buitentalud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Maatregelen/Custom%20maatregel.html">Custom maatregelen</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Bepalen van versterkingsmaatregelen</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Bepaling van trajectfaalkansen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BepalingKostenBaten.html">Bepaling van kosten en baten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Veiligheidsrendement.html">Optimalisatie van maatregelen op basis van veiligheidsrendement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Referentieaanpak.html">Referentievariant op basis van OI2014</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Achtergronden</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Bepalen van versterkingsmaatregelen</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Bepaling...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="bepaling-van-trajectfaalkansen">
+<h1>Bepaling van trajectfaalkansen<a class="headerlink" href="#bepaling-van-trajectfaalkansen" title="Link to this heading">#</a></h1>
+<p>Een belangrijke basis voor de veiligheidsrendementanalyses is de bepaling van de effecten van maatregelen op trajectniveau. Daarvoor worden trajectfaalkansen bepaald. Hierbij wordt voortgebouwd op de assemblageregels zoals die gehanteerd worden in het WBI/BOI, aangevuld met enkele praktische inzichten. De aanpak gehanteerd in de VRTOOL sluit aan op de <a class="reference external" href="https://adviesteamdijkontwerp.nl/rode-draden/rode-draad-nr-10-assembleren/">Rode Draad #10 - Assembleren</a> van het Adviesteam Dijkontwerp`.</p>
+<p>Op systeemniveau wordt de faalkans van een mechansimen van een heel traject bepaald door de combinatie van grenstoestandsfuncties van de verschillende doorsneden, waarbij deze zich goed laten benaderen door onder- en bovengrenzen die corresponderen met volledige (on)afhankelijkheid tussen deze grenstoestandsfuncties (ook wel MAX en SOM in de Rode Draad genoemd):</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}P_\mathrm{SOM} = 1 - \prod_{i=1}^{n} (1 - P_{\text{vak}_i})\\P_\mathrm{MAX} = max(P_\mathrm{dsn,i})\end{aligned}\end{align} \]</div>
+<p>Hierbij correspondeert <span class="math notranslate nohighlight">\(P_\mathrm{SOM}\)</span> met de kans bij onafhankelijkheid tussen vakken, dit is de theoretische bovengrens van de trajectfaalkans (merk op dat een vakkans bepaald kan worden door meerdere (on)afhankelijke grenstoestandsfuncties voor verschillende doorsneden, zie daarvoor ook de volgende paragraaf). <span class="math notranslate nohighlight">\(P_\mathrm{MAX}\)</span> correspondeert met de kans bij (sterke) afhankelijkheid tussen vakken. In de praktijk geldt daarbij dat <span class="math notranslate nohighlight">\(P_\mathrm{SOM}\)</span> met name een goede benadering geeft bij geotechnische mechanismen, waar sterke onafhankelijkheid is door de grote ruimtelijke variabiliteit. En <span class="math notranslate nohighlight">\(P_\mathrm{MAX}\)</span> geeft de beste benadering bij belastinggedreven mechanismen zoals bekledingen en overloop/overslag. In de rekenmethode van de VRTOOL wordt daarom standaard <span class="math notranslate nohighlight">\(P_\mathrm{SOM}\)</span> gehanteerd voor piping en binnenwaartse stabiliteit, en <span class="math notranslate nohighlight">\(P_\mathrm{MAX}\)</span> voor bekledingen en overloop/overslag. Dit is in lijn met de meest recente voorschriften voor assemblage uit het BOI en de Rode Draad.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In de assemblage in WBI-2017 is voor de MAX regel nog een extra parameter <span class="math notranslate nohighlight">\(N_\mathrm{mech}\)</span> opgenomen die de aanwezigheid van meerdere onafhankelijke orientaties in rekening brengt. In de praktijk blijkt deze echter vaak zeer dicht bij 1 te liggen, en daarom is deze in de Rode Draad niet meer opgenomen. Wanneer er toch de verwachting is dat er meerdere onafhankelijke orientaties kan dit los in rekening worden gebracht. Dit wordt in de VRTOOL niet expliciet gefaciliteerd.</p>
+</div>
+<div class="admonition-math-p-mathrm-som-of-math-p-mathrm-max-maakt-het-uit admonition">
+<p class="admonition-title"><span class="math notranslate nohighlight">\(P_\mathrm{SOM}\)</span> <strong>of</strong> <span class="math notranslate nohighlight">\(P_\mathrm{MAX}\)</span> <strong>, maakt het uit?</strong></p>
+<p>Een belangrijke vraag bij bovenstaande is in hoeverre het uitmaakt of we <span class="math notranslate nohighlight">\(P_\mathrm{SOM}\)</span> of <span class="math notranslate nohighlight">\(P_\mathrm{MAX}\)</span> hanteren. In onderstaande figuur is een illustratie weergegeven voor een systeem van 10 dijkvakken waarbij links alle vakken een betrouwbaarheidsindex van 3.5 hebben, en rechts er 1 van de dijkvakken een betrouwbaarheidsindex van 2.5 heeft. Te zien is dat rechts de beide grenzen voor een heel groot bereik goed werken, en dat dit eigenlijk in de rechtersituatie ook zo is, met de toevoeging dat de waarden veel dichter bij elkaar liggen. In de praktijk komen we zeker vóór een versterking veel situaties tegen zoals rechts, waarbij er enkele vakken zeer dominant zijn. Beide grenzen liggen dan dicht bij elkaar en welke wordt gebruikt maakt weinig uit.</p>
+<p>Na versterking wordt dit anders en zal de linkerfiguur meer van toepassing zijn. Maar ook dan geldt dat voor situaties met en zonder sterke afhankelijkheid tussen falen op verschillende vakken er 1 van beide grenzen duidelijk beter is. Op basis hiervan is de keuze gemaakt om voor de VRTOOL standaard <span class="math notranslate nohighlight">\(P_\mathrm{SOM}\)</span> te hanteren voor piping en stabiliteit binnenwaarts, en <span class="math notranslate nohighlight">\(P_\mathrm{MAX}\)</span> voor bekledingen en overloop/overslag.</p>
+<div class="pst-scrollable-table-container"><table class="borderless table" style="width: 100%">
+<tbody>
+<tr class="row-odd"><td><figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/EqualComponents.png"><img alt="Equal Components" src="../../_images/EqualComponents.png" style="width: 100%;" />
+</a>
+</figure>
+</td>
+<td><figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/UnequalComponents.png"><img alt="Unequal Components" src="../../_images/UnequalComponents.png" style="width: 100%;" />
+</a>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>Situatie met 10 dijkvakken waarbij links alle vakken een betrouwbaarheidsindex van 3.5 hebben, en rechts 1 van de dijkvakken een betrouwbaarheidsindex van 2.5 heeft, met verschillende correlatie</em> <span class="math notranslate nohighlight">\(\rho\)</span> <em>(horizontale as). Stippen geven de grenzen</em> <span class="math notranslate nohighlight">\(P_\mathrm{MAX}\)</span> <em>en</em> <span class="math notranslate nohighlight">\(P_\mathrm{SOM}\)</span> <em>aan.</em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>De betrouwbaarheidsindex <span class="math notranslate nohighlight">\(\beta\)</span> wordt bepaald vanuit de standaardnormale verdeling waarbij geldt dat <span class="math notranslate nohighlight">\(P_f = \Phi(-\beta)\)</span>. Een <span class="math notranslate nohighlight">\(\beta\)</span> van 3,5 correspondeert met een faalkans van ongeveer <span class="math notranslate nohighlight">\(2,33 * 10^{-4}\)</span>. In bovenstaande figuur slaat <span class="math notranslate nohighlight">\(\beta_\mathrm{sys}\)</span> op de betrouwbaarheidsindex van het systeem.</p>
+</div>
+</div>
+<p>Zoals aangegeven gaat het om combinaties van grenstoestandsfuncties. In de praktijk willen we doorsnedeberekeningen en vakken combineren tot een trajectfaalkans. Daarop gaan we in de volgende paragraaf verder in.</p>
+<section id="de-relatie-tussen-doorsnede-en-vakfaalkansen">
+<h2>De relatie tussen doorsnede- en vakfaalkansen<a class="headerlink" href="#de-relatie-tussen-doorsnede-en-vakfaalkansen" title="Link to this heading">#</a></h2>
+<p>Het startpunt bij de bepaling van de trajectfaalkans zijn doorgaans berekeningen op doorsnedeniveau, die ‘representatief’ zijn voor een dijkvak. In de basis geldt vaak dat langere vakken leiden tot een groter lengte-effect: er is dan meer kans op een ongunstige set parameters. In het WBI-2017 is dit op verschillende manieren meegenomen, maar dit was inhoudelijk niet altijd correct geïmplementeerd. In de Handleiding Overstromingskansanalyse van het BOI zijn daarom drie opties gegeven:</p>
+<ol class="arabic simple">
+<li><p>Wanneer niet wordt onderbouwd dat de doorsnede voor een deel van het vak geldig is geldt dat <span class="math notranslate nohighlight">\(a_\mathrm{vak}=1\)</span>.</p></li>
+<li><p>Wanneer wordt onderbouwd dat op een dijkvak een lagere gevoelige lengte van toepassing is (<span class="math notranslate nohighlight">\(a_\mathrm{vak}\)</span>) dan 1 kan deze waarde worden gehanteerd.</p></li>
+<li><p>Wanneer de doorsnede onderbouwd de zwakste is in een vak geldt dat de gevoelige lengte gelijk is aan 1x de onafhankelijke strekkinglengte van het mechanisme (er is dan dus geen opschaling, eigenlijk is dit een specifieke variant van optie 2).</p></li>
+</ol>
+<p>De meest nette versie is daarbij optie 2. In een studie voor dijkversterkingsproject SAFE is deze variant expliciet uitgewerkt voor een aantal dijkvakken. Hieruit blijkt dat opschalen met de aanname <span class="math notranslate nohighlight">\(a_\mathrm{vak}=1\)</span> (dus optie 1) doorgaans veel te conservatief is, met name voor stabiliteit binnenwaarts. Lokale variaties in geometrie en ondergrond leiden al snel tot orde groottes andere faalkansen en daarmee een lagere gevoelige lengte. Uit de daar doorgerekende cases voor verschillende vakken blijkt dat voor stabiliteit binnenwaarts de vakkans 3 tot 6 keer groter is dan het vak als geheel (gevoelige lengte doorgaans tussen de 30 en 50% op vakniveau). Tegelijkertijd blijkt dat doorsnede-berekeningen vaak zeer conservatief zijn ingestoken, en dat de onzekerheid daarin vele malen groter is. Voor piping zijn, door de wat grotere onafhankelijke strekkinglengte (b=300 meter), de verschillen per definitie kleiner.</p>
+<div class="admonition-toepassing-binnen-het-innovatieproject admonition">
+<p class="admonition-title">Toepassing binnen het innovatieproject</p>
+<p>In fase 1 en 2 van het innovatieproject is er voor gekozen om niet op te schalen binnen dijkvakken (dus optie 3) omdat de benodigde gegevens voor een uitwerking van optie 2 niet voor handen waren, én de berekeningen op doorsnede-niveau in de beoordeling conservatief waren. Bovendien was 1 van de uitgangspunten om aan te sluiten op het WBI-2017, waar opschalen binnen vakken niet gebruikelijk was. Zodoende is er voor gekozen om in veiligheidsrendementanalyses uit te gaan van optie 3. In fase 2b is ervoor gekozen om standaard uit te gaan van optie 1, en gebruikers de mogelijkheid voor optie 2 te bieden.</p>
+</div>
+<p>De mate van opschaling maakt verschil voor de gekozen maatregelen, omdat deze het veiligheidstekort en daarmee het overstromingsrisico direct beinvloeden. Met name op langere vakken kan een andere opschaling tot andere maatregelen leiden omdat hier het veiligheidstekort op vakniveau omhoog gaat, en daarmee ook het veiligheidsrendement van maatregelen. In onderstaande figuur is een vergelijking weergegeven tussen een scenario met opschaling binnen het vak (<span class="math notranslate nohighlight">\(a=1\)</span>) en zonder opschaling, als middenvariant is een variant weergegeven waarbij wordt opgeschaald, maar deze waarde gemaximeerd is op <span class="math notranslate nohighlight">\(N_\mathrm{vak}=4\)</span> (waarbij 4 een enigszins arbitraire keuze is o.b.v. de range uit het eerder genoemde onderzoek bij SAFE). Te zien is dat grotere lengte-effecten zoals verwacht tot hogere kosten leiden. Het relatieve verschil tussen veiligheidsrendement en het OI2014v4 wordt door opschaling dus iets kleiner, maar opgemerkt moet worden dat volledige opschaling leidt tot zeer onrealistische faalkansen (in dit geval ca. 85% trajectfaalkans per jaar).</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/LE_DrieScenarios_10-1.png"><img alt="Vergelijking van trajectfaalkansen met en zonder opschaling van lengte-effecten binnen vakken" src="../../_images/LE_DrieScenarios_10-1.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Vergelijking van trajectfaalkansen met en zonder opschaling van lengte-effecten binnen vakken voor traject 10-1.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Overigens moet worden opgemerkt dat het hanteren van de standaard lengte-effectfactoren uit het OI2014v4 voor stabiliteit binnenwaarts, gecombineerd met optie 1, in sommige gevallen niet zal leiden tot een resultaat dat voldoet aan de trajecteis. Doordat de gevoelige fractie van het traject gelijk wordt gesteld aan 3,3%, geldt immers dat wanneer een dijkvak een lengte heeft groter dan 3,3% van de trajectlengte én een faalkans gelijk aan de doorsnede-eis, de trajectfaalkans per definitie hoger wordt dan de eis. Hoewel deze situatie in de praktijk niet zo realistisch is, laat dit wel de noodzaak zien van het helder uitwerken van een systematiek om op een gebalanceerde manier lengte-effecten in rekening te brengen in de bepaling van trajectfaalkansen in ontwerp en beoordeling. Veiligheidsrendement geeft daar invulling aan. Dit is verder uitgewerkt in Hoofdstuk 5 van de <a class="reference external" href="https://www.hwbp.nl/binaries/hoogwaterbeschermingsprogramma/documenten/handreikingen/2025/04/24/handreiking-veiligheidsrendement/Handreiking+Veiligheidsrendement+fase+2.pdf">Handreiking Veiligheidsrendement</a>.</p>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Bepalen van versterkingsmaatregelen</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="BepalingKostenBaten.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Bepaling van kosten en baten</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#de-relatie-tussen-doorsnede-en-vakfaalkansen">De relatie tussen doorsnede- en vakfaalkansen</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/Deltares/VrtoolDocumentation/edit/main/docs/Achtergronden/Optimalisatie/BepalingTrajectfaalkansen.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/Achtergronden/Optimalisatie/BepalingTrajectfaalkansen.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2023, Deltares.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

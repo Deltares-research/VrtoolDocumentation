@@ -1,0 +1,678 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Werken met de preprocessor &#8212; vrtool_docs  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/theme-deltares.css?v=a5d64199" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Gebruikershandleiding/Preprocessing/werken_met_preprocessor';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Vakindeling" href="Vakindeling.html" />
+    <link rel="prev" title="Preprocessing" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/logo_vrtool.svg" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="../../_static/logo_vrtool.svg" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">Veiligheidsrendement</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Installaties/index.html">
+    Installaties
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Tutorials/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    Gebruikershandleiding
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Achtergronden/index.html">
+    Achtergronden
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Deltares/Veiligheidsrendement" title="VRTOOL" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" class="icon-link-image" alt="VRTOOL"/></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.deltares.nl/en/" title="Deltares" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../_static/deltares-blue.svg" class="icon-link-image" alt="Deltares"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Installaties/index.html">
+    Installaties
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Tutorials/index.html">
+    Tutorials
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    Gebruikershandleiding
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../Achtergronden/index.html">
+    Achtergronden
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/Deltares/Veiligheidsrendement" title="VRTOOL" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" class="icon-link-image" alt="VRTOOL"/></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.deltares.nl/en/" title="Deltares" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../_static/deltares-blue.svg" class="icon-link-image" alt="Deltares"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Preprocessing</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Werken met de preprocessor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Vakindeling.html">Vakindeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Waterstand.html">Waterstandsberekeningen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Overtopping.html">Overslag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Bekleding.html">Bekledingen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Macro.html">Stabiliteit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Piping.html">Piping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Dijkprofielen.html"> Afleiden dijkprofielen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Teenlijn.html"> Afleiden teenlijn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Bebouwing.html"> Afleiden bebouwing per dijkvak</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Genereren_database.html">Genereren database</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../VRTool/index.html">Rekenen met de VRTOOL</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Postprocessing/index.html">Werken met het dashboard</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Postprocessing/WeergevenResultaten.html"> Weergeven van resultaten op trajectniveau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Postprocessing/BerekeningenMetDashboard.html"> Berekeningen aansturen via het dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Postprocessing/VergelijkenOptimalisatieberekeningen.html"> Vergelijken van optimalisatieberekeningen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Postprocessing/ProgrammerenVersterkingen.html"> Analyse op gebiedsniveau</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Gebruikershandleiding</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Preprocessing</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Werken met...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="werken-met-de-preprocessor">
+<h1>Werken met de preprocessor<a class="headerlink" href="#werken-met-de-preprocessor" title="Link to this heading">#</a></h1>
+<section id="opstarten-van-de-preprocessor">
+<h2>Opstarten van de preprocessor<a class="headerlink" href="#opstarten-van-de-preprocessor" title="Link to this heading">#</a></h2>
+<p>Alle workflows (de blauwe rechthoeken in de overzichtsfiguur) gebruiken dezelfde stappen. Om workflows uit te voeren moet eerst Anaconda Prompt worden opgestart en het environment worden geactiveerd.
+Het activeren van een environment kan door het volgende command in Anaconda in te voeren.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>C:/Veiligheidsrendement/.env/
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Let op:</strong>
+Vervang <code class="docutils literal notranslate"><span class="pre">&quot;C:/Veiligheidsrendement&quot;</span></code> met de locatie van de map waar de verschillende bestanden zijn neergezet.</p>
+<p>Als je het environment een andere naam hebt gegeven, vervang <code class="docutils literal notranslate"><span class="pre">&quot;.env&quot;</span></code> dan door de naam die je aan het environment gegeven hebt.</p>
+</div>
+</section>
+<section id="aanmaken-van-een-mappenstructuur">
+<h2>Aanmaken van een mappenstructuur<a class="headerlink" href="#aanmaken-van-een-mappenstructuur" title="Link to this heading">#</a></h2>
+<p>De tweede stap is om een werkmap te maken voor de preprocessor. Dat gebeurt met een aparte workflow <code class="docutils literal notranslate"><span class="pre">maak_project</span></code>. Hierin wordt automatisch een complete mappenstructuur aangemaakt waarmee de preprocessor uit de voeten kan. Dit is te doen via het volgende commando:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>preprocessing<span class="w"> </span>maak_project<span class="w"> </span>--project_folder<span class="w"> </span><span class="o">{</span>projectfolder<span class="o">}</span><span class="w"> </span>--traject_id<span class="w"> </span><span class="o">{</span>traject_id<span class="o">}</span>
+</pre></div>
+</div>
+<p>Bij <code class="docutils literal notranslate"><span class="pre">{projectfolder}</span></code> moet de locatie van de map worden ingevuld waar de mappenstructuur moet worden aangemaakt, bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">&quot;C:/Veiligheidsrendement/preprocessor_werkmap&quot;</span></code>. Bij <code class="docutils literal notranslate"><span class="pre">{traject_id}</span></code> moet het traject worden ingevuld, bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">&quot;24-3&quot;</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Tip</strong>
+Voor de verschillende workflows kan met <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">preprocessing</span> <span class="pre">workflow_naam</span> <span class="pre">--help</span></code> een overzicht van de invoerparameters worden opgevraagd.</p>
+</div>
+<p>De mappenstructuur die wordt aangemaakt ziet er als volgt uit:</p>
+<figure class="align-center" id="id1">
+<img alt="Mappenstructuur" src="../../_images/Mappenstructuur.png" />
+<figcaption>
+<p><span class="caption-text">Mappenstructuur t.b.v. de preprocessor</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="de-structuur-van-de-werkmap">
+<h3>De structuur van de werkmap<a class="headerlink" href="#de-structuur-van-de-werkmap" title="Link to this heading">#</a></h3>
+<p>In de map <code class="docutils literal notranslate"><span class="pre">input_files</span></code> zijn 5 submappen aangemaakt:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bag_gebouwen</span></code>: hierin kan een geopackage van de Basisadministratie Adressen en Gebouwen (BAG) worden geplaatst. Deze is te downloaden vanaf de website van <a class="reference external" href="https://service.pdok.nl/lv/bag/atom/downloads/bag-light.gpkg">PDOK</a>. Let op: dit is een zeer groot bestand (ca. 7 GB), dus het kan even duren.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default_files</span></code>: hierin worden automatisch de standaardinvoerbestanden neergezet. Deze kunnen worden aangepast op basis van de gegevens van het traject.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">HR_databases</span></code>: hier kunnen de hydraulische databases worden geplaatst voor 2023 (WBI) en 2100 (ontwerpdatabases). Deze zijn <a class="reference external" href="https://fbwvl.stackstorage.com/s/cQJwECwRv88jqsc/nl">hier</a> te downloaden. Elke map moet 1 database bevatten (combinatie van HRD, HLCD-bestand en .config bestand zoals aangeboden op de website).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prfl</span></code>: hier kunnen de <cite>*.prfl</cite>-bestanden worden geplaatst ten behoeve van de workflows voor overloop/overslag en bekleding.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">steentoets</span></code>: indien van toepassing kunnen hier de Steentoetsbestanden uit de beoordeling worden geplaatst.</p></li>
+</ul>
+<p>In de map <code class="docutils literal notranslate"><span class="pre">intermediate_results</span></code> worden de resultaten van de workflows opgeslagen. Hierin zijn 6 submappen aangemaakt. De inhoud hiervan wordt bij de betreffende workflows nader toegelicht.</p>
+<p>In de map <code class="docutils literal notranslate"><span class="pre">vrtool_database</span></code> wordt de database weggeschreven die nodig is voor de VRTool.</p>
+<p>Het <code class="docutils literal notranslate"><span class="pre">preprocessing.config</span></code>-bestand bevat de configuratie van de preprocessor. Hierin kunnen de locaties van de verschillende bestanden worden aangepast. In de basis is het advies dit niet te doen, tenzij dit uitdrukkelijk staat vermeld in de documentatie van de betreffende workflow.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul>
+<li><p>Wanneer paden worden aangepast in het <code class="docutils literal notranslate"><span class="pre">preprocessing.config</span></code>-bestand, zijn er 2 mogelijkheden:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Invoeren van een <em>relatief</em> pad ten opzichte van de map waarin de preprocessor wordt uitgevoerd. Deze wordt dan automatisch gecombineerd met de <code class="docutils literal notranslate"><span class="pre">project_dir</span></code>.</p></li>
+<li><p>Invoeren van een <em>absoluut</em> pad, bijvoorbeeld <code class="docutils literal notranslate"><span class="pre">C:\Veiligheidsrendement\basisadministratiegebouwen\bag-light.gpkg</span></code>.</p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>Wanneer aan meerdere dijktrajecten wordt gewerkt kan het handig zijn om voor het <code class="docutils literal notranslate"><span class="pre">bag_gebouwen</span></code>-bestand een aparte locatie te gebruiken om onnodig gebruik van schijfruimte te voorkomen.</p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="uitvoeren-van-de-workflows">
+<h2>Uitvoeren van de workflows<a class="headerlink" href="#uitvoeren-van-de-workflows" title="Link to this heading">#</a></h2>
+<p>Nadat de mappenstructuur is aangemaakt en de benodigde bestanden zijn geplaatst, kunnen de verschillende workflows worden uitgevoerd. Workflows zijn uit te voeren via de commandline, net als bij het aanmaken van de mappenstructuur. Daarbij geldt dat altijd alleen het configuratiebestand als invoerparameter moet worden opgegeven, bijvoorbeeld:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>preprocessing<span class="w"> </span>vakindeling<span class="w"> </span>--config_file<span class="w"> </span>C:/Veiligheidsrendement/preprocessor_werkmap/100-1/preprocessing.config
+</pre></div>
+</div>
+<p>Wanneer een workflow wordt uitgevoerd wordt logging weggeschreven naar de commandline én naar een logbestand. Dit logbestand wordt opgeslagen naast de resultaten van de workflow in de map <code class="docutils literal notranslate"><span class="pre">intermediate_results</span></code>. Het is aan te raden om deze logbestanden te bekijken wanneer er iets misgaat, omdat hier vaak meer informatie in staat over de oorzaak van het probleem.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Bij het openen van het logbestand is eerst algemene informatie te vinden en de parameters die zijn gebruikt als invoer. Daarna worden comments met INFO, WARNING en ERROR-niveau weggeschreven. Deze zijn te herkennen aan de voorvoegsels <code class="docutils literal notranslate"><span class="pre">[INFO]</span></code>, <code class="docutils literal notranslate"><span class="pre">[WARNING]</span></code> en <code class="docutils literal notranslate"><span class="pre">[ERROR]</span></code>. Het is aan te raden om deze berichten goed door te nemen, omdat ze vaak belangrijke informatie bevatten over de uitvoering van de workflow. Het kan bijvoorbeeld voorkomen dat er bij het afleiden van profielen enkele profielen niet goed kunnen worden weergegeven. Een voorbeeld is hieronder weergegeven:</p>
+<figure class="align-center" id="id2">
+<img alt="Logbestand met warnings" src="../../_images/logging_warning_example.png" />
+<figcaption>
+<p><span class="caption-text">Voorbeeld van een logbestand met WARNING-niveau berichten</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Hier is bijvoorbeeld te zien dat bij profile_0009 geen profiel kon worden afgeleid. Zo kan makkelijk worden gecontroleerd of dit mogelijk gevolgen heeft voor de resultaten.</p>
+</div>
+<p>In totaal zijn er 8 workflows, meer informatie over de invoerparameters per workflow is te vinden via onderstaande links:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="Vakindeling.html">Vakindeling</a></p></li>
+<li><p><a class="reference external" href="Overtopping.html">Overslag</a></p></li>
+<li><p><a class="reference external" href="Waterstand.html">Waterstand</a></p></li>
+<li><p><a class="reference external" href="Bekleding.html">Bekleding</a></p></li>
+<li><p><a class="reference external" href="Dijkprofielen.html">Dijkprofielen</a></p></li>
+<li><p><a class="reference external" href="Teenlijn.html">Teenlijn</a></p></li>
+<li><p><a class="reference external" href="Bebouwing.html">Bebouwing</a></p></li>
+<li><p><a class="reference external" href="Genereren_database.html">Genereren database</a></p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Preprocessing</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Vakindeling.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Vakindeling</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opstarten-van-de-preprocessor">Opstarten van de preprocessor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aanmaken-van-een-mappenstructuur">Aanmaken van een mappenstructuur</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#de-structuur-van-de-werkmap">De structuur van de werkmap</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uitvoeren-van-de-workflows">Uitvoeren van de workflows</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/Deltares/VrtoolDocumentation/edit/main/docs/Gebruikershandleiding/Preprocessing/werken_met_preprocessor.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/Gebruikershandleiding/Preprocessing/werken_met_preprocessor.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2023, Deltares.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
